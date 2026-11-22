@@ -201,8 +201,8 @@ export const CAMS: Record<number, Key[]> = {
   ],
   23: [{ f: 2488, s: P(2488, face(C.bench, 0.9), [3.4, 0.6, 5.4], [0, 0, 0], 0.002, { fov: 42 }) }],
   24: [
-    { f: 2554, s: P(2554, rel(C.ghost, [0.45, 1.3, 0]), [0.25, 0.1, 2.6], [0, 0, 0], 0.0025, { fov: 38, roll: 0.03 }) },
-    { f: 2598, dur: 40, s: (f) => { const k = glide((f - 2598) / 52); const a = fr(rel(C.ghost, [0.45, 1.3, 0]), [0.25, 0.1, 2.6]);
+    { f: 2554, s: P(2554, rel(C.ghost, [0.3, 1.3, 0]), [0.25, 0.1, 2.8], [0, 0, 0], 0.0025, { fov: 38, roll: 0.03 }) },
+    { f: 2598, dur: 40, s: (f) => { const k = glide((f - 2598) / 52); const a = fr(rel(C.ghost, [0.3, 1.3, 0]), [0.25, 0.1, 2.8]);
       return { pos: [a.pos[0] + 1.5 * k, a.pos[1] + 2.6 * k, a.pos[2] + 3.6 * k] as V3, look: [a.look[0] + 0.2 * k, a.look[1] - 0.1 * k, a.look[2] - 0.6 * k] as V3, fov: 38 + 4 * k, roll: 0 }; } },
   ],
 };

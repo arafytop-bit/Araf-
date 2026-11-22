@@ -216,7 +216,7 @@ const blob = (out: Stage, x: number, y: number, z: number, sc = 1, k = 1) => {
 export type Stage = { places: Place[]; fx: FxPlace[] };
 
 // ================= the Mincemeat cast =================
-const PALE = "#e2e6d6";
+const PALE = "#d3dbc4";
 const MARINE: Outfit = { jacket: "#7d7048", pants: "#6f6342", boots: "#3a2a20", hat: "peaked", cap: "#7a6c45", tie: "#5e4e32", buttons: "#d9c58a" };
 const CORPSE: Outfit = { ...MARINE, skin: PALE };
 const VEST: Outfit = { jacket: "#f2efe6", pants: "#8a8f96", boots: INK, hat: "hair", hair: "#4a3426", vest: true, skin: PALE };

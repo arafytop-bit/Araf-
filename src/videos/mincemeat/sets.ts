@@ -146,6 +146,15 @@ const sandTex = () => ctex("sandTex", 512, 512, (g, r) => {
   for (let i = 0; i < 900; i++) { g.fillStyle = `rgba(${r() > 0.5 ? "255,250,230" : "150,110,70"},${0.15 + 0.2 * r()})`; g.fillRect(r() * 512, r() * 512, 3, 3); }
 });
 
+/** green leather desk blotter: tooled gold border, worn grain, a few ink spots */
+const blotter = () => ctex("blotter", 2048, 1024, (g, r) => {
+  g.fillStyle = "#3f5a3a"; g.fillRect(0, 0, 2048, 1024);
+  for (let i = 0; i < 1400; i++) { g.fillStyle = `rgba(${r() > 0.5 ? "255,255,230" : "10,25,10"},${0.03 + 0.05 * r()})`; g.beginPath(); g.ellipse(r() * 2048, r() * 1024, 4 + 30 * r(), 2 + 12 * r(), r() * 3, 0, 7); g.fill(); }
+  g.strokeStyle = "#b89a52"; g.lineWidth = 10; g.strokeRect(40, 40, 1968, 944); g.lineWidth = 4; g.strokeRect(62, 62, 1924, 900);
+  g.strokeStyle = "rgba(20,15,10,0.6)"; g.lineWidth = 3; g.strokeRect(30, 30, 1988, 964);
+  for (let i = 0; i < 5; i++) { g.fillStyle = "rgba(20,30,60,0.5)"; g.beginPath(); g.arc(200 + r() * 1600, 150 + r() * 700, 6 + r() * 10, 0, 7); g.fill(); }
+});
+
 // ---------------- geometry helpers ----------------
 const UB = new THREE.BoxGeometry(1, 1, 1);
 const box = (b: Batch, mat: THREE.Material, o: V3, x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) =>
@@ -193,7 +202,7 @@ const desk = (b: Batch, o: V3, x: number, z: number, w: number, d: number, c: st
   box(b, m, o, x - w / 2, x + w / 2, 0.72, 0.78, z - d / 2, z + d / 2);
   box(b, m, o, x - w / 2, x - w / 2 + 0.45, 0, 0.72, z - d / 2 + 0.05, z + d / 2 - 0.05);
   box(b, m, o, x + w / 2 - 0.45, x + w / 2, 0, 0.72, z - d / 2 + 0.05, z + d / 2 - 0.05);
-  box(b, col("deskTop", "#3f5a3a"), o, x - w / 2 + 0.1, x + w / 2 - 0.1, 0.78, 0.785, z - d / 2 + 0.1, z + d / 2 - 0.1);
+  box(b, lam("blotter", () => ({ map: blotter() })), o, x - w / 2 + 0.1, x + w / 2 - 0.1, 0.78, 0.785, z - d / 2 + 0.1, z + d / 2 - 0.1);
 };
 
 // ---------------- the sets ----------------
@@ -220,7 +229,9 @@ const buildRoom = (root: THREE.Object3D, b: Batch) => {
   lampAt(root, b, o, 3.0, 0.785, -3.3);
   for (const [x, z, y] of [[-1.2, 1.2, 0], [1.4, 1.25, 0.2]] as const) chair(b, o, x, z + 0.4, y, "#5a3a26");
   // wall picture frames (abstract landscapes, no text)
-  b.add(quad(V(0.6, 1.9, -4.1), V(2.0, 1.9, -4.1), V(2.0, 2.9, -4.1), V(0.6, 2.9, -4.1)), lam("pic1", () => ({ map: ctex("pic1", 256, 192, (g) => { g.fillStyle = "#9cc0d8"; g.fillRect(0, 0, 256, 192); g.fillStyle = "#6f8f4a"; g.beginPath(); g.moveTo(0, 130); g.quadraticCurveTo(120, 70, 256, 120); g.lineTo(256, 192); g.lineTo(0, 192); g.fill(); g.strokeStyle = "#7a5a2a"; g.lineWidth = 18; g.strokeRect(9, 9, 238, 174); }) })));
+  b.add(quad(V(0.2, 1.75, -4.1), V(2.6, 1.75, -4.1), V(2.6, 3.08, -4.1), V(0.2, 3.08, -4.1)), lam("wallMap", () => ({ map: mapTex() })));
+  box(b, col("mapFrame", "#4e3322"), o, 0.12, 2.68, 1.68, 1.75, -4.12, -4.06); box(b, col("mapFrame", "#4e3322"), o, 0.12, 2.68, 3.08, 3.15, -4.12, -4.06);
+  if (false) b.add(quad(V(0.6, 1.9, -4.1), V(2.0, 1.9, -4.1), V(2.0, 2.9, -4.1), V(0.6, 2.9, -4.1)), lam("pic1", () => ({ map: ctex("pic1", 256, 192, (g) => { g.fillStyle = "#9cc0d8"; g.fillRect(0, 0, 256, 192); g.fillStyle = "#6f8f4a"; g.beginPath(); g.moveTo(0, 130); g.quadraticCurveTo(120, 70, 256, 120); g.lineTo(256, 192); g.lineTo(0, 192); g.fill(); g.strokeStyle = "#7a5a2a"; g.lineWidth = 18; g.strokeRect(9, 9, 238, 174); }) })));
 };
 
 const buildBerlin = (root: THREE.Object3D, b: Batch) => {

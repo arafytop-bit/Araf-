@@ -248,7 +248,7 @@ const FACE: Record<Expr, { eye: [EyeK, EyeK]; brow: [number, number]; mouth: Mou
   smile: { eye: ["dot", "dot"], brow: [0, -1], mouth: "smirk" },
   smile_closed: { eye: ["happy", "happy"], brow: [0, -1], mouth: "smile" },
   lick: { eye: ["dot", "dot"], brow: [0, -1], mouth: "lick" },
-  dead: { eye: ["dash", "dash"], brow: [1, 1], mouth: "dash" },
+  dead: { eye: ["dash", "dash"], brow: [2, 2], mouth: "o" },
   smug: { eye: ["lid", "lid"], brow: [-2, -4], mouth: "smirk" },
   angry: { eye: ["small", "small"], brow: [6, -4], mouth: "teeth" },
   chomp: { eye: ["squeeze", "squeeze"], brow: [-3, -3], mouth: "laugh" },
@@ -387,7 +387,7 @@ const hatOn = (p: Pen, o: Outfit, hp: P2[], H: Blob, cx: number, hc: number, lig
       p.ell(tx, ty, 7 * u, 7 * u, "#2b7a4b", 2.5 * u); // green tuft
     }
   } else if (o.hat === "cap" || o.hat === "hair") {
-    const cut = crown + (o.hat === "cap" ? 0.3 : 0.42) * HH;
+    const cut = crown + (o.hat === "cap" ? 0.3 : o.forelock ? 0.33 : 0.42) * HH;
     const keep = (x: number, y: number) => y < cut || (side && o.hat === "hair" && x < cx - 6 * u && y < hc + 0.42 * H.b);
     // start the arc at the first kept point after a dropped one, so the kept run is contiguous and the cut closes it
     const n = hp.length, startIdx = Math.max(0, hp.findIndex(([x, y], i) => keep(x, y) && !keep(hp[(i + n - 1) % n][0], hp[(i + n - 1) % n][1])));
@@ -665,7 +665,7 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout");
   BRUSH.on = false;
   if (o.forelock) {
-    const top = crown + 0.4 * HH;
+    const top = crown + 0.31 * HH;
     const fl: P2[] = [[300 - 26 * u, top - 0.03 * HH], [300 + 22 * u, top - 0.02 * HH], [300 + 4 * u, top + 0.05 * HH], [300 - 22 * u, hc - 0.12 * HH], [300 - 34 * u, hc - 0.16 * HH]];
     p.poly(fl, o.hair ?? "#2a201a", 0);
     p.stroke([[300 + 20 * u, top - 0.01 * HH], [300 + 2 * u, top + 0.055 * HH], [300 - 22 * u, hc - 0.115 * HH]], 3 * u);
