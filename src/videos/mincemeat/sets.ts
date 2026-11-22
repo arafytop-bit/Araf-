@@ -226,7 +226,7 @@ const buildRoom = (root: THREE.Object3D, b: Batch) => {
   for (const z of [-3.2, -2.5]) { box(b, col("filing", "#7d8a7a"), o, 4.4, 5.1, 0, 1.4, z - 0.32, z + 0.32); for (const y of [0.3, 0.75, 1.15]) box(b, col("handle", "#c9ccd2"), o, 4.36, 4.4, y, y + 0.05, z - 0.1, z + 0.1); }
   mapTable(b, TABLE_C(o), "#7a4f33");
   desk(b, o, 2.4, -3.2, 2.0, 0.9, "#6e4a30");
-  lampAt(root, b, o, 3.0, 0.785, -3.3);
+  // (no desk lamp: the desk-insert camera ends where its shade stood)
   for (const [x, z, y] of [[-1.2, 1.2, 0], [1.4, 1.25, 0.2]] as const) chair(b, o, x, z + 0.4, y, "#5a3a26");
   // wall picture frames (abstract landscapes, no text)
   b.add(quad(V(0.2, 1.75, -4.1), V(2.6, 1.75, -4.1), V(2.6, 3.08, -4.1), V(0.2, 3.08, -4.1)), lam("wallMap", () => ({ map: mapTex() })));
