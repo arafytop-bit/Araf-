@@ -4,3 +4,5 @@ out/
 remotion-tmp/
 *.wav
 *.raw
+shorts/mincemeat/captions/cap_*.jpg
+shorts/mincemeat/captions/capsheet.jpg
