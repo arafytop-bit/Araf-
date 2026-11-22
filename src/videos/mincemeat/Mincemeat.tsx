@@ -21,7 +21,7 @@ import { TOTAL, FLASH_AT, SHOTS, layersAt, dofAt } from "./story";
 export const MINCEMEAT_FRAMES = TOTAL;
 
 /** A/B switches for test stills only (Remotion inputProps `{ post: { ink: false, ... } }`); everything is on by default. */
-type PostToggles = { nopost?: boolean; ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };
+type PostToggles = { nopost?: boolean; msaa?: number; ink: boolean; lens: boolean; pre: boolean; bloom: boolean; grade: boolean; grain: boolean };
 const toggles = (): PostToggles => ({ ink: true, lens: true, pre: true, bloom: true, grade: true, grain: false, ...((getInputProps() as { post?: Partial<PostToggles> }).post ?? {}) });
 
 /** Bloom for emissive sources only (depth.md 6.4). Its MIP chain always starts at 540x960 (half of 1080x1920),
@@ -56,7 +56,7 @@ const Inner: React.FC<{ id: number }> = ({ id }) => {
   // first advance() in headless renders, so the frame came out empty). Built synchronously; renders at priority 1.
   const { gl, size } = useThree();
   const composer = useMemo(() => {
-    const c = new EffectComposer(gl, { multisampling: 4, frameBufferType: THREE.HalfFloatType });
+    const c = new EffectComposer(gl, { multisampling: on.msaa ?? 2, frameBufferType: THREE.HalfFloatType });
     c.addPass(new RenderPass(scene, camera));
     if (on.ink) c.addPass(fx.ink);
     if (on.lens && on.pre) c.addPass(new EffectPass(camera, fx.lens.pre));
