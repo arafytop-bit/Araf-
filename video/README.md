@@ -25,6 +25,7 @@ Production: *Your Electric Bill Is Holding a Bet on AI* (16:41, 1920×1080, 30 f
 | `props.py` | About 130 doodle assets: grid, buildings, money, documents, charts, maps (US states from `us_states.json`), and gags. |
 | `engine.py` | Timeline engine. Each element is pinned to a phrase of the script; keyframes are linear. The scene cut happens when its first element appears. Renders through resvg → raw RGB → ffmpeg, rendering each unique frame only once. |
 | `story.py` | The storyboard: 223 scenes and about 680 word-anchored visual events. Commands: `info` (with `LINT=1` it checks every anchor), `preview out.png t0 t1` (contact sheet), `render out.mp4 [t0 t1]`. |
+| `sound_design.py` | Sound design. About 1,000 synthesized effects placed from the storyboard's events (pops, cut swishes, pencil/chalk/key ticks, stamps, impacts, marker swipes, dings, cha-chings, rising tones and more), panned by on-screen position. Adds an original lo-fi music bed with section moods: tense in the escalation, a muffled "tape" sound in the flashback, brighter at the end. The bed is ducked 8 dB under the voice and muted under the stings. Mixes to −14 LUFS and remuxes the video without re-rendering (`--no-bed` gives effects only). |
 | `gallery.py` | Renders every asset to contact sheets for visual QA. |
 | `fonts/` | Gaegu (subset to Latin) and Comic Neue, both under the SIL Open Font License (licence texts included). |
 | `data/` | `words.json`, `words_raw.json`, `stings.json` and `audio_report.json` for this production. |
@@ -42,6 +43,7 @@ python3 add_stings.py $PROD                           # -> audio_master.wav + sh
 ffmpeg -i $PROD/audio_master.wav -af volume=0.6dB $PROD/a.wav && mv $PROD/a.wav $PROD/audio_master.wav   # → −14.0 LUFS
 LINT=1 python3 story.py info                          # all anchors must resolve
 WORKERS=4 python3 story.py render $PROD/final.mp4     # about 10 minutes on 4 CPUs
+PROD=$PROD python3 sound_design.py $PROD/final.mp4 $PROD/final_sd.mp4   # adds sound effects + music bed (about 4 minutes)
 ```
 
 ## Editing a shot
