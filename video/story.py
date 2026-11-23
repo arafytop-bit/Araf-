@@ -549,10 +549,10 @@ def s3():
     tws = stagger("about a dozen", [("tower", dict(x=260 + (i % 6) * 280, y=330 + (i // 6) * 420, h=280)) for i in range(12)], gap=2)
     stagger("had been cancelled", [("xmark_a", dict(x=260 + (i % 6) * 280, y=330 + (i // 6) * 420, r=110, w=12)) for i in range(12)], gap=1)
     cut("Add in that disputed Joliet project")
-    m = add("us_map", None, x=960, y=600, w=1400, focus=["Pennsylvania", "Virginia", "Illinois"], hi={})
-    hero("more than five gigawatts", "5+ GW", 960, 140, 150, RED)
+    m = add("us_map", None, x=960, y=620, w=1240, hi={})
+    hero("more than five gigawatts", "5+ GW", 960, 125, 140, RED)
     chg(m, "Pennsylvania, Virginia and Illinois", hi={"Pennsylvania": "#F4A6A6", "Virginia": "#F4A6A6", "Illinois": "#F4A6A6"})
-    note("now in doubt", "in doubt...", 1500, 300, 64, RED, weight=700)
+    note("now in doubt", "in doubt...", 1755, 600, 60, RED, weight=700)
     scale_in(add("poof", "gone", x=960, y=600, r=480, text="POOF"), 0.4, 0.25)
 
     cut("In Virginia, two developers walked away")
