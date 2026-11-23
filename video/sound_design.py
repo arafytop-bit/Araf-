@@ -405,7 +405,7 @@ def main():
         bed_end = S["endcard_start"]
         bed = build_bed(total, sections, bed_end)[:len(vo)]
         write(f"{PROD}/bed_raw.wav", bed / (np.abs(bed).max() + 1e-9) * 0.5)
-        I_raw, _ = lufs(f"{PROD}/bed_raw.wav"); g = db(-27.0 - I_raw) * 0.5 / (np.abs(bed).max() + 1e-9)
+        I_raw, _ = lufs(f"{PROD}/bed_raw.wav"); g = db(float(os.environ.get("BED_LUFS", "-24.0")) - I_raw) * 0.5 / (np.abs(bed).max() + 1e-9)
         bed = bed * g
         gain = db(-8.0 * duck)                              # sidechain: -8 dB under speech
         t = np.arange(len(bed)) / SR
