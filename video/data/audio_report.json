@@ -1,0 +1,89 @@
+{
+ "clips": [
+  {
+   "clip": "80c7029e",
+   "sections": "1 \u00b7 Cold open",
+   "in_s": 65.49,
+   "out_s": 61.67,
+   "removed_s": 3.72,
+   "n_cuts": 18,
+   "script_match": 0.989
+  },
+  {
+   "clip": "6fc39342",
+   "sections": "2 \u00b7 Stakes and setup",
+   "in_s": 133.8,
+   "out_s": 128.74,
+   "removed_s": 4.93,
+   "n_cuts": 36,
+   "script_match": 0.997
+  },
+  {
+   "clip": "776c3134",
+   "sections": "2 \u00b7 Stakes and setup",
+   "in_s": 67.32,
+   "out_s": 63.96,
+   "removed_s": 3.3,
+   "n_cuts": 17,
+   "script_match": 1.0
+  },
+  {
+   "clip": "293f3761",
+   "sections": "3 \u00b7 The engine",
+   "in_s": 178.99,
+   "out_s": 172.72,
+   "removed_s": 6.25,
+   "n_cuts": 47,
+   "script_match": 0.988
+  },
+  {
+   "clip": "de677599",
+   "sections": "3 \u00b7 The engine",
+   "in_s": 124.92,
+   "out_s": 115.63,
+   "removed_s": 9.18,
+   "n_cuts": 41,
+   "script_match": 0.989
+  },
+  {
+   "clip": "fc8ffbbd",
+   "sections": "5 \u00b7 The history parallel",
+   "in_s": 178.21,
+   "out_s": 166.27,
+   "removed_s": 11.83,
+   "n_cuts": 55,
+   "script_match": 0.992
+  },
+  {
+   "clip": "9ec82919",
+   "sections": "6 \u00b7 The escalation",
+   "in_s": 206.37,
+   "out_s": 191.85,
+   "removed_s": 14.46,
+   "n_cuts": 70,
+   "script_match": 0.986
+  },
+  {
+   "clip": "b2f908f3",
+   "sections": "7 \u00b7 The payoff|8 \u00b7 The ask|9 \u00b7 The last line",
+   "in_s": 87.33,
+   "out_s": 82.23,
+   "removed_s": 4.95,
+   "n_cuts": 24,
+   "script_match": 1.0
+  }
+ ],
+ "total_s": 986.91,
+ "loudnorm_first_pass": {
+  "input_i": "-19.71",
+  "input_tp": "-0.32",
+  "input_lra": "2.20",
+  "input_thresh": "-29.97",
+  "output_i": "-14.97",
+  "output_tp": "-1.00",
+  "output_lra": "2.30",
+  "output_thresh": "-25.20",
+  "normalization_type": "dynamic",
+  "target_offset": "0.97"
+ }
+}
