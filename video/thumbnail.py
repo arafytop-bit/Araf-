@@ -33,6 +33,7 @@ def render(body, name, bg="#FFFFFF"):
     im = Image.open(io.BytesIO(bytes(png))).convert("RGB")
     t = im.resize((1280, 720), Image.LANCZOS)
     t.save(f"{OUT}/{name}.png", optimize=True); t.save(f"{OUT}/{name}.jpg", quality=92, optimize=True, progressive=True)
+    im.save(f"{OUT}/{name}_1920x1080.jpg", quality=92, optimize=True, progressive=True)
     return t
 
 # ---------------------------------------------------------------- A: YOU PAY EITHER WAY (bill + shocked narrator)
