@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(HERE, '..', '..')))
 
 import skia  # noqa: E402
 from engine.core import W, H, FPS, new_surface, draw_background, ease_out_cubic  # noqa: E402
-from engine.character import (draw_character, HOST, AGENT, subject, R_NORMAL, R_ZOOM,  # noqa: E402
+from engine.roundhead import (draw_character, HOST, AGENT, subject, R_NORMAL, R_ZOOM,  # noqa: E402
                               NORMAL_CENTER, ZOOM_CENTER)
 from engine.text import draw_callout, draw_label  # noqa: E402
 from engine.mapdraw import draw_map, map_point, draw_dot, dot_pulse_visible, load_outline  # noqa: E402
@@ -43,7 +43,7 @@ kin = KineticTitle([
     (686, [('MOST', 92, 'red', cutf(5)), ('WANTED', 92, 'red', cutf(6)), ('LIST', 108, 'silver', cutf(7))], W * 0.79),
 ])
 
-portrait = make_portrait(subject(skin='#E2BC98', hair='slick', top='suit', top_color='#2E2C33'), expr='neutral')
+portrait = make_portrait(subject(hair='slick', top='suit', top_color='#5B5E66'), expr='neutral')
 
 # map sizing: height = 72% of frame (BLUEPRINT 5.6), centred
 _path, _j = load_outline('us_outline')
@@ -71,7 +71,7 @@ def frame(c, f):
     draw_background(c)
     if f < C['s2']:                                   # S1 kinetic title
         kin.draw(c, f, 0, C['s2'])
-        e = 'talk' if f < 20 else 'o' if f < 40 else 'talk2' if f < 58 else 'smile'
+        e = 'talk' if f < 20 else 'talk2' if f < 40 else 'talk' if f < 58 else 'smile'
         draw_character(c, 330, 905, 80, pose='hips', expr=e, pal=HOST)
         for i, xf in enumerate((1290, 1500, 1710)):  # agents walk in from the right
             if f < 30 + 4 * i:
@@ -79,12 +79,12 @@ def frame(c, f):
             p = ease_out_cubic((f - 30 - 4 * i) / 36.0)
             x = xf + (2150 - xf) * (1 - p)
             walking = p < 0.999
-            draw_character(c, x, 905, 58, pose='walk' if walking else 'hips', expr='o', pal=AGENT,
+            draw_character(c, x, 880, 58, pose='walk' if walking else 'idle', expr='deadpan', pal=AGENT,
                            phase=f * 0.95 + i * 1.3 if walking else 0.0)
     elif f < C['s3']:                                 # S2 host normal, wave
         host(c, f, C['s2'], 'normal', 'wave', [(C['s2'], 'talk'), (C['s2_swap'], 'smile')], bob=(0.02, -0.015))
     elif f < C['s4']:                                 # S3 punch-in x1.52
-        host(c, f, C['s3'], 'zoom', 'hips', [(C['s3'], 'o'), (C['s3_swap'], 'talk2')], bob=(-0.015, 0.01))
+        host(c, f, C['s3'], 'zoom', 'hips', [(C['s3'], 'talk2'), (C['s3_swap'], 'talk')], bob=(-0.015, 0.01))
     elif f < C['s5']:                                 # S4 red callout "1950" over host
         host(c, f, C['s4'], 'normal', 'shrug', [(C['s4'], 'talk'), (C['s4_swap'], 'grin')], bob=(0.015, -0.01))
         draw_callout(c, '1950', progress=(f - C['s4'] + 1) / 5.0)
@@ -96,9 +96,9 @@ def frame(c, f):
         draw_dot(c, x, y, r=16, visible=dot_pulse_visible(t))
         draw_label(c, 'WASHINGTON, D.C.', x - 30, y + 13, 33, align='right')
     elif f < C['s6b']:                                # S6a host thinking
-        host(c, f, C['s6a'], 'normal', 'nerd', [(C['s6a'], 'skeptic')], glint=True)
+        host(c, f, C['s6a'], 'normal', 'inspect', [(C['s6a'], 'neutral')])
     elif f < C['s7']:                                 # S6b punch-in on the question
-        host(c, f, C['s6b'], 'zoom', 'wave', [(C['s6b'], 'o'), (C['s6b_swap'], 'talk')], bob=(0.02, 0.0))
+        host(c, f, C['s6b'], 'zoom', 'wave', [(C['s6b'], 'shock'), (C['s6b_swap'], 'talk')], bob=(0.02, 0.0))
     else:                                             # S7 fugitive title card
         draw_title_card(c, 1, ['THOMAS', 'JAMES', 'HOLDEN'], portrait, f - C['s7'])
 

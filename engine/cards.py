@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 import skia
 from .core import W, H, paint, rgb, ease_out_cubic, poly_path
-from .character import draw_character
+from .roundhead import draw_character
 from .text import draw_text, size_for_cap, text_width, CAP
 
 

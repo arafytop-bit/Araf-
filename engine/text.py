@@ -150,3 +150,36 @@ def draw_label(canvas, s, x, y, cap_px, align='left', alpha=255):
     draw_text(canvas, s, x, y, size, style='#FFFFFF', tracking=0.03, alpha=alpha, shadow=False,
               grunge=False, outline=size * 0.16)
     return tw
+
+
+# ---------------- speech captions (reference cartoon style) ----------------
+SPEECH_FONT = ASSETS + '/fonts/Nunito-900.ttf'
+
+
+@functools.lru_cache(maxsize=None)
+def speech_typeface():
+    return skia.Typeface.MakeFromFile(SPEECH_FONT)
+
+
+def draw_speech(canvas, s, x, y, cap_px=40.0, tail=None, rot=0.0, alpha=255):
+    """White rounded caption with a thick black outline and soft shadow, plus an optional
+    short white tail line (tail = ((x0, y0), (x1, y1))) pointing at the speaker."""
+    size = cap_px / 0.705
+    f = skia.Font(speech_typeface(), size)
+    f.setEdging(skia.Font.Edging.kAntiAlias)
+    canvas.save()
+    canvas.translate(x, y)
+    if rot:
+        canvas.rotate(rot)
+    canvas.saveLayerAlpha(None, int(alpha))
+    sh = paint('#000000', alpha=150)
+    sh.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, size * 0.06))
+    canvas.drawString(s, size * 0.03, size * 0.07, f, sh)
+    canvas.drawString(s, 0, 0, f, paint('#111111', stroke=size * 0.16))
+    canvas.drawString(s, 0, 0, f, paint('#FFFFFF'))
+    canvas.restore()
+    canvas.restore()
+    if tail:
+        (x0, y0), (x1, y1) = tail
+        canvas.drawLine(x0, y0, x1, y1, paint('#111111', stroke=cap_px * 0.36))
+        canvas.drawLine(x0, y0, x1, y1, paint('#FFFFFF', stroke=cap_px * 0.16))

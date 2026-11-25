@@ -1,89 +1,78 @@
-# Channel host: character spec v1
+# Channel host: character spec v2 (round-head cartoon style)
 
-The host is an original design that replaces the source-style stick figure. It is rendered
-by `engine/character.py` and shown in `design/host_character_sheet.png`.
+The host is drawn in the round-head cartoon style from the user's reference screenshots.
 
-## Concept
-An internet sleuth who "did the research".
-- **Yellow** echoes crime-scene tape, and stays clear of the red used for callouts.
-- **Round glasses** stand for research.
-- **The hoodie** keeps him relatable.
+- **What we match:** the art style.
+- **What we don't copy:** any specific character from those screenshots. Our host is an original detective.
 
-He keeps the format's mechanics (dark stage, expression swaps, three scales) but has a
-silhouette of his own.
+Renderer: `engine/roundhead.py`. Model sheet: `design/host_character_sheet.png`.
 
-## Silhouette rules (what makes him recognisable)
-1. Three-spike messy hair and a zig-zag fringe kept above the brows.
-2. **Big round glasses** with thick brows above them. No other character wears them.
-3. Caution-yellow hoodie with the hood bunched at the neck, two drawstrings and a kangaroo pocket.
-4. Tube sleeves with round hands, slate jeans, white sneakers.
-5. Egg-shaped head with blush, a small nose, and maroon open mouths with a tongue.
+## Style rules (measured from the references, 1080p)
+- **Head:** a big white circle (`#F8F8F5`) with an inked black outline of about **0.06 R**, plus a tiny wobble (fixed seed, so lines don't boil). The head is **42–49% of total height**.
+- **Eyes:** two small black shapes (r ≈ 0.125 R), **close together** (centres ±0.155 R), shifted toward where the character looks (`look=(dx, dy)`).
+  - Moods come from the eye shape: dot, lidded, smug, angry, sad, wide with a highlight, happy arcs.
+  - Thin brows are added only when needed.
+- **Mouth:** absent by default. A small open mouth, an "o", a smile, a grimace or a smirk only when the line needs it.
+- **Hands:** big white mitten blobs.
+- **Limbs:** chunky tubes (sleeves 0.27 R, legs 0.30 R).
+- **Identity:** carried by **hat + outfit**, in muted earthy colours with soft vertical gradients.
+- **On the black stage:** a faint grey rim (0.02 R) keeps dark clothes readable. Drop the rim on illustrated backgrounds.
 
-## Palette
+## The host: "The Detective"
+- Brown fedora with a dark band.
+- Tan trench coat with lapels, belt and gold buckle, double buttons and pocket flaps.
+- White shirt and red tie.
+- Slate trousers and brown shoes.
+- **Signature pose:** `inspect`, a magnifying glass held over one eye that enlarges it. Use it for reveals, "the first name on it…", "I did the research".
+
 | Part | Hex |
 |---|---|
-| Hoodie | `#FFC83D` |
-| Hoodie shade (pocket, hem) | `#E9A92A` |
-| Jeans | `#3A3F4B` |
-| Sneakers | `#F4F4F4` |
-| Skin | `#FBF6EE` |
-| Hair | `#2B1F1B` |
-| Outline | `#141414` |
-| Blush | `#FF8A8A` (≈37% opacity) |
-| Mouth / tongue | `#4A1216` / `#E66A6E` |
-| Lens tint | `#DCEEFF` (≈43% opacity) |
-| Rim (on dark stage) | `#8E8E8E` |
+| Fedora / band | `#6A4A38` / `#2A221E` |
+| Trench / belt | `#C9A26B` / `#7D5B3A` |
+| Tie / shirt | `#B23A32` / `#EFEAE0` |
+| Trousers / shoes | `#3D414C` / `#4A3329` |
+| Head & hands / ink | `#F8F8F5` / `#151515` |
 
-## Proportions (head half-width R = 1, origin at head centre)
-- **Head:** egg shape, 2.0 wide × 2.1 tall.
-- **Hair:** top at −1.52.
-- **Glasses:** lenses r 0.30 at x ±0.38, y −0.12. Eyes have a white highlight.
-- **Hoodie:** y 0.98 → 2.10, half-width 0.62 → 0.72. Sleeves are 0.25 wide.
-- **Legs:** to 2.72, with sneakers to about 2.95. Total height is about 4.5R.
+**Alternate outfits on the same rig** (one-line swap):
 
-**Framing at 1080p** (same as the blueprint):
-
-| Scale | R | Head centre |
-|---|---|---|
-| Normal | 182 px | (960, 430) |
-| Punch-in | 277 px (×1.52) | (960, 446) |
-| PIP | 87 px | bottom-left or bottom-centre |
-
-## Expressions (swap about every 1 s at phrase points, no lip-sync)
-| Expression | Use for |
+| Preset | Outfit |
 |---|---|
-| `talk`, `talk2` | neutral narration |
-| `o` | "wait, what?" |
-| `smile`, `grin` | jokes, positive beats |
-| `skeptic` (one brow up) | doubt, irony |
-| `frown`, `grimace` | grim facts, cringe |
-| `shock` | shocking reveals |
-| `evil` | describing a villain's intent |
-| `neutral` | flat aside |
+| `REPORTER` | newsboy cap and vest |
+| `SLEUTH` | beanie and bomber jacket |
+
+## Expressions
+`neutral`, `talk`, `talk2`, `smile`, `grin`, `smug`, `deadpan`, `skeptic`, `angry`, `evil`, `sad`, `cry` (tears),
+`nervous` (sweat drop), `grimace`, `shock`.
+
+Swap about every second at phrase points. There is no lip-sync.
 
 ## Poses
-| Pose | Use for |
-|---|---|
-| `hips` | default |
-| `wave` | talking, greeting |
-| `point` | at an inserted photo or map |
-| `chin` | thinking |
-| `shrug` | "who knows" |
-| `cheeks` | horror or shock |
-| **`nerd`** | **Signature move:** pushes his glasses up, with `glint=True`. Use on "I did the research", reveals, and "here's the thing". |
+`idle`, `hips`, `wave`, `point`, `chin`, `inspect`, `shrug`, `cheeks`, `walk`
 
-## Supporting cast (same construction, never the host's look)
-- **FBI agents:** navy jacket, navy forward cap with yellow "FBI".
-- **Subjects:** vary skin tone, hair (`short`, `slick`, `buzz`), top (`tee`, `suit`, `jacket`) and colours.
-- **No glasses or yellow hoodie** on anyone but the host.
-- **Portraits:** title-card portraits use the aged-photo treatment (`cards.make_portrait`).
+## Framing (unchanged from the blueprint)
+| Scale | Head radius | Head centre |
+|---|---|---|
+| Normal | 182 px | (960, 430) |
+| Punch-in | 277 px | (960, 446) |
+| PIP | 87 px | bottom-left |
 
-## Don'ts
-- No red sideways cap.
-- No white circle head on stick limbs with a rectangle shirt. That is the source's look.
+## Supporting cast
+Same construction for everyone.
+- **FBI agents:** navy cap with yellow "FBI", and a navy windbreaker.
+- **Subjects:** `subject(hair=..., top=..., ...)`.
+- **Portraits:** `cards.make_portrait`, with the aged-photo look.
+- The fedora and trench coat belong to the host only.
+
+## Speech captions
+These follow the reference style:
+- white rounded heavy text (Nunito Black) with a thick black outline and soft shadow
+- a short white tail line pointing at the speaker
+- usually a slight tilt
+
+Call `text.draw_speech(canvas, text, x, y, cap_px, tail=((x0, y0), (x1, y1)), rot)`.
 
 ## API
 ```python
-from engine.character import draw_character, HOST, AGENT, subject, R_NORMAL, NORMAL_CENTER
-draw_character(canvas, *NORMAL_CENTER, R_NORMAL, pose='nerd', expr='skeptic', pal=HOST, glint=True)
+from engine.roundhead import draw_character, HOST, AGENT, subject, R_NORMAL, NORMAL_CENTER
+draw_character(canvas, *NORMAL_CENTER, R_NORMAL, pose='inspect', expr='neutral', pal=HOST)
 ```
