@@ -13,8 +13,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(HERE, '..', '..')))
 
 import skia  # noqa: E402
 from engine.core import W, H, FPS, new_surface, draw_background, ease_out_cubic  # noqa: E402
-from engine.host import (draw_character, HOST, AGENT, R_NORMAL, R_ZOOM, NORMAL_CENTER,  # noqa: E402
-                         ZOOM_CENTER)
+from engine.character import (draw_character, HOST, AGENT, subject, R_NORMAL, R_ZOOM,  # noqa: E402
+                              NORMAL_CENTER, ZOOM_CENTER)
 from engine.text import draw_callout, draw_label  # noqa: E402
 from engine.mapdraw import draw_map, map_point, draw_dot, dot_pulse_visible, load_outline  # noqa: E402
 from engine.cards import KineticTitle, draw_title_card, make_portrait  # noqa: E402
@@ -43,7 +43,7 @@ kin = KineticTitle([
     (686, [('MOST', 92, 'red', cutf(5)), ('WANTED', 92, 'red', cutf(6)), ('LIST', 108, 'silver', cutf(7))], W * 0.79),
 ])
 
-portrait = make_portrait(dict(skin='#E2BC98', cap=None, shirt='#2E2C33', hair='slick'), expr='neutral')
+portrait = make_portrait(subject(skin='#E2BC98', hair='slick', top='suit', top_color='#2E2C33'), expr='neutral')
 
 # map sizing: height = 72% of frame (BLUEPRINT 5.6), centred
 _path, _j = load_outline('us_outline')
@@ -53,7 +53,7 @@ MAP_C = (960, 560)
 DC = _j['dc']
 
 
-def host(c, f, f0, scale, pose, exprs, bob=(0.0, 0.0)):
+def host(c, f, f0, scale, pose, exprs, bob=(0.0, 0.0), glint=False):
     """exprs: list of (start_frame, expression)."""
     e = exprs[0][1]
     k = 0
@@ -62,9 +62,9 @@ def host(c, f, f0, scale, pose, exprs, bob=(0.0, 0.0)):
             e, k = ex, i
     b = (bob[0] * (1 if k % 2 else 0), bob[1] * (1 if k % 2 else 0))
     if scale == 'zoom':
-        draw_character(c, *ZOOM_CENTER, R_ZOOM, pose=pose, expr=e, pal=HOST, bob=b)
+        draw_character(c, *ZOOM_CENTER, R_ZOOM, pose=pose, expr=e, pal=HOST, bob=b, glint=glint)
     else:
-        draw_character(c, *NORMAL_CENTER, R_NORMAL, pose=pose, expr=e, pal=HOST, bob=b)
+        draw_character(c, *NORMAL_CENTER, R_NORMAL, pose=pose, expr=e, pal=HOST, bob=b, glint=glint)
 
 
 def frame(c, f):
@@ -96,7 +96,7 @@ def frame(c, f):
         draw_dot(c, x, y, r=16, visible=dot_pulse_visible(t))
         draw_label(c, 'WASHINGTON, D.C.', x - 30, y + 13, 33, align='right')
     elif f < C['s6b']:                                # S6a host thinking
-        host(c, f, C['s6a'], 'normal', 'chin', [(C['s6a'], 'skeptic')])
+        host(c, f, C['s6a'], 'normal', 'nerd', [(C['s6a'], 'skeptic')], glint=True)
     elif f < C['s7']:                                 # S6b punch-in on the question
         host(c, f, C['s6b'], 'zoom', 'wave', [(C['s6b'], 'o'), (C['s6b_swap'], 'talk')], bob=(0.02, 0.0))
     else:                                             # S7 fugitive title card

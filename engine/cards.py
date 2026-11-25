@@ -4,12 +4,12 @@ import numpy as np
 import cv2
 import skia
 from .core import W, H, paint, rgb, ease_out_cubic, poly_path
-from .host import draw_character
+from .character import draw_character
 from .text import draw_text, size_for_cap, text_width, CAP
 
 
 # ---------------- illustrated portrait (stand-in for a real photo) ----------------
-def make_portrait(pal, expr='neutral', w=470, h=610, suit=True, aged=True, seed=5):
+def make_portrait(pal, expr='neutral', w=470, h=610, aged=True, seed=5):
     s = skia.Surface(w, h)
     c = s.getCanvas()
     sh = skia.GradientShader.MakeLinear(points=[(0, 0), (0, h)], colors=[rgb('#D3D0C8'), rgb('#A9A59C')])
@@ -19,12 +19,6 @@ def make_portrait(pal, expr='neutral', w=470, h=610, suit=True, aged=True, seed=
     R = 150
     hx, hy = w / 2, h * 0.43
     draw_character(c, hx, hy, R, pose='hips', expr=expr, pal=pal, show_rim=False)
-    if suit:  # white collar + tie over the dark jacket
-        def P(pts):
-            return poly_path([(hx + x * R, hy + y * R) for x, y in pts])
-        c.drawPath(P([(-0.30, 0.98), (0.0, 1.30), (0.30, 0.98), (0.16, 0.95), (0.0, 1.10), (-0.16, 0.95)]), paint('#F2F2F2'))
-        c.drawPath(P([(-0.07, 1.10), (0.07, 1.10), (0.11, 1.75), (0.0, 1.88), (-0.11, 1.75)]), paint('#5A1E22'))
-        c.drawPath(P([(-0.07, 1.10), (0.07, 1.10), (0.11, 1.75), (0.0, 1.88), (-0.11, 1.75)]), paint('#000000', stroke=5))
     a = s.makeImageSnapshot().toarray()[:, :, :3].astype(np.float32)  # BGR order (BGRA surface)
     if aged:
         lum = a[..., 0] * 0.114 + a[..., 1] * 0.587 + a[..., 2] * 0.299
