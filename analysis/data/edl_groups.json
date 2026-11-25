@@ -1,0 +1,2442 @@
+[
+ {
+  "group": 0,
+  "states": "0-1",
+  "start_tc": "00:00.000",
+  "end_tc": "00:03.533",
+  "dur_s": 3.53,
+  "category": "TITLE_KINETIC",
+  "description": "Kinetic title \"EVERY PERSON / ON THE FBI'S / MOST WANTED LIST\": all words pre-placed as dim ghosts, each lights up (white; MOST WANTED red) on its spoken word; small host bottom-left; 3 FBI-agent chibis run in from right",
+  "words": "every person currently on the fbi's most wanted list"
+ },
+ {
+  "group": 1,
+  "states": "2-2",
+  "start_tc": "00:03.533",
+  "end_tc": "00:04.567",
+  "dur_s": 1.03,
+  "category": "HOST",
+  "description": "Host, hands on hips, talking",
+  "words": "chances are you've heard about"
+ },
+ {
+  "group": 2,
+  "states": "3-4",
+  "start_tc": "00:04.567",
+  "end_tc": "00:06.933",
+  "dur_s": 2.37,
+  "category": "DOC",
+  "description": "FBI \"Ten Most Wanted Fugitives\" web page screenshot, pops in (scale-down entrance) + slow push-in",
+  "words": "the fbi's most wanted list at some point in your life"
+ },
+ {
+  "group": 3,
+  "states": "5-5",
+  "start_tc": "00:06.933",
+  "end_tc": "00:08.133",
+  "dur_s": 1.2,
+  "category": "HOST",
+  "description": "Host",
+  "words": "it's also likely you that don't"
+ },
+ {
+  "group": 4,
+  "states": "6-8",
+  "start_tc": "00:08.133",
+  "end_tc": "00:10.900",
+  "dur_s": 2.77,
+  "category": "HOST_ZOOM",
+  "description": "Three rapid punch-in host shots, new expression each (on \"know much about it\" / \"besides the fact\" / \"a list of criminals\")",
+  "words": "know much about it besides the fact that it's a list of criminals"
+ },
+ {
+  "group": 5,
+  "states": "9-9",
+  "start_tc": "00:10.900",
+  "end_tc": "00:13.100",
+  "dur_s": 2.2,
+  "category": "GAG",
+  "description": "Literal pun \"in the same boat\": host composited standing in a red rowboat on an ocean photo (+SFX)",
+  "words": "well i was in the same boat so i did some research and"
+ },
+ {
+  "group": 6,
+  "states": "10-10",
+  "start_tc": "00:13.100",
+  "end_tc": "00:20.200",
+  "dur_s": 7.1,
+  "category": "HOST",
+  "description": "Host hand-on-chin \"thinking\" pose (\"so I did some research\")",
+  "words": "today i'm going to a explain brief history about the fbi's most wanted list and then take a deep dive into every single person who's on the list and"
+ },
+ {
+  "group": 7,
+  "states": "11-12",
+  "start_tc": "00:20.200",
+  "end_tc": "00:21.067",
+  "dur_s": 0.87,
+  "category": "DOC",
+  "description": "Grid of 6 fugitive mugshots pops in (\"every single person who's on the list\")",
+  "words": "why they're there spoiler"
+ },
+ {
+  "group": 8,
+  "states": "13-13",
+  "start_tc": "00:21.067",
+  "end_tc": "00:23.167",
+  "dur_s": 2.1,
+  "category": "TEXT",
+  "description": "\"SPOILER ALERT\" big red text over blurred+darkened mugshot grid (+alert SFX)",
+  "words": "alert these are some bad people"
+ },
+ {
+  "group": 9,
+  "states": "14-14",
+  "start_tc": "00:23.167",
+  "end_tc": "00:24.733",
+  "dur_s": 1.57,
+  "category": "HOST",
+  "description": "Host",
+  "words": "the most wanted list was actually born in"
+ },
+ {
+  "group": 10,
+  "states": "15-17",
+  "start_tc": "00:24.733",
+  "end_tc": "00:25.700",
+  "dur_s": 0.97,
+  "category": "TEXT",
+  "description": "Giant red 3D \"1949\" slammed over restaurant scene, shakes, fades in ~5f",
+  "words": "nineteen forty nine when"
+ },
+ {
+  "group": 11,
+  "states": "18-31",
+  "start_tc": "00:25.700",
+  "end_tc": "00:31.400",
+  "dur_s": 5.7,
+  "category": "SCENE",
+  "description": "Restaurant photo bg with 3 characters (FBI director in navy \"FBI\" shirt, two editors); 0.4s talk/gesture loop",
+  "words": "the director of the fbi was at dinner with the chief and editor of the international news service as they were discussing  ways to"
+ },
+ {
+  "group": 12,
+  "states": "32-32",
+  "start_tc": "00:31.400",
+  "end_tc": "00:34.000",
+  "dur_s": 2.6,
+  "category": "SCENE",
+  "description": "Close-up push on one character's sweating face",
+  "words": "promote and capture the fbi's toughest guys the"
+ },
+ {
+  "group": 13,
+  "states": "33-33",
+  "start_tc": "00:34.000",
+  "end_tc": "00:35.100",
+  "dur_s": 1.1,
+  "category": "HOST",
+  "description": "Host",
+  "words": "fbi wanted to use the"
+ },
+ {
+  "group": 14,
+  "states": "34-35",
+  "start_tc": "00:35.100",
+  "end_tc": "00:37.267",
+  "dur_s": 2.17,
+  "category": "GAG",
+  "description": "Newspaper \"FBI'S MOST-WANTED FUGITIVES NAMED\" as a character with eyes and legs, animated",
+  "words": "newspaper to spread awareness to civilians to get"
+ },
+ {
+  "group": 15,
+  "states": "36-47",
+  "start_tc": "00:37.267",
+  "end_tc": "00:40.367",
+  "dur_s": 3.1,
+  "category": "SCENE",
+  "description": "Character at desk with many ringing phones (tip line) + helmeted police character, \"INFORMATION\" text; 6-frame flipbook loop",
+  "words": "more tips to help arm law enforcement    with information   shortly"
+ },
+ {
+  "group": 16,
+  "states": "48-48",
+  "start_tc": "00:40.367",
+  "end_tc": "00:44.000",
+  "dur_s": 3.63,
+  "category": "HOST",
+  "description": "Host",
+  "words": "after this meeting the list was published and that very same day the"
+ },
+ {
+  "group": 17,
+  "states": "49-50",
+  "start_tc": "00:44.000",
+  "end_tc": "00:47.900",
+  "dur_s": 3.9,
+  "category": "CHAR",
+  "description": "Stick figure with real-photo head cut-out (first fugitive caught same day)",
+  "words": "one of members that was on the initial list was caught and from that point on the"
+ },
+ {
+  "group": 18,
+  "states": "51-52",
+  "start_tc": "00:47.900",
+  "end_tc": "00:49.500",
+  "dur_s": 1.6,
+  "category": "DOC",
+  "description": "FBI web page screenshot again",
+  "words": "fbi's most wanted list has been a staple"
+ },
+ {
+  "group": 19,
+  "states": "53-53",
+  "start_tc": "00:49.500",
+  "end_tc": "00:52.000",
+  "dur_s": 2.5,
+  "category": "GAG",
+  "description": "\"has been a staple\": giant staple over blurred screenshot",
+  "words": "when it comes to highlevel justice"
+ },
+ {
+  "group": 20,
+  "states": "54-54",
+  "start_tc": "00:52.000",
+  "end_tc": "00:55.900",
+  "dur_s": 3.9,
+  "category": "HOST",
+  "description": "Host hand-on-chin",
+  "words": "to be eligible to even be put on the fbi's most wanted list you have to do some terrible"
+ },
+ {
+  "group": 21,
+  "states": "55-57",
+  "start_tc": "00:55.900",
+  "end_tc": "00:57.900",
+  "dur_s": 2.0,
+  "category": "CHAR",
+  "description": "Character with trash can (petty \"terrible things\" joke), walks off",
+  "words": "things and in most cases "
+ },
+ {
+  "group": 22,
+  "states": "58-58",
+  "start_tc": "00:57.900",
+  "end_tc": "00:59.633",
+  "dur_s": 1.73,
+  "category": "HOST",
+  "description": "Host",
+  "words": "you have to have a long history or a stram"
+ },
+ {
+  "group": 23,
+  "states": "59-61",
+  "start_tc": "00:59.633",
+  "end_tc": "01:04.033",
+  "dur_s": 4.4,
+  "category": "GAG",
+  "description": "\"under your belt\": leather belt photo + \"REALLY BAD THINGS\" red text; then host with text fading behind",
+  "words": "of multiple things under your belt some examples of which we're going to get into today"
+ },
+ {
+  "group": 24,
+  "states": "62-62",
+  "start_tc": "01:04.033",
+  "end_tc": "01:06.433",
+  "dur_s": 2.4,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in (\"the only ways to be removed...\")",
+  "words": "oh and the only ways to be removed from this list"
+ },
+ {
+  "group": 25,
+  "states": "63-67",
+  "start_tc": "01:06.433",
+  "end_tc": "01:09.433",
+  "dur_s": 3.0,
+  "category": "GAG",
+  "description": "Host zoom + giant photo hand holding tiny character (\"captured\") + circle inset of character falling down stairs (\"dying\"), \"take your pick\"",
+  "words": "are being captured  or dying so take your pick"
+ },
+ {
+  "group": 26,
+  "states": "68-69",
+  "start_tc": "01:09.433",
+  "end_tc": "01:10.733",
+  "dur_s": 1.3,
+  "category": "TITLE_CARD",
+  "description": "Fugitive title card: red \"1\", white \"ALEJANDRO / CASTILLO\", mugshot right (+title SFX)",
+  "words": "alejandro castillo"
+ },
+ {
+  "group": 27,
+  "states": "70-70",
+  "start_tc": "01:10.733",
+  "end_tc": "01:14.033",
+  "dur_s": 3.3,
+  "category": "HOST",
+  "description": "Host",
+  "words": "it's crazy that the first entry on this list is the youngest entry by far"
+ },
+ {
+  "group": 28,
+  "states": "71-71",
+  "start_tc": "01:14.033",
+  "end_tc": "01:20.533",
+  "dur_s": 6.5,
+  "category": "CHAR_INFO",
+  "description": "Subject character with black name tag \"ALEJANDRO\"; red facts pop in on their words: \"BORN IN 1998\", \"NOVEMBER 26TH\", \"26 YEARS OLD\"",
+  "words": "alejandro was only born nineteen in ninety eight on november twenty sixth making him only twenty years six old at the time of this recording he was born in"
+ },
+ {
+  "group": 29,
+  "states": "72-72",
+  "start_tc": "01:20.533",
+  "end_tc": "01:26.033",
+  "dur_s": 5.5,
+  "category": "CHAR_INFO",
+  "description": "Arizona state map left, \"5'6\\\"\" right, \"180-190 POUNDS\", \"MALE HISPANIC\" in red",
+  "words": "arizona and is currently pbs he is male and hispanic"
+ },
+ {
+  "group": 30,
+  "states": "73-74",
+  "start_tc": "01:26.033",
+  "end_tc": "01:28.100",
+  "dur_s": 2.07,
+  "category": "HOST_OVER",
+  "description": "Host punch-in over dimmed info card",
+  "words": "and what landed him on this list may shock you"
+ },
+ {
+  "group": 31,
+  "states": "75-75",
+  "start_tc": "01:28.100",
+  "end_tc": "01:30.600",
+  "dur_s": 2.5,
+  "category": "HOST",
+  "description": "Host",
+  "words": "when alejandro was only seventeen years old he was working at a shamar's"
+ },
+ {
+  "group": 32,
+  "states": "76-77",
+  "start_tc": "01:30.600",
+  "end_tc": "01:32.567",
+  "dur_s": 1.97,
+  "category": "PHOTO_FULL",
+  "description": "Restaurant exterior photo, then North Carolina map overlay with \"CHARLOTTE, NORTH CAROLINA\" label + red dot",
+  "words": "restaurant charlotte in north carolina"
+ },
+ {
+  "group": 33,
+  "states": "78-78",
+  "start_tc": "01:32.567",
+  "end_tc": "01:33.767",
+  "dur_s": 1.2,
+  "category": "HOST",
+  "description": "Host",
+  "words": "he worked at this restaurant with his"
+ },
+ {
+  "group": 34,
+  "states": "79-82",
+  "start_tc": "01:33.767",
+  "end_tc": "01:39.633",
+  "dur_s": 5.87,
+  "category": "PHOTO",
+  "description": "Girlfriend mugshot; ex-girlfriend photo pops in beside it (layout re-centres)",
+  "words": "girlfriend but not only his girlfriend his ex girlfriend also worked there as alejandro's well ex girlfriend sandy"
+ },
+ {
+  "group": 35,
+  "states": "83-83",
+  "start_tc": "01:39.633",
+  "end_tc": "01:41.433",
+  "dur_s": 1.8,
+  "category": "CHAR",
+  "description": "Ex-girlfriend character lends money to subject; small photo inset + red arrow",
+  "words": "lent him some money but unfortunately"
+ },
+ {
+  "group": 36,
+  "states": "84-84",
+  "start_tc": "01:41.433",
+  "end_tc": "01:43.633",
+  "dur_s": 2.2,
+  "category": "DOC",
+  "description": "MISSING poster, slow move",
+  "words": "she went missing before he could pay her back"
+ },
+ {
+  "group": 37,
+  "states": "85-85",
+  "start_tc": "01:43.633",
+  "end_tc": "01:45.567",
+  "dur_s": 1.93,
+  "category": "HOST",
+  "description": "Host",
+  "words": "but even strangers the day after that"
+ },
+ {
+  "group": 38,
+  "states": "86-88",
+  "start_tc": "01:45.567",
+  "end_tc": "01:49.867",
+  "dur_s": 4.3,
+  "category": "PHOTO",
+  "description": "Ex-girlfriend photo; subject + girlfriend photos side by side",
+  "words": "sandy his ex girlfriend went missing both alejandro and his current girlfriend went missing as"
+ },
+ {
+  "group": 39,
+  "states": "89-89",
+  "start_tc": "01:49.867",
+  "end_tc": "01:50.233",
+  "dur_s": 0.37,
+  "category": "BLANK",
+  "description": "Empty background 0.4s",
+  "words": "well"
+ },
+ {
+  "group": 40,
+  "states": "90-90",
+  "start_tc": "01:50.233",
+  "end_tc": "01:54.667",
+  "dur_s": 4.43,
+  "category": "HOST",
+  "description": "Host",
+  "words": "but although they all went missing alejandro girlfriend and his were no victims they simply were"
+ },
+ {
+  "group": 41,
+  "states": "91-92",
+  "start_tc": "01:54.667",
+  "end_tc": "01:55.533",
+  "dur_s": 0.87,
+  "category": "CHAR",
+  "description": "Subject + girlfriend characters walk off; empty",
+  "words": " on the run"
+ },
+ {
+  "group": 42,
+  "states": "93-93",
+  "start_tc": "01:55.533",
+  "end_tc": "02:00.733",
+  "dur_s": 5.2,
+  "category": "HOST",
+  "description": "Host",
+  "words": "what happened was the night before his ex girlfriend sandy went missing alejandro and sandy had plans of meeting up so"
+ },
+ {
+  "group": 43,
+  "states": "94-95",
+  "start_tc": "02:00.733",
+  "end_tc": "02:04.300",
+  "dur_s": 3.57,
+  "category": "CHAR",
+  "description": "Money hand-off; extreme close-up of subject's evil grin",
+  "words": "alejandro could repay his debt although that was never his intention"
+ },
+ {
+  "group": 44,
+  "states": "96-96",
+  "start_tc": "02:04.300",
+  "end_tc": "02:06.467",
+  "dur_s": 2.17,
+  "category": "HOST",
+  "description": "Host",
+  "words": "when the two met up alejandro and his girlfriend forced"
+ },
+ {
+  "group": 45,
+  "states": "97-99",
+  "start_tc": "02:06.467",
+  "end_tc": "02:09.100",
+  "dur_s": 2.63,
+  "category": "SCENE",
+  "description": "Night parking-lot photo; victim character with giant grabbing hands (\"forced into the vehicle\")",
+  "words": "sandy to get in the vehicle and it was at that point when"
+ },
+ {
+  "group": 46,
+  "states": "100-101",
+  "start_tc": "02:09.100",
+  "end_tc": "02:11.633",
+  "dur_s": 2.53,
+  "category": "SCENE",
+  "description": "Close-ups: girlfriend holds a real-photo gun to victim",
+  "words": "alejandro's girlfriend held a gun to sandy and they drove"
+ },
+ {
+  "group": 47,
+  "states": "102-106",
+  "start_tc": "02:11.633",
+  "end_tc": "02:13.967",
+  "dur_s": 2.33,
+  "category": "SCENE",
+  "description": "Bank ATM night photo; victim character walks to ATM",
+  "words": "to the nearest atm withdrew where she  money after"
+ },
+ {
+  "group": 48,
+  "states": "107-107",
+  "start_tc": "02:13.967",
+  "end_tc": "02:14.767",
+  "dur_s": 0.8,
+  "category": "HOST",
+  "description": "Host",
+  "words": "this they drove"
+ },
+ {
+  "group": 49,
+  "states": "108-110",
+  "start_tc": "02:14.767",
+  "end_tc": "02:23.400",
+  "dur_s": 8.63,
+  "category": "PHOTO",
+  "description": "Photos framed over blurred copy of themselves: woods at night w/ headlights, foggy ditch, abandoned car",
+  "words": "deep into the woods and alejandro murdered his ex girlfriend and left her body in a ditch alejandra's car found was abandoned a little bit outside of town likely dumped by the murderers"
+ },
+ {
+  "group": 50,
+  "states": "111-111",
+  "start_tc": "02:23.400",
+  "end_tc": "02:24.300",
+  "dur_s": 0.9,
+  "category": "HOST",
+  "description": "Host",
+  "words": "but oddly enough"
+ },
+ {
+  "group": 51,
+  "states": "112-112",
+  "start_tc": "02:24.300",
+  "end_tc": "02:27.033",
+  "dur_s": 2.73,
+  "category": "PHOTO",
+  "description": "Victim's car photo over blurred bg",
+  "words": "sy's car was found all the way in arizona"
+ },
+ {
+  "group": 52,
+  "states": "113-113",
+  "start_tc": "02:27.033",
+  "end_tc": "02:30.633",
+  "dur_s": 3.6,
+  "category": "HOST_OVER",
+  "description": "Host punch-in fades in over blurred+darkened car photo",
+  "words": "basically on the opposite side of the country where it was also abandoned it"
+ },
+ {
+  "group": 53,
+  "states": "114-114",
+  "start_tc": "02:30.633",
+  "end_tc": "02:32.500",
+  "dur_s": 1.87,
+  "category": "HOST",
+  "description": "Host",
+  "words": "was this discovery that allowed them to find"
+ },
+ {
+  "group": 54,
+  "states": "115-117",
+  "start_tc": "02:32.500",
+  "end_tc": "02:37.700",
+  "dur_s": 5.2,
+  "category": "PIP",
+  "description": "Border-crossing surveillance footage framed; small host bottom-centre reacting",
+  "words": "surveillance footage of alejandro and his girlfriend crossing the border into mexico where they currently reside"
+ },
+ {
+  "group": 55,
+  "states": "118-118",
+  "start_tc": "02:37.700",
+  "end_tc": "02:43.000",
+  "dur_s": 5.3,
+  "category": "HOST",
+  "description": "Host (5.3s)",
+  "words": "at least alejandro still does three months after they disappeared into mexico alejandro's girlfriend actually"
+ },
+ {
+  "group": 56,
+  "states": "119-119",
+  "start_tc": "02:43.000",
+  "end_tc": "02:43.800",
+  "dur_s": 0.8,
+  "category": "PHOTO",
+  "description": "Girlfriend mugshot",
+  "words": "turned herself in"
+ },
+ {
+  "group": 57,
+  "states": "120-120",
+  "start_tc": "02:43.800",
+  "end_tc": "02:46.033",
+  "dur_s": 2.23,
+  "category": "HOST_OVER",
+  "description": "Host over blurred mugshot",
+  "words": "alejandra's girlfriend claims that one morning she woke up and"
+ },
+ {
+  "group": 58,
+  "states": "121-127",
+  "start_tc": "02:46.033",
+  "end_tc": "02:54.600",
+  "dur_s": 8.57,
+  "category": "CHAR",
+  "description": "Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face",
+  "words": "alejandra was simply gone and with nothing else to do she decided to turn herself in and whether he simply abandoned her or she's telling a lie to cover his tracks we may never know"
+ },
+ {
+  "group": 59,
+  "states": "128-128",
+  "start_tc": "02:54.600",
+  "end_tc": "02:59.500",
+  "dur_s": 4.9,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in",
+  "words": "but alejandro the seventeen murderer year old who is now twenty six is still at large"
+ },
+ {
+  "group": 60,
+  "states": "129-129",
+  "start_tc": "02:59.500",
+  "end_tc": "03:01.267",
+  "dur_s": 1.77,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"2\", \"DONALD / EUGENE / FIELDS II\", mugshot (+title SFX)",
+  "words": "donald eugene fields ii"
+ },
+ {
+  "group": 61,
+  "states": "130-130",
+  "start_tc": "03:01.267",
+  "end_tc": "03:03.933",
+  "dur_s": 2.67,
+  "category": "PIP",
+  "description": "Large photo of subject + small host bottom-left (\"definitely looks like somebody who would be on this list\")",
+  "words": "donald definitely looks like somebody who would be on this list"
+ },
+ {
+  "group": 62,
+  "states": "131-132",
+  "start_tc": "03:03.933",
+  "end_tc": "03:12.100",
+  "dur_s": 8.17,
+  "category": "CHAR_INFO",
+  "description": "Subject character, name tag \"DONALD\"; red \"JULY 9TH, 1964\", red height bar \"6' TO 6'4\\\" FT TALL\", \"WHITE MALE\", scar photo inset",
+  "words": "he was born in july in ninth nineteen sixty four is anywhere from six to six four tall he's a white male and has a scar in his chest and a few tattoos as well"
+ },
+ {
+  "group": 63,
+  "states": "133-135",
+  "start_tc": "03:12.100",
+  "end_tc": "03:18.067",
+  "dur_s": 5.97,
+  "category": "HOST",
+  "description": "Host; subject character; host hands-on-face shock",
+  "words": "fields is on this list for an extremely unsavory reason he's alleged to have trafficked at least one child"
+ },
+ {
+  "group": 64,
+  "states": "136-136",
+  "start_tc": "03:18.067",
+  "end_tc": "03:18.933",
+  "dur_s": 0.87,
+  "category": "MAP_STATE",
+  "description": "Missouri map (green) + red dot + label",
+  "words": "in missouri from"
+ },
+ {
+  "group": 65,
+  "states": "137-137",
+  "start_tc": "03:18.933",
+  "end_tc": "03:24.733",
+  "dur_s": 5.8,
+  "category": "HOST",
+  "description": "Host (5.8s)",
+  "words": "approximately twenty thirteen to twenty seventeen it is believed that donald was knowingly attempting to recruit"
+ },
+ {
+  "group": 66,
+  "states": "138-141",
+  "start_tc": "03:24.733",
+  "end_tc": "03:31.833",
+  "dur_s": 7.1,
+  "category": "SCENE",
+  "description": "Grass-roof house photo; subject holds child; joke sign \"PRIVATE PROPERTY - I'M HARBORING CHILDREN\"; blue cartoon car; cash",
+  "words": "entice harbor transport provide maintain and solicit a person who he believed to be under the age of eighteen years old"
+ },
+ {
+  "group": 67,
+  "states": "142-143",
+  "start_tc": "03:31.833",
+  "end_tc": "03:37.133",
+  "dur_s": 5.3,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in; host",
+  "words": "to put it in regular speak he was essentially trying to sell a child for sex his last known location is"
+ },
+ {
+  "group": 68,
+  "states": "144-144",
+  "start_tc": "03:37.133",
+  "end_tc": "03:39.433",
+  "dur_s": 2.3,
+  "category": "MAP_STATE",
+  "description": "Missouri map \"FRANKLIN COUNTY\" label + red pin",
+  "words": "franklin county missouri but he's been reported to have"
+ },
+ {
+  "group": 69,
+  "states": "145-145",
+  "start_tc": "03:39.433",
+  "end_tc": "03:42.000",
+  "dur_s": 2.57,
+  "category": "MAP_WORLD",
+  "description": "Cartoon N. America map; red zig-zag route with icon travelling along it (\"traveling around the country\")",
+  "words": "around the been traveling country since twenty twenty two"
+ },
+ {
+  "group": 70,
+  "states": "146-146",
+  "start_tc": "03:42.000",
+  "end_tc": "03:42.600",
+  "dur_s": 0.6,
+  "category": "HOST",
+  "description": "Host",
+  "words": "fortunately one"
+ },
+ {
+  "group": 71,
+  "states": "147-148",
+  "start_tc": "03:42.600",
+  "end_tc": "03:47.033",
+  "dur_s": 4.43,
+  "category": "CHAR",
+  "description": "Buyer character holding cash (real-photo hand prop)",
+  "words": "of the people that fields was selling this underage person to was caught and sentenced to over"
+ },
+ {
+  "group": 72,
+  "states": "149-150",
+  "start_tc": "03:47.033",
+  "end_tc": "03:48.200",
+  "dur_s": 1.17,
+  "category": "TEXT",
+  "description": "\"30 YEARS IN PRISON\" red callout top-centre over character",
+  "words": "thirty years in prison"
+ },
+ {
+  "group": 73,
+  "states": "151-151",
+  "start_tc": "03:48.200",
+  "end_tc": "03:49.600",
+  "dur_s": 1.4,
+  "category": "HOST",
+  "description": "Host",
+  "words": "and he even admitted to giving cash"
+ },
+ {
+  "group": 74,
+  "states": "152-156",
+  "start_tc": "03:49.600",
+  "end_tc": "03:52.133",
+  "dur_s": 2.53,
+  "category": "CHAR",
+  "description": "List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",
+  "words": "a car a motorcycle christmas presents and"
+ },
+ {
+  "group": 75,
+  "states": "157-157",
+  "start_tc": "03:52.133",
+  "end_tc": "03:56.867",
+  "dur_s": 4.73,
+  "category": "SCENE",
+  "description": "Beach photo with character on lounger (\"vacations\")",
+  "words": "vacations in exchange for access to this fourteen year old that fields was soliciting"
+ },
+ {
+  "group": 76,
+  "states": "158-158",
+  "start_tc": "03:56.867",
+  "end_tc": "03:59.333",
+  "dur_s": 2.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "every time the fbi gets a tip about him they are putting up"
+ },
+ {
+  "group": 77,
+  "states": "159-161",
+  "start_tc": "03:59.333",
+  "end_tc": "04:02.767",
+  "dur_s": 3.43,
+  "category": "PHOTO",
+  "description": "Edited billboard \"HAVE YOU SEEN THIS NASTY MAN? FBI.GOV\"; then tilted billboard + Facebook-ad screenshots collage",
+  "words": "billboards signs and facebook ads in the city to get any information but"
+ },
+ {
+  "group": 78,
+  "states": "162-163",
+  "start_tc": "04:02.767",
+  "end_tc": "04:08.633",
+  "dur_s": 5.87,
+  "category": "HOST_OVER",
+  "description": "Host punch-in over blurred collage; host",
+  "words": "unfortunately it seems that fields is typically one step ahead although i hope he is brought to justice very soon"
+ },
+ {
+  "group": 79,
+  "states": "164-165",
+  "start_tc": "04:08.633",
+  "end_tc": "04:10.433",
+  "dur_s": 1.8,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"3\", \"VITEL' / HOMME / INNOCENT\", photo (+title SFX)",
+  "words": " vel om innocent"
+ },
+ {
+  "group": 80,
+  "states": "166-168",
+  "start_tc": "04:10.433",
+  "end_tc": "04:15.867",
+  "dur_s": 5.43,
+  "category": "HOST",
+  "description": "Host; host + Google Translate screenshot \"homme innocent -> innocent man\" right; host",
+  "words": "ironically vel's last name literally translates to innocent man in french but this man is far"
+ },
+ {
+  "group": 81,
+  "states": "169-169",
+  "start_tc": "04:15.867",
+  "end_tc": "04:16.933",
+  "dur_s": 1.07,
+  "category": "PHOTO",
+  "description": "Subject photo close",
+  "words": "from innocent"
+ },
+ {
+  "group": 82,
+  "states": "170-170",
+  "start_tc": "04:16.933",
+  "end_tc": "04:19.800",
+  "dur_s": 2.87,
+  "category": "HOST",
+  "description": "Host",
+  "words": "vel is one of the leaders of hades's largest and most violent"
+ },
+ {
+  "group": 83,
+  "states": "171-171",
+  "start_tc": "04:19.800",
+  "end_tc": "04:20.833",
+  "dur_s": 1.03,
+  "category": "PHOTO",
+  "description": "Two tilted gang-violence photos (collage)",
+  "words": "gangs besides"
+ },
+ {
+  "group": 84,
+  "states": "172-172",
+  "start_tc": "04:20.833",
+  "end_tc": "04:27.233",
+  "dur_s": 6.4,
+  "category": "CHAR",
+  "description": "Subject character",
+  "words": "his affiliation with a gang that has been terrorizing haiti for years vel is also personally connected to a string"
+ },
+ {
+  "group": 85,
+  "states": "173-173",
+  "start_tc": "04:27.233",
+  "end_tc": "04:29.100",
+  "dur_s": 1.87,
+  "category": "GAG",
+  "description": "\"string of murders\": waving red string, swinging tags \"MURDERS\" then \"KIDNAPPINGS\"; character dimmed behind",
+  "words": "of murders and kidnappings"
+ },
+ {
+  "group": 86,
+  "states": "174-175",
+  "start_tc": "04:29.100",
+  "end_tc": "04:29.967",
+  "dur_s": 0.87,
+  "category": "TEXT",
+  "description": "Host; huge grey outline \"2021\" behind host",
+  "words": "in twenty twenty one and"
+ },
+ {
+  "group": 87,
+  "states": "176-176",
+  "start_tc": "04:29.967",
+  "end_tc": "04:32.867",
+  "dur_s": 2.9,
+  "category": "CHAR",
+  "description": "Two gang-leader characters shake hands (\"collaborated with another gang\")",
+  "words": "his gang collaborated with another gang to kidnap"
+ },
+ {
+  "group": 88,
+  "states": "177-177",
+  "start_tc": "04:32.867",
+  "end_tc": "04:35.900",
+  "dur_s": 3.03,
+  "category": "PHOTO",
+  "description": "Missionaries group photo",
+  "words": "seventeen christian missionaries that were currently in haiti"
+ },
+ {
+  "group": 89,
+  "states": "178-184",
+  "start_tc": "04:35.900",
+  "end_tc": "04:48.967",
+  "dur_s": 13.07,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-ins over blurred group photo, alternating scales/expressions",
+  "words": "and if this sounds familiar you've probably the heard story of before when it was happening because it was pretty high profile disturbingly out of all these hostages five of them were children one being of them under one year old but fortunately they were all safely returned after this surely"
+ },
+ {
+  "group": 90,
+  "states": "185-186",
+  "start_tc": "04:48.967",
+  "end_tc": "04:52.567",
+  "dur_s": 3.6,
+  "category": "GAG",
+  "description": "Baby close-up photo; green \"$$$\" over blurred baby (\"paid an undisclosed amount\")",
+  "words": "traumatic experience after somebody paid an undisclosed money amount of"
+ },
+ {
+  "group": 91,
+  "states": "187-187",
+  "start_tc": "04:52.567",
+  "end_tc": "04:53.200",
+  "dur_s": 0.63,
+  "category": "HOST",
+  "description": "Host",
+  "words": "initially these"
+ },
+ {
+  "group": 92,
+  "states": "188-189",
+  "start_tc": "04:53.200",
+  "end_tc": "04:57.267",
+  "dur_s": 4.07,
+  "category": "TEXT",
+  "description": "Subject with $$ eyes; \"$1M PER PERSON\" red callout",
+  "words": "gangs wanted one dollars million us per person but who knows what they settled for"
+ },
+ {
+  "group": 93,
+  "states": "190-190",
+  "start_tc": "04:57.267",
+  "end_tc": "05:00.533",
+  "dur_s": 3.27,
+  "category": "HOST",
+  "description": "Host",
+  "words": "after this ransom was paid vel's gang used the money to fund buying weapons"
+ },
+ {
+  "group": 94,
+  "states": "191-192",
+  "start_tc": "05:00.533",
+  "end_tc": "05:03.267",
+  "dur_s": 2.73,
+  "category": "PHOTO",
+  "description": "Gang-with-weapons photo; president photo",
+  "words": "and later that year the haitian president was"
+ },
+ {
+  "group": 95,
+  "states": "193-194",
+  "start_tc": "05:03.267",
+  "end_tc": "05:05.733",
+  "dur_s": 2.47,
+  "category": "GAG",
+  "description": "Red X over darkened photo (\"murdered\"); vacuum cleaner labelled \"POWER\" (\"power vacuum\")",
+  "words": "murdered leaving a massive power vacuum and an opportunity"
+ },
+ {
+  "group": 96,
+  "states": "195-204",
+  "start_tc": "05:05.733",
+  "end_tc": "05:09.400",
+  "dur_s": 3.67,
+  "category": "CHAR",
+  "description": "Subject character with vacuum, looping animation (\"gain massive power\")",
+  "words": " for vel's gang to gain  massive power haiti in in"
+ },
+ {
+  "group": 97,
+  "states": "205-205",
+  "start_tc": "05:09.400",
+  "end_tc": "05:11.667",
+  "dur_s": 2.27,
+  "category": "HOST",
+  "description": "Host",
+  "words": "twenty twenty three it's reported that this gang has up to"
+ },
+ {
+  "group": 98,
+  "states": "206-207",
+  "start_tc": "05:11.667",
+  "end_tc": "05:13.667",
+  "dur_s": 2.0,
+  "category": "TEXT",
+  "description": "\"600 MEMBERS\" red callout over host",
+  "words": "six hundred members including"
+ },
+ {
+  "group": 99,
+  "states": "208-209",
+  "start_tc": "05:13.667",
+  "end_tc": "05:22.167",
+  "dur_s": 8.5,
+  "category": "CHAR",
+  "description": "Child gang-member character; host (6.3s)",
+  "words": "children who are fighting against their will interestingly vatel offers a strange perspective into the life of crime in haiti whereas last year he actually did a"
+ },
+ {
+  "group": 100,
+  "states": "210-211",
+  "start_tc": "05:22.167",
+  "end_tc": "05:29.800",
+  "dur_s": 7.63,
+  "category": "PHOTO",
+  "description": "Documentary still with red circle + green arrow annotation; TV-news screenshot over blurred bg",
+  "words": "full documentary with reporters where he showed off his lifestyle and even spoke to reporters about how he came to power and what his lifestyle is currently like"
+ },
+ {
+  "group": 101,
+  "states": "212-213",
+  "start_tc": "05:29.800",
+  "end_tc": "05:35.300",
+  "dur_s": 5.5,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in; host",
+  "words": "it goes without saying that vatel is considered armed and extremely dangerous for vatel the fbi is offering two"
+ },
+ {
+  "group": 102,
+  "states": "214-218",
+  "start_tc": "05:35.300",
+  "end_tc": "05:39.533",
+  "dur_s": 4.23,
+  "category": "DOC",
+  "description": "FBI reward poster \"$2,000,000\" pops in + slow push",
+  "words": " dollars  million for anybody who can offer information leading to his arrest but"
+ },
+ {
+  "group": 103,
+  "states": "219-219",
+  "start_tc": "05:39.533",
+  "end_tc": "05:44.767",
+  "dur_s": 5.23,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in",
+  "words": "i think on the based brief that i gave about vel it's understandable why this price is so high and i also think it's no wonder"
+ },
+ {
+  "group": 104,
+  "states": "220-227",
+  "start_tc": "05:44.767",
+  "end_tc": "05:46.400",
+  "dur_s": 1.63,
+  "category": "CHAR",
+  "description": "Subject character walking loop (\"still on the loose\")",
+  "words": "how he's still  on the loose today  "
+ },
+ {
+  "group": 105,
+  "states": "228-228",
+  "start_tc": "05:46.400",
+  "end_tc": "05:48.300",
+  "dur_s": 1.9,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"4\", \"WILVER / VILLEGAS- / PALOMINO\" (+title SFX)",
+  "words": "wolver vz palamino"
+ },
+ {
+  "group": 106,
+  "states": "229-229",
+  "start_tc": "05:48.300",
+  "end_tc": "05:49.133",
+  "dur_s": 0.83,
+  "category": "HOST",
+  "description": "Host",
+  "words": "wolver is a high"
+ },
+ {
+  "group": 107,
+  "states": "230-232",
+  "start_tc": "05:49.133",
+  "end_tc": "05:53.167",
+  "dur_s": 4.03,
+  "category": "CHAR",
+  "description": "Guerrilla character + ELN logo pops in",
+  "words": "ranking member of the national liberation army or eln for sure which is"
+ },
+ {
+  "group": 108,
+  "states": "233-234",
+  "start_tc": "05:53.167",
+  "end_tc": "05:55.500",
+  "dur_s": 2.33,
+  "category": "PHOTO_FULL",
+  "description": "Guerrilla group photo",
+  "words": "a military movement which is active primarily in columbia"
+ },
+ {
+  "group": 109,
+  "states": "235-236",
+  "start_tc": "05:55.500",
+  "end_tc": "05:56.567",
+  "dur_s": 1.07,
+  "category": "MAP_STATE",
+  "description": "Colombia map, then + Venezuela, labels + red dots, over blurred photo",
+  "words": "and venezuela "
+ },
+ {
+  "group": 110,
+  "states": "237-237",
+  "start_tc": "05:56.567",
+  "end_tc": "05:58.067",
+  "dur_s": 1.5,
+  "category": "TEXT",
+  "description": "\"ELN\" white text on red/black flag",
+  "words": "eln similar to craze"
+ },
+ {
+  "group": 111,
+  "states": "238-238",
+  "start_tc": "05:58.067",
+  "end_tc": "06:02.133",
+  "dur_s": 4.07,
+  "category": "PHOTO",
+  "description": "Gang-leader photo over red/black flag",
+  "words": "bar the gang owned by vatel deals primarily with organized crime"
+ },
+ {
+  "group": 112,
+  "states": "239-244",
+  "start_tc": "06:02.133",
+  "end_tc": "06:05.000",
+  "dur_s": 2.87,
+  "category": "MEME",
+  "description": "Meme caption bar: \"KID NAPPING?\" over sleeping kid with floating zzz; \"BETTER WAKE 'EM UP!!!! \ud83d\ude02\ud83d\ude02\ud83d\ude02\" with masked kidnapper",
+  "words": "specifically kidnapping   extortion and even attacking"
+ },
+ {
+  "group": 113,
+  "states": "245-245",
+  "start_tc": "06:05.000",
+  "end_tc": "06:07.700",
+  "dur_s": 2.7,
+  "category": "SCENE",
+  "description": "Oil refinery photo + guerrilla character (\"attacking oil infrastructure\")",
+  "words": "oil infrastructure basically eco terrorism"
+ },
+ {
+  "group": 114,
+  "states": "246-246",
+  "start_tc": "06:07.700",
+  "end_tc": "06:08.933",
+  "dur_s": 1.23,
+  "category": "HOST",
+  "description": "Host",
+  "words": "and shortly after in true"
+ },
+ {
+  "group": 115,
+  "states": "247-248",
+  "start_tc": "06:08.933",
+  "end_tc": "06:13.000",
+  "dur_s": 4.07,
+  "category": "GAG",
+  "description": "Colombia map wearing \"deal with it\" sunglasses; extreme close-up drug-lord character",
+  "words": "colombian fashion got involved in the drug trade wilver personally is alleged to have killed"
+ },
+ {
+  "group": 116,
+  "states": "249-251",
+  "start_tc": "06:13.000",
+  "end_tc": "06:16.067",
+  "dur_s": 3.07,
+  "category": "CHAR",
+  "description": "Subject with knife vs activist with sign; activist disintegrates into pixels (\"killed... human rights activists\")",
+  "words": "multiple humans rights activists in colombia as well as committing"
+ },
+ {
+  "group": 117,
+  "states": "252-258",
+  "start_tc": "06:16.067",
+  "end_tc": "06:20.067",
+  "dur_s": 4.0,
+  "category": "CHAR",
+  "description": "Subject + character with real-photo head, small loop",
+  "words": " narcot  terrorism   distribution of drugs murder and other similar charges"
+ },
+ {
+  "group": 118,
+  "states": "259-259",
+  "start_tc": "06:20.067",
+  "end_tc": "06:24.567",
+  "dur_s": 4.5,
+  "category": "HOST",
+  "description": "Host",
+  "words": "wolver and his gang of eln is heavily attributed to the massive influx of drugs into the"
+ },
+ {
+  "group": 119,
+  "states": "260-261",
+  "start_tc": "06:24.567",
+  "end_tc": "06:28.267",
+  "dur_s": 3.7,
+  "category": "MAP_WORLD",
+  "description": "Cartoon map with drug bricks on southern US; host over darkened map",
+  "words": "southern states in the usa and for that reason the fbi is offering up to"
+ },
+ {
+  "group": 120,
+  "states": "262-263",
+  "start_tc": "06:28.267",
+  "end_tc": "06:32.467",
+  "dur_s": 4.2,
+  "category": "TEXT",
+  "description": "\"$5 MILLION\" red callout over host",
+  "words": "five dollars information million for any that could help bring him to justice"
+ },
+ {
+  "group": 121,
+  "states": "264-264",
+  "start_tc": "06:32.467",
+  "end_tc": "06:33.833",
+  "dur_s": 1.37,
+  "category": "HOST",
+  "description": "Host",
+  "words": "currently there is absolutely"
+ },
+ {
+  "group": 122,
+  "states": "265-266",
+  "start_tc": "06:33.833",
+  "end_tc": "06:38.833",
+  "dur_s": 5.0,
+  "category": "DOC",
+  "description": "FBI wanted poster; host over blurred poster",
+  "words": "no information available about where wilver may reside although if you have any clue you"
+ },
+ {
+  "group": 123,
+  "states": "267-267",
+  "start_tc": "06:38.833",
+  "end_tc": "06:40.533",
+  "dur_s": 1.7,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in",
+  "words": "might be five dollars"
+ },
+ {
+  "group": 124,
+  "states": "268-268",
+  "start_tc": "06:40.533",
+  "end_tc": "06:41.900",
+  "dur_s": 1.37,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"5\", \"RUJA / IGNATOVA\" (+title SFX)",
+  "words": "million ignatova richer rja"
+ },
+ {
+  "group": 125,
+  "states": "269-269",
+  "start_tc": "06:41.900",
+  "end_tc": "06:45.800",
+  "dur_s": 3.9,
+  "category": "HOST",
+  "description": "Host",
+  "words": "all of this person definitely is not a good person compared to some of the other people in this list"
+ },
+ {
+  "group": 126,
+  "states": "270-273",
+  "start_tc": "06:45.800",
+  "end_tc": "06:52.167",
+  "dur_s": 6.37,
+  "category": "PHOTO",
+  "description": "Subject portrait; Bulgaria map; extreme close-up crop of face",
+  "words": "roua is going to seem like a petty thief is a bulgarian woman and she was an entrepreneur or so she was believed be to"
+ },
+ {
+  "group": 127,
+  "states": "274-274",
+  "start_tc": "06:52.167",
+  "end_tc": "06:53.333",
+  "dur_s": 1.17,
+  "category": "HOST",
+  "description": "Host",
+  "words": "roua was the founder of"
+ },
+ {
+  "group": 128,
+  "states": "275-276",
+  "start_tc": "06:53.333",
+  "end_tc": "06:54.567",
+  "dur_s": 1.23,
+  "category": "LOGO",
+  "description": "OneCoin logo card",
+  "words": "onecoin limited which"
+ },
+ {
+  "group": 129,
+  "states": "277-277",
+  "start_tc": "06:54.567",
+  "end_tc": "07:00.000",
+  "dur_s": 5.43,
+  "category": "HOST",
+  "description": "Host (5.4s)",
+  "words": "was a bulgaria based company that was marketing and purporting cryptocurrency i'm sure as soon as it said crypto currency you"
+ },
+ {
+  "group": 130,
+  "states": "278-278",
+  "start_tc": "07:00.000",
+  "end_tc": "07:00.933",
+  "dur_s": 0.93,
+  "category": "FOOTAGE",
+  "description": "Stock footage: crashing price chart",
+  "words": "saw where this was going"
+ },
+ {
+  "group": 131,
+  "states": "279-279",
+  "start_tc": "07:00.933",
+  "end_tc": "07:04.633",
+  "dur_s": 3.7,
+  "category": "HOST",
+  "description": "Host",
+  "words": "onecoin was defrauding billions of dollars from their investors"
+ },
+ {
+  "group": 132,
+  "states": "280-280",
+  "start_tc": "07:04.633",
+  "end_tc": "07:05.700",
+  "dur_s": 1.07,
+  "category": "GAG",
+  "description": "Earth globe with red markers (\"investors all over the world\")",
+  "words": "all over the world"
+ },
+ {
+  "group": 133,
+  "states": "281-281",
+  "start_tc": "07:05.700",
+  "end_tc": "07:10.667",
+  "dur_s": 4.97,
+  "category": "HOST",
+  "description": "Host (5.0s)",
+  "words": "in and order to make her scheme as big as it was and go on as long as it was rjo is allegedly making"
+ },
+ {
+  "group": 134,
+  "states": "282-282",
+  "start_tc": "07:10.667",
+  "end_tc": "07:16.300",
+  "dur_s": 5.63,
+  "category": "PIP",
+  "description": "Event footage + small host bottom-left",
+  "words": "false statements and representations to individuals in to order solicit more investments in onecoin basically"
+ },
+ {
+  "group": 135,
+  "states": "283-283",
+  "start_tc": "07:16.300",
+  "end_tc": "07:17.833",
+  "dur_s": 1.53,
+  "category": "HOST",
+  "description": "Host",
+  "words": "more or less of your"
+ },
+ {
+  "group": 136,
+  "states": "284-285",
+  "start_tc": "07:17.833",
+  "end_tc": "07:22.733",
+  "dur_s": 4.9,
+  "category": "GAG",
+  "description": "Pyramid outline with subject on top (\"Ponzi\"); FTX logo",
+  "words": "run of the mail ponzi scheman very similar to what happened recently with ftx which was another"
+ },
+ {
+  "group": 137,
+  "states": "286-286",
+  "start_tc": "07:22.733",
+  "end_tc": "07:24.500",
+  "dur_s": 1.77,
+  "category": "PHOTO",
+  "description": "Related-person photo over blurred bg",
+  "words": "huge cryptocurrency scandal"
+ },
+ {
+  "group": 138,
+  "states": "287-287",
+  "start_tc": "07:24.500",
+  "end_tc": "07:25.767",
+  "dur_s": 1.27,
+  "category": "HOST",
+  "description": "Host",
+  "words": "throughout the entirety of its scheme"
+ },
+ {
+  "group": 139,
+  "states": "288-289",
+  "start_tc": "07:25.767",
+  "end_tc": "07:27.800",
+  "dur_s": 2.03,
+  "category": "LOGO",
+  "description": "OneCoin logo",
+  "words": "onecoin is believed to have defrauded over four"
+ },
+ {
+  "group": 140,
+  "states": "290-292",
+  "start_tc": "07:27.800",
+  "end_tc": "07:31.067",
+  "dur_s": 3.27,
+  "category": "TEXT",
+  "description": "\"$4B OUT OF INVESTORS\" red callout + logo; host over it",
+  "words": " dollars billion out of investment which ers is insane"
+ },
+ {
+  "group": 141,
+  "states": "293-296",
+  "start_tc": "07:31.067",
+  "end_tc": "07:38.833",
+  "dur_s": 7.77,
+  "category": "DOC",
+  "description": "Wanted poster; red charge labels pop in around it one by one as spoken",
+  "words": " r's company was officially charged with conspiracy  to commit wire fraud wire fraud conspiracy to commit money laundering conspiracy commit to securities fraud and securities fraud"
+ },
+ {
+  "group": 142,
+  "states": "297-298",
+  "start_tc": "07:38.833",
+  "end_tc": "07:41.533",
+  "dur_s": 2.7,
+  "category": "HOST",
+  "description": "Host",
+  "words": "and currently roua is on the run on october twelfth"
+ },
+ {
+  "group": 143,
+  "states": "299-299",
+  "start_tc": "07:41.533",
+  "end_tc": "07:42.300",
+  "dur_s": 0.77,
+  "category": "TEXT",
+  "description": "\"OCTOBER 12TH, 2017\" over host",
+  "words": "twenty seventeen"
+ },
+ {
+  "group": 144,
+  "states": "300-301",
+  "start_tc": "07:42.300",
+  "end_tc": "07:46.100",
+  "dur_s": 3.8,
+  "category": "HOST",
+  "description": "Host",
+  "words": "was charged in the united states district court today and they were offering up to"
+ },
+ {
+  "group": 145,
+  "states": "302-303",
+  "start_tc": "07:46.100",
+  "end_tc": "07:50.033",
+  "dur_s": 3.93,
+  "category": "TEXT",
+  "description": "\"$5 MILLION\" over host",
+  "words": "five dollars million for any information that leads to her arrest or conviction"
+ },
+ {
+  "group": 146,
+  "states": "304-306",
+  "start_tc": "07:50.033",
+  "end_tc": "07:58.000",
+  "dur_s": 7.97,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-ins (\"note to self...\")",
+  "words": "note to self do not buy into cryptocurrency pyramid schemes i'm not anti crypto but i'm definitely anti cam and one coin was a huge scam"
+ },
+ {
+  "group": 147,
+  "states": "307-307",
+  "start_tc": "07:58.000",
+  "end_tc": "07:59.433",
+  "dur_s": 1.43,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"6\", \"ARNOLDO / JIMENEZ\" (+title SFX)",
+  "words": "arnaldo um menz"
+ },
+ {
+  "group": 148,
+  "states": "308-311",
+  "start_tc": "07:59.433",
+  "end_tc": "08:06.433",
+  "dur_s": 7.0,
+  "category": "HOST",
+  "description": "Host / punch-ins",
+  "words": "this man is absolutely vile as is everybody list on this but the specific details of this story just made me feel gross"
+ },
+ {
+  "group": 149,
+  "states": "312-313",
+  "start_tc": "08:06.433",
+  "end_tc": "08:07.633",
+  "dur_s": 1.2,
+  "category": "TEXT",
+  "description": "\"MAY 11TH, 2012\" over host",
+  "words": "on may eleventh twenty twelve"
+ },
+ {
+  "group": 150,
+  "states": "314-316",
+  "start_tc": "08:07.633",
+  "end_tc": "08:09.967",
+  "dur_s": 2.33,
+  "category": "SCENE",
+  "description": "Wedding aisle photo with bride+groom characters",
+  "words": "arnaldo got married to his wife and only"
+ },
+ {
+  "group": 151,
+  "states": "317-317",
+  "start_tc": "08:09.967",
+  "end_tc": "08:10.967",
+  "dur_s": 1.0,
+  "category": "HOST",
+  "description": "Host",
+  "words": "one day later on"
+ },
+ {
+  "group": 152,
+  "states": "318-319",
+  "start_tc": "08:10.967",
+  "end_tc": "08:11.633",
+  "dur_s": 0.67,
+  "category": "TEXT",
+  "description": "\"MAY 12TH, 2012\" over host",
+  "words": "may arnaldo twelfth "
+ },
+ {
+  "group": 153,
+  "states": "320-320",
+  "start_tc": "08:11.633",
+  "end_tc": "08:14.000",
+  "dur_s": 2.37,
+  "category": "CHAR",
+  "description": "Subject with knife",
+  "words": "is alleged with murdering his wife by stabbing"
+ },
+ {
+  "group": 154,
+  "states": "321-323",
+  "start_tc": "08:14.000",
+  "end_tc": "08:16.300",
+  "dur_s": 2.3,
+  "category": "PHOTO_FULL",
+  "description": "Sports-car photo + animated blood splatter",
+  "words": " her to death in the back of his maserati"
+ },
+ {
+  "group": 155,
+  "states": "324-324",
+  "start_tc": "08:16.300",
+  "end_tc": "08:19.933",
+  "dur_s": 3.63,
+  "category": "HOST",
+  "description": "Host",
+  "words": "he's alleged to at that point taking her dead body vehicle from his and putting her in the"
+ },
+ {
+  "group": 156,
+  "states": "325-330",
+  "start_tc": "08:19.933",
+  "end_tc": "08:23.667",
+  "dur_s": 3.73,
+  "category": "SCENE",
+  "description": "Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (\"vanished\")",
+  "words": "bathtub of her apartment where he left her and then seemingly vanished "
+ },
+ {
+  "group": 157,
+  "states": "331-331",
+  "start_tc": "08:23.667",
+  "end_tc": "08:26.133",
+  "dur_s": 2.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "when arnaldo's wife was not replying to any of family's her"
+ },
+ {
+  "group": 158,
+  "states": "332-333",
+  "start_tc": "08:26.133",
+  "end_tc": "08:30.000",
+  "dur_s": 3.87,
+  "category": "PHOTO_FULL",
+  "description": "Phone with blood (\"calls or texts\"); school door (\"pick up her children\")",
+  "words": "calls or texts and didn't pick up her children from school her family called the place where"
+ },
+ {
+  "group": 159,
+  "states": "334-337",
+  "start_tc": "08:30.000",
+  "end_tc": "08:33.633",
+  "dur_s": 3.63,
+  "category": "SCENE",
+  "description": "Two police characters in bathroom, shocked (\"wellness check\")",
+  "words": "they did a wellness check and found her body in her tub still in her wedding dress"
+ },
+ {
+  "group": 160,
+  "states": "338-338",
+  "start_tc": "08:33.633",
+  "end_tc": "08:35.100",
+  "dur_s": 1.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "arnaldo is believed to be somewhere"
+ },
+ {
+  "group": 161,
+  "states": "339-339",
+  "start_tc": "08:35.100",
+  "end_tc": "08:35.600",
+  "dur_s": 0.5,
+  "category": "MAP_WORLD",
+  "description": "Cartoon map, subject head icon in Mexico",
+  "words": "in but mexico unfortunately"
+ },
+ {
+  "group": 162,
+  "states": "340-340",
+  "start_tc": "08:35.600",
+  "end_tc": "08:43.700",
+  "dur_s": 8.1,
+  "category": "HOST",
+  "description": "Host (8.1s)",
+  "words": "after hundreds twelve years and of tips nothing has brought the fbi any closer to bringing this man to justice after the murder phone records were able to trace arnaldo"
+ },
+ {
+  "group": 163,
+  "states": "341-341",
+  "start_tc": "08:43.700",
+  "end_tc": "08:48.900",
+  "dur_s": 5.2,
+  "category": "MAP_WORLD",
+  "description": "Cartoon map with cell towers across states (\"phone records\")",
+  "words": "across multiple states across the country even and ended with him in texas extremely close to the mexican border"
+ },
+ {
+  "group": 164,
+  "states": "342-344",
+  "start_tc": "08:48.900",
+  "end_tc": "09:02.833",
+  "dur_s": 13.93,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in / host (8.7s)",
+  "words": "but unfortunately that's where the records ended and once he entered mexico there has been absolutely no sightings of him hopefully arnaldo is caught and serves life in prison for the crimes he's committed but from what we've seen so far in this list it seems that going to mexico is a pretty good way to avoid jail time"
+ },
+ {
+  "group": 165,
+  "states": "345-345",
+  "start_tc": "09:02.833",
+  "end_tc": "09:04.633",
+  "dur_s": 1.8,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"7\", \"OMAR / ALEXANDER / CARDENAS\" (+title SFX)",
+  "words": "omar alexander cardas"
+ },
+ {
+  "group": 166,
+  "states": "346-348",
+  "start_tc": "09:04.633",
+  "end_tc": "09:10.933",
+  "dur_s": 6.3,
+  "category": "HOST",
+  "description": "Host / punch-ins",
+  "words": "omar's case is short and simple but no less disturbing as he is charged with murdering a man in broad daylight with"
+ },
+ {
+  "group": 167,
+  "states": "349-354",
+  "start_tc": "09:10.933",
+  "end_tc": "09:15.533",
+  "dur_s": 4.6,
+  "category": "FOOTAGE",
+  "description": "Surveillance clip of suspect walking",
+  "words": "footage of him walking to and waddling away from the place where he committed this murder "
+ },
+ {
+  "group": 168,
+  "states": "355-355",
+  "start_tc": "09:15.533",
+  "end_tc": "09:17.767",
+  "dur_s": 2.23,
+  "category": "HOST",
+  "description": "Host",
+  "words": "omar is another young entry on this list being only twenty"
+ },
+ {
+  "group": 169,
+  "states": "356-356",
+  "start_tc": "09:17.767",
+  "end_tc": "09:19.867",
+  "dur_s": 2.1,
+  "category": "TEXT",
+  "description": "\"29 YEARS OLD\" + subject character",
+  "words": "nine years old at the time of recording this video"
+ },
+ {
+  "group": 170,
+  "states": "357-357",
+  "start_tc": "09:19.867",
+  "end_tc": "09:25.500",
+  "dur_s": 5.63,
+  "category": "HOST",
+  "description": "Host (5.6s)",
+  "words": "and even younger when this crime happened and while his crime is essentially caught on camera not much is known about"
+ },
+ {
+  "group": 171,
+  "states": "358-358",
+  "start_tc": "09:25.500",
+  "end_tc": "09:29.667",
+  "dur_s": 4.17,
+  "category": "CHAR_INFO",
+  "description": "Subject with red width bar \"300 POUNDS\" + height bar \"5'7\"",
+  "words": "him besides the fact that he's fifty seven and three hundred lb which is a crazy on"
+ },
+ {
+  "group": 172,
+  "states": "359-359",
+  "start_tc": "09:29.667",
+  "end_tc": "09:31.500",
+  "dur_s": 1.83,
+  "category": "TEXT",
+  "description": "\"AUGUST 15TH, 2019\" over host",
+  "words": "august fifteenth twenty nineteen"
+ },
+ {
+  "group": 173,
+  "states": "360-368",
+  "start_tc": "09:31.500",
+  "end_tc": "09:42.733",
+  "dur_s": 11.23,
+  "category": "SCENE",
+  "description": "Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",
+  "words": "omar walked to an open air shopping center where he stood in front of a barber shop pulled a pistol out of his pants and shot at the head of people one of the in the barber shop who he instantly killed and then seemingly just casually walked away "
+ },
+ {
+  "group": 174,
+  "states": "369-369",
+  "start_tc": "09:42.733",
+  "end_tc": "09:48.333",
+  "dur_s": 5.6,
+  "category": "HOST",
+  "description": "Host (5.6s)",
+  "words": "with how brazen this murder was and the fact that it was in public in broad daylight and even caught on camera to me it's"
+ },
+ {
+  "group": 175,
+  "states": "370-371",
+  "start_tc": "09:48.333",
+  "end_tc": "09:51.000",
+  "dur_s": 2.67,
+  "category": "SCENE",
+  "description": "Shopping-centre photo, tiny character walks away",
+  "words": "honestly crazy that this man is still walking free today being"
+ },
+ {
+  "group": 176,
+  "states": "372-372",
+  "start_tc": "09:51.000",
+  "end_tc": "09:52.467",
+  "dur_s": 1.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "a most wanted has criminal allowed the"
+ },
+ {
+  "group": 177,
+  "states": "373-373",
+  "start_tc": "09:52.467",
+  "end_tc": "09:58.000",
+  "dur_s": 5.53,
+  "category": "DOC",
+  "description": "FBI wanted poster",
+  "words": "fbi to get a lot more tips and information about this individual but unfortunately nothing has been able to help them find"
+ },
+ {
+  "group": 178,
+  "states": "374-374",
+  "start_tc": "09:58.000",
+  "end_tc": "10:00.300",
+  "dur_s": 2.3,
+  "category": "HOST",
+  "description": "Host",
+  "words": "him likely because like others on this list he"
+ },
+ {
+  "group": 179,
+  "states": "375-376",
+  "start_tc": "10:00.300",
+  "end_tc": "10:02.767",
+  "dur_s": 2.47,
+  "category": "MAP_STATE",
+  "description": "USA map with subject, then he vanishes (\"fled the country\")",
+  "words": "too fled the country to avoid prosecution"
+ },
+ {
+  "group": 180,
+  "states": "377-377",
+  "start_tc": "10:02.767",
+  "end_tc": "10:05.200",
+  "dur_s": 2.43,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"8\", \"YULAN / ADONAY / ARCHAGA / CARIAS\" (+title SFX)",
+  "words": "hulan adonai archaga kayas"
+ },
+ {
+  "group": 181,
+  "states": "378-378",
+  "start_tc": "10:05.200",
+  "end_tc": "10:08.500",
+  "dur_s": 3.3,
+  "category": "TEXT",
+  "description": "\"MS13\" red text centre",
+  "words": "ms thirteen is one of the most violent criminal organizations in the world"
+ },
+ {
+  "group": 182,
+  "states": "379-379",
+  "start_tc": "10:08.500",
+  "end_tc": "10:11.000",
+  "dur_s": 2.5,
+  "category": "HOST",
+  "description": "Host",
+  "words": "active primarily in south america specifically honduras"
+ },
+ {
+  "group": 183,
+  "states": "380-380",
+  "start_tc": "10:11.000",
+  "end_tc": "10:12.533",
+  "dur_s": 1.53,
+  "category": "MAP_STATE",
+  "description": "Central-America map, red dot, country labels",
+  "words": "guatemala el salvador"
+ },
+ {
+  "group": 184,
+  "states": "381-381",
+  "start_tc": "10:12.533",
+  "end_tc": "10:20.767",
+  "dur_s": 8.23,
+  "category": "HOST",
+  "description": "Host (8.2s)",
+  "words": "but currently are active in mexico and united the states as well yulan here is the alleged leader of the ms13 in all of honduras making him responsible for a"
+ },
+ {
+  "group": 185,
+  "states": "382-383",
+  "start_tc": "10:20.767",
+  "end_tc": "10:23.467",
+  "dur_s": 2.7,
+  "category": "PHOTO",
+  "description": "Subject photo; extreme close-up crop",
+  "words": "lot of shenanigans to say the least as such drug"
+ },
+ {
+  "group": 186,
+  "states": "384-387",
+  "start_tc": "10:23.467",
+  "end_tc": "10:24.900",
+  "dur_s": 1.43,
+  "category": "GAG",
+  "description": "Mask icon; box truck; \"WE SELL PEOPLE!\" advert on truck (\"human trafficking\")",
+  "words": "trafficking human  trafficking"
+ },
+ {
+  "group": 187,
+  "states": "388-389",
+  "start_tc": "10:24.900",
+  "end_tc": "10:28.167",
+  "dur_s": 3.27,
+  "category": "CHAR",
+  "description": "Photo pistol pointed at character (\"extortion\"); character carried off (\"kidnapping\")",
+  "words": "extortion kidnapping and extreme acts of violence yulan"
+ },
+ {
+  "group": 188,
+  "states": "390-390",
+  "start_tc": "10:28.167",
+  "end_tc": "10:30.867",
+  "dur_s": 2.7,
+  "category": "HOST",
+  "description": "Host",
+  "words": "specifically is wanted in the us for trafficking"
+ },
+ {
+  "group": 189,
+  "states": "391-392",
+  "start_tc": "10:30.867",
+  "end_tc": "10:34.133",
+  "dur_s": 3.27,
+  "category": "SCENE",
+  "description": "Truck-trailer interior with cocaine pallets, more added (\"multi-ton loads\")",
+  "words": "multi ton of loads cocaine into the united states"
+ },
+ {
+  "group": 190,
+  "states": "393-393",
+  "start_tc": "10:34.133",
+  "end_tc": "10:38.900",
+  "dur_s": 4.77,
+  "category": "HOST",
+  "description": "Host (4.8s)",
+  "words": "as well as murder and a laundry list of others crazy yulan was actually apprehended and charged"
+ },
+ {
+  "group": 191,
+  "states": "394-395",
+  "start_tc": "10:38.900",
+  "end_tc": "10:42.867",
+  "dur_s": 3.97,
+  "category": "SCENE",
+  "description": "Courtroom photo with characters; host over blurred courtroom",
+  "words": "in court murder for the of two hondurus prosecutors when during his trial"
+ },
+ {
+  "group": 192,
+  "states": "396-396",
+  "start_tc": "10:42.867",
+  "end_tc": "10:50.400",
+  "dur_s": 7.53,
+  "category": "PIP",
+  "description": "CCTV footage of courtroom attack + small host (7.5s)",
+  "words": "twenty armed men dressed in the same uniforms as the anti gang unit walk into the court hearing and seconds after unload on the entire room four"
+ },
+ {
+  "group": 193,
+  "states": "397-397",
+  "start_tc": "10:50.400",
+  "end_tc": "11:02.000",
+  "dur_s": 11.6,
+  "category": "HOST",
+  "description": "Host commentary hold (11.6s)",
+  "words": "police officers were killed and yulan was once again a free man the power that these criminal organizations south have in america is honestly scary and strongly rivals the government although some would argue that the two are intertwined"
+ },
+ {
+  "group": 194,
+  "states": "398-398",
+  "start_tc": "11:02.000",
+  "end_tc": "11:04.733",
+  "dur_s": 2.73,
+  "category": "CHAR_INFO",
+  "description": "Subject with \"160 POUNDS\" width bar + \"5'5\" height bar",
+  "words": "although this man is only fifty and five one hundred and sixty lbs"
+ },
+ {
+  "group": 195,
+  "states": "399-399",
+  "start_tc": "11:04.733",
+  "end_tc": "11:13.467",
+  "dur_s": 8.73,
+  "category": "HOST",
+  "description": "Host (8.7s)",
+  "words": "he is one of the most powerful and deadly men in honduras and likely in all of south america and it's not necessarily shocking that the fbi is willing to offer up to five"
+ },
+ {
+  "group": 196,
+  "states": "400-400",
+  "start_tc": "11:13.467",
+  "end_tc": "11:17.133",
+  "dur_s": 3.67,
+  "category": "TEXT",
+  "description": "\"$5 MILLION\" + wanted poster",
+  "words": "dollars million for information leading to the conviction or arrest of ulan"
+ },
+ {
+  "group": 197,
+  "states": "401-402",
+  "start_tc": "11:17.133",
+  "end_tc": "11:18.800",
+  "dur_s": 1.67,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"9\", \"ALEXIS / FLORES\" (+title SFX)",
+  "words": "alexis flores"
+ },
+ {
+  "group": 198,
+  "states": "403-404",
+  "start_tc": "11:18.800",
+  "end_tc": "11:23.567",
+  "dur_s": 4.77,
+  "category": "HOST",
+  "description": "Host / punch-in",
+  "words": "alexis is the another man from honduras although he is even shorter and smaller than the previous ent"
+ },
+ {
+  "group": 199,
+  "states": "405-405",
+  "start_tc": "11:23.567",
+  "end_tc": "11:27.400",
+  "dur_s": 3.83,
+  "category": "CHAR_INFO",
+  "description": "Subject with \"5'4\" height bar",
+  "words": "he stands at a staggering five four tall and weighs only one hundred and thirty lb but"
+ },
+ {
+  "group": 200,
+  "states": "406-406",
+  "start_tc": "11:27.400",
+  "end_tc": "11:32.133",
+  "dur_s": 4.73,
+  "category": "HOST",
+  "description": "Host (4.7s)",
+  "words": "his alleged crime is absolutely sick to it put bluntly alexis flores is alleged to have kidnapped"
+ },
+ {
+  "group": 201,
+  "states": "407-408",
+  "start_tc": "11:32.133",
+  "end_tc": "11:34.733",
+  "dur_s": 2.6,
+  "category": "CHAR",
+  "description": "Subject; giant grey hands (\"strangled\")",
+  "words": "and strangled to death a five year old girl in"
+ },
+ {
+  "group": 202,
+  "states": "409-410",
+  "start_tc": "11:34.733",
+  "end_tc": "11:35.800",
+  "dur_s": 1.07,
+  "category": "MAP_STATE",
+  "description": "Pennsylvania map, \"PHILADELPHIA\" dot, then \"PENNSYLVANIA\" label",
+  "words": "philadelphia pennsylvania"
+ },
+ {
+  "group": 203,
+  "states": "411-411",
+  "start_tc": "11:35.800",
+  "end_tc": "11:37.267",
+  "dur_s": 1.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "this young reported girl was missing"
+ },
+ {
+  "group": 204,
+  "states": "412-414",
+  "start_tc": "11:37.267",
+  "end_tc": "11:40.600",
+  "dur_s": 3.33,
+  "category": "TEXT",
+  "description": "\"JULY, 2000\" over host",
+  "words": "in july of two thousand and was found a few weeks later lifeless in"
+ },
+ {
+  "group": 205,
+  "states": "415-417",
+  "start_tc": "11:40.600",
+  "end_tc": "11:43.533",
+  "dur_s": 2.93,
+  "category": "PHOTO",
+  "description": "Two tilted abandoned-building photos + \"AUGUST, 2000\"",
+  "words": "the basement of an abandoned apartment building in august of two thousand"
+ },
+ {
+  "group": 206,
+  "states": "418-418",
+  "start_tc": "11:43.533",
+  "end_tc": "11:46.400",
+  "dur_s": 2.87,
+  "category": "HOST",
+  "description": "Host",
+  "words": "unfortunately for this crime there was little to no evidence and the case"
+ },
+ {
+  "group": 207,
+  "states": "419-420",
+  "start_tc": "11:46.400",
+  "end_tc": "11:48.067",
+  "dur_s": 1.67,
+  "category": "GAG",
+  "description": "Briefcase with eyes, then frozen in an ice block (\"the case went cold\")",
+  "words": "went cold for multiple years"
+ },
+ {
+  "group": 208,
+  "states": "421-422",
+  "start_tc": "11:48.067",
+  "end_tc": "11:50.667",
+  "dur_s": 2.6,
+  "category": "SCENE",
+  "description": "Abandoned basement photo + cartoon blue t-shirt; push to shirt",
+  "words": "the only piece of evidence they had was a strange t it shirt"
+ },
+ {
+  "group": 209,
+  "states": "423-424",
+  "start_tc": "11:50.667",
+  "end_tc": "11:53.200",
+  "dur_s": 2.53,
+  "category": "TEXT",
+  "description": "Host; huge outline \"2007\" behind host",
+  "words": "wasn't until seven years later in two thousand and"
+ },
+ {
+  "group": 210,
+  "states": "425-425",
+  "start_tc": "11:53.200",
+  "end_tc": "11:59.400",
+  "dur_s": 6.2,
+  "category": "SCENE",
+  "description": "Lab scientist photo + t-shirt (\"DNA analysis\")",
+  "words": "seven when dna analysis advancements were far enough along where they were successfully able to find a matching dna sample to someone that they"
+ },
+ {
+  "group": 211,
+  "states": "426-427",
+  "start_tc": "11:59.400",
+  "end_tc": "12:02.067",
+  "dur_s": 2.67,
+  "category": "SCENE",
+  "description": "Jail-bars photo with subject character + green $ (\"shoplifting and forgery\")",
+  "words": "arrested years prior for shoplifting and forgery"
+ },
+ {
+  "group": 212,
+  "states": "428-430",
+  "start_tc": "12:02.067",
+  "end_tc": "12:19.267",
+  "dur_s": 17.2,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in over blurred bars; host holds (4.8s, 9.8s)",
+  "words": "they finally had a lead and a perfect dna match closely linking this criminal to at least the owner of this t shirt which was directly at the crime scene although when they found out who this t shirt belonged to they had a whole new problem that they had to solve they knew they had their guy alexis flores but when searching the database they also saw that alexis flores was"
+ },
+ {
+  "group": 213,
+  "states": "431-432",
+  "start_tc": "12:19.267",
+  "end_tc": "12:20.733",
+  "dur_s": 1.47,
+  "category": "MAP_WORLD",
+  "description": "Cartoon map; red prohibition circle over USA (\"no longer in the United States\")",
+  "words": "no longer the united in states"
+ },
+ {
+  "group": 214,
+  "states": "433-435",
+  "start_tc": "12:20.733",
+  "end_tc": "12:37.200",
+  "dur_s": 16.47,
+  "category": "HOST",
+  "description": "Host / punch-in / host (9.7s)",
+  "words": "alexis was actually deported years prior for other unrelated charges and unfortunately the authorities had no idea where he was it's pretty shocking how somebody can do something once again so brazen in broad daylight and have absolutely nobody report or see anything at least that anything was able to bring him to justice"
+ },
+ {
+  "group": 215,
+  "states": "436-437",
+  "start_tc": "12:37.200",
+  "end_tc": "12:39.167",
+  "dur_s": 1.97,
+  "category": "TITLE_CARD",
+  "description": "Title card: red \"10\", \"BHADRESHKUMAR / CHETANBHAI / PATEL\" (+title SFX)",
+  "words": "badish kumar chaten by patel"
+ },
+ {
+  "group": 216,
+  "states": "438-438",
+  "start_tc": "12:39.167",
+  "end_tc": "12:52.433",
+  "dur_s": 13.27,
+  "category": "HOST",
+  "description": "Host (13.3s) - mid-roll CTA starts",
+  "words": "ladies and gentlemen before we get into the disgusting actions of the last person the on fbi's most wanted list i just wanted mention two quick things when doing research for this video i not only researched those who are currently on this list but i also made a list of some of the most"
+ },
+ {
+  "group": 217,
+  "states": "439-439",
+  "start_tc": "12:52.433",
+  "end_tc": "12:56.767",
+  "dur_s": 4.33,
+  "category": "PIP",
+  "description": "Grid of 10 historical fugitives + small host",
+  "words": "infamous people that have ever been on this list that has existed for over seventy years"
+ },
+ {
+  "group": 218,
+  "states": "440-440",
+  "start_tc": "12:56.767",
+  "end_tc": "13:05.900",
+  "dur_s": 9.13,
+  "category": "HOST",
+  "description": "Host (9.1s)",
+  "words": "and although doesn't youtube necessarily love videos on these topics if you guys want that video i'd be more than happy to make a video about the most infamous people to ever the be on list so"
+ },
+ {
+  "group": 219,
+  "states": "441-443",
+  "start_tc": "13:05.900",
+  "end_tc": "13:08.933",
+  "dur_s": 3.03,
+  "category": "CTA",
+  "description": "Grey thumbs-up turns blue (\"leave a like\"); speech bubble \"PLEASE MAKE THAT VID, BRODY!!\" (\"leave a comment\")",
+  "words": "leave a like or leave a comment letting me know you'd be interested in that video"
+ },
+ {
+  "group": 220,
+  "states": "444-446",
+  "start_tc": "13:08.933",
+  "end_tc": "13:15.900",
+  "dur_s": 6.97,
+  "category": "HOST",
+  "description": "Host / punch-ins",
+  "words": "and while the fbi most wanted list is definitely most the famous list there is also another list full of dangerous criminals that list is"
+ },
+ {
+  "group": 221,
+  "states": "447-449",
+  "start_tc": "13:15.900",
+  "end_tc": "13:26.267",
+  "dur_s": 10.37,
+  "category": "DOC",
+  "description": "US Marshals most-wanted poster + small host; host over blurred poster",
+  "words": "the us marshall's most wanted list and they currently have fifteen extremely dangerous criminals listed on there so if either of those videos are something that you'd want to see i'd be more than happy to cover just let know me by"
+ },
+ {
+  "group": 222,
+  "states": "450-450",
+  "start_tc": "13:26.267",
+  "end_tc": "13:29.200",
+  "dur_s": 2.93,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in, smiling",
+  "words": "leaving a like or a comment now let's proceed with our final entry"
+ },
+ {
+  "group": 223,
+  "states": "451-455",
+  "start_tc": "13:29.200",
+  "end_tc": "13:40.367",
+  "dur_s": 11.17,
+  "category": "HOST_PHOTO",
+  "description": "Host left + subject photo right; host centre between subject and fugitive #1 photos (\"similar to the first entry\")",
+  "words": "badush kumar shares a very similar and disturbing similarity to the first entry on this list badush kumar and alejandro both worked at restaurants with their significant others badrish kar"
+ },
+ {
+  "group": 224,
+  "states": "456-457",
+  "start_tc": "13:40.367",
+  "end_tc": "13:42.267",
+  "dur_s": 1.9,
+  "category": "PHOTO_FULL",
+  "description": "Donut-shop exterior; wedding photo",
+  "words": "worked at a dunkin donuts with his wife"
+ },
+ {
+  "group": 225,
+  "states": "458-458",
+  "start_tc": "13:42.267",
+  "end_tc": "13:46.600",
+  "dur_s": 4.33,
+  "category": "HOST",
+  "description": "Host",
+  "words": "and at it's that same dunkin donuts where badrish kar's wife would pass away customers"
+ },
+ {
+  "group": 226,
+  "states": "459-460",
+  "start_tc": "13:46.600",
+  "end_tc": "13:51.733",
+  "dur_s": 5.13,
+  "category": "SCENE",
+  "description": "Donut-shop interior photo + customer character",
+  "words": "entered this dunkin' donuts and called police after realizing that there was employees no at the store whatsoever"
+ },
+ {
+  "group": 227,
+  "states": "461-461",
+  "start_tc": "13:51.733",
+  "end_tc": "13:53.200",
+  "dur_s": 1.47,
+  "category": "HOST",
+  "description": "Host",
+  "words": "and once police entered the store they"
+ },
+ {
+  "group": 228,
+  "states": "462-462",
+  "start_tc": "13:53.200",
+  "end_tc": "13:55.600",
+  "dur_s": 2.4,
+  "category": "PHOTO_FULL",
+  "description": "Dark back-room door photo (+SFX)",
+  "words": "checked in the back and found a lifeless employee"
+ },
+ {
+  "group": 229,
+  "states": "463-464",
+  "start_tc": "13:55.600",
+  "end_tc": "13:57.900",
+  "dur_s": 2.3,
+  "category": "HOST_ZOOM",
+  "description": "Host punch-in over blurred door; hands-on-face shock",
+  "words": "this employee being the wife badish of kumar"
+ },
+ {
+  "group": 230,
+  "states": "465-483",
+  "start_tc": "13:57.900",
+  "end_tc": "14:07.333",
+  "dur_s": 9.43,
+  "category": "PIP",
+  "description": "CCTV security footage (19s) + small host bottom-left",
+  "words": "security footage pointed obviously to    kumar murdering his wife as  there was  footage of both of them stepping in the back room and badish only kumar leaving the back room before he fled the scene "
+ },
+ {
+  "group": 231,
+  "states": "484-484",
+  "start_tc": "14:07.333",
+  "end_tc": "14:09.067",
+  "dur_s": 1.73,
+  "category": "HOST",
+  "description": "Host",
+  "words": "badash kar was last seen taking"
+ },
+ {
+  "group": 232,
+  "states": "485-487",
+  "start_tc": "14:09.067",
+  "end_tc": "14:14.333",
+  "dur_s": 5.27,
+  "category": "PHOTO",
+  "description": "Tilted CCTV stills collage (taxi, train station)",
+  "words": "a taxi from a hotel in new jersey to a train station yark in new where he hasn't been seen or heard from since"
+ },
+ {
+  "group": 233,
+  "states": "488-488",
+  "start_tc": "14:14.333",
+  "end_tc": "14:15.667",
+  "dur_s": 1.33,
+  "category": "HOST",
+  "description": "Host",
+  "words": "hence why the fbi was so"
+ },
+ {
+  "group": 234,
+  "states": "489-491",
+  "start_tc": "14:15.667",
+  "end_tc": "14:21.800",
+  "dur_s": 6.13,
+  "category": "DOC",
+  "description": "FBI wanted poster; host over blurred poster; punch-in",
+  "words": "eager to put him on this list as without any information or tips this man is walking the streets free and"
+ },
+ {
+  "group": 235,
+  "states": "492-492",
+  "start_tc": "14:21.800",
+  "end_tc": "14:22.833",
+  "dur_s": 1.03,
+  "category": "FOOTAGE",
+  "description": "Footage clip over blurred poster",
+  "words": "nobody wants"
+ },
+ {
+  "group": 236,
+  "states": "493-495",
+  "start_tc": "14:22.833",
+  "end_tc": "14:33.267",
+  "dur_s": 10.43,
+  "category": "HOST",
+  "description": "Host (7.3s) / punch-in / host",
+  "words": "them after doing research for this video i have two pretty crazy takeaways and i want to know yours as well to me it seems so crazy that some people can just get away with such brazen and crazy crimes and it also seems extremely saddening how simply going"
+ },
+ {
+  "group": 237,
+  "states": "496-497",
+  "start_tc": "14:33.267",
+  "end_tc": "14:35.700",
+  "dur_s": 2.43,
+  "category": "GAG",
+  "description": "Cartoon map zoomed on \"MEXICO\" + dot; \"GET OUT OF JAIL FREE\" card over blurred map",
+  "words": "to mexico be a can get out of jail free card"
+ },
+ {
+  "group": 238,
+  "states": "498-498",
+  "start_tc": "14:35.700",
+  "end_tc": "14:37.900",
+  "dur_s": 2.2,
+  "category": "HOST",
+  "description": "Host",
+  "words": "if you happen to know anything about some of these people"
+ },
+ {
+  "group": 239,
+  "states": "499-500",
+  "start_tc": "14:37.900",
+  "end_tc": "14:40.633",
+  "dur_s": 2.73,
+  "category": "TEXT",
+  "description": "\"https://tips.fbi.gov/home\" red over host",
+  "words": "drop a tip at the fbi and you might just be a little bit richer thank"
+ },
+ {
+  "group": 240,
+  "states": "501-502",
+  "start_tc": "14:40.633",
+  "end_tc": "14:42.700",
+  "dur_s": 2.07,
+  "category": "HOST",
+  "description": "Host",
+  "words": " you guys so much for watching this video and"
+ },
+ {
+  "group": 241,
+  "states": "503-504",
+  "start_tc": "14:42.700",
+  "end_tc": "14:56.867",
+  "dur_s": 14.17,
+  "category": "ENDSCREEN",
+  "description": "Host left + white \"WATCH THIS NEXT\" card with red curved arrow + tiny agent peeking (11.6s)",
+  "words": "if you enjoyed this video check out this video on screen about how the most infamous serial killers caught got in this video i outlin the stories of how john wing gasey jeffrey dummer and ted bundy all got caught and spoiler alert there's some pretty stories crazy thank you guys so much for watching and as always trust me bro"
+ },
+ {
+  "group": 242,
+  "states": "505-506",
+  "start_tc": "14:56.867",
+  "end_tc": "15:03.500",
+  "dur_s": 6.63,
+  "category": "ENDSCREEN",
+  "description": "Host drops out with motion blur; channel logo + \"Subscribe\" button drop in and bounce; outro music",
+  "words": " "
+ },
+ {
+  "group": 243,
+  "states": "507-507",
+  "start_tc": "15:03.500",
+  "end_tc": "15:03.900",
+  "dur_s": 0.4,
+  "category": "BLANK",
+  "description": "Empty background 0.4s",
+  "words": ""
+ }
+]

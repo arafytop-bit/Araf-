@@ -1,0 +1,509 @@
+state,group,start_frame,end_frame,start_tc,end_tc,dur_s,dur_frames,kind,category,description,host_scale,push_rate_pct_per_s,words,ocr
+0,0,0,21,00:00.000,00:00.733,0.733,22,still,TITLE_KINETIC,"Kinetic title ""EVERY PERSON / ON THE FBI'S / MOST WANTED LIST"": all words pre-placed as dim ghosts, each lights up (white; MOST WANTED red) on its spoken word; small host bottom-left; 3 FBI-agent chibis run in from right",,,every person,[white] EVERY PERSON
+1,0,22,105,00:00.733,00:03.533,2.8,84,motion,TITLE_KINETIC,"Kinetic title ""EVERY PERSON / ON THE FBI'S / MOST WANTED LIST"": all words pre-placed as dim ghosts, each lights up (white; MOST WANTED red) on its spoken word; small host bottom-left; 3 FBI-agent chibis run in from right",,,currently on the fbi's most wanted list,[white] EVERY PERSON ON THE ERI’S | [red] MOST
+2,1,106,136,00:03.533,00:04.567,1.033,31,still,HOST,"Host, hands on hips, talking",normal(r81),-0.5,chances are you've heard about,
+3,2,137,142,00:04.567,00:04.767,0.2,6,still,DOC,"FBI ""Ten Most Wanted Fugitives"" web page screenshot, pops in (scale-down entrance) + slow push-in",,,the fbi's,[white] Tom Minet Wanted egntreos BShad Sean
+4,2,143,207,00:04.767,00:06.933,2.167,65,still,DOC,"FBI ""Ten Most Wanted Fugitives"" web page screenshot, pops in (scale-down entrance) + slow push-in",,0.57,most wanted list at some point in your life,"[white] Ten Most Wanted Fugitives Nowce The officiad FG) Tan Most Wanted Fugéives list mastained on the FE webste. Thar Information may be copled and distributed, however, any uruithonzed afterabon of any portion of the FBS Ten Most Vaned Fugiives posters lt wolution of fadern law 118 U.6.C., Section 709), Parsons who make or produce Ihese aiterations ara aubect 19 prosecution and. if coewided, shalt bg lined on enarizoned for ek mona Bian one year, oF bots, Harta 30 mtr ae ‘COMALD EUGENE FELDS BHADRESHKUMAR ALEJANORD ROBALES {TEL HOMME THNOCENF WLVEA YELEOAS- CHETAMBHA) PATEL CASTRLO PALOMINO ALLA KARA TOYA AROLOO SET OMAR ALEXANDER YULAH ADONAY AROHAZA MEZIS FLORES CARDEMA CARAS"
+5,3,208,243,00:06.933,00:08.133,1.2,36,still,HOST,Host,normal(r81),-0.03,it's also likely you that don't,
+6,4,244,272,00:08.133,00:09.100,0.967,29,still,HOST_ZOOM,"Three rapid punch-in host shots, new expression each (on ""know much about it"" / ""besides the fact"" / ""a list of criminals"")",zoom(r123),,know much about it,
+7,4,273,300,00:09.100,00:10.033,0.933,28,still,HOST_ZOOM,"Three rapid punch-in host shots, new expression each (on ""know much about it"" / ""besides the fact"" / ""a list of criminals"")",zoom(r123),,besides the fact that it's,
+8,4,301,326,00:10.033,00:10.900,0.867,26,still,HOST_ZOOM,"Three rapid punch-in host shots, new expression each (on ""know much about it"" / ""besides the fact"" / ""a list of criminals"")",zoom(r123),,a list of criminals,
+9,5,327,392,00:10.900,00:13.100,2.2,66,still,GAG,"Literal pun ""in the same boat"": host composited standing in a red rowboat on an ocean photo (+SFX)",small(r38),,well i was in the same boat so i did some research and,[white] Co
+10,6,393,605,00:13.100,00:20.200,7.1,213,still,HOST,"Host hand-on-chin ""thinking"" pose (""so I did some research"")",normal(r81),0.02,today i'm going to a explain brief history about the fbi's most wanted list and then take a deep dive into every single person who's on the list and,
+11,7,606,616,00:20.200,00:20.567,0.367,11,motion,DOC,"Grid of 6 fugitive mugshots pops in (""every single person who's on the list"")",,,why they're,[white] DOPALD LUGE 0a eF oF Va
+12,7,617,631,00:20.567,00:21.067,0.5,15,still,DOC,"Grid of 6 fugitive mugshots pops in (""every single person who's on the list"")",,,there spoiler,[white] in MAD od ae avy ‘wa 97 ory ata PRAM Ete
+13,8,632,694,00:21.067,00:23.167,2.1,63,still,TEXT,"""SPOILER ALERT"" big red text over blurred+darkened mugshot grid (+alert SFX)",,2.07,alert these are some bad people,[red] SPOILER LERT
+14,9,695,741,00:23.167,00:24.733,1.567,47,still,HOST,Host,normal(r81),-0.4,the most wanted list was actually born in,
+15,10,742,754,00:24.733,00:25.167,0.433,13,still,TEXT,"Giant red 3D ""1949"" slammed over restaurant scene, shakes, fades in ~5f",,,nineteen forty,[white] -ewrs mm roe oh mE Mc ar Dal ai | [red] “‘a94a9
+16,10,755,766,00:25.167,00:25.567,0.4,12,still,TEXT,"Giant red 3D ""1949"" slammed over restaurant scene, shakes, fades in ~5f",,,nine,[white] oe am we oA cwrrs me wl we er oe ad | [red] “4949
+17,10,767,770,00:25.567,00:25.700,0.133,4,still,TEXT,"Giant red 3D ""1949"" slammed over restaurant scene, shakes, fades in ~5f",,,when,[white] cwcs me om wm wo an | [red] ‘4949
+18,11,771,779,00:25.700,00:26.000,0.3,9,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,the director,[white] cwcs mm ae os el vy oe ed “ele | [red] of ‘eo eee er ni
+19,11,780,791,00:26.000,00:26.400,0.4,12,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,of the,[white] Gee uh wrt wi; et on ee SN is Zs | [red] ee hee
+20,11,792,804,00:26.400,00:26.833,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,fbi,"[white] oe ees mom oe oe oe Gum met, wm ho"" Zs Nol os, | [red] oe OE Le"
+21,11,805,816,00:26.833,00:27.233,0.4,12,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,was at,[white] the 4M swe mM ro we Lom ono Zs | [red] som
+22,11,817,828,00:27.233,00:27.633,0.4,12,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,dinner,[white] om CE es oe ee c7ck ie) on ht Ls | [red] ry oj) Gi.. ha
+23,11,829,841,00:27.633,00:28.067,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,with the,[white] gw_wcs me oe oh ee ee o9 | [red] rN Sh
+24,11,842,853,00:28.067,00:28.467,0.4,12,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,chief,[white] swe at Me rn oS aes | [red] som Qe
+25,11,854,866,00:28.467,00:28.900,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,and editor,[white] Sat cnr vs mma Lo SN Ls | [red] S\N.
+26,11,867,878,00:28.900,00:29.300,0.4,12,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,of the international,[white] em Ah swiss oe RG amma rie ee ON | [red] 3s os La.
+27,11,879,891,00:29.300,00:29.733,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,news,[white] Oe oe te ea ie Me! ae ee Lo SS | [red] Pe fen ene
+28,11,892,904,00:29.733,00:30.167,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,service,[white] cqwes oa Le Zz | [red] any
+29,11,905,917,00:30.167,00:30.600,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,as they were discussing,"[white] ae Oh oe Ae ew at io? oe ee cwcs ai, ow SN ay | [red] CM Yo."
+30,11,918,930,00:30.600,00:31.033,0.433,13,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,,[white] ee rwchm ie ww st at ie ee” LO iN 23 | [red] re) foe vou
+31,11,931,941,00:31.033,00:31.400,0.367,11,still,SCENE,"Restaurant photo bg with 3 characters (FBI director in navy ""FBI"" shirt, two editors); 0.4s talk/gesture loop",,,ways to,[white] oe OE Eee oh nd ha av mh mam mB er ae as 4s) | [red] al
+32,12,942,1019,00:31.400,00:34.000,2.6,78,still,SCENE,Close-up push on one character's sweating face,,0.57,promote and capture the fbi's toughest guys the,[white] re ae
+33,13,1020,1052,00:34.000,00:35.100,1.1,33,still,HOST,Host,normal(r81),0.77,fbi wanted to use the,
+34,14,1053,1064,00:35.100,00:35.500,0.4,12,still,GAG,"Newspaper ""FBI'S MOST-WANTED FUGITIVES NAMED"" as a character with eyes and legs, animated",,,newspaper,[white] Thean Te FBI'S; MOST-WANTED GITIVES’. Ps] wa fh ao fas
+35,14,1065,1117,00:35.500,00:37.267,1.767,53,motion,GAG,"Newspaper ""FBI'S MOST-WANTED FUGITIVES NAMED"" as a character with eyes and legs, animated",,,to spread awareness to civilians to get,"[white] ej Thezin FBI'S:‘MOST-WANTED FUGITIVES’ jie) Se ee Sd, ae Gir SE"
+36,15,1118,1138,00:37.267,00:37.967,0.7,21,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,more tips,
+37,15,1139,1142,00:37.967,00:38.100,0.133,4,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,to help,[white] sf Mae
+38,15,1143,1158,00:38.100,00:38.633,0.533,16,motion,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,arm law,
+39,15,1159,1163,00:38.633,00:38.800,0.167,5,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,enforcement,[white] te
+40,15,1164,1169,00:38.800,00:39.000,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,,[white] ae tee
+41,15,1170,1175,00:39.000,00:39.200,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,,
+42,15,1176,1181,00:39.200,00:39.400,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,,
+43,15,1182,1187,00:39.400,00:39.600,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,with,
+44,15,1188,1193,00:39.600,00:39.800,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,information,
+45,15,1194,1199,00:39.800,00:40.000,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,,
+46,15,1200,1205,00:40.000,00:40.200,0.2,6,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,,[white] a0 on an
+47,15,1206,1210,00:40.200,00:40.367,0.167,5,still,SCENE,"Character at desk with many ringing phones (tip line) + helmeted police character, ""INFORMATION"" text; 6-frame flipbook loop",,,shortly,[white] ova
+48,16,1211,1319,00:40.367,00:44.000,3.633,109,still,HOST,Host,normal(r81),0.03,after this meeting the list was published and that very same day the,
+49,17,1320,1355,00:44.000,00:45.200,1.2,36,still,CHAR,Stick figure with real-photo head cut-out (first fugitive caught same day),,0.2,one of members that was,
+50,17,1356,1436,00:45.200,00:47.900,2.7,81,still,CHAR,Stick figure with real-photo head cut-out (first fugitive caught same day),,0.76,on the initial list was caught and from that point on the,
+51,18,1437,1440,00:47.900,00:48.033,0.133,4,still,DOC,FBI web page screenshot again,,,fbi's,[white] wenae Eee
+52,18,1441,1484,00:48.033,00:49.500,1.467,44,still,DOC,FBI web page screenshot again,,0.51,most wanted list has been a staple,"[white] Ten Most Wanted Fugitives Noticg: Tha official FBI Ton Mom Vianted Fupsined iret bs maintained on tho FEI website, Ths information mey be copied and diswibuied, beware. any unauthonzad atarakon of ary porbon of the FEN Ten Aiost Wanted Fugityes postars ta inlailon of federal taw (18 U.S.C., Sacton 708). Parsons who make or reproduce these alterations ara subyect Lo prosecuton and, convicted, shall be fined of emprsoned far O08 mone HEA One year of both. hepa 10 mer at DONALD GUG Et PRLS BHADGS SHKUMAR, ALELAHORO ROSALES VITEL HOMME NOC ENT WAVER YRLEGAS- CHETANEMAS PATEL CASTILLO PALOMINO PUUIA FONATOVA, ASAIO SET TULAN ADOMAY ARCHAGS ALENS FLORES CARDENAS CARIAS"
+53,19,1485,1559,00:49.500,00:52.000,2.5,75,still,GAG,"""has been a staple"": giant staple over blurred screenshot",,0.18,when it comes to highlevel justice,
+54,20,1560,1676,00:52.000,00:55.900,3.9,117,still,HOST,Host hand-on-chin,normal(r81),-0.01,to be eligible to even be put on the fbi's most wanted list you have to do some terrible,
+55,21,1677,1704,00:55.900,00:56.833,0.933,28,still,CHAR,"Character with trash can (petty ""terrible things"" joke), walks off",,,things,
+56,21,1705,1730,00:56.833,00:57.700,0.867,26,motion,CHAR,"Character with trash can (petty ""terrible things"" joke), walks off",,,and in most cases,
+57,21,1731,1736,00:57.700,00:57.900,0.2,6,still,CHAR,"Character with trash can (petty ""terrible things"" joke), walks off",,,,
+58,22,1737,1788,00:57.900,00:59.633,1.733,52,still,HOST,Host,normal(r81),0.05,you have to have a long history or a stram,
+59,23,1789,1830,00:59.633,01:01.033,1.4,42,still,GAG,"""under your belt"": leather belt photo + ""REALLY BAD THINGS"" red text; then host with text fading behind",,,of multiple things,[white] fo
+60,23,1831,1858,01:01.033,01:01.967,0.933,28,still,GAG,"""under your belt"": leather belt photo + ""REALLY BAD THINGS"" red text; then host with text fading behind",,,under your belt some,[white] YL | [red] REALLY BAD THINGS
+61,23,1859,1920,01:01.967,01:04.033,2.067,62,still,GAG,"""under your belt"": leather belt photo + ""REALLY BAD THINGS"" red text; then host with text fading behind",normal(r81),0.0,examples of which we're going to get into today,
+62,24,1921,1992,01:04.033,01:06.433,2.4,72,still,HOST_ZOOM,"Host punch-in (""the only ways to be removed..."")",zoom(r123),-0.26,oh and the only ways to be removed from this list,
+63,25,1993,2004,01:06.433,01:06.833,0.4,12,still,GAG,"Host zoom + giant photo hand holding tiny character (""captured"") + circle inset of character falling down stairs (""dying""), ""take your pick""",zoom(r123),,are being,
+64,25,2005,2015,01:06.833,01:07.200,0.367,11,still,GAG,"Host zoom + giant photo hand holding tiny character (""captured"") + circle inset of character falling down stairs (""dying""), ""take your pick""",zoom(r123),,captured,
+65,25,2016,2029,01:07.200,01:07.667,0.467,14,still,GAG,"Host zoom + giant photo hand holding tiny character (""captured"") + circle inset of character falling down stairs (""dying""), ""take your pick""",zoom(r123),,,
+66,25,2030,2043,01:07.667,01:08.133,0.467,14,motion,GAG,"Host zoom + giant photo hand holding tiny character (""captured"") + circle inset of character falling down stairs (""dying""), ""take your pick""",zoom(r123),,or dying,[white] eo
+67,25,2044,2082,01:08.133,01:09.433,1.3,39,still,GAG,"Host zoom + giant photo hand holding tiny character (""captured"") + circle inset of character falling down stairs (""dying""), ""take your pick""",zoom(r123),-0.57,so take your pick,[white] li
+68,26,2083,2093,01:09.433,01:09.800,0.367,11,motion,TITLE_CARD,"Fugitive title card: red ""1"", white ""ALEJANDRO / CASTILLO"", mugshot right (+title SFX)",,,alejandro,[white] ALEJANDRO CASTILLO
+69,26,2094,2121,01:09.800,01:10.733,0.933,28,still,TITLE_CARD,"Fugitive title card: red ""1"", white ""ALEJANDRO / CASTILLO"", mugshot right (+title SFX)",,,castillo,[white] ALEJANDRO sd CASTILLO
+70,27,2122,2220,01:10.733,01:14.033,3.3,99,still,HOST,Host,normal(r81),-0.18,it's crazy that the first entry on this list is the youngest entry by far,
+71,28,2221,2415,01:14.033,01:20.533,6.5,195,still,CHAR_INFO,"Subject character with black name tag ""ALEJANDRO""; red facts pop in on their words: ""BORN IN 1998"", ""NOVEMBER 26TH"", ""26 YEARS OLD""",,-0.79,alejandro was only born nineteen in ninety eight on november twenty sixth making him only twenty years six old at the time of this recording he was born in,[white] ALEJANDRO | [red] BORN IN 1998 NOVEMBER 267TH 26 YEARS OLD
+72,29,2416,2580,01:20.533,01:26.033,5.5,165,still,CHAR_INFO,"Arizona state map left, ""5'6\"""" right, ""180-190 POUNDS"", ""MALE HISPANIC"" in red",,-0.67,arizona and is currently pbs he is male and hispanic,"[white] ALEJANDRO | [red] Ss’ Se"" 180 190 POUNDS"
+73,30,2581,2623,01:26.033,01:27.467,1.433,43,still,HOST_OVER,Host punch-in over dimmed info card,zoom(r123),-0.18,and what landed him on this list,
+74,30,2624,2642,01:27.467,01:28.100,0.633,19,still,HOST_OVER,Host punch-in over dimmed info card,zoom(r123),,may shock you,
+75,31,2643,2717,01:28.100,01:30.600,2.5,75,still,HOST,Host,normal(r81),-16.01,when alejandro was only seventeen years old he was working at a shamar's,
+76,32,2718,2744,01:30.600,01:31.500,0.9,27,still,PHOTO_FULL,"Restaurant exterior photo, then North Carolina map overlay with ""CHARLOTTE, NORTH CAROLINA"" label + red dot",,,restaurant charlotte in,[white] WSS aoe malpy
+77,32,2745,2776,01:31.500,01:32.567,1.067,32,still,PHOTO_FULL,"Restaurant exterior photo, then North Carolina map overlay with ""CHARLOTTE, NORTH CAROLINA"" label + red dot",,1.35,north carolina,[white] CHARLOTE. NORTH CAROLINA
+78,33,2777,2812,01:32.567,01:33.767,1.2,36,still,HOST,Host,normal(r81),-0.66,he worked at this restaurant with his,
+79,34,2813,2879,01:33.767,01:36.000,2.233,67,still,PHOTO,Girlfriend mugshot; ex-girlfriend photo pops in beside it (layout re-centres),,-0.12,girlfriend but not only his girlfriend his,
+80,34,2880,2890,01:36.000,01:36.367,0.367,11,motion,PHOTO,Girlfriend mugshot; ex-girlfriend photo pops in beside it (layout re-centres),,,ex,
+81,34,2891,2937,01:36.367,01:37.933,1.567,47,still,PHOTO,Girlfriend mugshot; ex-girlfriend photo pops in beside it (layout re-centres),,-0.54,girlfriend also worked there as alejandro's well,
+82,34,2938,2988,01:37.933,01:39.633,1.7,51,still,PHOTO,Girlfriend mugshot; ex-girlfriend photo pops in beside it (layout re-centres),normal(r81),0.12,ex girlfriend sandy,
+83,35,2989,3042,01:39.633,01:41.433,1.8,54,still,CHAR,Ex-girlfriend character lends money to subject; small photo inset + red arrow,,0.68,lent him some money but unfortunately,
+84,36,3043,3108,01:41.433,01:43.633,2.2,66,motion,DOC,"MISSING poster, slow move",,,she went missing before he could pay her back,"[white] Biack 2003 4&Door TOYOTA COROLLA Src NC Tae ZVE-1262 (’SANCY” WAS SEEN DAMING VOLE IN KAST GHARLGITTE OFF BAsTway G@rvo) RNG Wee LAMT Raine Ie THE Quite tier Cink STAT OM Ome RagtecAt BLO. Blan"" Aen “ALEC” ag thine peer ICS Latte Oe tate Cry Oui Cation Ghee. AHMIA PASTE .-xua"" ALILIANDIS CASTILLO “Aur” AM FE THruc QUAN LE--sasor* WACK FEMALE Pm MALE 46"" /110Lm ws ig Wi"" 1e0.as LINKET Gavan Han Oacerny EYES Baca Gace Eres BLACK Ham Grown Eves Amma as Ace ni? v4 CHARLOTTINAECKLEMSURG POLICE PRIVATE INVESTIGATOR JENNWER | [red] was “et. Smm fr. FS, CR Vee lem’ RAY Oe ge"
+85,37,3109,3166,01:43.633,01:45.567,1.933,58,still,HOST,Host,normal(r81),-0.48,but even strangers the day after that,
+86,38,3167,3228,01:45.567,01:47.633,2.067,62,still,PHOTO,Ex-girlfriend photo; subject + girlfriend photos side by side,,-0.67,sandy his ex girlfriend went missing both alejandro,
+87,38,3229,3253,01:47.633,01:48.467,0.833,25,still,PHOTO,Ex-girlfriend photo; subject + girlfriend photos side by side,,,and his,
+88,38,3254,3295,01:48.467,01:49.867,1.4,42,still,PHOTO,Ex-girlfriend photo; subject + girlfriend photos side by side,,-0.94,current girlfriend went missing as,
+89,39,3296,3306,01:49.867,01:50.233,0.367,11,still,BLANK,Empty background 0.4s,,,well,
+90,40,3307,3439,01:50.233,01:54.667,4.433,133,still,HOST,Host,normal(r81),-0.01,but although they all went missing alejandro girlfriend and his were no victims they simply were,
+91,41,3440,3444,01:54.667,01:54.833,0.167,5,still,CHAR,Subject + girlfriend characters walk off; empty,,,,
+92,41,3445,3465,01:54.833,01:55.533,0.7,21,still,CHAR,Subject + girlfriend characters walk off; empty,,,on the run,
+93,42,3466,3621,01:55.533,02:00.733,5.2,156,still,HOST,Host,normal(r81),-0.01,what happened was the night before his ex girlfriend sandy went missing alejandro and sandy had plans of meeting up so,
+94,43,3622,3670,02:00.733,02:02.367,1.633,49,still,CHAR,Money hand-off; extreme close-up of subject's evil grin,,0.42,alejandro could repay his debt,
+95,43,3671,3728,02:02.367,02:04.300,1.933,58,still,CHAR,Money hand-off; extreme close-up of subject's evil grin,,0.6,although that was never his intention,[red] im
+96,44,3729,3793,02:04.300,02:06.467,2.167,65,still,HOST,Host,normal(r81),0.1,when the two met up alejandro and his girlfriend forced,
+97,45,3794,3824,02:06.467,02:07.500,1.033,31,still,SCENE,"Night parking-lot photo; victim character with giant grabbing hands (""forced into the vehicle"")",,0.55,sandy to get,[red] ae anes
+98,45,3825,3835,02:07.500,02:07.867,0.367,11,motion,SCENE,"Night parking-lot photo; victim character with giant grabbing hands (""forced into the vehicle"")",,,in the vehicle,
+99,45,3836,3872,02:07.867,02:09.100,1.233,37,still,SCENE,"Night parking-lot photo; victim character with giant grabbing hands (""forced into the vehicle"")",,0.52,and it was at that point when,
+100,46,3873,3906,02:09.100,02:10.233,1.133,34,still,SCENE,Close-ups: girlfriend holds a real-photo gun to victim,,0.46,alejandro's girlfriend,
+101,46,3907,3948,02:10.233,02:11.633,1.4,42,still,SCENE,Close-ups: girlfriend holds a real-photo gun to victim,,-0.26,held a gun to sandy and they drove,[white] fs
+102,47,3949,3957,02:11.633,02:11.933,0.3,9,still,SCENE,Bank ATM night photo; victim character walks to ATM,,,to,[white] Bank ott America GE OO | [red] BankofAmerica
+103,47,3958,3974,02:11.933,02:12.500,0.567,17,motion,SCENE,Bank ATM night photo; victim character walks to ATM,,,the nearest atm,[white] anor Nmeanea 22- | [red] Bankef America
+104,47,3975,3992,02:12.500,02:13.100,0.6,18,still,SCENE,Bank ATM night photo; victim character walks to ATM,,,withdrew where she,[white] hj OS billie conAnnerica | [red] Renket America
+105,47,3993,4002,02:13.100,02:13.433,0.333,10,still,SCENE,Bank ATM night photo; victim character walks to ATM,,,,[white] Salat Minerioa 2Z pe | [red] Bankef America
+106,47,4003,4018,02:13.433,02:13.967,0.533,16,motion,SCENE,Bank ATM night photo; victim character walks to ATM,,,money after,[white] Ramat iene Ca ie | [red] Gankef America
+107,48,4019,4042,02:13.967,02:14.767,0.8,24,still,HOST,Host,normal(r81),,this they drove,
+108,49,4043,4120,02:14.767,02:17.367,2.6,78,still,PHOTO,"Photos framed over blurred copy of themselves: woods at night w/ headlights, foggy ditch, abandoned car",,0.6,deep into the woods and alejandro murdered his ex girlfriend and,[white] CP
+109,49,4121,4159,02:17.367,02:18.667,1.3,39,still,PHOTO,"Photos framed over blurred copy of themselves: woods at night w/ headlights, foggy ditch, abandoned car",,0.39,left her body in a ditch,[white] Ve
+110,49,4160,4301,02:18.667,02:23.400,4.733,142,still,PHOTO,"Photos framed over blurred copy of themselves: woods at night w/ headlights, foggy ditch, abandoned car",,0.53,alejandra's car found was abandoned a little bit outside of town likely dumped by the murderers,[white] Peay epee re te al Wee
+111,50,4302,4328,02:23.400,02:24.300,0.9,27,still,HOST,Host,normal(r81),,but oddly enough,
+112,51,4329,4410,02:24.300,02:27.033,2.733,82,still,PHOTO,Victim's car photo over blurred bg,,,sy's car was found all the way in arizona,"[white] ee,"
+113,52,4411,4518,02:27.033,02:30.633,3.6,108,still,HOST_OVER,Host punch-in fades in over blurred+darkened car photo,zoom(r123),0.0,basically on the opposite side of the country where it was also abandoned it,
+114,53,4519,4574,02:30.633,02:32.500,1.867,56,still,HOST,Host,normal(r81),-0.53,was this discovery that allowed them to find,
+115,54,4575,4624,02:32.500,02:34.167,1.667,50,still,PIP,Border-crossing surveillance footage framed; small host bottom-centre reacting,small(r38),0.51,surveillance footage of alejandro and his,[white] Yy ig
+116,54,4625,4666,02:34.167,02:35.567,1.4,42,still,PIP,Border-crossing surveillance footage framed; small host bottom-centre reacting,small(r38),0.54,girlfriend crossing the border,
+117,54,4667,4730,02:35.567,02:37.700,2.133,64,still,PIP,Border-crossing surveillance footage framed; small host bottom-centre reacting,small(r38),0.56,into mexico where they currently reside,[red] t's
+118,55,4731,4889,02:37.700,02:43.000,5.3,159,still,HOST,Host (5.3s),normal(r81),,at least alejandro still does three months after they disappeared into mexico alejandro's girlfriend actually,
+119,56,4890,4913,02:43.000,02:43.800,0.8,24,still,PHOTO,Girlfriend mugshot,,,turned herself in,[white] gh Laneeuarns
+120,57,4914,4980,02:43.800,02:46.033,2.233,67,still,HOST_OVER,Host over blurred mugshot,normal(r81),-0.21,alejandra's girlfriend claims that one morning she woke up and,
+121,58,4981,5005,02:46.033,02:46.867,0.833,25,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,,alejandra was simply,
+122,58,5006,5033,02:46.867,02:47.800,0.933,28,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,,gone and,
+123,58,5034,5060,02:47.800,02:48.700,0.9,27,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,,with nothing else to do she,
+124,58,5061,5149,02:48.700,02:51.667,2.967,89,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,0.57,decided to turn herself in and whether he simply abandoned her,
+125,58,5150,5174,02:51.667,02:52.500,0.833,25,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,,or she's telling,
+126,58,5175,5213,02:52.500,02:53.800,1.3,39,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,1.35,a lie to cover his tracks,
+127,58,5214,5237,02:53.800,02:54.600,0.8,24,still,CHAR,Subject + girlfriend characters; girlfriend alone; 4-step punch-in on her face,,,we may never know,
+128,59,5238,5384,02:54.600,02:59.500,4.9,147,still,HOST_ZOOM,Host punch-in,zoom(r123),-0.01,but alejandro the seventeen murderer year old who is now twenty six is still at large,
+129,60,5385,5437,02:59.500,03:01.267,1.767,53,still,TITLE_CARD,"Title card: red ""2"", ""DONALD / EUGENE / FIELDS II"", mugshot (+title SFX)",,1.58,donald eugene fields ii,[white] DONALD EUGENE FIELDS Il
+130,61,5438,5517,03:01.267,03:03.933,2.667,80,still,PIP,"Large photo of subject + small host bottom-left (""definitely looks like somebody who would be on this list"")",small(r38),,donald definitely looks like somebody who would be on this list,
+131,62,5518,5724,03:03.933,03:10.833,6.9,207,still,CHAR_INFO,"Subject character, name tag ""DONALD""; red ""JULY 9TH, 1964"", red height bar ""6' TO 6'4\"" FT TALL"", ""WHITE MALE"", scar photo inset",,-0.36,he was born in july in ninth nineteen sixty four is anywhere from six to six four tall he's a white male and has a scar in his chest and,[white] DONALD | [red] JULY STH 1964 TO6 FT TALL
+132,62,5725,5762,03:10.833,03:12.100,1.267,38,still,CHAR_INFO,"Subject character, name tag ""DONALD""; red ""JULY 9TH, 1964"", red height bar ""6' TO 6'4\"" FT TALL"", ""WHITE MALE"", scar photo inset",,-0.59,a few tattoos as well,[white] DONALD Yd | [red] JULY STM 1964 TOS Fr TALL WHITE MALE
+133,63,5763,5808,03:12.100,03:13.633,1.533,46,still,HOST,Host; subject character; host hands-on-face shock,normal(r81),-0.44,fields is on this list for,
+134,63,5809,5871,03:13.633,03:15.733,2.1,63,still,HOST,Host; subject character; host hands-on-face shock,,1.77,an extremely unsavory reason he's,
+135,63,5872,5941,03:15.733,03:18.067,2.333,70,still,HOST,Host; subject character; host hands-on-face shock,normal(r81),-0.47,alleged to have trafficked at least one child,
+136,64,5942,5967,03:18.067,03:18.933,0.867,26,still,MAP_STATE,Missouri map (green) + red dot + label,,,in missouri from,[white] MISSOURI
+137,65,5968,6141,03:18.933,03:24.733,5.8,174,still,HOST,Host (5.8s),normal(r81),0.0,approximately twenty thirteen to twenty seventeen it is believed that donald was knowingly attempting to recruit,
+138,66,6142,6165,03:24.733,03:25.533,0.8,24,still,SCENE,"Grass-roof house photo; subject holds child; joke sign ""PRIVATE PROPERTY - I'M HARBORING CHILDREN""; blue cartoon car; cash",,,entice harbor,
+139,66,6166,6182,03:25.533,03:26.100,0.567,17,still,SCENE,"Grass-roof house photo; subject holds child; joke sign ""PRIVATE PROPERTY - I'M HARBORING CHILDREN""; blue cartoon car; cash",,,transport,
+140,66,6183,6245,03:26.100,03:28.200,2.1,63,still,SCENE,"Grass-roof house photo; subject holds child; joke sign ""PRIVATE PROPERTY - I'M HARBORING CHILDREN""; blue cartoon car; cash",,0.6,provide maintain and solicit,[white] “Th... aA Pane LF
+141,66,6246,6354,03:28.200,03:31.833,3.633,109,still,SCENE,"Grass-roof house photo; subject holds child; joke sign ""PRIVATE PROPERTY - I'M HARBORING CHILDREN""; blue cartoon car; cash",,0.59,a person who he believed to be under the age of eighteen years old,[white] naar Ce
+142,67,6355,6474,03:31.833,03:35.833,4.0,120,still,HOST_ZOOM,Host punch-in; host,zoom(r123),0.06,to put it in regular speak he was essentially trying to sell a child for sex,
+143,67,6475,6513,03:35.833,03:37.133,1.3,39,still,HOST_ZOOM,Host punch-in; host,normal(r81),-0.31,his last known location is,
+144,68,6514,6582,03:37.133,03:39.433,2.3,69,still,MAP_STATE,"Missouri map ""FRANKLIN COUNTY"" label + red pin",,2.46,franklin county missouri but he's been reported to have,[white] FRANKLIN COUNTY
+145,69,6583,6659,03:39.433,03:42.000,2.567,77,still,MAP_WORLD,"Cartoon N. America map; red zig-zag route with icon travelling along it (""traveling around the country"")",,0.61,around the been traveling country since twenty twenty two,
+146,70,6660,6677,03:42.000,03:42.600,0.6,18,still,HOST,Host,normal(r81),,fortunately one,
+147,71,6678,6715,03:42.600,03:43.867,1.267,38,still,CHAR,Buyer character holding cash (real-photo hand prop),,1.6,of the people that fields was,
+148,71,6716,6810,03:43.867,03:47.033,3.167,95,still,CHAR,Buyer character holding cash (real-photo hand prop),,1.03,selling this underage person to was caught and sentenced to over,
+149,72,6811,6825,03:47.033,03:47.533,0.5,15,motion,TEXT,"""30 YEARS IN PRISON"" red callout top-centre over character",,,thirty years,[red] 30 YEARS IN PRISON
+150,72,6826,6845,03:47.533,03:48.200,0.667,20,still,TEXT,"""30 YEARS IN PRISON"" red callout top-centre over character",,,in prison,[red] 30 YEARS IN PRISON
+151,73,6846,6887,03:48.200,03:49.600,1.4,42,still,HOST,Host,normal(r81),-0.25,and he even admitted to giving cash,
+152,74,6888,6904,03:49.600,03:50.167,0.567,17,still,CHAR,"List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",,,a,
+153,74,6905,6921,03:50.167,03:50.733,0.567,17,still,CHAR,"List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",,,car,
+154,74,6922,6939,03:50.733,03:51.333,0.6,18,still,CHAR,"List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",small(r38),,a motorcycle,[white] Ne
+155,74,6940,6949,03:51.333,03:51.667,0.333,10,still,CHAR,"List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",small(r38),,christmas,[white] oO. | [red] 24>
+156,74,6950,6963,03:51.667,03:52.133,0.467,14,still,CHAR,"List build-up: cash, car, motorcycle photo, Christmas present + Santa hat each pop in on its spoken word",small(r38),,presents and,[white] eae om | [red] 45>
+157,75,6964,7105,03:52.133,03:56.867,4.733,142,still,SCENE,"Beach photo with character on lounger (""vacations"")",,,vacations in exchange for access to this fourteen year old that fields was soliciting,[white] cst pono ih ee omy az im ee | [red] —ean ~._seeee oil
+158,76,7106,7179,03:56.867,03:59.333,2.467,74,still,HOST,Host,normal(r81),-0.42,every time the fbi gets a tip about him they are putting up,
+159,77,7180,7216,03:59.333,04:00.567,1.233,37,still,PHOTO,"Edited billboard ""HAVE YOU SEEN THIS NASTY MAN? FBI.GOV""; then tilted billboard + Facebook-ad screenshots collage",,0.65,billboards signs and,
+160,77,7217,7228,04:00.567,04:00.967,0.4,12,motion,PHOTO,"Edited billboard ""HAVE YOU SEEN THIS NASTY MAN? FBI.GOV""; then tilted billboard + Facebook-ad screenshots collage",,,facebook,"[white] Alty y'all now this trapk? Me god NO thik and negather mura eed Men boched up ASAP Ire, See mre THE £81 NEEOS YOUR HELP A0t mow UG? emer OF net Greet Fad | [red] XR sf"
+161,77,7229,7282,04:00.967,04:02.767,1.8,54,still,PHOTO,"Edited billboard ""HAVE YOU SEEN THIS NASTY MAN? FBI.GOV""; then tilted billboard + Facebook-ad screenshots collage",,0.57,ads in the city to get any information but,"[white] FBl Any y'all Anove (hie freal Ik? He Gor no EL aNd negative ai re. Net hum hocked up ASAP Irtr. Sree THE FBINEEDS YOUR HELP an DEG) BCU pre at, ise Radial"
+162,78,7283,7379,04:02.767,04:06.000,3.233,97,still,HOST_OVER,Host punch-in over blurred collage; host,zoom(r123),-0.1,unfortunately it seems that fields is typically one step ahead,
+163,78,7380,7458,04:06.000,04:08.633,2.633,79,still,HOST_OVER,Host punch-in over blurred collage; host,normal(r81),-0.33,although i hope he is brought to justice very soon,
+164,79,7459,7468,04:08.633,04:08.967,0.333,10,motion,TITLE_CARD,"Title card: red ""3"", ""VITEL' / HOMME / INNOCENT"", photo (+title SFX)",,,,[white] VITEL’ HOMME ry INNOCENT if
+165,79,7469,7512,04:08.967,04:10.433,1.467,44,still,TITLE_CARD,"Title card: red ""3"", ""VITEL' / HOMME / INNOCENT"", photo (+title SFX)",,1.18,vel om innocent,[white] VITEL’ HOMME ry INNOCENT Ir
+166,80,7513,7598,04:10.433,04:13.300,2.867,86,still,HOST,"Host; host + Google Translate screenshot ""homme innocent -> innocent man"" right; host",normal(r81),-0.25,ironically vel's last name literally translates to,
+167,80,7599,7642,04:13.300,04:14.767,1.467,44,still,HOST,"Host; host + Google Translate screenshot ""homme innocent -> innocent man"" right; host",zoom(r123),0.49,innocent man in french,[white] hornme innagent innocent mar
+168,80,7643,7675,04:14.767,04:15.867,1.1,33,still,HOST,"Host; host + Google Translate screenshot ""homme innocent -> innocent man"" right; host",normal(r81),-19.61,but this man is far,
+169,81,7676,7707,04:15.867,04:16.933,1.067,32,still,PHOTO,Subject photo close,,2.11,from innocent,[white] “KR
+170,82,7708,7793,04:16.933,04:19.800,2.867,86,still,HOST,Host,normal(r81),0.22,vel is one of the leaders of hades's largest and most violent,
+171,83,7794,7824,04:19.800,04:20.833,1.033,31,still,PHOTO,Two tilted gang-violence photos (collage),,0.61,gangs besides,[red] Seay? ry
+172,84,7825,8016,04:20.833,04:27.233,6.4,192,still,CHAR,Subject character,,0.5,his affiliation with a gang that has been terrorizing haiti for years vel is also personally connected to a string,
+173,85,8017,8072,04:27.233,04:29.100,1.867,56,motion,GAG,"""string of murders"": waving red string, swinging tags ""MURDERS"" then ""KIDNAPPINGS""; character dimmed behind",,,of murders and kidnappings,[white] sh DS 1k ty: Lae ao Na te aby per
+174,86,8073,8076,04:29.100,04:29.233,0.133,4,still,TEXT,"Host; huge grey outline ""2021"" behind host",normal(r81),,in twenty,
+175,86,8077,8098,04:29.233,04:29.967,0.733,22,still,TEXT,"Host; huge grey outline ""2021"" behind host",normal(r81),,twenty one and,
+176,87,8099,8185,04:29.967,04:32.867,2.9,87,still,CHAR,"Two gang-leader characters shake hands (""collaborated with another gang"")",,-1.05,his gang collaborated with another gang to kidnap,
+177,88,8186,8276,04:32.867,04:35.900,3.033,91,still,PHOTO,Missionaries group photo,,-0.18,seventeen christian missionaries that were currently in haiti,[white] ww oom Pe Sof vl
+178,89,8277,8359,04:35.900,04:38.667,2.767,83,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),-0.22,and if this sounds familiar you've probably the heard story of before when,
+179,89,8360,8383,04:38.667,04:39.467,0.8,24,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),,it was happening because,
+180,89,8384,8416,04:39.467,04:40.567,1.1,33,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),0.11,it was pretty high profile,
+181,89,8417,8564,04:40.567,04:45.500,4.933,148,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",normal(r81),-0.09,disturbingly out of all these hostages five of them were children one being of them under one year old,
+182,89,8565,8586,04:45.500,04:46.233,0.733,22,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),,but fortunately,
+183,89,8587,8643,04:46.233,04:48.133,1.9,57,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),-0.29,they were all safely returned,
+184,89,8644,8668,04:48.133,04:48.967,0.833,25,still,HOST_ZOOM,"Host punch-ins over blurred group photo, alternating scales/expressions",zoom(r123),,after this surely,
+185,90,8669,8728,04:48.967,04:50.967,2.0,60,still,GAG,"Baby close-up photo; green ""$$$"" over blurred baby (""paid an undisclosed amount"")",,,traumatic experience after somebody,
+186,90,8729,8776,04:50.967,04:52.567,1.6,48,still,GAG,"Baby close-up photo; green ""$$$"" over blurred baby (""paid an undisclosed amount"")",,0.7,paid an undisclosed money amount of,
+187,91,8777,8795,04:52.567,04:53.200,0.633,19,still,HOST,Host,normal(r81),,initially these,
+188,92,8796,8807,04:53.200,04:53.600,0.4,12,still,TEXT,"Subject with $$ eyes; ""$1M PER PERSON"" red callout",,,gangs wanted,[red] [me
+189,92,8808,8917,04:53.600,04:57.267,3.667,110,still,TEXT,"Subject with $$ eyes; ""$1M PER PERSON"" red callout",,9.56,one dollars million us per person but who knows what they settled for,[red] ciM PER PERSON
+190,93,8918,9015,04:57.267,05:00.533,3.267,98,still,HOST,Host,normal(r81),0.04,after this ransom was paid vel's gang used the money to fund buying weapons,
+191,94,9016,9072,05:00.533,05:02.433,1.9,57,still,PHOTO,Gang-with-weapons photo; president photo,,0.59,and later that year the,[red] aoa.
+192,94,9073,9097,05:02.433,05:03.267,0.833,25,still,PHOTO,Gang-with-weapons photo; president photo,,,haitian president was,[white] am | [red] OS
+193,95,9098,9129,05:03.267,05:04.333,1.067,32,still,GAG,"Red X over darkened photo (""murdered""); vacuum cleaner labelled ""POWER"" (""power vacuum"")",,-0.77,murdered leaving a massive,
+194,95,9130,9171,05:04.333,05:05.733,1.4,42,still,GAG,"Red X over darkened photo (""murdered""); vacuum cleaner labelled ""POWER"" (""power vacuum"")",,1.82,power vacuum and an opportunity,
+195,96,9172,9182,05:05.733,05:06.100,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,,
+196,96,9183,9193,05:06.100,05:06.467,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,for,
+197,96,9194,9204,05:06.467,05:06.833,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,vel's,
+198,96,9205,9215,05:06.833,05:07.200,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,gang,
+199,96,9216,9226,05:07.200,05:07.567,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,to gain,
+200,96,9227,9237,05:07.567,05:07.933,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,,
+201,96,9238,9248,05:07.933,05:08.300,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,massive,
+202,96,9249,9259,05:08.300,05:08.667,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,power,
+203,96,9260,9270,05:08.667,05:09.033,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,haiti in,
+204,96,9271,9281,05:09.033,05:09.400,0.367,11,still,CHAR,"Subject character with vacuum, looping animation (""gain massive power"")",,,in,
+205,97,9282,9349,05:09.400,05:11.667,2.267,68,still,HOST,Host,normal(r81),-0.58,twenty twenty three it's reported that this gang has up to,
+206,98,9350,9364,05:11.667,05:12.167,0.5,15,motion,TEXT,"""600 MEMBERS"" red callout over host",normal(r81),,six,[red] 600 MEMBERS fr
+207,98,9365,9409,05:12.167,05:13.667,1.5,45,still,TEXT,"""600 MEMBERS"" red callout over host",normal(r81),-0.04,hundred members including,[red] 600 MEMBERS fr
+208,99,9410,9476,05:13.667,05:15.900,2.233,67,still,CHAR,Child gang-member character; host (6.3s),,0.21,children who are fighting against their will,
+209,99,9477,9664,05:15.900,05:22.167,6.267,188,still,CHAR,Child gang-member character; host (6.3s),normal(r81),0.09,interestingly vatel offers a strange perspective into the life of crime in haiti whereas last year he actually did a,
+210,100,9665,9848,05:22.167,05:28.300,6.133,184,still,PHOTO,Documentary still with red circle + green arrow annotation; TV-news screenshot over blurred bg,,,full documentary with reporters where he showed off his lifestyle and even spoke to reporters about how he came to power and,
+211,100,9849,9893,05:28.300,05:29.800,1.5,45,still,PHOTO,Documentary still with red circle + green arrow annotation; TV-news screenshot over blurred bg,,0.87,what his lifestyle is currently like,[white] bale Soe | [red] ee il
+212,101,9894,10006,05:29.800,05:33.567,3.767,113,still,HOST_ZOOM,Host punch-in; host,zoom(r123),0.19,it goes without saying that vatel is considered armed and extremely dangerous,
+213,101,10007,10058,05:33.567,05:35.300,1.733,52,still,HOST_ZOOM,Host punch-in; host,normal(r81),-0.5,for vatel the fbi is offering two,
+214,102,10059,10072,05:35.300,05:35.767,0.467,14,motion,DOC,"FBI reward poster ""$2,000,000"" pops in + slow push",,,,"[white] REWARD Or UPTO ba, 900,000.00 usp POX INTORMATION LEADING TO THE ARREST ARD/OR CONVICTION OF Se Vitel’Homme Innocent Sabai tevin Phone/Text/Whatafipp Orbe: Tips. Ai qayv"
+215,102,10073,10075,05:35.767,05:35.867,0.1,3,still,DOC,"FBI reward poster ""$2,000,000"" pops in + slow push",,,dollars,[white] REWARD OF UPTO p00 tits JU USD FOR MEPORMETION LEADING TO TAP AMREST AMD/OR COMVICTION OF Vitel’Homme Innocent SUBMIT TIPS VIA. Phone/Text/WhatsApp Online: Tips. fhi.gov
+216,102,10076,10091,05:35.867,05:36.400,0.533,16,motion,DOC,"FBI reward poster ""$2,000,000"" pops in + slow push",,,,"[white] REWARD OP UP TO TOR INFORMATION LEADING TO THE AMREST AND/OR CONVICTION Of 000,000. 00 USD Vitel’Homme Innocent ——_siiriesvia Phone/Text/WhatsApp Online: Tips.fbi.gov"
+217,102,10092,10142,05:36.400,05:38.100,1.7,51,still,DOC,"FBI reward poster ""$2,000,000"" pops in + slow push",,1.16,million for anybody who can offer information,"[white] REWARD wy, OF UPTO hz, 000,000.00 usp POR INTORMATION LEADING TO TME AKREST AND/OR CONVICTION OF Vitel’Homme Innocent SOehar Tips Vis Phone/Text/WhataApp Online: Tips.fhi.gov"
+218,102,10143,10185,05:38.100,05:39.533,1.433,43,motion,DOC,"FBI reward poster ""$2,000,000"" pops in + slow push",,,leading to his arrest but,"[white] REWARD OF UP TO 000,000 usp £OR FOEORMETION LEADING TO THE AREAS? ABD/OR CONPICTION OF Vitel’Homme Innocent SUEMInTPSVIA Phone/Text/WhatsApp Ontine: Tips. ftu-gov"
+219,103,10186,10342,05:39.533,05:44.767,5.233,157,still,HOST_ZOOM,Host punch-in,zoom(r123),-0.18,i think on the based brief that i gave about vel it's understandable why this price is so high and i also think it's no wonder,
+220,104,10343,10348,05:44.767,05:44.967,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,how he's,
+221,104,10349,10354,05:44.967,05:45.167,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,still,
+222,104,10355,10360,05:45.167,05:45.367,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,,
+223,104,10361,10366,05:45.367,05:45.567,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,on,
+224,104,10367,10371,05:45.567,05:45.733,0.167,5,still,CHAR,"Subject character walking loop (""still on the loose"")",,,the loose,
+225,104,10372,10377,05:45.733,05:45.933,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,today,
+226,104,10378,10383,05:45.933,05:46.133,0.2,6,still,CHAR,"Subject character walking loop (""still on the loose"")",,,,
+227,104,10384,10391,05:46.133,05:46.400,0.267,8,still,CHAR,"Subject character walking loop (""still on the loose"")",,,,
+228,105,10392,10448,05:46.400,05:48.300,1.9,57,still,TITLE_CARD,"Title card: red ""4"", ""WILVER / VILLEGAS- / PALOMINO"" (+title SFX)",,1.56,wolver vz palamino,[white] WIL VER VILLEGAS-— PALOMINO
+229,106,10449,10473,05:48.300,05:49.133,0.833,25,still,HOST,Host,normal(r81),,wolver is a high,
+230,107,10474,10501,05:49.133,05:50.067,0.933,28,still,CHAR,Guerrilla character + ELN logo pops in,,,ranking member of the,[white] Gi
+231,107,10502,10512,05:50.067,05:50.433,0.367,11,motion,CHAR,Guerrilla character + ELN logo pops in,,,national,[white] ps LIBERA ae fla COLOMBIA
+232,107,10513,10594,05:50.433,05:53.167,2.733,82,still,CHAR,Guerrilla character + ELN logo pops in,,0.6,liberation army or eln for sure which is,[white] ah. Ela yt COLOMBIA ELN
+233,108,10595,10604,05:53.167,05:53.500,0.333,10,motion,PHOTO_FULL,Guerrilla group photo,,,a military,[red] Fi 44
+234,108,10605,10664,05:53.500,05:55.500,2.0,60,still,PHOTO_FULL,Guerrilla group photo,,-0.57,movement which is active primarily in columbia,"[white] wy Fao ‘ot Se Aas isa ae te he wy og BA My nd Sle oo Os ett at pels"", | [red] Vy"
+235,109,10665,10676,05:55.500,05:55.900,0.4,12,still,MAP_STATE,"Colombia map, then + Venezuela, labels + red dots, over blurred photo",,,and venezuela,[white] COLUMBIA
+236,109,10677,10696,05:55.900,05:56.567,0.667,20,still,MAP_STATE,"Colombia map, then + Venezuela, labels + red dots, over blurred photo",,,,[white] VENEZUELA COLUMBIA
+237,110,10697,10741,05:56.567,05:58.067,1.5,45,still,TEXT,"""ELN"" white text on red/black flag",,0.12,eln similar to craze,[white] CLN | [red] SEN
+238,111,10742,10863,05:58.067,06:02.133,4.067,122,still,PHOTO,Gang-leader photo over red/black flag,,0.86,bar the gang owned by vatel deals primarily with organized crime,[red] bad.
+239,112,10864,10878,06:02.133,06:02.633,0.5,15,motion,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,specifically,
+240,112,10879,10887,06:02.633,06:02.933,0.3,9,still,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,kidnapping,
+241,112,10888,10898,06:02.933,06:03.300,0.367,11,still,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,,
+242,112,10899,10911,06:03.300,06:03.733,0.433,13,still,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,,
+243,112,10912,10921,06:03.733,06:04.067,0.333,10,still,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,extortion,[white] BETT WAKE ‘EM UP 222 mr | [red] Vd Vy we SP
+244,112,10922,10949,06:04.067,06:05.000,0.933,28,still,MEME,"Meme caption bar: ""KID NAPPING?"" over sleeping kid with floating zzz; ""BETTER WAKE 'EM UP!!!! 😂😂😂"" with masked kidnapper",,,and even attacking,[white] BETT WAKE ‘EM UP! 222 54 MP» | [red] Vd Vy we SP
+245,113,10950,11030,06:05.000,06:07.700,2.7,81,still,SCENE,"Oil refinery photo + guerrilla character (""attacking oil infrastructure"")",,0.62,oil infrastructure basically eco terrorism,[white] hs. (Bi. we aT “ah iat
+246,114,11031,11067,06:07.700,06:08.933,1.233,37,still,HOST,Host,normal(r81),0.0,and shortly after in true,
+247,115,11068,11140,06:08.933,06:11.367,2.433,73,still,GAG,"Colombia map wearing ""deal with it"" sunglasses; extreme close-up drug-lord character",,1.49,colombian fashion got involved in the drug trade,
+248,115,11141,11189,06:11.367,06:13.000,1.633,49,still,GAG,"Colombia map wearing ""deal with it"" sunglasses; extreme close-up drug-lord character",,0.25,wilver personally is alleged to have killed,
+249,116,11190,11202,06:13.000,06:13.433,0.433,13,still,CHAR,"Subject with knife vs activist with sign; activist disintegrates into pixels (""killed... human rights activists"")",,,multiple,
+250,116,11203,11231,06:13.433,06:14.400,0.967,29,still,CHAR,"Subject with knife vs activist with sign; activist disintegrates into pixels (""killed... human rights activists"")",,,humans rights,[red] yo oae
+251,116,11232,11281,06:14.400,06:16.067,1.667,50,motion,CHAR,"Subject with knife vs activist with sign; activist disintegrates into pixels (""killed... human rights activists"")",,,activists in colombia as well as committing,
+252,117,11282,11286,06:16.067,06:16.233,0.167,5,still,CHAR,"Subject + character with real-photo head, small loop",,,,
+253,117,11287,11293,06:16.233,06:16.467,0.233,7,still,CHAR,"Subject + character with real-photo head, small loop",,,narcot,
+254,117,11294,11299,06:16.467,06:16.667,0.2,6,still,CHAR,"Subject + character with real-photo head, small loop",,,,[white] Le)
+255,117,11300,11307,06:16.667,06:16.933,0.267,8,still,CHAR,"Subject + character with real-photo head, small loop",,,terrorism,[red] Se
+256,117,11308,11313,06:16.933,06:17.133,0.2,6,still,CHAR,"Subject + character with real-photo head, small loop",,,,
+257,117,11314,11320,06:17.133,06:17.367,0.233,7,still,CHAR,"Subject + character with real-photo head, small loop",,,,
+258,117,11321,11401,06:17.367,06:20.067,2.7,81,still,CHAR,"Subject + character with real-photo head, small loop",,-0.57,distribution of drugs murder and other similar charges,
+259,118,11402,11536,06:20.067,06:24.567,4.5,135,still,HOST,Host,normal(r81),0.2,wolver and his gang of eln is heavily attributed to the massive influx of drugs into the,
+260,119,11537,11608,06:24.567,06:26.967,2.4,72,still,MAP_WORLD,Cartoon map with drug bricks on southern US; host over darkened map,,-0.56,southern states in the usa and for that reason the,[white] te 2b
+261,119,11609,11647,06:26.967,06:28.267,1.3,39,still,MAP_WORLD,Cartoon map with drug bricks on southern US; host over darkened map,normal(r81),0.15,fbi is offering up to,
+262,120,11648,11658,06:28.267,06:28.633,0.367,11,motion,TEXT,"""$5 MILLION"" red callout over host",normal(r81),,five,[red] S5 MILLION fr
+263,120,11659,11773,06:28.633,06:32.467,3.833,115,still,TEXT,"""$5 MILLION"" red callout over host",normal(r81),0.62,dollars information million for any that could help bring him to justice,[red] MILLION fr
+264,121,11774,11814,06:32.467,06:33.833,1.367,41,still,HOST,Host,normal(r81),0.29,currently there is absolutely,
+265,122,11815,11907,06:33.833,06:36.933,3.1,93,still,DOC,FBI wanted poster; host over blurred poster,,2.06,no information available about where wilver may reside,"[white] FBI TEN MOST WANTED FUGITIVE MeO Tetorteet, trier eam Cot tira Dit tine Cort pole acy: Meet nice! Cn aire Ott ti ot WILVER VILLEGAS-PALOMINO Aete Finten he Ree Vg DESCRIPTION paren eer tt be tee Coe Come Peat Sere Bat awrtrebevatmriiy rr fy Re Viniad hee Gages of Gee's Seamer Pree SP Pre of ow Li flan fer ame Ie ru Sr CSS So ee eS ee fre vege Weare rere Saas are are CNT ES Oe HONE US af ro Nearer Laren Sys Lt are eevee cotery mere rs tere Ae SPIQULO IG CONBIODRED ARMED AND DANGEROUS woe ee ater ot Perey wen rere Farr ves PD ealen Sp weed Lamervn Grtemeny wr Commie ros Samal PB ale ee Se mg Neate yt er sire Sep PF Ahp ERI pe myer nb eps tte mor"
+266,122,11908,11964,06:36.933,06:38.833,1.9,57,still,DOC,FBI wanted poster; host over blurred poster,normal(r81),0.0,although if you have any clue you,
+267,123,11965,12015,06:38.833,06:40.533,1.7,51,still,HOST_ZOOM,Host punch-in,zoom(r123),-0.26,might be five dollars,
+268,124,12016,12056,06:40.533,06:41.900,1.367,41,still,TITLE_CARD,"Title card: red ""5"", ""RUJA / IGNATOVA"" (+title SFX)",,1.77,million ignatova richer rja,[white] RUIA IGNATOVA | [red] 5S
+269,125,12057,12173,06:41.900,06:45.800,3.9,117,still,HOST,Host,normal(r81),0.0,all of this person definitely is not a good person compared to some of the other people in this list,
+270,126,12174,12250,06:45.800,06:48.367,2.567,77,still,PHOTO,Subject portrait; Bulgaria map; extreme close-up crop of face,,-0.62,roua is going to seem like a petty thief is,
+271,126,12251,12291,06:48.367,06:49.733,1.367,41,still,PHOTO,Subject portrait; Bulgaria map; extreme close-up crop of face,,3.15,a bulgarian woman and she was,[white] BULGARIA
+272,126,12292,12340,06:49.733,06:51.367,1.633,49,still,PHOTO,Subject portrait; Bulgaria map; extreme close-up crop of face,,0.61,an entrepreneur or so she was,
+273,126,12341,12364,06:51.367,06:52.167,0.8,24,still,PHOTO,Subject portrait; Bulgaria map; extreme close-up crop of face,,,believed be to,
+274,127,12365,12399,06:52.167,06:53.333,1.167,35,still,HOST,Host,normal(r81),-0.03,roua was the founder of,
+275,128,12400,12410,06:53.333,06:53.700,0.367,11,motion,LOGO,OneCoin logo card,,,onecoin,
+276,128,12411,12436,06:53.700,06:54.567,0.867,26,still,LOGO,OneCoin logo card,,,limited which,
+277,129,12437,12599,06:54.567,07:00.000,5.433,163,still,HOST,Host (5.4s),normal(r81),,was a bulgaria based company that was marketing and purporting cryptocurrency i'm sure as soon as it said crypto currency you,
+278,130,12600,12627,07:00.000,07:00.933,0.933,28,motion,FOOTAGE,Stock footage: crashing price chart,,,saw where this was going,
+279,131,12628,12738,07:00.933,07:04.633,3.7,111,still,HOST,Host,normal(r81),0.0,onecoin was defrauding billions of dollars from their investors,
+280,132,12739,12770,07:04.633,07:05.700,1.067,32,still,GAG,"Earth globe with red markers (""investors all over the world"")",,1.73,all over the world,[white] see we
+281,133,12771,12919,07:05.700,07:10.667,4.967,149,still,HOST,Host (5.0s),normal(r81),0.0,in and order to make her scheme as big as it was and go on as long as it was rjo is allegedly making,
+282,134,12920,13088,07:10.667,07:16.300,5.633,169,motion,PIP,Event footage + small host bottom-left,small(r38),,false statements and representations to individuals in to order solicit more investments in onecoin basically,
+283,135,13089,13134,07:16.300,07:17.833,1.533,46,still,HOST,Host,normal(r81),0.05,more or less of your,
+284,136,13135,13236,07:17.833,07:21.233,3.4,102,still,GAG,"Pyramid outline with subject on top (""Ponzi""); FTX logo",,1.35,run of the mail ponzi scheman very similar to what happened recently with,
+285,136,13237,13281,07:21.233,07:22.733,1.5,45,still,GAG,"Pyramid outline with subject on top (""Ponzi""); FTX logo",,1.88,ftx which was another,
+286,137,13282,13334,07:22.733,07:24.500,1.767,53,still,PHOTO,Related-person photo over blurred bg,,,huge cryptocurrency scandal,[white] on
+287,138,13335,13372,07:24.500,07:25.767,1.267,38,still,HOST,Host,normal(r81),-0.01,throughout the entirety of its scheme,
+288,139,13373,13383,07:25.767,07:26.133,0.367,11,motion,LOGO,OneCoin logo,,,onecoin,
+289,139,13384,13433,07:26.133,07:27.800,1.667,50,still,LOGO,OneCoin logo,,-0.67,is believed to have defrauded over four,
+290,140,13434,13444,07:27.800,07:28.167,0.367,11,motion,TEXT,"""$4B OUT OF INVESTORS"" red callout + logo; host over it",,,,[red] S4B OUT OF INVESTORS
+291,140,13445,13498,07:28.167,07:29.967,1.8,54,still,TEXT,"""$4B OUT OF INVESTORS"" red callout + logo; host over it",,-0.61,dollars billion out of investment,[red] ¢4B OUT OF INVESTORS
+292,140,13499,13531,07:29.967,07:31.067,1.1,33,still,TEXT,"""$4B OUT OF INVESTORS"" red callout + logo; host over it",normal(r81),-0.02,which ers is insane,
+293,141,13532,13538,07:31.067,07:31.300,0.233,7,still,DOC,Wanted poster; red charge labels pop in around it one by one as spoken,,,,[white] FRITEN MOST WANTED FUGITIVE RUA IGNATOVA nae
+294,141,13539,13589,07:31.300,07:33.000,1.7,51,still,DOC,Wanted poster; red charge labels pop in around it one by one as spoken,,-0.47,r's company was officially charged with conspiracy,"[white] FBI TEN MOST WANTED FUGITIVE RUJA IGNATOVA Camaptracy Le Camm wira Frau We Wire Frees. pat, Conepien te Cement Maney Launder: Comepieacy DESCRIPTION Ames BAe yee Ae Pireres orem an? yume “Cesena emia «Bre than Ven rot sms wire ee amr Cars Reo on me Laight tage tere yay REWARD Yat men ppt yo mre Cre hy Pan ay re og as al re te ts es ye Nets so he pr cAuTION eee eg chek hnarten teenth seeded mek amet kema nt hesukulest-Eetehdec! eT ae Teme ae ee remade ree eae te re ee peg ee le ee ed ee age ae mr ak Aad ppt Seale eet oe ee cee en he re ere ae ne Sarre ope ee Pina ome ate ee ae mene he hee Oe ew revere tem bane Dhagems Soy Grema me sme renee varne umornce mmsbratoree Tages mere Sans orree Tews Fear tome Zam rr"" wma rm came me sys fey sti Sore cur ae ory vas Merc carnn mas om Se ON Pm Om Oe ed Ba refey BONE Pe AS he COA SSS ee Fan tare 29 sharwersrrevers tu oven rere: ms Pe Pree bao 7S Sra ey me vor aver Pal reared Aare Oy Saw Pan an rr Soy ede ae So tt"
+295,141,13590,13600,07:33.000,07:33.367,0.367,11,motion,DOC,Wanted poster; red charge labels pop in around it one by one as spoken,,,,"[white] -FBITEN MOST WANTED FUGITIVE RUJA IGNATOVA ee Pape re Pe rey Gd ey Comprar, See ere ee Peter baer ee as"
+296,141,13601,13764,07:33.367,07:38.833,5.467,164,still,DOC,Wanted poster; red charge labels pop in around it one by one as spoken,,-0.59,to commit wire fraud wire fraud conspiracy to commit money laundering conspiracy commit to securities fraud and securities fraud,[white] FBITEN MOST WANTED FUGITIVE RUJA IGNATOVA Re et et Mi Rae Prete ete ieee ERE | [red] CONBPIRACY TO COMMIT WIRE FRAUD WIRE FRAUD CONSPIRACY TO COMMIT RONEY LAVUNOSRING CONSPMACY TO COMMIT SECURITIES FrRavuo
+297,142,13765,13810,07:38.833,07:40.367,1.533,46,still,HOST,Host,normal(r81),,and currently roua is on,
+298,142,13811,13845,07:40.367,07:41.533,1.167,35,motion,HOST,Host,normal(r81),,the run on october twelfth,
+299,143,13846,13868,07:41.533,07:42.300,0.767,23,still,TEXT,"""OCTOBER 12TH, 2017"" over host",normal(r81),,twenty seventeen,[red] OCTOBER 12TH 2017 fr
+300,144,13869,13880,07:42.300,07:42.700,0.4,12,motion,HOST,Host,normal(r81),,was,
+301,144,13881,13982,07:42.700,07:46.100,3.4,102,still,HOST,Host,normal(r81),-0.12,charged in the united states district court today and they were offering up to,
+302,145,13983,13997,07:46.100,07:46.600,0.5,15,motion,TEXT,"""$5 MILLION"" over host",normal(r81),,five,[red] MILLION fr
+303,145,13998,14100,07:46.600,07:50.033,3.433,103,still,TEXT,"""$5 MILLION"" over host",normal(r81),0.63,dollars million for any information that leads to her arrest or conviction,[red] MILLION fr
+304,146,14101,14111,07:50.033,07:50.400,0.367,11,motion,HOST_ZOOM,"Host punch-ins (""note to self..."")",zoom(r123),,note,
+305,146,14112,14202,07:50.400,07:53.433,3.033,91,still,HOST_ZOOM,"Host punch-ins (""note to self..."")",zoom(r123),-0.17,to self do not buy into cryptocurrency pyramid schemes,
+306,146,14203,14339,07:53.433,07:58.000,4.567,137,still,HOST_ZOOM,"Host punch-ins (""note to self..."")",normal(r81),0.0,i'm not anti crypto but i'm definitely anti cam and one coin was a huge scam,
+307,147,14340,14382,07:58.000,07:59.433,1.433,43,still,TITLE_CARD,"Title card: red ""6"", ""ARNOLDO / JIMENEZ"" (+title SFX)",,1.72,arnaldo um menz,[white] ARNOLDO JIMENEZ
+308,148,14383,14405,07:59.433,08:00.200,0.767,23,still,HOST,Host / punch-ins,normal(r81),,this man is,
+309,148,14406,14440,08:00.200,08:01.367,1.167,35,still,HOST,Host / punch-ins,zoom(r123),0.26,absolutely vile,
+310,148,14441,14497,08:01.367,08:03.267,1.9,57,still,HOST,Host / punch-ins,zoom(r123),-0.13,as is everybody list on this but,
+311,148,14498,14592,08:03.267,08:06.433,3.167,95,still,HOST,Host / punch-ins,normal(r81),-0.14,the specific details of this story just made me feel gross,
+312,149,14593,14607,08:06.433,08:06.933,0.5,15,motion,TEXT,"""MAY 11TH, 2012"" over host",normal(r81),,on may eleventh,"[red] MAY 124TH 2012 ff"""
+313,149,14608,14628,08:06.933,08:07.633,0.7,21,still,TEXT,"""MAY 11TH, 2012"" over host",normal(r81),,twenty twelve,[red] MAY 424TH 2012 fr
+314,150,14629,14634,08:07.633,08:07.833,0.2,6,still,SCENE,Wedding aisle photo with bride+groom characters,,,arnaldo,[white] han yr Yue ve
+315,150,14635,14659,08:07.833,08:08.667,0.833,25,still,SCENE,Wedding aisle photo with bride+groom characters,,,got married,[white] Fe al Sea yr af? fo4 (Ly arn ed 43-43 er Tt ee
+316,150,14660,14698,08:08.667,08:09.967,1.3,39,motion,SCENE,Wedding aisle photo with bride+groom characters,,,to his wife and only,[white] resets Ne ae Sate (Ay Tri HM Pid Vf VI 50 ae yi
+317,151,14699,14728,08:09.967,08:10.967,1.0,30,still,HOST,Host,normal(r81),-0.55,one day later on,
+318,152,14729,14742,08:10.967,08:11.433,0.467,14,motion,TEXT,"""MAY 12TH, 2012"" over host",normal(r81),,may arnaldo twelfth,[red] MAY 12TH 20142 fr
+319,152,14743,14748,08:11.433,08:11.633,0.2,6,still,TEXT,"""MAY 12TH, 2012"" over host",normal(r81),,,[red] MAY 12TH 2012 fr
+320,153,14749,14819,08:11.633,08:14.000,2.367,71,still,CHAR,Subject with knife,,0.14,is alleged with murdering his wife by stabbing,
+321,154,14820,14827,08:14.000,08:14.267,0.267,8,still,PHOTO_FULL,Sports-car photo + animated blood splatter,,,,[white] Si.
+322,154,14828,14870,08:14.267,08:15.700,1.433,43,motion,PHOTO_FULL,Sports-car photo + animated blood splatter,,,her to death in the back of his,[white] ty re. M4 1s iia. Si NC we NL HY | [red] as
+323,154,14871,14888,08:15.700,08:16.300,0.6,18,still,PHOTO_FULL,Sports-car photo + animated blood splatter,,,maserati,"[white] Vy oF her, Go Marte NF NL ZY"
+324,155,14889,14997,08:16.300,08:19.933,3.633,109,still,HOST,Host,normal(r81),0.27,he's alleged to at that point taking her dead body vehicle from his and putting her in the,
+325,156,14998,15038,08:19.933,08:21.300,1.367,41,still,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,0.58,bathtub of her apartment where he,[white] it
+326,156,15039,15049,08:21.300,08:21.667,0.367,11,motion,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,,left,
+327,156,15050,15075,08:21.667,08:22.533,0.867,26,still,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,,her and then,
+328,156,15076,15086,08:22.533,08:22.900,0.367,11,motion,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,,seemingly,[white] EF
+329,156,15087,15090,08:22.900,08:23.033,0.133,4,still,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,,vanished,"[white] beer if fs, Bip"
+330,156,15091,15109,08:23.033,08:23.667,0.633,19,still,SCENE,"Bathroom photo; subject extreme close-up with sunglasses + photo peace-sign hand; crossfades away (""vanished"")",,,,
+331,157,15110,15183,08:23.667,08:26.133,2.467,74,still,HOST,Host,normal(r81),-0.3,when arnaldo's wife was not replying to any of family's her,
+332,158,15184,15233,08:26.133,08:27.800,1.667,50,still,PHOTO_FULL,"Phone with blood (""calls or texts""); school door (""pick up her children"")",,-0.52,calls or texts and didn't pick up her children,[white] on le:
+333,158,15234,15299,08:27.800,08:30.000,2.2,66,still,PHOTO_FULL,"Phone with blood (""calls or texts""); school door (""pick up her children"")",,-0.62,from school her family called the place where,
+334,159,15300,15310,08:30.000,08:30.367,0.367,11,motion,SCENE,"Two police characters in bathroom, shocked (""wellness check"")",,,they did a wellness,[white] Vy we
+335,159,15311,15327,08:30.367,08:30.933,0.567,17,still,SCENE,"Two police characters in bathroom, shocked (""wellness check"")",,,check and,[white] yy ww
+336,159,15328,15357,08:30.933,08:31.933,1.0,30,still,SCENE,"Two police characters in bathroom, shocked (""wellness check"")",,0.46,found her body in her,
+337,159,15358,15408,08:31.933,08:33.633,1.7,51,still,SCENE,"Two police characters in bathroom, shocked (""wellness check"")",,0.49,tub still in her wedding dress,[white] uw wW
+338,160,15409,15452,08:33.633,08:35.100,1.467,44,still,HOST,Host,normal(r81),-0.27,arnaldo is believed to be somewhere,
+339,161,15453,15467,08:35.100,08:35.600,0.5,15,still,MAP_WORLD,"Cartoon map, subject head icon in Mexico",,,in but mexico unfortunately,
+340,162,15468,15710,08:35.600,08:43.700,8.1,243,still,HOST,Host (8.1s),normal(r81),0.2,after hundreds twelve years and of tips nothing has brought the fbi any closer to bringing this man to justice after the murder phone records were able to trace arnaldo,
+341,163,15711,15866,08:43.700,08:48.900,5.2,156,still,MAP_WORLD,"Cartoon map with cell towers across states (""phone records"")",,0.6,across multiple states across the country even and ended with him in texas extremely close to the mexican border,
+342,164,15867,15957,08:48.900,08:51.933,3.033,91,still,HOST_ZOOM,Host punch-in / host (8.7s),zoom(r123),-0.13,but unfortunately that's where the records ended and once he entered mexico there,
+343,164,15958,16023,08:51.933,08:54.133,2.2,66,still,HOST_ZOOM,Host punch-in / host (8.7s),zoom(r123),-0.07,has been absolutely no sightings of him,
+344,164,16024,16284,08:54.133,09:02.833,8.7,261,still,HOST_ZOOM,Host punch-in / host (8.7s),normal(r81),0.0,hopefully arnaldo is caught and serves life in prison for the crimes he's committed but from what we've seen so far in this list it seems that going to mexico is a pretty good way to avoid jail time,
+345,165,16285,16338,09:02.833,09:04.633,1.8,54,still,TITLE_CARD,"Title card: red ""7"", ""OMAR / ALEXANDER / CARDENAS"" (+title SFX)",,1.6,omar alexander cardas,[white] OMAR ALEXANDER CARDENAS
+346,166,16339,16476,09:04.633,09:09.233,4.6,138,still,HOST,Host / punch-ins,normal(r81),0.0,omar's case is short and simple but no less disturbing as he is charged with,
+347,166,16477,16502,09:09.233,09:10.100,0.867,26,still,HOST,Host / punch-ins,zoom(r123),,murdering a man in,
+348,166,16503,16527,09:10.100,09:10.933,0.833,25,still,HOST,Host / punch-ins,zoom(r123),,broad daylight with,
+349,167,16528,16539,09:10.933,09:11.333,0.4,12,still,FOOTAGE,Surveillance clip of suspect walking,,,footage,[white] ng
+350,167,16540,16611,09:11.333,09:13.733,2.4,72,motion,FOOTAGE,Surveillance clip of suspect walking,,,of him walking to and waddling away from,[white] nr
+351,167,16612,16614,09:13.733,09:13.833,0.1,3,still,FOOTAGE,Surveillance clip of suspect walking,,,the,
+352,167,16615,16649,09:13.833,09:15.000,1.167,35,motion,FOOTAGE,Surveillance clip of suspect walking,,,place where he committed this,[white] 2059 O05 15 me ak
+353,167,16650,16652,09:15.000,09:15.100,0.1,3,still,FOOTAGE,Surveillance clip of suspect walking,,,murder,[white] 2009 URLS ae
+354,167,16653,16665,09:15.100,09:15.533,0.433,13,motion,FOOTAGE,Surveillance clip of suspect walking,,,,[white] ee be.
+355,168,16666,16732,09:15.533,09:17.767,2.233,67,still,HOST,Host,normal(r81),-0.01,omar is another young entry on this list being only twenty,
+356,169,16733,16795,09:17.767,09:19.867,2.1,63,still,TEXT,"""29 YEARS OLD"" + subject character",,1.04,nine years old at the time of recording this video,[red] 29 YEARS OLD
+357,170,16796,16964,09:19.867,09:25.500,5.633,169,still,HOST,Host (5.6s),normal(r81),-0.01,and even younger when this crime happened and while his crime is essentially caught on camera not much is known about,
+358,171,16965,17089,09:25.500,09:29.667,4.167,125,still,CHAR_INFO,"Subject with red width bar ""300 POUNDS"" + height bar ""5'7""",,,him besides the fact that he's fifty seven and three hundred lb which is a crazy on,[red] 300 POUNDS 5°7
+359,172,17090,17144,09:29.667,09:31.500,1.833,55,still,TEXT,"""AUGUST 15TH, 2019"" over host",normal(r81),-0.66,august fifteenth twenty nineteen,[red] AUGUST 15TH 2049 fr”
+360,173,17145,17157,09:31.500,09:31.933,0.433,13,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,omar walked,[white] iC
+361,173,17158,17212,09:31.933,09:33.767,1.833,55,motion,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,to an open air shopping center where he stood,"[white] oe “ort MT wtp | [red] wos,"
+362,173,17213,17307,09:33.767,09:36.933,3.167,95,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,0.34,in front of a barber shop pulled a pistol out of his pants and shot at the,[red] ue Lad
+363,173,17308,17318,09:36.933,09:37.300,0.367,11,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,head,[white] xh atin Li i_4 af
+364,173,17319,17379,09:37.300,09:39.333,2.033,61,motion,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,of people one of the in the barber shop who he instantly,[white] ta vee IQ ii ad
+365,173,17380,17395,09:39.333,09:39.867,0.533,16,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,killed,[white] Ele) vif lao afl 455 woes
+366,173,17396,17412,09:39.867,09:40.433,0.567,17,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,and then seemingly,[white] lat nt wre we te | [red] Waa
+367,173,17413,17473,09:40.433,09:42.467,2.033,61,motion,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,just casually walked away,[white] lot ij an rad en RR ET ST 18 tei. | [red] goin
+368,173,17474,17481,09:42.467,09:42.733,0.267,8,still,SCENE,"Barbershop photo: subject walks in, shoots (photo pistol), interior with victim, bullet holes, walks away",,,,[white] hia at Aes? or hin. | [red] wok
+369,174,17482,17649,09:42.733,09:48.333,5.6,168,still,HOST,Host (5.6s),normal(r81),0.0,with how brazen this murder was and the fact that it was in public in broad daylight and even caught on camera to me it's,
+370,175,17650,17678,09:48.333,09:49.300,0.967,29,still,SCENE,"Shopping-centre photo, tiny character walks away",,,honestly crazy that this,[white] er St ee iu ‘Wee eat aa hi aoe Oo | [red] ate ft [ity SMOKE
+371,175,17679,17729,09:49.300,09:51.000,1.7,51,motion,SCENE,"Shopping-centre photo, tiny character walks away",,,man is still walking free today being,[white] eee ive vb aie wz tk ialaleal ip es aan Tes | [red] ade Wad SMOKE
+372,176,17730,17773,09:51.000,09:52.467,1.467,44,still,HOST,Host,normal(r81),-0.01,a most wanted has criminal allowed the,
+373,177,17774,17939,09:52.467,09:58.000,5.533,166,still,DOC,FBI wanted poster,,1.46,fbi to get a lot more tips and information about this individual but unfortunately nothing has been able to help them find,[white] FBI TEN MOST Ul WANTED FUGITIVE OMAR ALEXANDER CARDENAS Vedgetys Fen to Avoid Prosecehos Marder aaa DEBCRF TION eee eee Arete tee orm owe Pm ve Caters ai 109 re ox tee eee owe tem Te eg cr Mr ee ny Bs sed of Re emer Cartes REWSAD eee the Ren} ph ie me te rrr ee SHOULO FFE COMINOERET GF0RD ANC CANORROUS Fat ane pe tare nanhans aaa ovaans cas aaah er Reethemeteton atid
+374,178,17940,18008,09:58.000,10:00.300,2.3,69,still,HOST,Host,normal(r81),,him likely because like others on this list he,
+375,179,18009,18024,10:00.300,10:00.833,0.533,16,still,MAP_STATE,"USA map with subject, then he vanishes (""fled the country"")",,,too,
+376,179,18025,18082,10:00.833,10:02.767,1.933,58,still,MAP_STATE,"USA map with subject, then he vanishes (""fled the country"")",,-0.5,fled the country to avoid prosecution,
+377,180,18083,18155,10:02.767,10:05.200,2.433,73,still,TITLE_CARD,"Title card: red ""8"", ""YULAN / ADONAY / ARCHAGA / CARIAS"" (+title SFX)",,1.5,hulan adonai archaga kayas,[white] YULAN ADONAY CARIAS
+378,181,18156,18254,10:05.200,10:08.500,3.3,99,still,TEXT,"""MS13"" red text centre",,0.58,ms thirteen is one of the most violent criminal organizations in the world,[red] MSsis3
+379,182,18255,18329,10:08.500,10:11.000,2.5,75,still,HOST,Host,normal(r81),-0.39,active primarily in south america specifically honduras,
+380,183,18330,18375,10:11.000,10:12.533,1.533,46,still,MAP_STATE,"Central-America map, red dot, country labels",,1.75,guatemala el salvador,[white] HONDURAS GUATEMALA EL SALVADOR
+381,184,18376,18622,10:12.533,10:20.767,8.233,247,still,HOST,Host (8.2s),normal(r81),0.0,but currently are active in mexico and united the states as well yulan here is the alleged leader of the ms13 in all of honduras making him responsible for a,
+382,185,18623,18668,10:20.767,10:22.300,1.533,46,still,PHOTO,Subject photo; extreme close-up crop,,0.53,lot of shenanigans,
+383,185,18669,18703,10:22.300,10:23.467,1.167,35,still,PHOTO,Subject photo; extreme close-up crop,,0.45,to say the least as such drug,
+384,186,18704,18719,10:23.467,10:24.000,0.533,16,still,GAG,"Mask icon; box truck; ""WE SELL PEOPLE!"" advert on truck (""human trafficking"")",,,trafficking,
+385,186,18720,18729,10:24.000,10:24.333,0.333,10,motion,GAG,"Mask icon; box truck; ""WE SELL PEOPLE!"" advert on truck (""human trafficking"")",,,human,
+386,186,18730,18732,10:24.333,10:24.433,0.1,3,still,GAG,"Mask icon; box truck; ""WE SELL PEOPLE!"" advert on truck (""human trafficking"")",,,,
+387,186,18733,18746,10:24.433,10:24.900,0.467,14,still,GAG,"Mask icon; box truck; ""WE SELL PEOPLE!"" advert on truck (""human trafficking"")",,,trafficking,
+388,187,18747,18755,10:24.900,10:25.200,0.3,9,still,CHAR,"Photo pistol pointed at character (""extortion""); character carried off (""kidnapping"")",,,extortion,
+389,187,18756,18844,10:25.200,10:28.167,2.967,89,motion,CHAR,"Photo pistol pointed at character (""extortion""); character carried off (""kidnapping"")",,,kidnapping and extreme acts of violence yulan,[white] Or
+390,188,18845,18925,10:28.167,10:30.867,2.7,81,still,HOST,Host,normal(r81),0.2,specifically is wanted in the us for trafficking,
+391,189,18926,18945,10:30.867,10:31.533,0.667,20,still,SCENE,"Truck-trailer interior with cocaine pallets, more added (""multi-ton loads"")",,,multi ton,[white] oon rk Sl ry we GQ am oe SHt ah ge eS... an 2S ee Rey
+392,189,18946,19023,10:31.533,10:34.133,2.6,78,still,SCENE,"Truck-trailer interior with cocaine pallets, more added (""multi-ton loads"")",,-0.6,of loads cocaine into the united states,[white] “Sg wy wa wets oe pe Sz RH ex 721 RR eS @ay te Ey re @itmaeas 3s ne mc) at
+393,190,19024,19166,10:34.133,10:38.900,4.767,143,still,HOST,Host (4.8s),normal(r81),0.07,as well as murder and a laundry list of others crazy yulan was actually apprehended and charged,
+394,191,19167,19251,10:38.900,10:41.733,2.833,85,still,SCENE,Courtroom photo with characters; host over blurred courtroom,,0.6,in court murder for the of two hondurus prosecutors,[white] eq oW@ | [red] os al ny
+395,191,19252,19285,10:41.733,10:42.867,1.133,34,still,SCENE,Courtroom photo with characters; host over blurred courtroom,normal(r81),0.08,when during his trial,
+396,192,19286,19511,10:42.867,10:50.400,7.533,226,motion,PIP,CCTV footage of courtroom attack + small host (7.5s),small(r38),,twenty armed men dressed in the same uniforms as the anti gang unit walk into the court hearing and seconds after unload on the entire room four,[white] ab it ASGSOSHSsegoe.
+397,193,19512,19859,10:50.400,11:02.000,11.6,348,still,HOST,Host commentary hold (11.6s),normal(r81),-0.04,police officers were killed and yulan was once again a free man the power that these criminal organizations south have in america is honestly scary and strongly rivals the government although some would argue that the two are intertwined,
+398,194,19860,19941,11:02.000,11:04.733,2.733,82,still,CHAR_INFO,"Subject with ""160 POUNDS"" width bar + ""5'5"" height bar",,-0.75,although this man is only fifty and five one hundred and sixty lbs,[red] 160 POUNDS 5’s5
+399,195,19942,20203,11:04.733,11:13.467,8.733,262,still,HOST,Host (8.7s),normal(r81),0.02,he is one of the most powerful and deadly men in honduras and likely in all of south america and it's not necessarily shocking that the fbi is willing to offer up to five,
+400,196,20204,20313,11:13.467,11:17.133,3.667,110,still,TEXT,"""$5 MILLION"" + wanted poster",,1.4,dollars million for information leading to the conviction or arrest of ulan,[white] FBI TEN MOST WANTED FUGITIVE YULAN ADONAY ARCHAGA CARIAS Rineteiny Comprvy HEY Cryer (Caasgamy be Panuaan thems Gate Cae ting Pe of Synn ey Ean* ie teed oom oe wee we mmane er ee el le owas Scone oan tay Ho 66 Comat fh nag ba mr. ee | [red] S5 MILLION
+401,197,20314,20326,11:17.133,11:17.567,0.433,13,motion,TITLE_CARD,"Title card: red ""9"", ""ALEXIS / FLORES"" (+title SFX)",,,alexis,[white] ALF XAiS FLORES
+402,197,20327,20363,11:17.567,11:18.800,1.233,37,still,TITLE_CARD,"Title card: red ""9"", ""ALEXIS / FLORES"" (+title SFX)",,1.13,flores,[white] ALEXIS FLORES fh
+403,198,20364,20418,11:18.800,11:20.633,1.833,55,still,HOST,Host / punch-in,normal(r81),-0.54,alexis is the another man from honduras,
+404,198,20419,20506,11:20.633,11:23.567,2.933,88,still,HOST,Host / punch-in,zoom(r123),-0.07,although he is even shorter and smaller than the previous ent,
+405,199,20507,20621,11:23.567,11:27.400,3.833,115,still,CHAR_INFO,"Subject with ""5'4"" height bar",,,he stands at a staggering five four tall and weighs only one hundred and thirty lb but,
+406,200,20622,20763,11:27.400,11:32.133,4.733,142,still,HOST,Host (4.7s),normal(r81),0.0,his alleged crime is absolutely sick to it put bluntly alexis flores is alleged to have kidnapped,
+407,201,20764,20782,11:32.133,11:32.767,0.633,19,still,CHAR,"Subject; giant grey hands (""strangled"")",,,and,
+408,201,20783,20841,11:32.767,11:34.733,1.967,59,still,CHAR,"Subject; giant grey hands (""strangled"")",,-0.21,strangled to death a five year old girl in,
+409,202,20842,20857,11:34.733,11:35.267,0.533,16,still,MAP_STATE,"Pennsylvania map, ""PHILADELPHIA"" dot, then ""PENNSYLVANIA"" label",,,philadelphia,[white] PHILADELPHIA
+410,202,20858,20873,11:35.267,11:35.800,0.533,16,still,MAP_STATE,"Pennsylvania map, ""PHILADELPHIA"" dot, then ""PENNSYLVANIA"" label",,,pennsylvania,[white] PENNSYLVANIA PHILADELPHIA
+411,203,20874,20917,11:35.800,11:37.267,1.467,44,still,HOST,Host,normal(r81),,this young reported girl was missing,
+412,204,20918,20930,11:37.267,11:37.700,0.433,13,motion,TEXT,"""JULY, 2000"" over host",normal(r81),,in july of,[red] JULY 2000 fr
+413,204,20931,20948,11:37.700,11:38.300,0.6,18,still,TEXT,"""JULY, 2000"" over host",normal(r81),,two thousand,[red] JULY 2000 fr
+414,204,20949,21017,11:38.300,11:40.600,2.3,69,still,TEXT,"""JULY, 2000"" over host",normal(r81),0.37,and was found a few weeks later lifeless in,
+415,205,21018,21065,11:40.600,11:42.200,1.6,48,still,PHOTO,"Two tilted abandoned-building photos + ""AUGUST, 2000""",,-0.72,the basement of an abandoned apartment building,[white] eam
+416,205,21066,21076,11:42.200,11:42.567,0.367,11,motion,PHOTO,"Two tilted abandoned-building photos + ""AUGUST, 2000""",,,in august,[white] Th | [red] AUGUST 2000
+417,205,21077,21105,11:42.567,11:43.533,0.967,29,still,PHOTO,"Two tilted abandoned-building photos + ""AUGUST, 2000""",,,of two thousand,[white] Th | [red] AUGUST 2000
+418,206,21106,21191,11:43.533,11:46.400,2.867,86,still,HOST,Host,normal(r81),-0.27,unfortunately for this crime there was little to no evidence and the case,
+419,207,21192,21202,11:46.400,11:46.767,0.367,11,still,GAG,"Briefcase with eyes, then frozen in an ice block (""the case went cold"")",,,went,[white] 80
+420,207,21203,21241,11:46.767,11:48.067,1.3,39,still,GAG,"Briefcase with eyes, then frozen in an ice block (""the case went cold"")",,0.3,cold for multiple years,
+421,208,21242,21293,11:48.067,11:49.800,1.733,52,still,SCENE,Abandoned basement photo + cartoon blue t-shirt; push to shirt,,0.7,the only piece of evidence they had was a strange,[white] ll am Rl ab
+422,208,21294,21319,11:49.800,11:50.667,0.867,26,still,SCENE,Abandoned basement photo + cartoon blue t-shirt; push to shirt,,,t it shirt,
+423,209,21320,21365,11:50.667,11:52.200,1.533,46,still,TEXT,"Host; huge outline ""2007"" behind host",normal(r81),0.07,wasn't until seven years later in,
+424,209,21366,21395,11:52.200,11:53.200,1.0,30,still,TEXT,"Host; huge outline ""2007"" behind host",normal(r81),-0.01,two thousand and,[white] if Iw ee
+425,210,21396,21581,11:53.200,11:59.400,6.2,186,still,SCENE,"Lab scientist photo + t-shirt (""DNA analysis"")",,-0.58,seven when dna analysis advancements were far enough along where they were successfully able to find a matching dna sample to someone that they,[white] yy
+426,211,21582,21592,11:59.400,11:59.767,0.367,11,motion,SCENE,"Jail-bars photo with subject character + green $ (""shoplifting and forgery"")",,,arrested,"[white] al hee ee eee ee, EE"
+427,211,21593,21661,11:59.767,12:02.067,2.3,69,still,SCENE,"Jail-bars photo with subject character + green $ (""shoplifting and forgery"")",,0.57,years prior for shoplifting and forgery,[white] Lie LL
+428,212,21662,21739,12:02.067,12:04.667,2.6,78,still,HOST_ZOOM,"Host punch-in over blurred bars; host holds (4.8s, 9.8s)",zoom(r123),,they finally had a lead and a perfect dna match,
+429,212,21740,21882,12:04.667,12:09.433,4.767,143,still,HOST_ZOOM,"Host punch-in over blurred bars; host holds (4.8s, 9.8s)",zoom(r123),-0.05,closely linking this criminal to at least the owner of this t shirt which was directly at the crime scene,
+430,212,21883,22177,12:09.433,12:19.267,9.833,295,still,HOST_ZOOM,"Host punch-in over blurred bars; host holds (4.8s, 9.8s)",normal(r81),-0.09,although when they found out who this t shirt belonged to they had a whole new problem that they had to solve they knew they had their guy alexis flores but when searching the database they also saw that alexis flores was,
+431,213,22178,22191,12:19.267,12:19.733,0.467,14,still,MAP_WORLD,"Cartoon map; red prohibition circle over USA (""no longer in the United States"")",,,no longer the united,
+432,213,22192,22221,12:19.733,12:20.733,1.0,30,still,MAP_WORLD,"Cartoon map; red prohibition circle over USA (""no longer in the United States"")",,-0.55,in states,
+433,214,22222,22347,12:20.733,12:24.933,4.2,126,still,HOST,Host / punch-in / host (9.7s),normal(r81),0.01,alexis was actually deported years prior for other unrelated charges,
+434,214,22348,22423,12:24.933,12:27.467,2.533,76,still,HOST,Host / punch-in / host (9.7s),zoom(r123),-0.19,and unfortunately the authorities had no idea where he was it's,
+435,214,22424,22715,12:27.467,12:37.200,9.733,292,still,HOST,Host / punch-in / host (9.7s),normal(r81),-0.09,pretty shocking how somebody can do something once again so brazen in broad daylight and have absolutely nobody report or see anything at least that anything was able to bring him to justice,
+436,215,22716,22727,12:37.200,12:37.600,0.4,12,motion,TITLE_CARD,"Title card: red ""10"", ""BHADRESHKUMAR / CHETANBHAI / PATEL"" (+title SFX)",,,badish,[white] BHADRESHKUMAR CHET ANBHAI PATEL | [red] 20
+437,215,22728,22774,12:37.600,12:39.167,1.567,47,still,TITLE_CARD,"Title card: red ""10"", ""BHADRESHKUMAR / CHETANBHAI / PATEL"" (+title SFX)",,1.28,kumar chaten by patel,[white] BHADRESHKUMAR CHET ANBHAI PATEL | [red] 10
+438,216,22775,23172,12:39.167,12:52.433,13.267,398,still,HOST,Host (13.3s) - mid-roll CTA starts,normal(r81),,ladies and gentlemen before we get into the disgusting actions of the last person the on fbi's most wanted list i just wanted mention two quick things when doing research for this video i not only researched those who are currently on this list but i also made a list of some of the most,
+439,217,23173,23302,12:52.433,12:56.767,4.333,130,still,PIP,Grid of 10 historical fugitives + small host,small(r38),1.47,infamous people that have ever been on this list that has existed for over seventy years,[white] wey af as Pe
+440,218,23303,23576,12:56.767,13:05.900,9.133,274,still,HOST,Host (9.1s),normal(r81),,and although doesn't youtube necessarily love videos on these topics if you guys want that video i'd be more than happy to make a video about the most infamous people to ever the be on list so,
+441,219,23577,23582,13:05.900,13:06.100,0.2,6,still,CTA,"Grey thumbs-up turns blue (""leave a like""); speech bubble ""PLEASE MAKE THAT VID, BRODY!!"" (""leave a comment"")",,,leave,
+442,219,23583,23598,13:06.100,13:06.633,0.533,16,still,CTA,"Grey thumbs-up turns blue (""leave a like""); speech bubble ""PLEASE MAKE THAT VID, BRODY!!"" (""leave a comment"")",,,a like or,
+443,219,23599,23667,13:06.633,13:08.933,2.3,69,still,CTA,"Grey thumbs-up turns blue (""leave a like""); speech bubble ""PLEASE MAKE THAT VID, BRODY!!"" (""leave a comment"")",,-4.58,leave a comment letting me know you'd be interested in that video,
+444,220,23668,23809,13:08.933,13:13.667,4.733,142,still,HOST,Host / punch-ins,normal(r81),0.01,and while the fbi most wanted list is definitely most the famous list there is also another list full,
+445,220,23810,23857,13:13.667,13:15.267,1.6,48,still,HOST,Host / punch-ins,zoom(r123),-0.15,of dangerous criminals,
+446,220,23858,23876,13:15.267,13:15.900,0.633,19,still,HOST,Host / punch-ins,zoom(r123),,that list is,
+447,221,23877,23886,13:15.900,13:16.233,0.333,10,motion,DOC,US Marshals most-wanted poster + small host; host over blurred poster,small(r38),,the us,"[white] United States Marshals v9 Fughive Task Force MOST WANTED HOMICIDE FUGITIVES 15-141, Cumin ier Berge Seu Mier Ee ete hut Ghee nue Be BTS be! pew Agu (Chemttes Fs, Gee Ot beget fen 12 Corus bh 2m Reigrount te Reommeed Geteeres tint Marte nt Veneto theqee WE Eas ia ees nae 1La™ ite"
+448,221,23887,24047,13:16.233,13:21.600,5.367,161,still,DOC,US Marshals most-wanted poster + small host; host over blurred poster,small(r38),0.61,marshall's most wanted list and they currently have fifteen extremely dangerous criminals listed on there,[white] United States Marshais v9 Task Force 10 MOST WANTED HOMICIDE FUGITIVES Manpal Gerrpaleg E:drece Burgess Deeell Mier Kris Davis Kdcattte 23-1 BM BI 3000 Agar SL #900 Gesene Si 600 Magnolia Ave 3900 Parish Si 400: Bdgewood St Leonerd Reberts Kaleem Marthe Rokvorm Venable Marquis Willems oo 2B 2t/Bhd aM 2400 Parts 2300 Parti Sa 1100 Chefeotes
+449,221,24048,24187,13:21.600,13:26.267,4.667,140,still,DOC,US Marshals most-wanted poster + small host; host over blurred poster,normal(r81),0.03,so if either of those videos are something that you'd want to see i'd be more than happy to cover just let know me by,
+450,222,24188,24275,13:26.267,13:29.200,2.933,88,still,HOST_ZOOM,"Host punch-in, smiling",zoom(r123),-0.14,leaving a like or a comment now let's proceed with our final entry,
+451,223,24276,24286,13:29.200,13:29.567,0.367,11,motion,HOST_PHOTO,"Host left + subject photo right; host centre between subject and fugitive #1 photos (""similar to the first entry"")",normal(r81),,badush,[white] QO}
+452,223,24287,24435,13:29.567,13:34.533,4.967,149,still,HOST_PHOTO,"Host left + subject photo right; host centre between subject and fugitive #1 photos (""similar to the first entry"")",zoom(r123),0.6,kumar shares a very similar and disturbing similarity to the first entry on this list,[white] ae
+453,223,24436,24458,13:34.533,13:35.300,0.767,23,still,HOST_PHOTO,"Host left + subject photo right; host centre between subject and fugitive #1 photos (""similar to the first entry"")",normal(r81),,badush kumar,[white] ol:
+454,223,24459,24581,13:35.300,13:39.400,4.1,123,still,HOST_PHOTO,"Host left + subject photo right; host centre between subject and fugitive #1 photos (""similar to the first entry"")",normal(r81),0.0,and alejandro both worked at restaurants with their significant others,
+455,223,24582,24610,13:39.400,13:40.367,0.967,29,still,HOST_PHOTO,"Host left + subject photo right; host centre between subject and fugitive #1 photos (""similar to the first entry"")",normal(r81),,badrish kar,
+456,224,24611,24644,13:40.367,13:41.500,1.133,34,still,PHOTO_FULL,Donut-shop exterior; wedding photo,,-0.39,worked at a dunkin donuts,[white] ei. Ns rT ed Aaa oy ScPotalniee eal Ob wm BES oe | [red] DUNKIN' pave DONUTS
+457,224,24645,24667,13:41.500,13:42.267,0.767,23,still,PHOTO_FULL,Donut-shop exterior; wedding photo,,,with his wife,"[white] af, is ra ral Dit este et at woh to ad yi. Ag | [red] ""ss er ws"
+458,225,24668,24797,13:42.267,13:46.600,4.333,130,still,HOST,Host,normal(r81),-0.03,and at it's that same dunkin donuts where badrish kar's wife would pass away customers,
+459,226,24798,24807,13:46.600,13:46.933,0.333,10,motion,SCENE,Donut-shop interior photo + customer character,,,entered,"[white] ined"""
+460,226,24808,24951,13:46.933,13:51.733,4.8,144,still,SCENE,Donut-shop interior photo + customer character,,0.59,this dunkin' donuts and called police after realizing that there was employees no at the store whatsoever,[white] ne ag. | [red] ne bd
+461,227,24952,24995,13:51.733,13:53.200,1.467,44,still,HOST,Host,normal(r81),,and once police entered the store they,
+462,228,24996,25067,13:53.200,13:55.600,2.4,72,still,PHOTO_FULL,Dark back-room door photo (+SFX),,,checked in the back and found a lifeless employee,
+463,229,25068,25096,13:55.600,13:56.567,0.967,29,still,HOST_ZOOM,Host punch-in over blurred door; hands-on-face shock,zoom(r123),,this employee being,
+464,229,25097,25136,13:56.567,13:57.900,1.333,40,still,HOST_ZOOM,Host punch-in over blurred door; hands-on-face shock,zoom(r123),-0.2,the wife badish of kumar,
+465,230,25137,25177,13:57.900,13:59.267,1.367,41,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),-58.64,security footage pointed obviously,[white] wabe FO) age Bans ee art Ae aa an
+466,230,25178,25198,13:59.267,13:59.967,0.7,21,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,to,"[white] Baa SANS er ma ae, ee Ae an ay va Camera bed"
+467,230,25199,25201,13:59.967,14:00.067,0.1,3,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,"[white] 1e vin PR, we -Oogr oo ey aes Camere 63 cae?"
+468,230,25202,25207,14:00.067,14:00.267,0.2,6,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,[white] ins jen TRE we og ey Av pan ait va
+469,230,25208,25211,14:00.267,14:00.400,0.133,4,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,[white] Sater” IDL oi? oh cok sane bd Ty
+470,230,25212,25250,14:00.400,14:01.700,1.3,39,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,kumar murdering his wife as,[white] ts ra) Fa tks Sa oy ye te fe oe Camere 43
+471,230,25251,25253,14:01.700,14:01.800,0.1,3,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,"[white] ett” sae ee awe wos ca ae Ya, Cama 03 LY,"
+472,230,25254,25264,14:01.800,14:02.167,0.367,11,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,there was,[white] whan com hbS ae ms Sy oy me wo aot wv Cammrea 43 LA
+473,230,25265,25267,14:02.167,14:02.267,0.1,3,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,[white] 20 ey AN} ae Sy my ~se wa ot Camere 43 1H
+474,230,25268,25288,14:02.267,14:02.967,0.7,21,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,footage of both,[white] FF af wr na} 7a Comtere 43 oa nid
+475,230,25289,25313,14:02.967,14:03.800,0.833,25,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,of them stepping in the,"[white] aes rm, ae op Pan St, oN. Comerea"
+476,230,25314,25330,14:03.800,14:04.367,0.567,17,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,back room,[white] aay Catia aN cog Sa mz Ae yd Ra} Ya. Cura
+477,230,25331,25337,14:04.367,14:04.600,0.233,7,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,and badish only,
+478,230,25338,25369,14:04.600,14:05.667,1.067,32,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),0.57,kumar leaving,[white] m4 Camere
+479,230,25370,25381,14:05.667,14:06.067,0.4,12,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,the back,"[white] Saw <PS4+ -eugit ee, -we hz we at ar, wey Camcre"
+480,230,25382,25399,14:06.067,14:06.667,0.6,18,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,room before he,[white] wy ee Fr oa ee Fa? fe ao va Commre
+481,230,25400,25409,14:06.667,14:07.000,0.333,10,motion,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,fled the,"[white] ear Po yo Gompe ws ay. ay ta, Cammre id"
+482,230,25410,25412,14:07.000,14:07.100,0.1,3,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,scene,"[white] ‘wor STRAP an Wo Gogh ws “eo if at “st wm, Care 63 iD"
+483,230,25413,25419,14:07.100,14:07.333,0.233,7,still,PIP,CCTV security footage (19s) + small host bottom-left,small(r38),,,[white] Syney LS hal] Gogh et “Ate SC a7 Sie? Canare xe
+484,231,25420,25471,14:07.333,14:09.067,1.733,52,still,HOST,Host,normal(r81),,badash kar was last seen taking,
+485,232,25472,25515,14:09.067,14:10.533,1.467,44,still,PHOTO,"Tilted CCTV stills collage (taxi, train station)",,-0.73,a taxi from a hotel in new jersey,[white] ag ae cf ad
+486,232,25516,25548,14:10.533,14:11.633,1.1,33,motion,PHOTO,"Tilted CCTV stills collage (taxi, train station)",,,to a train station yark in new,[white] an
+487,232,25549,25629,14:11.633,14:14.333,2.7,81,still,PHOTO,"Tilted CCTV stills collage (taxi, train station)",,-0.2,where he hasn't been seen or heard from since,[white] Pen ‘wy ws
+488,233,25630,25669,14:14.333,14:15.667,1.333,40,still,HOST,Host,normal(r81),-0.49,hence why the fbi was so,
+489,234,25670,25715,14:15.667,14:17.200,1.533,46,still,DOC,FBI wanted poster; host over blurred poster; punch-in,,3.22,eager to put him on this list,"[white] FBITEN MOST WANTED FUGITIVE BHADRESHKUMAR CHETANBHAI PATEL ‘Uniaarind Fagin wo Aveed Proetcathan Per. Ane. Maite, Recund Degree Marte, tom Degree ‘Wrenson WO Potent be inte era tr oa Li Ai ae ni en ee ee peng ed ac te mm Fr ered He LAF te mtr cet fy oy rae Portree Cover Poin ver aaee o_o REMARKS SHOULD BE COMMOEAED an ore eer een rer ens seme rs re CA AW AAA He ry reer earls re vee"
+490,234,25716,25835,14:17.200,14:21.200,4.0,120,still,DOC,FBI wanted poster; host over blurred poster; punch-in,normal(r81),0.0,as without any information or tips this man is walking the streets free,
+491,234,25836,25853,14:21.200,14:21.800,0.6,18,still,DOC,FBI wanted poster; host over blurred poster; punch-in,zoom(r123),,and,
+492,235,25854,25884,14:21.800,14:22.833,1.033,31,motion,FOOTAGE,Footage clip over blurred poster,,,nobody wants,[white] ee
+493,236,25885,26102,14:22.833,14:30.100,7.267,218,still,HOST,Host (7.3s) / punch-in / host,normal(r81),-0.09,them after doing research for this video i have two pretty crazy takeaways and i want to know yours as well to me it seems so crazy that some people can just get away with such brazen and,
+494,236,26103,26133,14:30.100,14:31.133,1.033,31,still,HOST,Host (7.3s) / punch-in / host,zoom(r123),0.02,crazy crimes,
+495,236,26134,26197,14:31.133,14:33.267,2.133,64,still,HOST,Host (7.3s) / punch-in / host,normal(r81),-0.38,and it also seems extremely saddening how simply going,
+496,237,26198,26235,14:33.267,14:34.533,1.267,38,still,GAG,"Cartoon map zoomed on ""MEXICO"" + dot; ""GET OUT OF JAIL FREE"" card over blurred map",,0.29,to mexico be a can get,[white] MEXICO
+497,237,26236,26270,14:34.533,14:35.700,1.167,35,still,GAG,"Cartoon map zoomed on ""MEXICO"" + dot; ""GET OUT OF JAIL FREE"" card over blurred map",,2.23,out of jail free card,"[red] ies Chance PRIS CAMO AY BE OLEPT GAT REEDIS GR Sane GET GUT GF salt Page COP,"
+498,238,26271,26336,14:35.700,14:37.900,2.2,66,still,HOST,Host,normal(r81),-0.47,if you happen to know anything about some of these people,
+499,239,26337,26351,14:37.900,14:38.400,0.5,15,motion,TEXT,"""https://tips.fbi.gov/home"" red over host",normal(r81),,drop a,[red] Nttps://tips.fFoi.gov/nome fr
+500,239,26352,26418,14:38.400,14:40.633,2.233,67,still,TEXT,"""https://tips.fbi.gov/home"" red over host",normal(r81),0.0,tip at the fbi and you might just be a little bit richer thank,[red] Nttps://tips.fFoi.gov/nome fr
+501,240,26419,26429,14:40.633,14:41.000,0.367,11,motion,HOST,Host,normal(r81),,,
+502,240,26430,26480,14:41.000,14:42.700,1.7,51,still,HOST,Host,normal(r81),-0.01,you guys so much for watching this video and,
+503,241,26481,26556,14:42.700,14:45.233,2.533,76,still,ENDSCREEN,"Host left + white ""WATCH THIS NEXT"" card with red curved arrow + tiny agent peeking (11.6s)",normal(r81),0.02,if you enjoyed this video check out this video on screen about how the most infamous,[white] WATCH THIS NEXT | [red] WATCH THIS NEXT
+504,241,26557,26905,14:45.233,14:56.867,11.633,349,still,ENDSCREEN,"Host left + white ""WATCH THIS NEXT"" card with red curved arrow + tiny agent peeking (11.6s)",normal(r81),0.0,serial killers caught got in this video i outlin the stories of how john wing gasey jeffrey dummer and ted bundy all got caught and spoiler alert there's some pretty stories crazy thank you guys so much for watching and as always trust me bro,[white] WATCH THIS NEXT | [red] WATCH THIS NEXT
+505,242,26906,26931,14:56.867,14:57.733,0.867,26,motion,ENDSCREEN,"Host drops out with motion blur; channel logo + ""Subscribe"" button drop in and bounce; outro music",,,,[white] Trust Me ww BRO WATCH THIS NEXT SuLSaib€ | [red] WATCH THIS NEXT Susi
+506,242,26932,27104,14:57.733,15:03.500,5.767,173,still,ENDSCREEN,"Host drops out with motion blur; channel logo + ""Subscribe"" button drop in and bounce; outro music",small(r38),0.05,,[white] Trust Me WATCH THIS NEXT RRO Sub sb€ | [red] WATCH THIS NEXT Su sete
+507,243,27105,27116,15:03.500,15:03.900,0.4,12,still,BLANK,Empty background 0.4s,,,,
