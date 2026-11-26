@@ -1,0 +1,98 @@
+{
+ "key": "stamford_river",
+ "query": "River Derwent Stamford Bridge",
+ "cands": [
+  {
+   "title": "File:Stamford Bridge - geograph.org.uk - 910969.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Stamford_Bridge_-_geograph.org.uk_-_910969.jpg",
+   "w": 640,
+   "h": 508,
+   "size": 94889,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Stamford_Bridge_-_geograph.org.uk_-_910969.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Paul Glazzard",
+   "credit": "From geograph.org.uk",
+   "desc": "Stamford Bridge, East Riding of Yorkshire, England.Arched stone road bridge over the River Derwent, completed in 1727 by the East Riding County Council to designs by William Etty of York. An earlier medieval bridge had crossed the river some 150 yards upstream, and before that there was an apparentl"
+  },
+  {
+   "title": "File:The road bridge at Stamford Bridge over the River Derwent.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/The_road_bridge_at_Stamford_Bridge_over_the_River_Derwent.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 111055,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:The_road_bridge_at_Stamford_Bridge_over_the_River_Derwent.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Andy Beecroft",
+   "credit": "From geograph.org.uk",
+   "desc": "Stamford Bridge, East Riding of Yorkshire, England, over the River Derwent."
+  },
+  {
+   "title": "File:Derwent in Stamford Bridge - geograph.org.uk - 1323992.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Derwent_in_Stamford_Bridge_-_geograph.org.uk_-_1323992.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 110035,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Derwent_in_Stamford_Bridge_-_geograph.org.uk_-_1323992.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "DS Pugh",
+   "credit": "From geograph.org.uk",
+   "desc": "Derwent in Stamford Bridge, East Riding of Yorkshire, England.The river Derwent passing through Stamford Bridge. Taken from the viaduct of the old railway hosting a cycle track now rather than trains."
+  },
+  {
+   "title": "File:River Derwent - Stamford Bridge - geograph.org.uk - 2529348.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/River_Derwent_-_Stamford_Bridge_-_geograph.org.uk_-_2529348.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 91992,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:River_Derwent_-_Stamford_Bridge_-_geograph.org.uk_-_2529348.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Betty Longbottom",
+   "credit": "Geograph Britain and Ireland",
+   "desc": "River Derwent - Stamford Bridge"
+  },
+  {
+   "title": "File:River Derwent, Stamford Bridge - geograph.org.uk - 2371356.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/River_Derwent%2C_Stamford_Bridge_-_geograph.org.uk_-_2371356.jpg",
+   "w": 1600,
+   "h": 1200,
+   "size": 620496,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:River_Derwent,_Stamford_Bridge_-_geograph.org.uk_-_2371356.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "JThomas",
+   "credit": "Geograph Britain and Ireland",
+   "desc": "River Derwent, Stamford Bridge"
+  },
+  {
+   "title": "File:River Derwent, Stamford Bridge - geograph.org.uk - 3110586.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/River_Derwent%2C_Stamford_Bridge_-_geograph.org.uk_-_3110586.jpg",
+   "w": 1024,
+   "h": 768,
+   "size": 327720,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:River_Derwent,_Stamford_Bridge_-_geograph.org.uk_-_3110586.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Pauline E",
+   "credit": "Geograph Britain and Ireland",
+   "desc": "River Derwent, Stamford Bridge"
+  },
+  {
+   "title": "File:River Derwent at Stamford Bridge - geograph.org.uk - 5531113.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/River_Derwent_at_Stamford_Bridge_-_geograph.org.uk_-_5531113.jpg",
+   "w": 800,
+   "h": 600,
+   "size": 128031,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:River_Derwent_at_Stamford_Bridge_-_geograph.org.uk_-_5531113.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Stephen Craven",
+   "credit": "Geograph Britain and Ireland",
+   "desc": "River Derwent at Stamford Bridge"
+  }
+ ],
+ "tried": []
+}
