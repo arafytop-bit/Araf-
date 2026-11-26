@@ -1,0 +1,33 @@
+{
+ "key": "attila_death",
+ "query": "Ferenc Paczka death of Attila",
+ "cands": [
+  {
+   "title": "File:Paczka Ferenc - Attila halála - 1884.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Paczka_Ferenc_-_Attila_hal%C3%A1la_-_1884.jpg",
+   "w": 3162,
+   "h": 2245,
+   "size": 5257130,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Paczka_Ferenc_-_Attila_hal%C3%A1la_-_1884.jpg",
+   "license": "Public domain",
+   "artist": "Ferenc Paczka",
+   "credit": "Own work, photo taken at the Attila exhibition at the Hungarian National Museum by OrionNimrod",
+   "desc": "Death of Attila"
+  },
+  {
+   "title": "File:Morte di Attila, Ferenc Paczka.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Morte_di_Attila%2C_Ferenc_Paczka.jpg",
+   "w": 800,
+   "h": 633,
+   "size": 313963,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Morte_di_Attila,_Ferenc_Paczka.jpg",
+   "license": "Public domain",
+   "artist": "Ferenc Paczka",
+   "credit": "[1]",
+   "desc": ""
+  }
+ ],
+ "tried": []
+}

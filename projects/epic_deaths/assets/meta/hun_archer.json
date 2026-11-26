@@ -1,0 +1,20 @@
+{
+ "key": "hun_archer",
+ "query": "Hungarian horse archer reenactment",
+ "cands": [
+  {
+   "title": "File:Hungarian horse archers.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hungarian_horse_archers.jpg",
+   "w": 1369,
+   "h": 1054,
+   "size": 581883,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hungarian_horse_archers.jpg",
+   "license": "Public domain",
+   "artist": "Csanády, edit by László Szalai (Beyond silence)",
+   "credit": "Edit of Image:Lovasíjászok Ópusztaszer.JPG",
+   "desc": "Hungarian horse archers presentation in Ópusztaszer (Hungary)"
+  }
+ ],
+ "tried": []
+}

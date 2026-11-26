@@ -1,0 +1,33 @@
+{
+ "key": "olympia_stadium",
+ "query": "Olympia stadium entrance tunnel",
+ "cands": [
+  {
+   "title": "File:Picture that I took in Olimpia (entance to stadium).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Picture_that_I_took_in_Olimpia_%28entance_to_stadium%29.jpg",
+   "w": 5184,
+   "h": 3888,
+   "size": 10017792,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Picture_that_I_took_in_Olimpia_(entance_to_stadium).jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Asier Barre",
+   "credit": "Own work",
+   "desc": "Part of the tunnel of the entrance of Olimpia stadium."
+  },
+  {
+   "title": "File:Olympia Bases of the Zanes from SW (1993).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Olympia_Bases_of_the_Zanes_from_SW_%281993%29.jpg",
+   "w": 4644,
+   "h": 2891,
+   "size": 3665551,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Olympia_Bases_of_the_Zanes_from_SW_(1993).jpg",
+   "license": "CC BY 4.0",
+   "artist": "Mark Landon",
+   "credit": "Own work",
+   "desc": "Olympia. Bases of the Zanes outside the entrance tunnel to the stadium, from the southwest."
+  }
+ ],
+ "tried": []
+}

@@ -1,0 +1,46 @@
+{
+ "key": "aquila",
+ "query": "Roman legion aquila standard reenactment",
+ "cands": [
+  {
+   "title": "File:Roman aquila.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Roman_aquila.jpg",
+   "w": 2304,
+   "h": 3456,
+   "size": 776692,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Roman_aquila.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "No machine-readable author provided. MatthiasKabel assumed (based on copyright claims).",
+   "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+   "desc": "Aquila, the sign of the legion Photographed by myself during a show of Legio XV from Pram, Austria"
+  },
+  {
+   "title": "File:Malta - ZebbugM - Good Friday 122 ies.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Malta_-_ZebbugM_-_Good_Friday_122_ies.jpg",
+   "w": 5616,
+   "h": 3744,
+   "size": 18040940,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Malta_-_ZebbugM_-_Good_Friday_122_ies.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Frank Vincentz",
+   "credit": "Own work",
+   "desc": "2014 Good Friday procession, Misraħ San Filep in Żebbuġ, Malta"
+  },
+  {
+   "title": "File:Malta - ZebbugM - Good Friday 123 ies.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Malta_-_ZebbugM_-_Good_Friday_123_ies.jpg",
+   "w": 5616,
+   "h": 3744,
+   "size": 16883971,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Malta_-_ZebbugM_-_Good_Friday_123_ies.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Frank Vincentz",
+   "credit": "Own work",
+   "desc": "2014 Good Friday procession, Misraħ San Filep in Żebbuġ, Malta"
+  }
+ ],
+ "tried": []
+}

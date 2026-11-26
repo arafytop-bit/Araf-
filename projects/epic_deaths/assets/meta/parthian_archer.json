@@ -1,0 +1,85 @@
+{
+ "key": "parthian_archer",
+ "query": "Parthian shot horse archer",
+ "cands": [
+  {
+   "title": "File:Hephthalite horseman on British Museum bowl 460-479 CE.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Hephthalite_horseman_on_British_Museum_bowl_460-479_CE.jpg",
+   "w": 1115,
+   "h": 914,
+   "size": 251455,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hephthalite_horseman_on_British_Museum_bowl_460-479_CE.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Original photo by User:PHGCOM, contoured by myself पाटलिपुत्र (talk)",
+   "credit": "Derived from:",
+   "desc": "Hephthalite horseman on British Museum bowl 460-479 CE British Museum notice"
+  },
+  {
+   "title": "File:Horse back archery AD 4C.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Horse_back_archery_AD_4C.jpg",
+   "w": 1024,
+   "h": 776,
+   "size": 171394,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horse_back_archery_AD_4C.jpg",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "http://rubens.anu.edu.au/raid2/no_dgb/the_lot/the_lot.html (direct link)",
+   "desc": "Goguryeo Horseback Archery"
+  },
+  {
+   "title": "File:ParthianHorseman.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/ParthianHorseman.jpg",
+   "w": 478,
+   "h": 523,
+   "size": 96647,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:ParthianHorseman.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Jean Chardin",
+   "credit": "Palazzo Madama and Casaforte degli Acaja, Turin",
+   "desc": "Parthian horseman performing a shot"
+  },
+  {
+   "title": "File:Hungarian warrior.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Hungarian_warrior.jpg",
+   "w": 734,
+   "h": 552,
+   "size": 121867,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hungarian_warrior.jpg",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "http://hu.wikipedia.org/wiki/Fájl:Hátrafelé_nyilazó_magyar_harcos.jpg",
+   "desc": "Hungarian warrior (10th century) from Patriarchate of Aquileia (fresco)"
+  },
+  {
+   "title": "File:Basilica di aquilieia, cripta, affreschi registro inferiore 03.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Basilica_di_aquilieia%2C_cripta%2C_affreschi_registro_inferiore_03.JPG",
+   "w": 2592,
+   "h": 1944,
+   "size": 4322459,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Basilica_di_aquilieia,_cripta,_affreschi_registro_inferiore_03.JPG",
+   "license": "CC BY-SA 3.0",
+   "artist": "sailko",
+   "credit": "Self-photographed",
+   "desc": "Basilica of aquilieia, crypt, lower register frescoes"
+  },
+  {
+   "title": "File:Amir Hassan II 20251119.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Amir_Hassan_II_20251119.jpg",
+   "w": 3666,
+   "h": 4998,
+   "size": 15950057,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Amir_Hassan_II_20251119.jpg",
+   "license": "CC0",
+   "artist": "This image was produced by me, David Castor (user:dcastor). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the",
+   "credit": "Own work",
+   "desc": "Relief av Amir Hassan II från klostret i Spitakavor. Reliefen från 1321 återfinns på Armeniens historiska museum i Jerevan."
+  }
+ ],
+ "tried": []
+}

@@ -49,8 +49,8 @@ QUERIES = [
     ('parthian_archer', 'Parthian shot horse archer', []),
     ('aquila', 'Roman legion aquila standard reenactment', []),
     ('greek_theater', 'Epidaurus theatre', []),
-    ('theater_masks', 'theatre masks mosaic Capitoline', []),
-    ('kouros_phigalia', 'Kouros Phigalia', []),
+    ('theater_masks', 'mosaic theatrical masks tragedy comedy', []),
+    ('kouros_phigalia', 'Arrhachion kouros', []),
     ('pankration_vase', 'pankration Panathenaic amphora', []),
     ('olympia_stadium', 'Olympia stadium entrance tunnel', []),
     ('olive_wreath', 'olive wreath kotinos', []),
@@ -75,8 +75,8 @@ PREFER = {
     'snorri': ['snorri'], 'stamford_arbo': ['stamford', 'arbo'], 'anglo_saxon_chronicle': ['chronicle'], 'bayeux_harold': ['bayeux'],
     'leo_attila': ['leo', 'attila'], 'feast_attila': ['attila', 'lakom', 'feast'], 'hun_archer': ['archer', 'íjász', 'horse'],
     'solidus': ['solidus'], 'attila_death': ['attila'], 'crassus_bust': ['crassus'], 'fire_rome': ['fire', 'incendie'],
-    'spartacus_statue': ['spartac'], 'parthian_archer': ['parthian', 'archer'], 'aquila': ['aquila', 'eagle'],
-    'greek_theater': ['epidaur'], 'theater_masks': ['mask'], 'kouros_phigalia': ['phigal'], 'pankration_vase': ['pankration'],
+    'spartacus_statue': ['spartac'], 'parthian_archer': ['parthian'], 'aquila': ['aquila', 'eagle'],
+    'greek_theater': ['epidaur'], 'theater_masks': ['mask'], 'kouros_phigalia': ['phigal', 'arrhach', 'arrich'], 'pankration_vase': ['pankration'],
     'olympia_stadium': ['stadium', 'stadion'], 'olive_wreath': ['wreath', 'kotinos'], 'pyrrhus': ['pyrrhus'],
     'yi_statue': ['yi sun', 'sun-sin'], 'nelson': ['nelson'], 'turtle_ship': ['turtle', 'geobuk', 'kobuk'],
     'myeongnyang': ['uldolmok', 'myeongnyang'], 'stamford_river': ['derwent', 'stamford'], 'hagia_sophia': ['hagia', 'sophia', 'ayasofya'],
@@ -177,7 +177,9 @@ def fetch_one(key):
     fp = os.path.join(META, key + '.json')
     m = json.load(open(fp))
     pref = PREFER.get(key, [])
-    ranked = sorted(m['cands'], key=lambda c: (not any(t in c['title'].lower() for t in pref), min(c['w'], c['h']) < 700))
+    free = lambda c: any(t in c['license'].lower() for t in ('public domain', 'cc0', 'pd'))  # noqa: E731
+    ranked = sorted(m['cands'], key=lambda c: (not any(t in c['title'].lower() for t in pref), min(c['w'], c['h']) < 480,
+                                               not free(c)))
     for c in ranked:
         if c['title'] in m['tried']:
             continue

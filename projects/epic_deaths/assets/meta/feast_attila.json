@@ -1,0 +1,20 @@
+{
+ "key": "feast_attila",
+ "query": "Than Mór Attila lakomája",
+ "cands": [
+  {
+   "title": "File:Than Mór - Attila lakomája (1870).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Than_M%C3%B3r_-_Attila_lakom%C3%A1ja_%281870%29.jpg",
+   "w": 1200,
+   "h": 809,
+   "size": 218683,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Than_M%C3%B3r_-_Attila_lakom%C3%A1ja_(1870).jpg",
+   "license": "Public domain",
+   "artist": "Mór Than",
+   "credit": "Fine Arts in Hungary:",
+   "desc": "Attila’s Feast"
+  }
+ ],
+ "tried": []
+}
