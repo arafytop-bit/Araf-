@@ -62,6 +62,12 @@ QUERIES = [
     ('hideyoshi', 'Toyotomi Hideyoshi portrait Kodai-ji', []),
     ('hundred_won', '100 won coin Yi Sun-sin', []),
     ('seoul_gwanghwamun', 'Gwanghwamun Square Seoul', []),
+    # real backdrops for character scenes (BLUEPRINT 5.4 SCENE: characters composited on a real photo)
+    ('stamford_river', 'River Derwent Stamford Bridge', []),
+    ('hagia_sophia', 'Hagia Sophia interior', []),
+    ('puszta', 'Hortobágy puszta grassland', []),
+    ('carrhae', 'Harran plain Turkey', []),
+    ('gyeongbokgung', 'Geunjeongjeon Gyeongbokgung throne hall', []),
 ]
 PREFER = {
     'tycho': ['tycho'], 'chrysippus': ['chrysippus', 'crisip'], 'rasputin': ['rasputin'], 'harald_portrait': ['harald', 'hardr'],
@@ -73,7 +79,8 @@ PREFER = {
     'greek_theater': ['epidaur'], 'theater_masks': ['mask'], 'kouros_phigalia': ['phigal'], 'pankration_vase': ['pankration'],
     'olympia_stadium': ['stadium', 'stadion'], 'olive_wreath': ['wreath', 'kotinos'], 'pyrrhus': ['pyrrhus'],
     'yi_statue': ['yi sun', 'sun-sin'], 'nelson': ['nelson'], 'turtle_ship': ['turtle', 'geobuk', 'kobuk'],
-    'myeongnyang': ['uldolmok', 'myeongnyang'], 'hideyoshi': ['hideyoshi'], 'hundred_won': ['won'], 'seoul_gwanghwamun': ['gwanghwamun'],
+    'myeongnyang': ['uldolmok', 'myeongnyang'], 'stamford_river': ['derwent', 'stamford'], 'hagia_sophia': ['hagia', 'sophia', 'ayasofya'],
+    'puszta': ['hortob', 'puszta'], 'carrhae': ['harran'], 'gyeongbokgung': ['geunjeongjeon', 'gyeongbok'], 'hideyoshi': ['hideyoshi'], 'hundred_won': ['won'], 'seoul_gwanghwamun': ['gwanghwamun'],
 }
 OK_LICENSES = ('public domain', 'pd', 'cc0', 'cc by', 'cc-by', 'attribution', 'no restrictions')
 BAD_WORDS = ('map', 'coat of arms', 'signature', 'logo', 'flag', 'diagram', 'plan of', 'svg', 'icon', 'chart')
@@ -215,6 +222,37 @@ def phase2():
         fetch_one(key)
 
 
+LIC_URL = {'cc0': 'https://creativecommons.org/publicdomain/zero/1.0/'}
+
+
+def license_url(lic):
+    m = re.match(r'cc[ -]by(-sa)?[ -]?([\d.]+)?', lic.lower())
+    if not m:
+        return LIC_URL.get(lic.lower().strip(), '')
+    kind = 'by-sa' if m.group(1) else 'by'
+    return f'https://creativecommons.org/licenses/{kind}/{m.group(2) or "4.0"}/'
+
+
+def write_credits(order):
+    cr = json.load(open(CREDITS)) if os.path.exists(CREDITS) else {}
+    lines = ['IMAGE CREDITS (all via Wikimedia Commons)', '']
+    for key in order:
+        c = cr.get(key)
+        if not c:
+            continue
+        name = re.sub(r'\.(jpe?g|png|tiff?)$', '', c['title'].split(':', 1)[1], flags=re.I)
+        lic = c['license'] or 'see file page'
+        who = c['artist'] or 'unknown author'
+        if 'public domain' in lic.lower() or lic.lower() in ('pd', 'cc0'):
+            lines.append(f'- {name}: {who}, {lic}. {c["page"]}')
+        else:
+            lu = license_url(lic)
+            lines.append(f'- {name}: {who}, {lic}{" (" + lu + ")" if lu else ""}. {c["page"]}')
+    out = os.path.join(HERE, '..', 'CREDITS.md')
+    open(out, 'w').write('\n'.join(lines) + '\n')
+    return out
+
+
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'run'
     if cmd == 'run':
@@ -223,6 +261,8 @@ if __name__ == '__main__':
         log('FETCH2_DONE')
     elif cmd == 'meta':
         phase1()
+    elif cmd == 'credits':
+        print(write_credits([k for k, _, _ in QUERIES]))
     elif cmd == 'next':
         for k in sys.argv[2:]:
             p = os.path.join(PICKED, k + '.jpg')

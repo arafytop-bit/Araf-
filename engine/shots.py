@@ -112,7 +112,19 @@ def render_photo(c, b, f):
         c.restore()
     else:
         c.drawImage(blur_bg(b['img']), 0, 0)
-        _framed(c, img, W / 2, H / 2 - (30 if b.get('pip') else 0), H * 0.72, W * 0.80, scale=s)
+        cy = H / 2 - (30 if b.get('pip') else 0)
+        w, h = _framed(c, img, W / 2, cy, H * 0.72, W * 0.80, scale=s)
+        if b.get('circle'):            # YouTube-thumbnail style annotation: red circle + green arrow (BLUEPRINT 5.5)
+            u, v, rf = b['circle'][:3]
+            fa = ev(b, 'circle', b['f0'] + 9)
+            if f >= fa:
+                k = appear(f, fa, 5)
+                px, py = W / 2 - w / 2 + u * w, cy - h / 2 + v * h
+                rr = rf * w * max(0.2, k)
+                c.drawCircle(px, py, rr, paint('#000000', stroke=17, alpha=90))
+                c.drawCircle(px, py, rr, paint('#E8392F', stroke=11))
+                d = b['circle'][3] if len(b['circle']) > 3 else 1
+                annot_arrow(c, px + d * rr * 2.3, py + rr * 2.1, px + d * rr * 1.12, py + rr * 1.02, k)
     if b.get('caption'):
         draw_label(c, b['caption'], W / 2, H - 70, 34, align='center')
     if b.get('bodycam'):
@@ -124,6 +136,23 @@ def render_photo(c, b, f):
         _txt(c, 'BODYCAM · UNIT 03', W - 90, H - 80, 26, color='#FFFFFF', align='right')
     if b.get('pip'):
         pip_host(c, f, b)
+
+
+def annot_arrow(c, x0, y0, x1, y1, k=1.0, color='#35D43A'):
+    dx, dy = x1 - x0, y1 - y0
+    n = max(1e-6, (dx * dx + dy * dy) ** 0.5)
+    ux, uy = dx / n, dy / n
+    x1k, y1k = x0 + dx * k, y0 + dy * k
+    hw, hl = 30, 46
+    bx, by = x1k - ux * hl, y1k - uy * hl
+    head = skia.Path()
+    head.moveTo(x1k, y1k); head.lineTo(bx - uy * hw, by + ux * hw); head.lineTo(bx + uy * hw, by - ux * hw); head.close()
+    for col, extra, a in (('#000000', 6, 110), (color, 0, 255)):
+        c.drawLine(x0, y0, bx, by, paint(col, stroke=20 + extra, alpha=a))
+        hp = paint(col, alpha=a)
+        if extra:
+            hp.setStyle(skia.Paint.kStrokeAndFill_Style); hp.setStrokeWidth(extra)
+        c.drawPath(head, hp)
 
 
 def render_collage(c, b, f):
@@ -145,23 +174,27 @@ def render_collage(c, b, f):
 
 # ---------------- title card with a real portrait ----------------
 @functools.lru_cache(maxsize=16)
-def portrait(key, w=470, h=610):
+@functools.lru_cache(maxsize=16)
+def portrait(key, w=470, h=610, cx=0.5, cy=0.2, zoom=1.0):
+    """Cover-crop a real image into the title-card frame; (cx, cy) = focus point in the source (0..1)."""
     img = load_img(key)
     if img is None:
         return None
     s = skia.Surface(w, h)
     c = s.getCanvas()
     iw, ih = img.width(), img.height()
-    k = max(w / iw, h / ih)
+    k = max(w / iw, h / ih) * zoom
     dw, dh = iw * k, ih * k
-    c.drawImageRect(img, skia.Rect((w - dw) / 2, (h - dh) * 0.2, (w - dw) / 2 + dw, (h - dh) * 0.2 + dh),
-                    skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear))
+    x = min(0.0, max(w - dw, w / 2 - cx * dw))
+    y = min(0.0, max(h - dh, h / 2 - cy * dh)) if cy != 0.2 else (h - dh) * 0.2
+    c.drawImageRect(img, skia.Rect(x, y, x + dw, y + dh), skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear))
     return s.makeImageSnapshot()
 
 
 def render_title(c, b, f):
     draw_background(c)
-    img = portrait(b['img'])
+    cx, cy, z = b.get('crop', (0.5, 0.2, 1.0))
+    img = portrait(b['img'], cx=cx, cy=cy, zoom=z)
     if img is None:
         from .cards import make_portrait
         img = make_portrait(b['pal'])
@@ -249,12 +282,15 @@ def backdrop(c, kind, f=0):
     if kind == 'black' or kind is None:
         draw_background(c); return
     if kind.startswith('img:'):
-        img = load_img(kind[4:])
+        key, _, fallback = kind[4:].partition('|')
+        img = load_img(key)
         if img is not None:
             _cover(c, img, 1.0 + 0.004 * f / FPS)
-            c.drawRect(skia.Rect(0, 0, W, H), paint('#000000', alpha=60))
+            c.drawRect(skia.Rect(0, 0, W, H), paint('#000000', alpha=70))
             return
-        draw_background(c); return
+        if not fallback:
+            draw_background(c); return
+        kind = fallback
     pal = {
         'field': ('#8FCBF2', '#DDF0FB', '#7FB65A', '#5E9442', 770),
         'sea': ('#8FCBF2', '#DDF0FB', '#3E93CF', '#2A6FA8', 640),

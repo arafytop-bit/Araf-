@@ -1,0 +1,59 @@
+{
+ "key": "snorri",
+ "query": "Snorri Sturluson Vigeland statue",
+ "cands": [
+  {
+   "title": "File:SnorriByVigland.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/SnorriByVigland.jpg",
+   "w": 762,
+   "h": 764,
+   "size": 286095,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:SnorriByVigland.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "photo by Einar Einarsson Kvaran aka Carptrash",
+   "credit": "own work of original uploader",
+   "desc": "Statue of Snorri Sturluson made by Gustav Vigeland"
+  },
+  {
+   "title": "File:Bergen - no-nb digifoto 20151021 00231 NB MIT FNR 10145 A.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Bergen_-_no-nb_digifoto_20151021_00231_NB_MIT_FNR_10145_A.jpg",
+   "w": 5170,
+   "h": 6940,
+   "size": 3786110,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bergen_-_no-nb_digifoto_20151021_00231_NB_MIT_FNR_10145_A.jpg",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "National Library of Norway",
+   "desc": "Bildet er hentet fra Nasjonalbibliotekets bildesamling. Anmerkninger til bildet var: Fotograf : ukjent"
+  },
+  {
+   "title": "File:Bergen - no-nb digifoto 20151021 00229 NB MIT FNR 10145 B.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Bergen_-_no-nb_digifoto_20151021_00229_NB_MIT_FNR_10145_B.jpg",
+   "w": 5170,
+   "h": 6940,
+   "size": 3043857,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bergen_-_no-nb_digifoto_20151021_00229_NB_MIT_FNR_10145_B.jpg",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "National Library of Norway",
+   "desc": "Bildet er hentet fra Nasjonalbibliotekets bildesamling. Anmerkninger til bildet var: Fotograf : ukjent"
+  },
+  {
+   "title": "File:Reykholt 07.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Reykholt_07.jpg",
+   "w": 2213,
+   "h": 3177,
+   "size": 2025591,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Reykholt_07.jpg",
+   "license": "Public domain",
+   "artist": "Christian Bickel (photo), Gustav Vigeland (statue)",
+   "credit": "Own work",
+   "desc": "Reykholt. Snorri Sturluson. Statue von Gustav Vigeland"
+  }
+ ],
+ "tried": []
+}

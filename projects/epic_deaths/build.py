@@ -109,6 +109,8 @@ def compile_beats():
             sub(b['strike_at'], 'strike')
         if b.get('overlay_at'):
             sub(b['overlay_at'], 'overlay')
+        if b.get('circle_at'):
+            sub(b['circle_at'], 'circle')
         for k, ch in enumerate(b.get('chars', [])):
             if ch.get('at'):
                 sub(ch['at'], f'c{k}')
@@ -191,19 +193,25 @@ def host_shots(beats):
     total_f = fr(TOTAL_S)
     gaps = []
     t = 0
+    prev = None
     for b in beats:
         if b['f0'] > t:
-            gaps.append((t, b['f0']))
+            gaps.append((t, b['f0'], prev))
+        if b['f1'] >= t:
+            prev = b
         t = max(t, b['f1'])
     if t < total_f:
-        gaps.append((t, total_f))
+        gaps.append((t, total_f, prev))
+    rng_over = random.Random(11)
     forced = []
     cur = 0
     for h in SB.HOSTS:
         i = find(h['trigger'], 0)
         forced.append((cut_frame(i), h))
     hs = []
-    for g0, g1 in gaps:
+    for g0, g1, pb in gaps:
+        # HOST_OVER (BLUEPRINT 5.4): sometimes the host stays over a blurred copy of the photo that was just on screen
+        over = pb['img'] if (pb is not None and pb['kind'] == 'photo' and pb['f1'] == g0 and rng_over.random() < 0.4) else None
         # split points: sentence starts inside the gap (keep shots >= 1.6 s), plus forced host settings
         cuts = [g0]
         for s in SENTS:
@@ -240,7 +248,7 @@ def host_shots(beats):
                     nxt = rng.choice([e for e in pool if e != exprs[-1][1]] or pool)
                     exprs.append((f, nxt))
                     last = f
-            hs.append(dict(kind='host', f0=a, f1=z, zoom=zoom, pose=pose, exprs=exprs,
+            hs.append(dict(kind='host', f0=a, f1=z, zoom=zoom, pose=pose, exprs=exprs, over=over if a == g0 else None,
                            look=(fh or {}).get('look', (0.0, 0.0)), bob=(rng.uniform(-0.03, 0.03), rng.uniform(-0.02, 0.02))))
     return hs
 
@@ -267,7 +275,10 @@ def compile_all():
 
 # ---------------- render ----------------
 def render_host(c, h, f):
-    draw_background(c)
+    if h.get('over') and os.path.exists(os.path.join(shots.IMG_DIR, h['over'] + '.jpg')):
+        c.drawImage(shots.blur_bg(h['over']), 0, 0)
+    else:
+        draw_background(c)
     e = h['exprs'][0][1]
     for f0, ex in h['exprs']:
         if f >= f0:
@@ -444,6 +455,25 @@ def prender(n=4):
     return out
 
 
+def describe():
+    """YouTube description helper: chapters from the title cards + image credits."""
+    timeline, _, _ = compile_all()
+    def ts(t):
+        return f'{int(t // 60)}:{int(t % 60):02d}'
+    rows = [('0:00', 'Intro')]
+    for b in timeline:
+        if b['kind'] == 'title':
+            rows.append((ts(b['f0'] / FPS), f"#{b['num']} " + b['trigger'].rstrip('.')))
+    mid = [snt for snt in SENTS if snt['section'] == 'outro'][0]['start']
+    rows.append((ts(mid), 'Recap'))
+    out = ['CHAPTERS'] + [f'{a} {b}' for a, b in rows] + ['']
+    cp = os.path.join(HERE, 'CREDITS.md')
+    if os.path.exists(cp):
+        out += open(cp).read().splitlines()
+    open(os.path.join(HERE, 'DESCRIPTION.md'), 'w').write('\n'.join(out) + '\n')
+    return os.path.join(HERE, 'DESCRIPTION.md')
+
+
 def plan():
     timeline, calls, overlays = compile_all()
     kinds = {}
@@ -491,6 +521,8 @@ if __name__ == '__main__':
         prender(4)
         mix()
         print('wrote', mux())
+    elif cmd == 'describe':
+        print(open(describe()).read())
     elif cmd == 'mix':
         print('wrote', mix())
     elif cmd == 'mux':

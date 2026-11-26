@@ -1,0 +1,98 @@
+{
+ "key": "heimskringla",
+ "query": "Heimskringla manuscript",
+ "cands": [
+  {
+   "title": "File:CodexFrisianus.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/CodexFrisianus.jpg",
+   "w": 2364,
+   "h": 2364,
+   "size": 2109885,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:CodexFrisianus.jpg",
+   "license": "Public domain",
+   "artist": "",
+   "credit": "",
+   "desc": ""
+  },
+  {
+   "title": "File:AM 45 fol.-38-0016r.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/AM_45_fol.-38-0016r.jpg",
+   "w": 8222,
+   "h": 9696,
+   "size": 11074830,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:AM_45_fol.-38-0016r.jpg",
+   "license": "Public domain",
+   "artist": "Author unknown",
+   "credit": "https://handrit.is/manuscript/view/en/AM02-0045/9#page/1v/mode/2up",
+   "desc": "Page 16r of AM 45 fol., also known as Fríssbók or Codex Frisianus, showing Hákonar saga góða"
+  },
+  {
+   "title": "File:AM 45 fol.-27-0010v.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/AM_45_fol.-27-0010v.jpg",
+   "w": 7975,
+   "h": 9437,
+   "size": 10490024,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:AM_45_fol.-27-0010v.jpg",
+   "license": "Public domain",
+   "artist": "Author unknown",
+   "credit": "https://handrit.is/manuscript/view/en/AM02-0045/0#mode/2up",
+   "desc": "Page 10v of AM 45 fol. (Fríssbók, Codex Frisianus), showing part of Haralds saga hins hárfagra"
+  },
+  {
+   "title": "File:Fríssbók f. 44r.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Fr%C3%ADssb%C3%B3k_f._44r.jpg",
+   "w": 2777,
+   "h": 3761,
+   "size": 3961223,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fr%C3%ADssb%C3%B3k_f._44r.jpg",
+   "license": "Public domain",
+   "artist": "The scribe who wrote Fríssbók in the 14th century is unknown. This photograph of this page was presumably made by Suzanne Reitz, photographer at the Department ",
+   "credit": "https://myndir.handrit.is/file/Handrit.is/AM%2045%20fol./87/HIGH_QUALITY_DISPLAY",
+   "desc": "This is a photograph of a page (folio 44 recto) from the 14th century Norse manuscript Fríssbók, also known as AM 45 fol. The manuscript is a part of the Arnamagnæan Collection in Copenhagen. This page shows a part of the saga of King Harald Hardrada, including a description of his campaign in Denma"
+  },
+  {
+   "title": "File:AM 45 fol 1r.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/AM_45_fol_1r.jpg",
+   "w": 1100,
+   "h": 1406,
+   "size": 971104,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:AM_45_fol_1r.jpg",
+   "license": "CC0",
+   "artist": "Gottskálk Jensson",
+   "credit": "Own work",
+   "desc": "The first page of Codex Frisianus (AM 45 fol.) with the Prologue of Heimskringla"
+  },
+  {
+   "title": "File:AM 45 fol.-38-0016r (cropped).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/AM_45_fol.-38-0016r_%28cropped%29.jpg",
+   "w": 6935,
+   "h": 9305,
+   "size": 10327272,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:AM_45_fol.-38-0016r_(cropped).jpg",
+   "license": "Public domain",
+   "artist": "Author unknown",
+   "credit": "https://handrit.is/manuscript/view/en/AM02-0045/9#page/1v/mode/2up",
+   "desc": "Page 16r of AM 45 fol., also known as Fríssbók or Codex Frisianus, showing Hákonar saga góða"
+  },
+  {
+   "title": "File:Fríssbók(Codex Frisianus).png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Fr%C3%ADssb%C3%B3k%28Codex_Frisianus%29.png",
+   "w": 489,
+   "h": 671,
+   "size": 748805,
+   "mime": "image/png",
+   "page": "https://commons.wikimedia.org/wiki/File:Fr%C3%ADssb%C3%B3k(Codex_Frisianus).png",
+   "license": "CC BY-SA 4.0",
+   "artist": "Thorsteinn1996",
+   "credit": "Own work",
+   "desc": "Blað úr Fríssbók - AM 45 fol. (Codex Frisianus)"
+  }
+ ],
+ "tried": []
+}

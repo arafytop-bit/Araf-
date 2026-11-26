@@ -438,3 +438,21 @@ SFX = {
     'killed the men who dug': [('thud', None, 0, -6)],
     "wrenched his opponent's foot": [('thud', None, 0, -5)],
 }
+
+
+# ---------- real photo backdrops behind character scenes (falls back to the cartoon set if the image is missing) ----------
+REAL_BG = {
+    "Byzantine emperor's elite": 'hagia_sophia', 'blind an emperor': 'hagia_sophia', 'marries a princess': 'hagia_sophia',
+    'weather is gorgeous': 'stamford_river', 'very merry': 'stamford_river', 'chilling in the sun': 'stamford_river',
+    'a cloud of dust rises': 'stamford_river', 'held the bridge': 'stamford_river', 'underneath the bridge': 'stamford_river',
+    'a herdsman noticed': 'puszta',
+    'Roman legionary': 'carrhae', 'fire backward': 'carrhae', "Crassus's son led": 'carrhae', 'lured into peace talks': 'carrhae',
+    'He was an athlete': 'olympia_stadium', 'He was the guy': 'olympia_stadium', 'makes it to the final': 'olympia_stadium',
+    'wraps his legs around': 'olympia_stadium', "wrenched his opponent's foot": 'olympia_stadium',
+    'judges with an awkward': 'olympia_stadium', 'The winner was dead': 'olympia_stadium', 'crowned the corpse': 'olympia_stadium',
+    'gave Yi his old job back': 'gyeongbokgung',
+    'captains hung back': 'myeongnyang', "Yi's flagship held off": 'myeongnyang', 'crashing into each other': 'myeongnyang',
+}
+for _b in BEATS:
+    if _b['kind'] == 'scene' and _b['trigger'] in REAL_BG:
+        _b['bg'] = f"img:{REAL_BG[_b['trigger']]}|{_b.get('bg', 'black')}"
