@@ -266,6 +266,11 @@ def compile_all():
     calls.sort(key=lambda c: c['f0'])
     for a, b in zip(calls, calls[1:]):
         a['f1'] = min(a['f1'], b['f0'])
+    for t in [b for b in timeline if b['kind'] in ('title', 'kinetic', 'end')]:   # title cards stay clean
+        for c in calls:
+            if c['f0'] < t['f0'] < c['f1']:
+                c['f1'] = t['f0']
+    calls = [c for c in calls if c['f1'] - c['f0'] >= 8]
     overlays = []
     for o in SB.OVERLAYS:
         i = find(o['trigger'], 0)
@@ -467,6 +472,20 @@ def describe():
     mid = [snt for snt in SENTS if snt['section'] == 'outro'][0]['start']
     rows.append((ts(mid), 'Recap'))
     out = ['CHAPTERS'] + [f'{a} {b}' for a, b in rows] + ['']
+    used = []
+    for b in timeline:
+        ks = [b.get('img'), b.get('over')] + [it.get('img') for it in b.get('items', []) if isinstance(it, dict)]
+        bg = str(b.get('bg', ''))
+        if bg.startswith('img:'):
+            ks.append(bg[4:].split('|')[0])
+        for k in ks:
+            if k and k not in used and os.path.exists(os.path.join(shots.IMG_DIR, k + '.jpg')):
+                used.append(k)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('fetch2', os.path.join(HERE, 'assets', 'fetch2.py'))
+    f2 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(f2)
+    f2.write_credits(used)
     cp = os.path.join(HERE, 'CREDITS.md')
     if os.path.exists(cp):
         out += open(cp).read().splitlines()

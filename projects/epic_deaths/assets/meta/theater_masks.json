@@ -1,6 +1,74 @@
 {
  "key": "theater_masks",
- "query": "theatre masks mosaic Capitoline",
- "cands": [],
- "tried": []
+ "query": "mosaic theatrical masks tragedy comedy",
+ "cands": [
+  {
+   "title": "File:Mosaic depicting theatrical masks of Tragedy and Comedy (Thermae Decianae).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy_%28Thermae_Decianae%29.jpg",
+   "w": 4024,
+   "h": 3264,
+   "size": 12913946,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy_(Thermae_Decianae).jpg",
+   "license": "Public domain",
+   "artist": "Carole Raddato from FRANKFURT, Germany (FollowingHadrian); derivative work: Speravir",
+   "credit": "Mosaic depicting theatrical masks of Tragedy and Comedy, 2nd century AD, from Rome Thermae Decianae (?), Palazzo Nuovo, Capitoline Museums (12830396085).jpg",
+   "desc": ""
+  },
+  {
+   "title": "File:Mosaic depicting theatrical masks of Tragedy and Comedy, 2nd century AD, from Rome Thermae Decianae (?), Palazzo Nuovo, Capitoline Museums (12830689153).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy%2C_2nd_century_AD%2C_from_Rome_Thermae_Decianae_%28%3F%29%2C_Palazzo_Nuovo%2C_Capitoline_Museums_%2812830689153%29.jpg",
+   "w": 4528,
+   "h": 3264,
+   "size": 12355870,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy,_2nd_century_AD,_from_Rome_Thermae_Decianae_(%3F),_Palazzo_Nuovo,_Capitoline_Museums_(12830689153).jpg",
+   "license": "Public domain",
+   "artist": "Carole Raddato from FRANKFURT, Germany (FollowingHadrian)",
+   "credit": "Mosaic depicting theatrical masks of Tragedy and Comedy, 2nd century AD, from Rome Thermae Decianae (?), Palazzo Nuovo, Capitoline Museums",
+   "desc": ""
+  },
+  {
+   "title": "File:Mosaic depicting theatrical masks of Tragedy and Comedy, 2nd century AD, from Rome Thermae Decianae (?), Palazzo Nuovo, Capitoline Museums (12830396085).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy%2C_2nd_century_AD%2C_from_Rome_Thermae_Decianae_%28%3F%29%2C_Palazzo_Nuovo%2C_Capitoline_Museums_%2812830396085%29.jpg",
+   "w": 4928,
+   "h": 3264,
+   "size": 15614081,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy,_2nd_century_AD,_from_Rome_Thermae_Decianae_(%3F),_Palazzo_Nuovo,_Capitoline_Museums_(12830396085).jpg",
+   "license": "Public domain",
+   "artist": "Carole Raddato from FRANKFURT, Germany (FollowingHadrian)",
+   "credit": "Mosaic depicting theatrical masks of Tragedy and Comedy, 2nd century AD, from Rome Thermae Decianae (?), Palazzo Nuovo, Capitoline Museums",
+   "desc": ""
+  },
+  {
+   "title": "File:Theatrical masks on a mosaic in the Museum Capitolini.png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Theatrical_masks_on_a_mosaic_in_the_Museum_Capitolini.png",
+   "w": 706,
+   "h": 497,
+   "size": 830282,
+   "mime": "image/png",
+   "page": "https://commons.wikimedia.org/wiki/File:Theatrical_masks_on_a_mosaic_in_the_Museum_Capitolini.png",
+   "license": "Public domain",
+   "artist": "Unknown artistUnknown artist",
+   "credit": "Unknown sourceUnknown source",
+   "desc": "Mosaic showing theatrical masks of Tragedy and Comedy. Roman artwork, 2nd century CE."
+  },
+  {
+   "title": "File:Tragic comic masks - roman mosaic.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Tragic_comic_masks_-_roman_mosaic.jpg",
+   "w": 1024,
+   "h": 768,
+   "size": 256817,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tragic_comic_masks_-_roman_mosaic.jpg",
+   "license": "Public domain",
+   "artist": "Unknown artistUnknown artist",
+   "credit": "antmoose, 4June 2005; English Wikipedia, original upload 25 June 2005 by Wetman, same filename",
+   "desc": "Mosaic showing theatrical masks of Tragedy and Comedy. Roman artwork, 2nd century CE."
+  }
+ ],
+ "tried": [
+  "File:Mosaic depicting theatrical masks of Tragedy and Comedy (Thermae Decianae).jpg"
+ ]
 }

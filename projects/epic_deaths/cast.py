@@ -53,6 +53,7 @@ ACTOR = dict(hair='short', hair_color='#3A2A20', top='robe', top_color='#7A3B6B'
 UNCLE = dict(hair='balding', hair_color='#6B5A4A', top='tshirt', top_color='#B0563E', pants='#3A3F4B', shoes='#3A3A3A')
 ARRICHION = dict(hair='short', hair_color='#3A2A20', top='athlete', top_color='#D9C9A3', pants='#F8F8F5', shoes='#F8F8F5')
 ARRICHION_WREATH = dict(ARRICHION, hat='laurel')
+ARRICHION_STATUE = dict(hair='short', hair_color='#A9A9A2', top='athlete', top_color='#C9C9C1', pants='#D6D6CF', shoes='#D6D6CF')
 OPPONENT = dict(hair='short', hair_color='#8A5A2E', top='athlete', top_color='#B5A07A', pants='#F8F8F5', shoes='#F8F8F5')
 ERYXIAS = dict(hair='balding', hair_color='#9A9A9A', facial='beard', top='robe', top_color='#3E6B8E')
 JUDGE = dict(hair='short', hair_color='#8A8A8A', facial='beard', top='robe', top_color='#7A3B2E')

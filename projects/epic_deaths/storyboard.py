@@ -166,7 +166,7 @@ S('lost to the weather', bg='field', props=[PR('sun', 960, 420, 190)], hold=2.0)
 C('lost to the weather', 'WINNER: THE WEATHER')
 
 # ============================== ATTILA ==============================
-B('Attila the Hun.', 'title', num=2, name=['ATTILA', 'THE HUN'], img='leo_attila', pal=ATTILA, sfx='hit', hold=2.0)
+B('Attila the Hun.', 'title', num=2, name=['ATTILA', 'THE HUN'], img='leo_attila', crop=(0.53, 0.47, 2.4), pal=ATTILA, sfx='hit', hold=2.0)
 S('written by people who hated him', bg='hall', chars=[CH(PRISCUS, 700, expr='angry'), CH(ROMAN_EMP, 1220, expr='angry', flip=True)], props=[PR('book', 960, 800, 70)])
 S('a Roman diplomat named Priscus', chars=[CH(PRISCUS, 960, R=130, expr='smile', tag='PRISCUS', pose='wave')], hold=1.8)
 PH('had dinner with him', 'feast_attila', until='Which is a sentence')
@@ -276,7 +276,7 @@ S('chasing gold', bg='field', chars=[CH(CRASSUS, 760, pose='walk', expr='grin')]
 H('more than he could swallow', zoom=True, expr='grin')
 
 # ============================== ARRICHION ==============================
-B('Arrichion of Phigalia.', 'title', num=4, name=['ARRICHION', 'OF PHIGALIA'], img='kouros_phigalia', pal=ARRICHION, sfx='hit', hold=2.0)
+B('Arrichion of Phigalia.', 'title', num=4, name=['ARRICHION', 'OF PHIGALIA'], img='pankration_vase', crop=(0.5, 0.42, 1.0), pal=ARRICHION, sfx='hit', hold=2.0)
 H('without armor felt hardcore', expr='smug', pose='hips')
 S('He was an athlete', bg='arena', chars=[CH(ARRICHION, 960, R=130, expr='smile', pose='hips', tag='ARRICHION')], until='And not in')
 PH('He competed in pankration', 'pankration_vase', until='It had been part')
@@ -324,7 +324,8 @@ C('crowned the corpse', 'THEY CROWNED THE CORPSE')
 C('third time', '3x OLYMPIC CHAMPION')
 C('seven hundred years', '~700 YEARS LATER')
 MAP("visited Arrichion's hometown", 'greece', zoom=1.6, focus='Phigalia', pins=[('Phigalia', 'PHIGALIA', None), ('Olympia', 'OLYMPIA', 'museum at Olympia')], until='A statue many')
-PH('A statue many believe', 'kouros_phigalia', pip=True, until='As far as we know')
+S('A statue many believe', chars=[CH(ARRICHION_STATUE, 960, y=500, R=100, expr='neutral', pose='hips', tag='"PROBABLY" ARRICHION')],
+  props=[PR('pedestal', 960, 840, 230)], until='As far as we know')
 C('win an Olympic final after dying', 'WON AN OLYMPIC FINAL AFTER DYING')
 H('impossible to top', expr='smug', pose='hips')
 B('with an entire fleet', 'ships', n=13, ship='turtle_ship', hold=2.2)
@@ -342,7 +343,7 @@ CARD('25,000 likes', 'likes', target=25000, until='Alright')
 H('Final entry. Well', expr='smile', pose='wave')
 
 # ============================== YI SUN-SIN ==============================
-B('Yi Sun-sin.', 'title', num=5, name=['YI', 'SUN-SIN'], img='yi_statue', pal=YI, sfx='hit', hold=2.0)
+B('Yi Sun-sin.', 'title', num=5, name=['YI', 'SUN-SIN'], img='hundred_won', crop=(0.25, 0.5, 1.0), pal=YI, sfx='hit', hold=2.0)
 H('Quick question', expr='skeptic', pose='chin')
 PH('Horatio Nelson', 'nelson', until='If you said Captain')
 S('Captain Hook', bg='sea', chars=[CH(HOOK, 960, R=125, expr='smug', pose='hips')], until='please leave')
@@ -405,7 +406,7 @@ H('Think about that', zoom=True, expr='talk', pose='chin')
 CARD('Arrichion won one fight', 'versus', left='ARRICHION: WON 1 FIGHT AFTER DYING', right='YI SUN-SIN: WON A WHOLE WAR', items=[dict(at='Arrichion won'), dict(at='Yi Sun-sin won')], until='Korea gave him')
 C('Chungmugong', '"LORD OF LOYALTY AND WARFARE"')
 PH('100-won coin', 'hundred_won', until='and his statue')
-PH('his statue stands', 'seoul_gwanghwamun', until='He earned')
+PH('his statue stands', 'yi_statue', until='He earned')
 H('He earned all of it', expr='smile', pose='hips')
 
 # ============================== OUTRO ==============================
@@ -451,7 +452,6 @@ REAL_BG = {
     'wraps his legs around': 'olympia_stadium', "wrenched his opponent's foot": 'olympia_stadium',
     'judges with an awkward': 'olympia_stadium', 'The winner was dead': 'olympia_stadium', 'crowned the corpse': 'olympia_stadium',
     'gave Yi his old job back': 'gyeongbokgung',
-    'captains hung back': 'myeongnyang', "Yi's flagship held off": 'myeongnyang', 'crashing into each other': 'myeongnyang',
 }
 for _b in BEATS:
     if _b['kind'] == 'scene' and _b['trigger'] in REAL_BG:

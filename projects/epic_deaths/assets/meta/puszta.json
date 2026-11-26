@@ -1,0 +1,35 @@
+{
+ "key": "puszta",
+ "query": "Hortobágy puszta grassland",
+ "cands": [
+  {
+   "title": "File:Hortobágyi pusztaság.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Hortob%C3%A1gyi_pusztas%C3%A1g.jpg",
+   "w": 1280,
+   "h": 960,
+   "size": 442254,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hortob%C3%A1gyi_pusztas%C3%A1g.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Lily15",
+   "credit": "Magyar Wikipedia; Hungarian WikipediaOriginal name; Eredeti név: Fájl:Hortobagy puszta.jpg original upload log; Eredeti feltöltési napló: 2006. augusztus 21., 12:48 Lily15 (vitalap - szerkesztései) „F",
+   "desc": "a hortobágyi puszta a Szálka-halmi kilátóból"
+  },
+  {
+   "title": "File:Пустара код Томашевца.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/%D0%9F%D1%83%D1%81%D1%82%D0%B0%D1%80%D0%B0_%D0%BA%D0%BE%D0%B4_%D0%A2%D0%BE%D0%BC%D0%B0%D1%88%D0%B5%D0%B2%D1%86%D0%B0.jpg",
+   "w": 3549,
+   "h": 2040,
+   "size": 1066903,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%83%D1%81%D1%82%D0%B0%D1%80%D0%B0_%D0%BA%D0%BE%D0%B4_%D0%A2%D0%BE%D0%BC%D0%B0%D1%88%D0%B5%D0%B2%D1%86%D0%B0.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Jozefsu",
+   "credit": "Own work",
+   "desc": "Пустара код томашевца, између правог и мртвог Тамиша, са кравама, гледана са високе обале Тамиша"
+  }
+ ],
+ "tried": [
+  "File:Hortobágyi pusztaság.jpg"
+ ]
+}

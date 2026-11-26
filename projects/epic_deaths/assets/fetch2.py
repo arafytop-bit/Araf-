@@ -185,23 +185,28 @@ def fetch_one(key):
             continue
         m['tried'].append(c['title'])
         json.dump(m, open(fp, 'w'), indent=1, ensure_ascii=False)
-        try:
-            data = _get(dl_url(c))
-        except Exception as e:
-            log('  dl fail', key, c['title'][:60], str(e)[:80]); time.sleep(DL_PACE); continue
-        os.makedirs(PICKED, exist_ok=True)
-        ext = '.png' if c['mime'] == 'image/png' else '.jpg'
-        raw = os.path.join(PICKED, key + '.src' + ext)
-        open(raw, 'wb').write(data)
-        to_jpg(raw, os.path.join(PICKED, key + '.jpg'))
-        cr = json.load(open(CREDITS)) if os.path.exists(CREDITS) else {}
-        cr[key] = {k: c[k] for k in ('title', 'page', 'license', 'artist', 'credit')}
-        json.dump(cr, open(CREDITS, 'w'), indent=1, ensure_ascii=False)
-        log('got', key, '<-', c['title'][:80], len(data) // 1024, 'KB')
-        time.sleep(DL_PACE)
-        return True
+        if download_cand(key, c):
+            return True
     log('no more candidates for', key)
     return False
+
+
+def download_cand(key, c):
+    try:
+        data = _get(dl_url(c))
+    except Exception as e:
+        log('  dl fail', key, c['title'][:60], str(e)[:80]); time.sleep(DL_PACE); return False
+    os.makedirs(PICKED, exist_ok=True)
+    ext = '.png' if c['mime'] == 'image/png' else '.jpg'
+    raw = os.path.join(PICKED, key + '.src' + ext)
+    open(raw, 'wb').write(data)
+    to_jpg(raw, os.path.join(PICKED, key + '.jpg'))
+    cr = json.load(open(CREDITS)) if os.path.exists(CREDITS) else {}
+    cr[key] = {k: c[k] for k in ('title', 'page', 'license', 'artist', 'credit')}
+    json.dump(cr, open(CREDITS, 'w'), indent=1, ensure_ascii=False)
+    log('got', key, '<-', c['title'][:80], len(data) // 1024, 'KB')
+    time.sleep(DL_PACE)
+    return True
 
 
 def to_jpg(src, dst, max_side=2200):
@@ -244,7 +249,7 @@ def write_credits(order):
             continue
         name = re.sub(r'\.(jpe?g|png|tiff?)$', '', c['title'].split(':', 1)[1], flags=re.I)
         lic = c['license'] or 'see file page'
-        who = c['artist'] or 'unknown author'
+        who = re.sub(r'^(.+?)\1$', r'\1', c['artist'] or 'unknown author')
         if 'public domain' in lic.lower() or lic.lower() in ('pd', 'cc0'):
             lines.append(f'- {name}: {who}, {lic}. {c["page"]}')
         else:
@@ -265,6 +270,11 @@ if __name__ == '__main__':
         phase1()
     elif cmd == 'credits':
         print(write_credits([k for k, _, _ in QUERIES]))
+    elif cmd == 'use':                      # use KEY=IDX ... : take a specific candidate
+        for a in sys.argv[2:]:
+            key, idx = a.split('=')
+            m = json.load(open(os.path.join(META, key + '.json')))
+            download_cand(key, m['cands'][int(idx)])
     elif cmd == 'next':
         for k in sys.argv[2:]:
             p = os.path.join(PICKED, k + '.jpg')

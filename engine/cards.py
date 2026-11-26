@@ -62,6 +62,12 @@ def draw_title_card(canvas, number, lines, portrait, t_frames):
     canvas.scale(sc, sc)
     canvas.translate(-W / 2, -H / 2)
     cap_name, pitch = 70.0, 120.0
+    limit = (1350 - 235 - 60) - 281          # room between the name column and the portrait's left edge
+    widest = max(text_width(ln, size_for_cap(cap_name), 0.03) for ln in lines)
+    if widest > limit:
+        k = limit / widest
+        cap_name *= k
+        pitch *= max(k, 0.85)
     n = len(lines)
     top = 590 - ((n - 1) * pitch + cap_name) / 2
     x0 = 281
