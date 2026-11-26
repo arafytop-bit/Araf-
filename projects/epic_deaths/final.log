@@ -1,0 +1,12 @@
+rendered 32211 frames in 15.1 min -> /home/user/Araf-/projects/epic_deaths/video_noaudio.mp4
+Fontconfig warning: "/usr/share/fontconfig/conf.avail/05-reset-dirs-sample.conf", line 6: unknown element "reset-dirs"
+cues 73 parts 61
+sfx events 690 ambience segments 73
+voice
+music bus
+ambience
+sfx (690 events)
+levels vs voice (speech / gaps): music -20.3 / -11.3, sfx -22.9 / -28.5, amb -30.1 / None
+master
+loudness {'input_i': -17.5, 'input_tp': -1.5, 'output_i': -14.0, 'output_tp': -2.0}
+wrote /home/user/Araf-/projects/epic_deaths/most_epic_deaths.mp4

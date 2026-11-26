@@ -373,9 +373,10 @@ def score(timeline):
     return A, cues
 
 
-def music_fx():
+def music_fx(timeline=None):
     out = []
     cur = 0
+    cuts = sorted(b['f0'] / FPS for b in (timeline or []) if b['kind'] == 'title')
     for trig, kind, o in MFX:
         try:
             t, i = resolve(trig, cur)
@@ -386,7 +387,11 @@ def music_fx():
             t1, _ = resolve(o['until'], i)
             out.append(dict(t=t, kind='muffle', dur=t1 - t, f=o.get('f', 420.0)))
         elif kind == 'drop':
-            out.append(dict(t=t, kind='drop', dur=o['dur'], gain=0.0))
+            dur = o['dur']
+            nxt = [c for c in cuts if c > t]
+            if nxt:                                   # a dramatic silence must never eat into a title hit
+                dur = min(dur, nxt[0] - t - 0.035)
+            out.append(dict(t=t, kind='drop', dur=dur, gain=0.0))
         else:
             out.append(dict(t=t, kind=kind, dur=o.get('dur', 0.8)))
     return out
@@ -634,7 +639,7 @@ def main(write=True):
     A, cues = score(timeline)
     print('cues', len(cues), 'parts', len(A.parts))
     stems = A.render(B.TOTAL_S)
-    fx = music_fx()
+    fx = music_fx(timeline)
     ev = auto_sfx(timeline, calls, overlays) + story_sfx() + death_sfx()
     amb = ambience(timeline)
     print('sfx events', len(ev), 'ambience segments', len(amb))

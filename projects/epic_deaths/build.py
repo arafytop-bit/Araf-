@@ -451,7 +451,7 @@ def mux(video=None, audio_path=None, out=None):
     audio_path = audio_path or os.path.join(HERE, 'mix.wav')
     out = out or os.path.join(HERE, 'most_epic_deaths.mp4')
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', video, '-i', audio_path, '-map', '0:v', '-map', '1:a',
-                    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-ar', '48000', '-movflags', '+faststart', '-shortest', out], check=True)
+                    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-movflags', '+faststart', '-shortest', out], check=True)
     return out
 
 
