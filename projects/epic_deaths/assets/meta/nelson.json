@@ -1,0 +1,111 @@
+{
+ "key": "nelson",
+ "query": "Horatio Nelson Lemuel Francis Abbott portrait",
+ "cands": [
+  {
+   "title": "File:HoratioNelson1.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/HoratioNelson1.jpg",
+   "w": 2074,
+   "h": 2500,
+   "size": 2250129,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg",
+   "license": "Public domain",
+   "artist": "Lemuel Francis Abbott",
+   "credit": "National Maritime Museum website: Embedding web page: http://www.nmm.ac.uk/collections/nelson/viewRepro.cfm?reproID=BHC2889 (archived version) Image: https://collections.rmg.co.uk/mediaLib/484/606/bhc",
+   "desc": ""
+  },
+  {
+   "title": "File:Rear-Admiral Sir Horatio Nelson, 1758–1805.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Rear-Admiral_Sir_Horatio_Nelson%2C_1758%E2%80%931805.jpg",
+   "w": 1290,
+   "h": 1600,
+   "size": 338130,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Rear-Admiral_Sir_Horatio_Nelson,_1758%E2%80%931805.jpg",
+   "license": "Public domain",
+   "artist": "Lemuel Francis Abbott",
+   "credit": "http://www.britannica.com/EBchecked/topic/415322/Battle-of-the-Nile The National Maritime Museum holds another copy of the painting as item BHC2889.[1] The painting was published as early as 1898 in: ",
+   "desc": ""
+  },
+  {
+   "title": "File:Horatio Nelson by George Baxter, after Lemuel Francis Abbott (2).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Horatio_Nelson_by_George_Baxter%2C_after_Lemuel_Francis_Abbott_%282%29.jpg",
+   "w": 575,
+   "h": 800,
+   "size": 170704,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson_by_George_Baxter,_after_Lemuel_Francis_Abbott_(2).jpg",
+   "license": "Public domain",
+   "artist": "George Baxter / After Lemuel Francis Abbott",
+   "credit": "http://www.npg.org.uk/collections/search/portraitLarge/mw121484/Horatio-Nelson?LinkID=mp06595&amp;role=art&amp;displayNo=60&amp;rNo=55",
+   "desc": "Baxter print of Horatio Nelson by George Baxter, after Lemuel Francis Abbott"
+  },
+  {
+   "title": "File:Horatio Nelson by Samuel Freeman, after Lemuel Francis Abbott.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Horatio_Nelson_by_Samuel_Freeman%2C_after_Lemuel_Francis_Abbott.jpg",
+   "w": 538,
+   "h": 800,
+   "size": 152953,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson_by_Samuel_Freeman,_after_Lemuel_Francis_Abbott.jpg",
+   "license": "Public domain",
+   "artist": "Samuel Freeman / After Lemuel Francis Abbott",
+   "credit": "http://www.npg.org.uk/collections/search/portraitLarge/mw39709/Horatio-Nelson?LinkID=mp06595&amp;role=art&amp;displayNo=60&amp;rNo=54",
+   "desc": "Stipple and line engraving of Horatio Nelson by Samuel Freeman, after Lemuel Francis Abbott"
+  },
+  {
+   "title": "File:Horatio Nelson by George Baxter, after Lemuel Francis Abbott.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Horatio_Nelson_by_George_Baxter%2C_after_Lemuel_Francis_Abbott.jpg",
+   "w": 595,
+   "h": 800,
+   "size": 174158,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson_by_George_Baxter,_after_Lemuel_Francis_Abbott.jpg",
+   "license": "Public domain",
+   "artist": "George Baxter / After Lemuel Francis Abbott",
+   "credit": "http://www.npg.org.uk/collections/search/portraitLarge/mw121484/Horatio-Nelson?LinkID=mp06595&amp;role=art&amp;displayNo=60&amp;rNo=55",
+   "desc": "Baxter print of Horatio Nelson by George Baxter, after Lemuel Francis Abbott"
+  },
+  {
+   "title": "File:Horatio Nelson by J. Golding, after Lemuel Francis Abbott.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Horatio_Nelson_by_J._Golding%2C_after_Lemuel_Francis_Abbott.jpg",
+   "w": 595,
+   "h": 800,
+   "size": 158328,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson_by_J._Golding,_after_Lemuel_Francis_Abbott.jpg",
+   "license": "Public domain",
+   "artist": "Lemuel Francis Abbott",
+   "credit": "http://www.npg.org.uk/collections/search/portraitLarge/mw39697/Horatio-Nelson?LinkID=mp06595&amp;role=art&amp;displayNo=60&amp;rNo=44",
+   "desc": "Line engraving of Horatio Nelson by J. Golding, after Lemuel Francis Abbott"
+  },
+  {
+   "title": "File:Horatio Nelson by A. Geiger, after Lemuel Francis Abbott.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Horatio_Nelson_by_A._Geiger%2C_after_Lemuel_Francis_Abbott.jpg",
+   "w": 600,
+   "h": 800,
+   "size": 126965,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson_by_A._Geiger,_after_Lemuel_Francis_Abbott.jpg",
+   "license": "Public domain",
+   "artist": "After Lemuel Francis Abbott",
+   "credit": "National Portrait Gallery: NPG 1899 http://www.npg.org.uk/collections/search/portraitLarge/mw79201/Horatio-Nelson?LinkID=mp06595&amp;role=art&amp;displayNo=60&amp;rNo=18",
+   "desc": "Portrait of Horatio Nelson"
+  },
+  {
+   "title": "File:Horatio Nelson, Viscount Nelson by Lemuel Francis Abbott.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Horatio_Nelson%2C_Viscount_Nelson_by_Lemuel_Francis_Abbott.jpg",
+   "w": 2400,
+   "h": 2900,
+   "size": 1341246,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Horatio_Nelson,_Viscount_Nelson_by_Lemuel_Francis_Abbott.jpg",
+   "license": "Public domain",
+   "artist": "Lemuel Francis Abbott",
+   "credit": "one or more third parties have made copyright claims against Wikimedia Commons in relation to the work from which this is sourced or a purely mechanical reproduction thereof. This may be due to recogn",
+   "desc": ""
+  }
+ ],
+ "tried": []
+}

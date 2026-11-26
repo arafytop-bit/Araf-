@@ -1,0 +1,46 @@
+{
+ "key": "hundred_won",
+ "query": "100 won coin Yi Sun-sin",
+ "cands": [
+  {
+   "title": "File:CORÉE DU SUD, 100 Won à l'effigie de l'Amiral Yi Sun-Shin.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/COR%C3%89E_DU_SUD%2C_100_Won_%C3%A0_l%27effigie_de_l%27Amiral_Yi_Sun-Shin.jpg",
+   "w": 1200,
+   "h": 590,
+   "size": 114715,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:COR%C3%89E_DU_SUD,_100_Won_%C3%A0_l%27effigie_de_l%27Amiral_Yi_Sun-Shin.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "cgb",
+   "credit": "http://www.cgb.fr/coree-du-sud-100-won-amiral-yi-sun-shin-2008,fwo_244236,a.html",
+   "desc": "CORÉE DU SUD, 100 Won à l'effigie de l'Amiral Yi Sun-Shin. L’ amiral Yi Sun-Shin est considéré comme un héro national en Corée. Lors de la Guerre Imjin (1592-1598), il repousse par deux fois les tentatives d’invasion des japonais.."
+  },
+  {
+   "title": "File:Korea100Won1970Obverse.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Korea100Won1970Obverse.JPG",
+   "w": 1632,
+   "h": 1224,
+   "size": 928992,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Korea100Won1970Obverse.JPG",
+   "license": "Public domain",
+   "artist": "Berlin-George",
+   "credit": "Own work",
+   "desc": "This coin commemorates admiral Yi Sun-sin or Sun Sin Lee"
+  },
+  {
+   "title": "File:Korea100Won1970Reverse.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Korea100Won1970Reverse.JPG",
+   "w": 1632,
+   "h": 1224,
+   "size": 926663,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Korea100Won1970Reverse.JPG",
+   "license": "Public domain",
+   "artist": "Berlin-George",
+   "credit": "Own work",
+   "desc": "This coin commemorates admiral Yi Sun-sin or Sun Sin Lee"
+  }
+ ],
+ "tried": []
+}

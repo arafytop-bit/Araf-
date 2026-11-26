@@ -1,0 +1,98 @@
+{
+ "key": "olive_wreath",
+ "query": "olive wreath kotinos",
+ "cands": [
+  {
+   "title": "File:Kotinos light background.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Kotinos_light_background.jpg",
+   "w": 2369,
+   "h": 1753,
+   "size": 957548,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kotinos_light_background.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "FocalPoint",
+   "credit": "Own work",
+   "desc": "Olive wreath"
+  },
+  {
+   "title": "File:Kotinos dark background.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Kotinos_dark_background.jpg",
+   "w": 1836,
+   "h": 2022,
+   "size": 767398,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kotinos_dark_background.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "FocalPoint",
+   "credit": "Own work",
+   "desc": "Olive wreath"
+  },
+  {
+   "title": "File:Olive-embroidered linens.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Olive-embroidered_linens.jpg",
+   "w": 1920,
+   "h": 1080,
+   "size": 306174,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Olive-embroidered_linens.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Sotiria Simota",
+   "credit": "Own work",
+   "desc": "Table linen embroidered with olive motifs in a shop in Kefalonia, Greece. The hanging olive wreath is part of the shop decoration."
+  },
+  {
+   "title": "File:White Olive Wreath of the United Nations Emblem.png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/White_Olive_Wreath_of_the_United_Nations_Emblem.png",
+   "w": 1200,
+   "h": 976,
+   "size": 77941,
+   "mime": "image/png",
+   "page": "https://commons.wikimedia.org/wiki/File:White_Olive_Wreath_of_the_United_Nations_Emblem.png",
+   "license": "CC0",
+   "artist": "Oliver Lincoln Lundquist",
+   "credit": "www.un.org",
+   "desc": "Taken from the UN Emblem."
+  },
+  {
+   "title": "File:Corona a foglie d'ulivo, in oro, IV-III secolo ac, da yaka (çarsamba).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Corona_a_foglie_d%27ulivo%2C_in_oro%2C_IV-III_secolo_ac%2C_da_yaka_%28%C3%A7arsamba%29.jpg",
+   "w": 4854,
+   "h": 2220,
+   "size": 3808343,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Corona_a_foglie_d%27ulivo,_in_oro,_IV-III_secolo_ac,_da_yaka_(%C3%A7arsamba).jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Francesco Bini",
+   "credit": "Own work",
+   "desc": "Antiquities in the Istanbul Archaeological Museum"
+  },
+  {
+   "title": "File:Corona a foglie d'ulivo, III secolo ac, provenienza sconosciuta nell'ex-impero ottomano.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Corona_a_foglie_d%27ulivo%2C_III_secolo_ac%2C_provenienza_sconosciuta_nell%27ex-impero_ottomano.jpg",
+   "w": 4015,
+   "h": 2767,
+   "size": 3128505,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Corona_a_foglie_d%27ulivo,_III_secolo_ac,_provenienza_sconosciuta_nell%27ex-impero_ottomano.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Francesco Bini",
+   "credit": "Own work",
+   "desc": "Jewellery in the Istanbul Archaeological Museums"
+  },
+  {
+   "title": "File:Gold olive wreath from the Hellenistic cemetery at Europos (8725650076).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Gold_olive_wreath_from_the_Hellenistic_cemetery_at_Europos_%288725650076%29.jpg",
+   "w": 2201,
+   "h": 1238,
+   "size": 3440149,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Gold_olive_wreath_from_the_Hellenistic_cemetery_at_Europos_(8725650076).jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Tilemahos Efthimiadis from Athens, Greece",
+   "credit": "Gold olive wreath from the Hellenistic cemetery at Europos Uploaded by High Contrast",
+   "desc": "From two cist-grave burials belonging to a family group of tombs and covered by a tumulus. Dated to the late 4th-early 3rd c. BC. Archaeological Museum of Thessaloniki, Greece. --- Αρχαιολογικό Μουσείο Θεσσαλονίκης."
+  }
+ ],
+ "tried": []
+}

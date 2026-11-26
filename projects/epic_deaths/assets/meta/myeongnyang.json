@@ -1,0 +1,46 @@
+{
+ "key": "myeongnyang",
+ "query": "Uldolmok Myeongnyang strait",
+ "cands": [
+  {
+   "title": "File:Jindo Bridge.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Jindo_Bridge.jpg",
+   "w": 4287,
+   "h": 2847,
+   "size": 6877449,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Jindo_Bridge.jpg",
+   "license": "Public domain",
+   "artist": "Doo ho Kim from Seoul, Republic of Korea",
+   "credit": "originally posted to Flickr as DSJ_3775",
+   "desc": "The Jindo Bridge in South Korea"
+  },
+  {
+   "title": "File:Jindo Bridge (16043482437).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Jindo_Bridge_%2816043482437%29.jpg",
+   "w": 1280,
+   "h": 850,
+   "size": 487803,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Jindo_Bridge_(16043482437).jpg",
+   "license": "Public domain",
+   "artist": "old ccc",
+   "credit": "진도대교",
+   "desc": "진도대교 Jindo Bridge"
+  },
+  {
+   "title": "File:울돌목.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%EC%9A%B8%EB%8F%8C%EB%AA%A9.jpg",
+   "w": 2080,
+   "h": 1170,
+   "size": 2164798,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:%EC%9A%B8%EB%8F%8C%EB%AA%A9.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Jangg8962",
+   "credit": "Own work",
+   "desc": "울돌목의 물살이 회오리 모양을 하고 있다."
+  }
+ ],
+ "tried": []
+}
