@@ -3,3 +3,8 @@ __pycache__/
 projects/*/stills/
 projects/*/mix.wav
 projects/*/qa_audio.wav
+projects/*/chunks/
+projects/*/video_noaudio.mp4
+projects/*/voice.wav
+projects/epic_deaths/most_epic_deaths*.mp4
+projects/*/assets/picked/*.src.*

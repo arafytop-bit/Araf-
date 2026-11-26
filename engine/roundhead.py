@@ -151,6 +151,8 @@ EXPR = {
     'grimace': ('dot', 'angry', 'grimace', ()),
     'evil': ('angry', 'angry', 'evil', ()),
     'skeptic': ('lid', 'skeptic', 'line', ()),
+    'sleep': ('closed', None, None, ()),
+    'dead': ('closed', None, 'wavy', ()),
 }
 
 
@@ -263,6 +265,9 @@ def hat_parts(st):
         out.append(Part(dome, fill=c, grad=(-1.32, -0.42, 1.15, 0.85)))
         brim = P([(-0.82, -0.47), (0.0, -0.55), (0.82, -0.47), (0.70, -0.30), (0.0, -0.26), (-0.70, -0.30)], tension=0.8)
         out.append(Part(brim, fill=_shade(c, 0.8)))
+    elif h:
+        from .costumes import hat_extra
+        out = hat_extra(h, st)
     return out
 
 
@@ -318,7 +323,7 @@ def legs_for(pose, phase=0.0, hip=2.40, foot=3.10):
 
 
 def top_parts(st):
-    t, c = st['top'], st['top_color']
+    t, c = st.get('top', 'tunic'), st.get('top_color', '#888888')
     out = []
     if t == 'trench':
         out.append(Part(P([(-0.30, 0.76), (-0.60, 0.88), (-0.52, 1.06), (-0.22, 0.95)], tension=0.6), fill=_shade(c, 0.95)))
@@ -326,14 +331,14 @@ def top_parts(st):
         body = P([(-0.52, 0.90), (0.52, 0.90), (0.64, 1.28), (0.70, 1.92), (0.84, 2.64), (-0.84, 2.64), (-0.70, 1.92),
                   (-0.64, 1.28)], tension=0.45)
         out.append(Part(body, fill=c, grad=(0.9, 2.64, 1.05, 0.84)))
-        out.append(Part(poly([(-0.23, 0.92), (0.23, 0.92), (0.0, 1.48)]), fill=st['shirt'], ow=0.045))
+        out.append(Part(poly([(-0.23, 0.92), (0.23, 0.92), (0.0, 1.48)]), fill=st.get('shirt', '#EFEAE0'), ow=0.045))
         if st.get('tie'):
             out.append(Part(P([(-0.065, 1.0), (0.065, 1.0), (0.10, 1.38), (0.0, 1.50), (-0.10, 1.38)], tension=0.3),
                             fill=st['tie'], ow=0.04))
         for sx in (-1, 1):
             out.append(Part(poly([(sx * 0.23, 0.92), (sx * 0.54, 0.94), (sx * 0.46, 1.38), (sx * 0.02, 1.64)]),
                             fill=_shade(c, 1.04), ow=0.05))
-        out.append(Part(poly([(-0.71, 1.80), (0.71, 1.80), (0.73, 1.97), (-0.73, 1.97)]), fill=st['belt'], ow=0.045))
+        out.append(Part(poly([(-0.71, 1.80), (0.71, 1.80), (0.73, 1.97), (-0.73, 1.97)]), fill=st.get('belt', '#5A3B26'), ow=0.045))
         rr = skia.Path(); rr.addRRect(skia.RRect.MakeRectXY(skia.Rect(-0.30, 1.78, -0.08, 1.99), 0.03, 0.03))
         out.append(Part(rr, ow=0.045, rim=False, color='#C9A050', ink=False))
         out.append(Part(line((-0.19, 1.885), (-0.06, 1.885)), ow=0.035, rim=False, color='#C9A050', ink=False))
@@ -346,10 +351,10 @@ def top_parts(st):
     elif t in ('suit', 'windbreaker', 'vest', 'bomber'):
         hem = {'suit': 2.46, 'windbreaker': 2.42, 'vest': 2.46, 'bomber': 2.38}[t]
         body = P([(-0.50, 0.90), (0.50, 0.90), (0.60, 1.25), (0.64, hem), (-0.64, hem), (-0.60, 1.25)], tension=0.4)
-        base = st['shirt'] if t == 'vest' else c
+        base = st.get('shirt', '#EFEAE0') if t == 'vest' else c
         out.append(Part(body, fill=base, grad=(0.9, hem, 1.05, 0.86)))
         if t == 'suit':
-            out.append(Part(poly([(-0.22, 0.92), (0.22, 0.92), (0.0, 1.45)]), fill=st['shirt'], ow=0.045))
+            out.append(Part(poly([(-0.22, 0.92), (0.22, 0.92), (0.0, 1.45)]), fill=st.get('shirt', '#EFEAE0'), ow=0.045))
             if st.get('tie'):
                 out.append(Part(P([(-0.06, 1.0), (0.06, 1.0), (0.09, 1.32), (0.0, 1.42), (-0.09, 1.32)], tension=0.3),
                                 fill=st['tie'], ow=0.04))
@@ -365,13 +370,13 @@ def top_parts(st):
             out.append(Part(poly([(-0.64, hem - 0.14), (0.64, hem - 0.14), (0.64, hem), (-0.64, hem)]),
                             fill=_shade(c, 0.85), ow=0.04))
         elif t == 'vest':
-            out.append(Part(P([(-0.16, 0.92), (0.16, 0.92), (0.0, 1.10)], tension=0.4), fill=st['shirt'], ow=0.04))
+            out.append(Part(P([(-0.16, 0.92), (0.16, 0.92), (0.0, 1.10)], tension=0.4), fill=st.get('shirt', '#EFEAE0'), ow=0.04))
             if st.get('tie'):
                 out.append(Part(P([(-0.05, 1.0), (0.05, 1.0), (0.07, 1.28), (0.0, 1.36), (-0.07, 1.28)], tension=0.3),
                                 fill=st['tie'], ow=0.035))
             for sx in (-1, 1):
                 out.append(Part(poly([(sx * 0.14, 0.96), (sx * 0.54, 1.00), (sx * 0.62, hem), (sx * 0.06, hem),
-                                      (sx * 0.06, 1.46)]), fill=st['vest'], ow=0.05))
+                                      (sx * 0.06, 1.46)]), fill=st.get('vest', '#4E5A6B'), ow=0.05))
                 out.append(Part(oval(sx * 0.10, 1.62 + 0.0, 0.03, 0.03), fill=INK, ow=0, rim=False))
                 out.append(Part(oval(sx * 0.10, 1.88, 0.03, 0.03), fill=INK, ow=0, rim=False))
         elif t == 'bomber':
@@ -381,6 +386,9 @@ def top_parts(st):
             out.append(Part(poly([(-0.64, hem - 0.16), (0.64, hem - 0.16), (0.64, hem), (-0.64, hem)]),
                             fill='#3A2E25', ow=0.04))
             out.append(Part(poly([(0.24, 1.30), (0.46, 1.30), (0.46, 1.42), (0.24, 1.42)]), fill=_shade(c, 0.8), ow=0.03, rim=False))
+    else:
+        from .costumes import top_extra
+        out = top_extra(t, st)
     return out
 
 
@@ -400,48 +408,12 @@ def magnifier_parts(look=(0.0, 0.0)):
 
 
 # ---------------- assemble & draw ----------------
-def draw_character(canvas, cx, cy, R, pose='idle', expr='talk', pal=HOST, flip=False, bob=(0.0, 0.0),
-                   phase=0.0, alpha=255, show_rim=True, look=None, glint=False):
-    """Draw a round-head character with head centre (cx, cy) and head radius R (px)."""
-    st = pal
-    lk = look if look is not None else st.get('look', (0.0, 0.0))
-    back, mid, head, front = [], [], [], []
-    hip = 2.40 if st['top'] != 'trench' else 2.56
-    for a, b in legs_for(pose, phase, hip=hip):
-        back.append(Part(line(a, b), tube=0.30, fill=st['pants']))
-    for a, b in legs_for(pose, phase, hip=hip):
-        sx = -1 if b[0] < 0 else 1
-        shoe = P([(b[0] - 0.17 + 0.05 * sx, b[1] + 0.12), (b[0] - 0.12 + 0.04 * sx, b[1] - 0.04),
-                  (b[0] + 0.12 * sx + 0.05 * sx, b[1] - 0.03), (b[0] + 0.25 * sx + 0.04 * sx, b[1] + 0.07),
-                  (b[0] + 0.20 * sx + 0.04 * sx, b[1] + 0.14)], tension=0.75)
-        back.append(Part(shoe, fill=st['shoes'], grad=(b[1] - 0.05, b[1] + 0.15, 1.15, 0.9)))
-    sleeve = st['top_color'] if st['top'] != 'vest' else st['shirt']
-    hands_mid = []
-    for pts, infront in arms_for(pose, phase):
-        tube = Part(cubic(*pts), tube=0.27, fill=sleeve)
-        hx, hy = pts[-1]
-        hand = Part(oval(hx, hy, 0.16, 0.15), fill=st.get('hands', '#F8F8F5'))
-        if infront:
-            front += [tube, hand]
-        else:
-            back.append(tube)
-            hands_mid.append(hand)
-    mid += top_parts(st)
-    mid += hands_mid
-    bx, by = bob
-    hp = skia.Path(); hp.addCircle(0, 0, 1.0)
-    head.append(Part(hp, fill=HEAD_FILL))
-    head += hair_parts(st)
-    head += face_parts(expr, lk)
-    hats = hat_parts(st)
-    for p in head + hats:
-        p.path.offset(bx, by)
-    if pose == 'inspect':
-        front += magnifier_parts((lk[0] + bx, lk[1] + by))
-    order = back + mid + head + hats + front
-
+def render_parts(canvas, order, cx, cy, R, flip=False, alpha=255, show_rim=True, rot=0.0):
+    """Draw Part lists in the inked style (shared by characters and props)."""
     canvas.save()
     canvas.translate(cx, cy)
+    if rot:
+        canvas.rotate(rot)
     canvas.scale(-R if flip else R, R)
     if alpha < 255:
         canvas.saveLayerAlpha(None, int(alpha))
@@ -479,7 +451,57 @@ def draw_character(canvas, cx, cy, R, pose='idle', expr='talk', pal=HOST, flip=F
     if alpha < 255:
         canvas.restore()
     canvas.restore()
-    if st.get('cap_text'):
+
+
+def draw_character(canvas, cx, cy, R, pose='idle', expr='talk', pal=HOST, flip=False, bob=(0.0, 0.0),
+                   phase=0.0, alpha=255, show_rim=True, look=None, glint=False, rot=0.0):
+    """Draw a round-head character with head centre (cx, cy) and head radius R (px)."""
+    from .costumes import hair_extra, facial_hair, cape_parts
+    st = pal
+    lk = look if look is not None else st.get('look', (0.0, 0.0))
+    back, mid, head, front = [], [], [], []
+    top = st.get('top', 'tunic')
+    hip = {'trench': 2.56, 'robe': 2.60, 'toga': 2.45}.get(top, 2.40)
+    back += cape_parts(st)
+    for a, b in legs_for(pose, phase, hip=hip):
+        back.append(Part(line(a, b), tube=0.30, fill=st.get('pants', '#3D414C')))
+    for a, b in legs_for(pose, phase, hip=hip):
+        sx = -1 if b[0] < 0 else 1
+        shoe = P([(b[0] - 0.17 + 0.05 * sx, b[1] + 0.12), (b[0] - 0.12 + 0.04 * sx, b[1] - 0.04),
+                  (b[0] + 0.12 * sx + 0.05 * sx, b[1] - 0.03), (b[0] + 0.25 * sx + 0.04 * sx, b[1] + 0.07),
+                  (b[0] + 0.20 * sx + 0.04 * sx, b[1] + 0.14)], tension=0.75)
+        back.append(Part(shoe, fill=st.get('shoes', '#3A3A3A'), grad=(b[1] - 0.05, b[1] + 0.15, 1.15, 0.9)))
+    sleeve = st.get('sleeve') or {'vest': st.get('shirt', '#EFEAE0'), 'athlete': HEAD_FILL}.get(top, st.get('top_color', '#888'))
+    hands_mid = []
+    for pts, infront in arms_for(pose, phase):
+        tube = Part(cubic(*pts), tube=0.27, fill=sleeve)
+        hx, hy = pts[-1]
+        hand = Part(oval(hx, hy, 0.16, 0.15), fill=st.get('hands', '#F8F8F5'))
+        if infront:
+            front += [tube, hand]
+        else:
+            back.append(tube)
+            hands_mid.append(hand)
+    mid += top_parts(st)
+    mid += hands_mid
+    bx, by = bob
+    h = st.get('hair')
+    hb, hf = ([], hair_parts(st)) if h in ('slick', 'short', None) else hair_extra(h, st.get('hair_color', '#2A211C'))
+    hp = skia.Path(); hp.addCircle(0, 0, 1.0)
+    head += hb
+    head.append(Part(hp, fill=HEAD_FILL))
+    head += hf
+    head += face_parts(expr, lk)
+    if st.get('facial'):
+        head += facial_hair(st['facial'], st.get('facial_color', st.get('hair_color', '#2A211C')))
+    hats = hat_parts(st)
+    for p in head + hats:
+        p.path.offset(bx, by)
+    if pose == 'inspect':
+        front += magnifier_parts((lk[0] + bx, lk[1] + by))
+    order = back + mid + head + hats + front
+    render_parts(canvas, order, cx, cy, R, flip=flip, alpha=alpha, show_rim=show_rim, rot=rot)
+    if st.get('cap_text') and not rot:
         from .text import font
         f = font(0.30 * R)
         tw = f.measureText(st['cap_text'])

@@ -1,0 +1,98 @@
+{
+ "key": "chrysippus",
+ "query": "Chrysippus bust British Museum",
+ "cands": [
+  {
+   "title": "File:British Museum - Four Greek philosophers.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/British_Museum_-_Four_Greek_philosophers.jpg",
+   "w": 2816,
+   "h": 1584,
+   "size": 2348654,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:British_Museum_-_Four_Greek_philosophers.jpg",
+   "license": "CC BY 2.0",
+   "artist": "Cristian Bortes from Cluj-Napoca, Romania",
+   "credit": "British Museum",
+   "desc": "Marble portrait heads of four philosophers in the British Museum. From foreground: Socrates, Antisthenes, Chrysippos, Epicurus. All are Roman copies after Hellenistic originals."
+  },
+  {
+   "title": "File:British Museum (15302988376).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/British_Museum_%2815302988376%29.jpg",
+   "w": 1920,
+   "h": 1280,
+   "size": 1461208,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:British_Museum_(15302988376).jpg",
+   "license": "CC BY 2.0",
+   "artist": "Paul Hudson from United Kingdom",
+   "credit": "British Museum",
+   "desc": "British Museum"
+  },
+  {
+   "title": "File:Chrysippus bust.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chrysippus_bust.jpg",
+   "w": 748,
+   "h": 1000,
+   "size": 210768,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chrysippus_bust.jpg",
+   "license": "Public domain",
+   "artist": "Unknown artistUnknown artist",
+   "credit": "ChrisO (18 June 2006)",
+   "desc": "Chrysippos of Soli, second founder of Stoicism. Marble, Roman copy after a lost Hellenistic original of the late 3rd century BC."
+  },
+  {
+   "title": "File:Flickr - Nic's events - British Museum with Cory and Mary, 6 Sep 2007 - 393.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flickr_-_Nic%27s_events_-_British_Museum_with_Cory_and_Mary%2C_6_Sep_2007_-_393.jpg",
+   "w": 1021,
+   "h": 681,
+   "size": 266252,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_Nic%27s_events_-_British_Museum_with_Cory_and_Mary,_6_Sep_2007_-_393.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Nic McPhee from Morris, Minnesota, USA",
+   "credit": "British Museum with Cory and Mary, 6 Sep 2007 - 393",
+   "desc": "Marble portrait heads of three philosophers in the British Museum. From foreground: Antisthenes, Chrysippos, Epicurus. All are Roman copies after Hellenistic originals."
+  },
+  {
+   "title": "File:Greek philosopher busts.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Greek_philosopher_busts.jpg",
+   "w": 2500,
+   "h": 1674,
+   "size": 491129,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Greek_philosopher_busts.jpg",
+   "license": "CC BY 2.0",
+   "artist": "Matt Neale from UK",
+   "credit": "Greek philosophers Uploaded by NotFromUtrecht",
+   "desc": "Sokrates, Antisthenes, Chrysippos, Epikouros"
+  },
+  {
+   "title": "File:Cap de marbre de Crisip, exposició La Bellesa del Cos, MARQ.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Cap_de_marbre_de_Crisip%2C_exposici%C3%B3_La_Bellesa_del_Cos%2C_MARQ.JPG",
+   "w": 1974,
+   "h": 3392,
+   "size": 908528,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cap_de_marbre_de_Crisip,_exposici%C3%B3_La_Bellesa_del_Cos,_MARQ.JPG",
+   "license": "CC BY-SA 3.0",
+   "artist": "Joanbanjo",
+   "credit": "Own work",
+   "desc": "Marble head of Chrysippus. 1st Century AD Roman copy of an original dating to about 200 BC. Once thought to depict Aratus. British Museum online catalogue"
+  },
+  {
+   "title": "File:D371-diogène.-L2-Ch8.png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/D371-diog%C3%A8ne.-L2-Ch8.png",
+   "w": 943,
+   "h": 1257,
+   "size": 272200,
+   "mime": "image/png",
+   "page": "https://commons.wikimedia.org/wiki/File:D371-diog%C3%A8ne.-L2-Ch8.png",
+   "license": "Public domain",
+   "artist": "Extrait de \"L’Homme et la Terre\"",
+   "credit": "Extrait de \"L’Homme et la Terre\"",
+   "desc": "Diogène"
+  }
+ ],
+ "tried": []
+}

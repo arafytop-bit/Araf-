@@ -1,0 +1,98 @@
+{
+ "key": "tycho",
+ "query": "Tycho Brahe portrait",
+ "cands": [
+  {
+   "title": "File:Tycho Brahe.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Tycho_Brahe.JPG",
+   "w": 1081,
+   "h": 1600,
+   "size": 423032,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tycho_Brahe.JPG",
+   "license": "Public domain",
+   "artist": "Eduard Ender (1822-1883)",
+   "credit": "http://cache.eb.com/eb/image?id=83677&amp;rendTypeId=4 Now redirects to http://media.web.britannica.com/eb-media/77/83677-004-72A98E5A.jpg",
+   "desc": "Tycho Brahe"
+  },
+  {
+   "title": "File:Portrait of Tycho Brahe, a Danish Astronomer Wellcome L0005485.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Portrait_of_Tycho_Brahe%2C_a_Danish_Astronomer_Wellcome_L0005485.jpg",
+   "w": 1108,
+   "h": 1798,
+   "size": 919504,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Portrait_of_Tycho_Brahe,_a_Danish_Astronomer_Wellcome_L0005485.jpg",
+   "license": "CC BY 4.0",
+   "artist": "",
+   "credit": "https://wellcomeimages.org/indexplus/obf_images/62/87/0c3cdbed32acba71d7e0a8e1dbf7.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0005485.html Wellcome Collection gallery (2018-04-01): https",
+   "desc": "Portrait of Tycho Brahe, a Danish Astronomer Iconographic Collections Keywords: astronomer; Tycho Brahe; Philip Kilian"
+  },
+  {
+   "title": "File:Tycho Brahe - Stellarum octavi orbis inerrantium accurata restitutio, 1598. Author's portrait.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Tycho_Brahe_-_Stellarum_octavi_orbis_inerrantium_accurata_restitutio%2C_1598._Author%27s_portrait.jpg",
+   "w": 1039,
+   "h": 720,
+   "size": 259117,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tycho_Brahe_-_Stellarum_octavi_orbis_inerrantium_accurata_restitutio,_1598._Author%27s_portrait.jpg",
+   "license": "Public domain",
+   "artist": "Tycho Brahe",
+   "credit": "https://scholarlypublications.universiteitleiden.nl/handle/1887/21412",
+   "desc": "Tycho Brahe - Stellarum octavi orbis inerrantium accurata restitutio, 1598. Author's portrait and the first page of the Foreword in Latin."
+  },
+  {
+   "title": "File:Jacques de Gheyn Ii - Portrait of Tycho Brahe, astronomer (without a hat) - Google Art Project.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Jacques_de_Gheyn_Ii_-_Portrait_of_Tycho_Brahe%2C_astronomer_%28without_a_hat%29_-_Google_Art_Project.jpg",
+   "w": 1727,
+   "h": 2401,
+   "size": 2277396,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Jacques_de_Gheyn_Ii_-_Portrait_of_Tycho_Brahe,_astronomer_(without_a_hat)_-_Google_Art_Project.jpg",
+   "license": "Public domain",
+   "artist": "Jacques de Gheyn II",
+   "credit": "1QGEg5bS0wUzfg at Google Cultural Institute, zoom level maximum",
+   "desc": ""
+  },
+  {
+   "title": "File:Flemish Portrait of an astronomer.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flemish_Portrait_of_an_astronomer.jpg",
+   "w": 1947,
+   "h": 2500,
+   "size": 1968448,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Flemish_Portrait_of_an_astronomer.jpg",
+   "license": "Public domain",
+   "artist": "Unidentified painter",
+   "credit": "cyfrowe.mnw.art.pl",
+   "desc": ""
+  },
+  {
+   "title": "File:The King and Tycho Brahe.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/The_King_and_Tycho_Brahe.jpg",
+   "w": 3018,
+   "h": 1722,
+   "size": 4044385,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:The_King_and_Tycho_Brahe.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Vitold Muratov",
+   "credit": "Own work",
+   "desc": "The fragment of a painting is said to depict an encounter between Tycho Brahe and his sponsor King Frederick II of Denmark and Norway."
+  },
+  {
+   "title": "File:Tycho Brahe 2.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Tycho_Brahe_2.jpg",
+   "w": 1300,
+   "h": 1444,
+   "size": 659289,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tycho_Brahe_2.jpg",
+   "license": "Public domain",
+   "artist": "Unknown artistUnknown artist",
+   "credit": "Own photographic reproduction of an expired work of art.",
+   "desc": ""
+  }
+ ],
+ "tried": []
+}

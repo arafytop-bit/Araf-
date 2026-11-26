@@ -1,0 +1,46 @@
+{
+ "key": "golden_horn_chain",
+ "query": "chain Golden Horn Istanbul Archaeology Museum",
+ "cands": [
+  {
+   "title": "File:Istanbul Archaeology Museums - İstanbul Arkeoloji Müzeleri - Istanbul, Turkey (10582738393).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Istanbul_Archaeology_Museums_-_%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri_-_Istanbul%2C_Turkey_%2810582738393%29.jpg",
+   "w": 4000,
+   "h": 3000,
+   "size": 3065659,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Istanbul_Archaeology_Museums_-_%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri_-_Istanbul,_Turkey_(10582738393).jpg",
+   "license": "CC BY 2.0",
+   "artist": "David Berkowitz from New York, NY, USA",
+   "credit": "Istanbul Archaeology Museums - İstanbul Arkeoloji Müzeleri - Istanbul, Turkey",
+   "desc": "Travel Istanbul, Turkey in September 2013, by David Berkowitz"
+  },
+  {
+   "title": "File:Istanbul Archaeology Museums - İstanbul Arkeoloji Müzeleri - Istanbul, Turkey (10582521774).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Istanbul_Archaeology_Museums_-_%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri_-_Istanbul%2C_Turkey_%2810582521774%29.jpg",
+   "w": 4000,
+   "h": 3000,
+   "size": 3265491,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Istanbul_Archaeology_Museums_-_%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri_-_Istanbul,_Turkey_(10582521774).jpg",
+   "license": "CC BY 2.0",
+   "artist": "David Berkowitz from New York, NY, USA",
+   "credit": "Istanbul Archaeology Museums - İstanbul Arkeoloji Müzeleri - Istanbul, Turkey",
+   "desc": "Travel Istanbul, Turkey in September 2013, by David Berkowitz"
+  },
+  {
+   "title": "File:Constantinople mural, Istanbul Archaeological Museums.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Constantinople_mural%2C_Istanbul_Archaeological_Museums.jpg",
+   "w": 3216,
+   "h": 2144,
+   "size": 3259173,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Constantinople_mural,_Istanbul_Archaeological_Museums.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "en:User:Argos'Dad",
+   "credit": "en:User:Argos'Dad [1]",
+   "desc": "A mural in the Istanbul Archaeology Museums depicting the seaward walls of the Byzantine capital, the Golden Horn with its chains and the Genoese Colony of en:Galata in the 14th-15th centuries."
+  }
+ ],
+ "tried": []
+}

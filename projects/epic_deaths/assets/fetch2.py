@@ -1,0 +1,231 @@
+"""Slow, metadata-first fetch from Wikimedia Commons (the image host throttles unidentified clients hard).
+
+Phase 1 (API, commons.wikimedia.org): search each key, keep ranked candidates + licence metadata -> meta/<key>.json
+Phase 2 (upload.wikimedia.org): download ONE candidate per key (original if small, else the 1280px thumb),
+         paced and honouring Retry-After -> picked/<key>.jpg + credits.json
+
+  python3 fetch2.py run            # both phases, resumable
+  python3 fetch2.py next KEY       # mark current pick for KEY as wrong and fetch the next candidate
+"""
+import json
+import os
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+UA = 'EpicDeathsVideoBuild/1.1 (educational video production; low-rate Commons API client)'
+API = 'https://commons.wikimedia.org/w/api.php'
+META = os.path.join(HERE, 'meta')
+PICKED = os.path.join(HERE, 'picked')
+CREDITS = os.path.join(HERE, 'credits.json')
+API_PACE, DL_PACE = 15.0, 12.0
+
+# ordered by first appearance in the video
+QUERIES = [
+    ('tycho', 'Tycho Brahe portrait', ['File:Tycho Brahe.JPG']),
+    ('chrysippus', 'Chrysippus bust British Museum', []),
+    ('rasputin', 'Grigori Rasputin photograph', []),
+    ('harald_portrait', 'Harald Hardrada', []),
+    ('varangian', 'Varangian Guard Skylitzes', []),
+    ('golden_horn_chain', 'chain Golden Horn Istanbul Archaeology Museum', []),
+    ('york', 'York Minster city walls', []),
+    ('heimskringla', 'Heimskringla manuscript', []),
+    ('snorri', 'Snorri Sturluson Vigeland statue', []),
+    ('stamford_arbo', 'Arbo Slaget ved Stamford bridge', []),
+    ('anglo_saxon_chronicle', 'Anglo-Saxon Chronicle Peterborough manuscript', []),
+    ('bayeux_harold', 'Bayeux Tapestry Harold death', ['File:Bayeux Tapestry scene57 Harold death.jpg']),
+    ('leo_attila', 'Raphael Meeting between Leo the Great and Attila', []),
+    ('feast_attila', 'Than Mór Attila lakomája', []),
+    ('hun_archer', 'Hungarian horse archer reenactment', []),
+    ('solidus', 'Theodosius II solidus', []),
+    ('attila_death', 'Ferenc Paczka death of Attila', []),
+    ('crassus_bust', 'Marcus Licinius Crassus bust Louvre', []),
+    ('fire_rome', 'Hubert Robert Fire of Rome', []),
+    ('spartacus_statue', 'Spartacus Foyatier Louvre', []),
+    ('parthian_archer', 'Parthian shot horse archer', []),
+    ('aquila', 'Roman legion aquila standard reenactment', []),
+    ('greek_theater', 'Epidaurus theatre', []),
+    ('theater_masks', 'theatre masks mosaic Capitoline', []),
+    ('kouros_phigalia', 'Kouros Phigalia', []),
+    ('pankration_vase', 'pankration Panathenaic amphora', []),
+    ('olympia_stadium', 'Olympia stadium entrance tunnel', []),
+    ('olive_wreath', 'olive wreath kotinos', []),
+    ('pyrrhus', 'Pyrrhus bust Naples', []),
+    ('yi_statue', 'Statue of Admiral Yi Sun-sin Gwanghwamun', []),
+    ('nelson', 'Horatio Nelson Lemuel Francis Abbott portrait', ['File:HoratioNelson1.jpg']),
+    ('turtle_ship', 'Geobukseon turtle ship replica', []),
+    ('myeongnyang', 'Uldolmok Myeongnyang strait', []),
+    ('hideyoshi', 'Toyotomi Hideyoshi portrait Kodai-ji', []),
+    ('hundred_won', '100 won coin Yi Sun-sin', []),
+    ('seoul_gwanghwamun', 'Gwanghwamun Square Seoul', []),
+]
+PREFER = {
+    'tycho': ['tycho'], 'chrysippus': ['chrysippus', 'crisip'], 'rasputin': ['rasputin'], 'harald_portrait': ['harald', 'hardr'],
+    'varangian': ['varang'], 'golden_horn_chain': ['chain', 'zincir'], 'york': ['york'], 'heimskringla': ['kringla'],
+    'snorri': ['snorri'], 'stamford_arbo': ['stamford', 'arbo'], 'anglo_saxon_chronicle': ['chronicle'], 'bayeux_harold': ['bayeux'],
+    'leo_attila': ['leo', 'attila'], 'feast_attila': ['attila', 'lakom', 'feast'], 'hun_archer': ['archer', 'íjász', 'horse'],
+    'solidus': ['solidus'], 'attila_death': ['attila'], 'crassus_bust': ['crassus'], 'fire_rome': ['fire', 'incendie'],
+    'spartacus_statue': ['spartac'], 'parthian_archer': ['parthian', 'archer'], 'aquila': ['aquila', 'eagle'],
+    'greek_theater': ['epidaur'], 'theater_masks': ['mask'], 'kouros_phigalia': ['phigal'], 'pankration_vase': ['pankration'],
+    'olympia_stadium': ['stadium', 'stadion'], 'olive_wreath': ['wreath', 'kotinos'], 'pyrrhus': ['pyrrhus'],
+    'yi_statue': ['yi sun', 'sun-sin'], 'nelson': ['nelson'], 'turtle_ship': ['turtle', 'geobuk', 'kobuk'],
+    'myeongnyang': ['uldolmok', 'myeongnyang'], 'hideyoshi': ['hideyoshi'], 'hundred_won': ['won'], 'seoul_gwanghwamun': ['gwanghwamun'],
+}
+OK_LICENSES = ('public domain', 'pd', 'cc0', 'cc by', 'cc-by', 'attribution', 'no restrictions')
+BAD_WORDS = ('map', 'coat of arms', 'signature', 'logo', 'flag', 'diagram', 'plan of', 'svg', 'icon', 'chart')
+
+
+def log(*a):
+    print(time.strftime('%H:%M:%S'), *a, flush=True)
+
+
+def _get(url, timeout=90):
+    wait = 30
+    for attempt in range(14):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                ra = e.headers.get('retry-after')
+                w = int(ra) + 5 if ra and ra.isdigit() else wait
+                w = max(w, wait)
+                log('  429', str(e.reason)[:50], 'wait', w)
+                time.sleep(min(w, 900)); wait = min(wait * 1.5, 300); continue
+            if e.code in (500, 502, 503, 504):
+                time.sleep(30); continue
+            raise
+        except urllib.error.URLError as e:
+            log('  url error', str(e)[:120]); time.sleep(30); continue
+    raise RuntimeError('gave up ' + url)
+
+
+def api(params):
+    params = dict(params, format='json')
+    d = json.loads(_get(API + '?' + urllib.parse.urlencode(params), 60))
+    time.sleep(API_PACE)
+    return d
+
+
+def strip_html(s):
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
+
+
+def clean(u):
+    return (u or '').split('?')[0]
+
+
+def candidates_from(pages):
+    out = []
+    for p in sorted(pages, key=lambda p: p.get('index', 0)):
+        ii = (p.get('imageinfo') or [{}])[0]
+        md = ii.get('extmetadata', {})
+        lic = strip_html(md.get('LicenseShortName', {}).get('value', ''))
+        out.append(dict(title=p['title'], url=clean(ii.get('url')), w=ii.get('width', 0), h=ii.get('height', 0),
+                        size=ii.get('size', 0), mime=ii.get('mime', ''), page=clean(ii.get('descriptionurl')), license=lic,
+                        artist=strip_html(md.get('Artist', {}).get('value', ''))[:160],
+                        credit=strip_html(md.get('Credit', {}).get('value', ''))[:200],
+                        desc=strip_html(md.get('ImageDescription', {}).get('value', ''))[:300]))
+    return out
+
+
+def usable(c):
+    t = c['title'].lower()
+    return (c['mime'] in ('image/jpeg', 'image/png') and any(k in c['license'].lower() for k in OK_LICENSES)
+            and not any(b in t for b in BAD_WORDS) and min(c['w'], c['h']) >= 450)
+
+
+def phase1():
+    os.makedirs(META, exist_ok=True)
+    for key, q, titles in QUERIES:
+        fp = os.path.join(META, key + '.json')
+        if os.path.exists(fp):
+            continue
+        cands = []
+        prop = dict(prop='imageinfo', iiprop='url|extmetadata|size|mime')
+        if titles:
+            d = api(dict(action='query', titles='|'.join(titles), **prop))
+            cands += candidates_from([p for p in d.get('query', {}).get('pages', {}).values() if 'imageinfo' in p])
+        d = api(dict(action='query', generator='search', gsrsearch=q + ' filetype:bitmap', gsrnamespace=6, gsrlimit=10, **prop))
+        seen = {c['title'] for c in cands}
+        cands += [c for c in candidates_from(d.get('query', {}).get('pages', {}).values()) if c['title'] not in seen]
+        cands = [c for c in cands if usable(c)]
+        json.dump(dict(key=key, query=q, cands=cands, tried=[]), open(fp, 'w'), indent=1, ensure_ascii=False)
+        log('meta', key, len(cands), '|', cands[0]['title'][:70] if cands else '-')
+
+
+def dl_url(c, width=1280):
+    """MediaWiki's thumb.php on the commons host (the media hosts throttle unidentified clients much harder)."""
+    name = c['title'].split(':', 1)[1].replace(' ', '_')
+    w = min(width, c['w']) if c['w'] else width
+    return 'https://commons.wikimedia.org/w/thumb.php?' + urllib.parse.urlencode(dict(f=name, w=w))
+
+
+def fetch_one(key):
+    fp = os.path.join(META, key + '.json')
+    m = json.load(open(fp))
+    pref = PREFER.get(key, [])
+    ranked = sorted(m['cands'], key=lambda c: (not any(t in c['title'].lower() for t in pref), min(c['w'], c['h']) < 700))
+    for c in ranked:
+        if c['title'] in m['tried']:
+            continue
+        m['tried'].append(c['title'])
+        json.dump(m, open(fp, 'w'), indent=1, ensure_ascii=False)
+        try:
+            data = _get(dl_url(c))
+        except Exception as e:
+            log('  dl fail', key, c['title'][:60], str(e)[:80]); time.sleep(DL_PACE); continue
+        os.makedirs(PICKED, exist_ok=True)
+        ext = '.png' if c['mime'] == 'image/png' else '.jpg'
+        raw = os.path.join(PICKED, key + '.src' + ext)
+        open(raw, 'wb').write(data)
+        to_jpg(raw, os.path.join(PICKED, key + '.jpg'))
+        cr = json.load(open(CREDITS)) if os.path.exists(CREDITS) else {}
+        cr[key] = {k: c[k] for k in ('title', 'page', 'license', 'artist', 'credit')}
+        json.dump(cr, open(CREDITS, 'w'), indent=1, ensure_ascii=False)
+        log('got', key, '<-', c['title'][:80], len(data) // 1024, 'KB')
+        time.sleep(DL_PACE)
+        return True
+    log('no more candidates for', key)
+    return False
+
+
+def to_jpg(src, dst, max_side=2200):
+    import cv2
+    im = cv2.imread(src, cv2.IMREAD_COLOR)
+    if im is None:
+        raise RuntimeError('unreadable ' + src)
+    h, w = im.shape[:2]
+    k = min(1.0, max_side / max(h, w))
+    if k < 1:
+        im = cv2.resize(im, (int(w * k), int(h * k)), interpolation=cv2.INTER_AREA)
+    cv2.imwrite(dst, im, [cv2.IMWRITE_JPEG_QUALITY, 92])
+    os.remove(src)
+
+
+def phase2():
+    for key, _, _ in QUERIES:
+        if os.path.exists(os.path.join(PICKED, key + '.jpg')):
+            continue
+        fetch_one(key)
+
+
+if __name__ == '__main__':
+    cmd = sys.argv[1] if len(sys.argv) > 1 else 'run'
+    if cmd == 'run':
+        phase1()
+        phase2()
+        log('FETCH2_DONE')
+    elif cmd == 'meta':
+        phase1()
+    elif cmd == 'next':
+        for k in sys.argv[2:]:
+            p = os.path.join(PICKED, k + '.jpg')
+            if os.path.exists(p):
+                os.remove(p)
+            fetch_one(k)
