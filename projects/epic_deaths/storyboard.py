@@ -55,6 +55,10 @@ CARD('the greatest hits', 'playlist', title='HISTORY YOUTUBE: GREATEST HITS', un
 H("This isn't one of those", zoom=True, expr='smug', pose='point')
 S('people who wrote them down', bg='hall', chars=[CH(SCRIBE, 760, expr='shock'), CH(SCRIBE, 1160, expr=[(None, 'nervous'), ('barely believe', 'shock')], flip=True)],
   props=[PR('book', 960, 760, 80)])
+S('wins a fight', bg='img:olympia_stadium|arena', chars=[CH(ARRICHION_WREATH, 960, y=840, R=95, rot=-90, expr='dead', tag='OLYMPIC CHAMPION')],
+  teaser=True, until='Another wins')
+S('wins a battle', bg='sea', props=[PR('drum', 1150, 680, 130, kw={'hit': False})], chars=[CH(NEPHEW, 760, expr='angry', pose='wave')],
+  drum=True, teaser=True, until='every entry tops')
 C('wins a fight', 'WINS A FIGHT... AFTER DYING')
 C('wins a battle', 'WINS A BATTLE... THE SAME WAY')
 H('every entry tops', expr='grin', pose='hips')

@@ -6,6 +6,7 @@ shots, render with frame caching, mix audio.
   python3 build.py render [t0 t1]       # render (optionally a time range in seconds) -> out.mp4
 """
 import json
+import math
 import os
 import random
 import re
@@ -26,10 +27,12 @@ from engine.text import draw_callout, text_width, size_for_cap, draw_text  # noq
 from engine.cards import KineticTitle  # noqa: E402
 import storyboard as SB  # noqa: E402
 from cast import HOST  # noqa: E402
+import retention as RT  # noqa: E402
 
 VOICE_OFFSET = 0.10
 shots.IMG_DIR = os.path.join(HERE, 'assets', 'picked')
 shots.HOST_PAL = HOST
+RT.install_background_hook(shots, draw_background)
 
 # ---------------- words & triggers ----------------
 WORDS = json.load(open(os.path.join(HERE, 'words.json')))
@@ -283,15 +286,25 @@ def render_host(c, h, f):
     if h.get('over') and os.path.exists(os.path.join(shots.IMG_DIR, h['over'] + '.jpg')):
         c.drawImage(shots.blur_bg(h['over']), 0, 0)
     else:
-        draw_background(c)
+        shots.draw_background(c)
     e = h['exprs'][0][1]
     for f0, ex in h['exprs']:
         if f >= f0:
             e = ex
-    if h['zoom']:
-        draw_character(c, *ZOOM_CENTER, R_ZOOM, h['pose'], e, HOST, bob=h['bob'], look=h['look'])
-    else:
-        draw_character(c, *NORMAL_CENTER, R_NORMAL, h['pose'], e, HOST, bob=h['bob'], look=h['look'])
+    e = RT.host_expr(h, f, e)
+    sy = RT.host_bounce(h, f)
+    push = 1.0 if h['zoom'] else 1.0 + 0.005 * (f - h['f0']) / FPS
+    (cx, cy), R = (ZOOM_CENTER, R_ZOOM) if h['zoom'] else (NORMAL_CENTER, R_NORMAL)
+    c.save()
+    c.translate(W / 2, H / 2)
+    c.scale(push, push)
+    c.translate(-W / 2, -H / 2)
+    feet = cy + 3.05 * R
+    c.translate(cx, feet)
+    c.scale(1 / math.sqrt(sy), sy)
+    c.translate(-cx, -feet)
+    draw_character(c, cx, cy, R, h['pose'], e, HOST, bob=h['bob'], look=h['look'])
+    c.restore()
     return e
 
 
@@ -316,8 +329,34 @@ def frame_key(shot, f, calls_on, ovs_on):
     return None
 
 
+def compose(c, surf, f, shot, calls_on, ovs_on, rt):
+    RT.CUR_F[0] = f
+    c.clear(skia.ColorBLACK)
+    if shot is None:
+        shots.draw_background(c)
+    elif shot['kind'] == 'host':
+        render_host(c, shot, f)
+    else:
+        try:
+            RENDERERS[shot['kind']](c, shot, f)
+        except Exception as ex:
+            print('render error', shot['kind'], shot.get('trigger'), ex, flush=True)
+            shots.draw_background(c)
+    if shot is not None and shot.get('teaser'):
+        rt.teaser(c, surf, shot, f)
+    for o in ovs_on:
+        draw_timer(c, o, f)
+    for cl in calls_on:
+        draw_callout(c, cl['text'], progress=(f - cl['f0'] + 1) / 5.0)
+    rt.apply_camera(c, surf, f)
+    rt.death_overlay(c, surf, f)
+    if shot is None or shot['kind'] not in ('title', 'end', 'kinetic'):
+        rt.hud(c, f)
+
+
 def render(t0=0.0, t1=None, out=None, frames=None):
     timeline, calls, overlays = compile_all()
+    rt = RT.Retention(timeline, calls, overlays, sys.modules[__name__])
     total_f = fr(TOTAL_S)
     f_start, f_end = frames if frames else (fr(t0), fr(t1) if t1 else total_f)
     out = out or os.path.join(HERE, 'video_noaudio.mp4')
@@ -327,7 +366,6 @@ def render(t0=0.0, t1=None, out=None, frames=None):
                           stdin=subprocess.PIPE)
     surf = new_surface()
     si = 0
-    prev_key, prev_bytes = None, None
     import time
     t_start = time.time()
     for f in range(f_start, f_end):
@@ -336,29 +374,9 @@ def render(t0=0.0, t1=None, out=None, frames=None):
         shot = timeline[si] if timeline[si]['f0'] <= f else None
         calls_on = [c for c in calls if c['f0'] <= f < c['f1']]
         ovs_on = [o for o in overlays if o['f0'] <= f < o['f1']]
-        key = frame_key(shot, f, calls_on, ovs_on) if shot else None
-        if key is not None and key == prev_key:
-            ff.stdin.write(prev_bytes)
-            continue
         c = surf.getCanvas()
-        c.clear(skia.ColorBLACK)
-        if shot is None:
-            draw_background(c)
-        elif shot['kind'] == 'host':
-            render_host(c, shot, f)
-        else:
-            try:
-                RENDERERS[shot['kind']](c, shot, f)
-            except Exception as ex:
-                print('render error', shot['kind'], shot.get('trigger'), ex, flush=True)
-                draw_background(c)
-        for o in ovs_on:
-            draw_timer(c, o, f)
-        for cl in calls_on:
-            draw_callout(c, cl['text'], progress=(f - cl['f0'] + 1) / 5.0)
-        data = surf.makeImageSnapshot().toarray().tobytes()
-        ff.stdin.write(data)
-        prev_key, prev_bytes = key, data
+        compose(c, surf, f, shot, calls_on, ovs_on, rt)
+        ff.stdin.write(surf.makeImageSnapshot().toarray().tobytes())
         if f % 900 == 0:
             el = time.time() - t_start
             print(f'frame {f}/{f_end}  {el / 60:.1f} min elapsed', flush=True)
@@ -517,19 +535,13 @@ if __name__ == '__main__':
     elif cmd == 'stills':
         import cv2
         timeline, calls, overlays = compile_all()
+        rt = RT.Retention(timeline, calls, overlays, sys.modules[__name__])
         os.makedirs(os.path.join(HERE, 'stills'), exist_ok=True)
         surf = new_surface()
         for f in [int(x) for x in sys.argv[2].split(',')]:
             shot = [s for s in timeline if s['f0'] <= f][-1]
-            c = surf.getCanvas(); c.clear(skia.ColorBLACK)
-            if shot['kind'] == 'host':
-                render_host(c, shot, f)
-            else:
-                RENDERERS[shot['kind']](c, shot, f)
-            for cl in [c_ for c_ in calls if c_['f0'] <= f < c_['f1']]:
-                draw_callout(c, cl['text'], progress=1.0)
-            for o in [o for o in overlays if o['f0'] <= f < o['f1']]:
-                draw_timer(c, o, f)
+            c = surf.getCanvas()
+            compose(c, surf, f, shot, [c_ for c_ in calls if c_['f0'] <= f < c_['f1']], [o for o in overlays if o['f0'] <= f < o['f1']], rt)
             cv2.imwrite(os.path.join(HERE, 'stills', f'f{f:05d}.jpg'), surf.makeImageSnapshot().toarray()[:, :, :3], [cv2.IMWRITE_JPEG_QUALITY, 85])
         print('stills done')
     elif cmd == 'render_f':
@@ -538,7 +550,8 @@ if __name__ == '__main__':
         prender(int(sys.argv[2]) if len(sys.argv) > 2 else 4)
     elif cmd == 'final':
         prender(4)
-        mix()
+        import sound_design
+        sound_design.main()
         print('wrote', mux())
     elif cmd == 'describe':
         print(open(describe()).read())

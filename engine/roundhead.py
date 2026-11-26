@@ -155,6 +155,10 @@ EXPR = {
     'dead': ('closed', None, 'wavy', ()),
 }
 
+for _k, _v in list(EXPR.items()):            # blink variants: same face, eyes closed
+    if _v[0] != 'closed':
+        EXPR[_k + '_blink'] = ('closed',) + tuple(_v[1:])
+
 
 def face_parts(expr, look=(0.0, 0.0)):
     eye, brows, mouth, extras = EXPR[expr]
