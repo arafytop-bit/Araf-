@@ -57,7 +57,7 @@ QUERIES = [
     ('pyrrhus', 'Pyrrhus bust Naples', []),
     ('yi_statue', 'Statue of Admiral Yi Sun-sin Gwanghwamun', []),
     ('nelson', 'Horatio Nelson Lemuel Francis Abbott portrait', ['File:HoratioNelson1.jpg']),
-    ('turtle_ship', 'Geobukseon turtle ship replica', []),
+    ('turtle_ship', 'Geobukseon', []),
     ('myeongnyang', 'Uldolmok Myeongnyang strait', []),
     ('hideyoshi', 'Toyotomi Hideyoshi portrait Kodai-ji', []),
     ('hundred_won', '100 won coin Yi Sun-sin', []),
