@@ -147,12 +147,18 @@ def fill_paint(style, y_top, y_base, alpha=255):
     return p
 
 
+TEXT_LOG = None          # list -> every visible draw is recorded as (text, cap_px_on_canvas, alpha) for QA
+
+
 def draw(c, s, x, y, cap, style='white', weight=800, tracking=0.02, align='left', alpha=255,
          shadow=0.9, stroke=None, stroke_color='#000000', glow=None):
     """Draw one line of caps; (x, y) = anchor at the BASELINE. Returns the drawn width.
     shadow: opacity of a soft drop shadow (0 = none). stroke: outline width in px (drawn under the fill)."""
     if alpha <= 0 or not s:
         return 0.0
+    if TEXT_LOG is not None:
+        m = c.getTotalMatrix()
+        TEXT_LOG.append((s, cap * abs(m.getScaleY()), alpha))
     size = size_for(cap)
     _, _, w = layout(s, size, weight, tracking)
     if align == 'center':

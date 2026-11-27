@@ -76,8 +76,8 @@ def say(text, x, bottom, at, until):
     return (text, x, bottom, at, until)
 
 
-def tagp(text, x, bottom, at):
-    return (text, x, bottom, at)
+def tagp(text, x, bottom, at, fixed=False):
+    return (text, x, bottom, at, fixed)
 
 
 def kline(y, cap, words):
@@ -119,7 +119,7 @@ B('the greatest hits', 'band', text="HISTORY YOUTUBE'S GREATEST HITS", until="Th
   photos=[('tycho', 0.20 * W, 0.615 * H, 0.235 * W, T("Tycho Brahe's"), None, (0.5, 0.3)),
           ('chrysippus', 0.50 * W, 0.615 * H, 0.235 * W, T('The philosopher'), None, (0.5, 0.35)),
           ('rasputin', 0.80 * W, 0.615 * H, 0.235 * W, T('Rasputin refusing'), None, (0.5, 0.3))],
-  label_y=0.965 * H, label_w=0.23 * W,
+  label_y=0.965 * H, label_w=0.23 * W, label_cap=50,
   photo_labels=[('BLADDER', 0.20 * W, T("bladder")), ('DONKEY JOKE', 0.50 * W, T('laughed')), ("WON'T DIE", 0.80 * W, T('refusing'))])
 STAMP('recycles the same', 'RECYCLED', sub='EVERY. SINGLE. LIST.', y=0.62 * H, hold=1.9, cap=96)
 HO("This isn't one of those", framing='CU', pose='point', expr='smug')
@@ -145,7 +145,7 @@ B("You've seen TV Vikings", 'scene', bg='tv_set', focus=(0.3, 0.35), zoom=1.6, b
   until='Harald was real',
   actors=[A(VIK_TEE, 845, y=760, R=96, pose='hips', expr='grin', enter=pop(T('TV Vikings')), clip=(400, 70, 1290, 742), no_shadow=True)],
   fx=[dict(kind='crt', rect=(400, 70, 1290, 742))],
-  tags=[tagp('TV VIKINGS', 845, 1010, T('TV Vikings'))])
+  tags=[tagp('TV VIKINGS', 845, 1010, T('TV Vikings'), fixed=True)])
 B('Harald was real', 'photo', img='harald_portrait', focus=(0.6, 0.5), caption='THE REAL ONE', cap_at=T('real'),
   until='his actual life')
 HO('his actual life', pose='shrug', expr='grin')
@@ -492,7 +492,7 @@ B('Then they sealed his body', 'stage', until='They buried him at night',
          P('coffin', 960, 600, 165, kw=dict(c='#C9CED3'), enter=pop(T('one of silver'))),
          P('coffin', 1360, 600, 165, kw=dict(c='#5E6469'), enter=pop(T('one of iron')))],
   tags=[tagp('GOLD', 560, 330, T('one of gold')), tagp('SILVER', 960, 330, T('one of silver')), tagp('IRON', 1360, 330, T('one of iron')),
-        tagp('THE RICHES HE TOOK', 760, 940, T('riches he took')), tagp('THE NATIONS HE CRUSHED', 1360, 1010, T('nations he crushed'))])
+        tagp('THE RICHES HE TOOK', 760, 940, T('riches he took'), fixed=True), tagp('THE NATIONS HE CRUSHED', 1360, 1010, T('nations he crushed'), fixed=True)])
 B('They buried him at night', 'scene', bg='puszta', gain=0.32, sat=0.5, until='And it worked',
   props=[P('gold_pile', 1150, 900, 120, enter=pop(T('treasure'))), P('sword', 1420, 860, 80, rot=80, enter=pop(T('weapons'))),
          P('shovel', 600, 820, 140, rot=20)],
@@ -565,7 +565,7 @@ B('His two political partners', 'trio', until='So at around sixty',
 B('So at around sixty years old', 'stage', until='Crassus decided his',
   props=[P('chariot', 960, 760, 200, enter=dict(kind='slide', at=T('sports chariot'), frm=-400, dur=12))],
   actors=[A(CRASSUS, 900, y=640, R=80, expr='grin', z=1, enter=dict(kind='slide', at=T('sports chariot'), frm=-460, dur=12))],
-  tags=[tagp('AGE: ~60', 960, 330, T('sixty years old')), tagp('"SPORTS CHARIOT"', 960, 1030, T('sports chariot', off=6))])
+  tags=[tagp('AGE: ~60', 960, 330, T('sixty years old')), tagp('"SPORTS CHARIOT"', 960, 1030, T('sports chariot', off=6), fixed=True)])
 B('Crassus decided his midlife crisis', 'text', until='a superpower that ruled', bg='crassus_bust',
   lines=[('MIDLIFE CRISIS:', 'silver', 0.07 * H, T('midlife crisis')), ('INVADE PARTHIA', 'red', 0.12 * H, T('invading'))])
 B('a superpower that ruled', 'map', region='rome_parthia', highlight=('Iran', 'Iraq'), until='It did not go well',
@@ -591,8 +591,15 @@ B('in a tight formation behind', 'scene', bg='carrhae', focus=(0.5, 0.55), until
   tags=[tagp('THE PLAN: WAIT', 960, 440, T('waiting for the enemy'))])
 HO("That's the plan", framing='CU', expr='deadpan', pose='hips')
 HO("That's the entire plan", framing='M', expr='deadpan', pose='shrug')
-B('the Romans spotted camels', 'photo', img='camel', mode='full', focus=(0.5, 0.5), until='The arrows were never',
-  caption='AMMO DELIVERY', cap_at=T('camels loaded'))
+if os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'assets', 'picked', 'camel.jpg')):
+    B('the Romans spotted camels', 'photo', img='camel', mode='full', focus=(0.5, 0.5), until='The arrows were never',
+      caption='AMMO DELIVERY', cap_at=T('camels loaded'))
+else:
+    B('the Romans spotted camels', 'scene', bg='carrhae', focus=(0.5, 0.5), until='The arrows were never',
+      props=[P('arrow', 1500 - 140 * k, 420 + 70 * (k % 3), 60, rot=180, enter=dict(kind='fly', at=T('fresh arrows', off=2 * k), frm=(2300, 300), dur=9))
+             for k in range(6)],
+      actors=[A(LEGIONARY, 600, R=104, expr=[(None, 'skeptic'), (T('fresh arrows'), 'shock')])],
+      tags=[tagp('CAMELS = ARROW REFILLS', 1200, 300, T('camels loaded'))])
 B('The arrows were never going', 'text', until='The Parthians would even', lines=[('ARROWS:', 'white', 0.08 * H), ('UNLIMITED', 'red', 0.13 * H, T('never'))])
 B('The Parthians would even fake', 'photo', img='parthian_archer', mode='frame', focus=(0.5, 0.45), until='That move became',
   marks=[('arrow', 0.15, 0.85, 0.42, 0.40, T('twist around')), ('label', 'FIRING BACKWARD', 0.5, 0.95, T('fire backward'))])
@@ -617,7 +624,7 @@ B('Rome even lost its sacred', 'photo', img='aquila', mode='frame', focus=(0.5, 
 C('thirty years of diplomacy', '30+ YEARS OF DIPLOMACY', hold=1.8)
 HO("And that's not even the wild part", framing='CU', expr='smug', pose='point')
 B('The Parthians cut off his head', 'scene', bg='greek_theater', blur=5.0, gain=0.5, until='who was at a royal',
-  actors=[A(PARTHIAN_KING, 960, R=124, pose='hips', expr='smug', enter=pop(T('their king')))],
+  actors=[A(PARTHIAN_KING, 960, R=124, pose='hips', expr=[(None, 'smug'), (T('sent them'), 'grin')], enter=pop(T('cut off his head')))],
   tags=[tagp('THE PARTHIAN KING', 960, 330, T('their king'))])
 B('who was at a royal wedding feast', 'photo', img='greek_theater', mode='full', focus=(0.5, 0.5), until='The next scene',
   caption='A GREEK TRAGEDY: THE BACCHAE', cap_at=T('Greek tragedy'))
@@ -648,7 +655,7 @@ C('250 years later', '250+ YEARS LATER', hold=1.8)
 B('poured molten gold into his mouth', 'stage', until='Even Dio only says',
   props=[P('cup', 1110, 300, 150, rot=125, kw=dict(c='#E8B83A'), enter=pop(T('poured')))],
   fx=[dict(kind='pour', x=1020, y=370, len=230, at=T('molten gold')), dict(kind='head', pal=CRASSUS, x=980, y=720, R=120, expr='ko_o')],
-  tags=[tagp('TO MOCK HIS GREED', 960, 1010, T('to mock'))])
+  tags=[tagp('TO MOCK HIS GREED', 960, 1010, T('to mock'), fixed=True)])
 B('Even Dio only says', 'text', until='Either way, the moral', lines=[('"SOME SAY..."', 'white', 0.11 * H), ('(MAYBE A LEGEND)', 'red', 0.06 * H, T('might be legend'))])
 HO('Either way, the moral', pose='hips', expr='talk')
 B('Crassus spent his whole life chasing', 'stage', until='he finally got more',
@@ -722,11 +729,11 @@ B('his trainer, a man named Eryxias', 'scene', bg='olympia_stadium', focus=(0.5,
 B('What a noble epitaph', 'quote', text='What a noble epitaph: He was never defeated at Olympia.', quote_at='What a noble epitaph',
   who='Eryxias, via Philostratus', bg='olympia_stadium', until='An epitaph is the line')
 B('An epitaph is the line', 'scene', bg='gravestone', focus=(0.5, 0.5), until='So his coach is basically',
-  props=[P('tombstone', 960, 700, 230, enter=drop(T('An epitaph')), text=['NEVER', 'DEFEATED'], tcap=34, ty=0.0)],
+  props=[P('tombstone', 960, 700, 250, enter=drop(T('An epitaph')), text=['NEVER', 'DEFEATED'], tcap=50, ty=0.05)],
   tags=[tagp('EPITAPH = GRAVESTONE LINE', 960, 300, T('carve on your'))], cam=[('shake', T('An epitaph', off=8), 8)])
 B('So his coach is basically yelling', 'scene', bg='olympia_stadium', focus=(0.5, 0.6), until='Respectfully',
   actors=[A(ERYXIAS, 640, R=112, pose='cheer', expr='grin')],
-  props=[P('tombstone', 1340, 760, 170, text=['NEVER', 'DEFEATED'], tcap=26, enter=pop(T('your tombstone')))],
+  props=[P('tombstone', 1360, 740, 220, text=['NEVER', 'DEFEATED'], tcap=46, ty=0.05, enter=pop(T('your tombstone')))],
   says=[say('"YOUR TOMBSTONE WILL LOOK AMAZING!"', 900, 380, T('if you die'), T('Respectfully', cut=True))])
 HO('Respectfully', framing='ECU', expr='shock', pose='cheeks')
 HO('Your fighter is being strangled', pose='shrug', expr='skeptic')
@@ -772,7 +779,7 @@ C('seven hundred years after', '~700 YEARS LATER', hold=1.8)
 B('A statue many believe', 'stage', until='As far as we know',
   props=[P('pedestal', 960, 860, 230)],
   actors=[A(ARRICHION_STATUE, 960, y=760, R=96, pose='hips', expr='neutral', no_shadow=True, enter=pop(T('A statue')))],
-  tags=[tagp('"PROBABLY" ARRICHION', 960, 300, T('many believe')), tagp('MUSEUM AT OLYMPIA', 960, 1040, T('museum at Olympia'))])
+  tags=[tagp('"PROBABLY" ARRICHION', 960, 300, T('many believe')), tagp('MUSEUM AT OLYMPIA', 960, 1040, T('museum at Olympia'), fixed=True)])
 B('As far as we know', 'text', until='Which sounds impossible', bg='olympia_stadium', lines=[
     ('THE ONLY ATHLETE TO WIN', 'white', 0.075 * H), ('AN OLYMPIC FINAL', 'white', 0.075 * H), ('AFTER DYING', 'red', 0.13 * H, T('after dying'))])
 HO('Which sounds impossible to top', pose='hips', expr='smug')

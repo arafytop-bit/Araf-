@@ -1,0 +1,80 @@
+CHAPTERS
+0:00 Intro
+0:26 #1 Harald Hardrada
+4:36 #2 Attila the Hun
+6:55 #3 Marcus Licinius Crassus
+9:49 #4 Arrichion of Phigalia
+12:30 A confession (part two)
+13:03 #5 Yi Sun-sin
+16:54 Recap
+
+IMAGE CREDITS (all via Wikimedia Commons)
+
+- Picture that I took in Olimpia (entance to stadium): Asier Barre, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Picture_that_I_took_in_Olimpia_(entance_to_stadium).jpg
+- Korea-Tongyeong Port-Turtle ship replica-03: by Junho Jung at Flickr from South Korea, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:Korea-Tongyeong_Port-Turtle_ship_replica-03.jpg
+- Tycho Brahe: Eduard Ender (1822-1883), Public domain. https://commons.wikimedia.org/wiki/File:Tycho_Brahe.JPG
+- Chrysippus bust: Unknown artist, Public domain. https://commons.wikimedia.org/wiki/File:Chrysippus_bust.jpg
+- Grigori Rasputin 1916: Unknown author, Public domain. https://commons.wikimedia.org/wiki/File:Grigori_Rasputin_1916.jpg
+- CodexFrisianus: unknown author, Public domain. https://commons.wikimedia.org/wiki/File:CodexFrisianus.jpg
+- Harald Hardrada window in Kirkwall Cathedral geograph 2068881: Colin Smith, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:Harald_Hardrada_window_in_Kirkwall_Cathedral_geograph_2068881.jpg
+- Vintage television (Unsplash): Sven Scheuermeier sveninho, CC0. https://commons.wikimedia.org/wiki/File:Vintage_television_(Unsplash).jpg
+- Geirangerfjord LC0188: Jörg Hempel, CC BY-SA 2.0 de (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:Geirangerfjord_LC0188.jpg
+- Arbo-Olav den helliges fall i slaget på Stiklestad: Peter Nicolai Arbo, Public domain. https://commons.wikimedia.org/wiki/File:Arbo-Olav_den_helliges_fall_i_slaget_p%C3%A5_Stiklestad.jpg
+- Edvard Munch - Dark Spruce Forest - 453: Edvard Munch, Public domain. https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_Dark_Spruce_Forest_-_453.jpg
+- A Thracesian woman kills a Varangian: John Skylitzes, Public domain. https://commons.wikimedia.org/wiki/File:A_Thracesian_woman_kills_a_Varangian.jpg
+- Gaspare Fossati - Louis Haghe - Vue générale de la grande nef, en regardant l'occident (Hagia Sophia - Ayasofya Mosque nave): Gaspare Fossati (artist, 1809-1883) Louis Haghe (lithographer, 1806-1885) Adam Cuerden (restoration), Public domain. https://commons.wikimedia.org/wiki/File:Gaspare_Fossati_-_Louis_Haghe_-_Vue_g%C3%A9n%C3%A9rale_de_la_grande_nef,_en_regardant_l%27occident_(Hagia_Sophia_-_Ayasofya_Mosque_nave).jpg
+- Baba Vida Klearchos 3 prison cell: Klearchos Kapoutsis from Paleo Faliro, Athens, Greece, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). https://commons.wikimedia.org/wiki/File:Baba_Vida_Klearchos_3_prison_cell.jpg
+- Golden Horn Metro Bridge Mars 2013: Arild Vågen, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:Golden_Horn_Metro_Bridge_Mars_2013.jpg
+- Istanbul Archaeology Museums - İstanbul Arkeoloji Müzeleri - Istanbul, Turkey (10582738393): David Berkowitz from New York, NY, USA, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). https://commons.wikimedia.org/wiki/File:Istanbul_Archaeology_Museums_-_%C4%B0stanbul_Arkeoloji_M%C3%BCzeleri_-_Istanbul,_Turkey_(10582738393).jpg
+- St Sophia bell tower Kiev dome 2018 G1: George Chernilevsky, Public domain. https://commons.wikimedia.org/wiki/File:St_Sophia_bell_tower_Kiev_dome_2018_G1.jpg
+- Bayeux Tapestry Scene 29 (cropped): Université de Caen Normandie · CNRS · ENSICAEN d'après la campagne photographique 2017 de la Fabrique de patrimoines en Normandie., Public domain. https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_Scene_29_(cropped).png
+- Statue d'Dgilliaume lé Contchéthant à Falaise 01: Man vyi, Public domain. https://commons.wikimedia.org/wiki/File:Statue_d%27Dgilliaume_l%C3%A9_Contch%C3%A9thant_%C3%A0_Falaise_01.jpg
+- View over fields to Whiston - geograph.org.uk - 339567: John Charlton, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:View_over_fields_to_Whiston_-_geograph.org.uk_-_339567.jpg
+- York Minster from the City Walls - geograph.org.uk - 4308760: Peter Jeffery, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:York_Minster_from_the_City_Walls_-_geograph.org.uk_-_4308760.jpg
+- SnorriByVigland: photo by Einar Einarsson Kvaran aka Carptrash, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:SnorriByVigland.jpg
+- Salt and pepper on table (Unsplash): André Robillard arsphtgrph, CC0. https://commons.wikimedia.org/wiki/File:Salt_and_pepper_on_table_(Unsplash).jpg
+- River Derwent, Stamford Bridge - geograph.org.uk - 2371356: JThomas, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:River_Derwent,_Stamford_Bridge_-_geograph.org.uk_-_2371356.jpg
+- Oseberg ship-Vikingskipshuset, Oslo: Yair-haklai, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Oseberg_ship-Vikingskipshuset,_Oslo.jpg
+- Arbo - Battle of Stamford Bridge (1870): Peter Nicolai Arbo, Public domain. https://commons.wikimedia.org/wiki/File:Arbo_-_Battle_of_Stamford_Bridge_(1870).jpg
+- Peterborough.Chronicle.firstpage: Photographed by en:User:Geogre, original author, monastic scribes in Peterborough, Public domain. https://commons.wikimedia.org/wiki/File:Peterborough.Chronicle.firstpage.jpg
+- Bayeux Tapestry scene57 Harold death: Myrabella, Public domain. https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg
+- Raphael - The Meeting of Leo the Great and Attila: Raphael, Public domain. https://commons.wikimedia.org/wiki/File:Raphael_-_The_Meeting_of_Leo_the_Great_and_Attila.jpg
+- Model of Rome - Gismondi: Original uploader was Frederika Eilers at en.wikipedia, Public domain. https://commons.wikimedia.org/wiki/File:Model_of_Rome_-_Gismondi.jpg
+- Than Mór - Attila lakomája (1870): Mór Than, Public domain. https://commons.wikimedia.org/wiki/File:Than_M%C3%B3r_-_Attila_lakom%C3%A1ja_(1870).jpg
+- Hungarian horse archers: Csanády, edit by László Szalai (Beyond silence), Public domain. https://commons.wikimedia.org/wiki/File:Hungarian_horse_archers.jpg
+- Solidus of Roman emperor Theodosius II: Apaleutos25, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Solidus_of_Roman_emperor_Theodosius_II.jpg
+- Hortobágyi pusztaság: Lily15, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:Hortob%C3%A1gyi_pusztas%C3%A1g.jpg
+- Hungarian Grey Cattle: No machine-readable author provided. Nl74 assumed (based on copyright claims)., Public domain. https://commons.wikimedia.org/wiki/File:Hungarian_Grey_Cattle.jpg
+- Mildenhall Great Dish, Late Roman period, silver - British Museum - DSC01383: Daderot, CC0. https://commons.wikimedia.org/wiki/File:Mildenhall_Great_Dish,_Late_Roman_period,_silver_-_British_Museum_-_DSC01383.jpg
+- Carved Wooden Feast Bowl and Spoon Used by Black Hawk: Unknown author, Public domain. https://commons.wikimedia.org/wiki/File:Carved_Wooden_Feast_Bowl_and_Spoon_Used_by_Black_Hawk.jpg
+- Paczka Ferenc - Attila halála - 1884: Ferenc Paczka, Public domain. https://commons.wikimedia.org/wiki/File:Paczka_Ferenc_-_Attila_hal%C3%A1la_-_1884.jpg
+- Old wooden door parador Granada Spain: Jebulon, CC0. https://commons.wikimedia.org/wiki/File:Old_wooden_door_parador_Granada_Spain.jpg
+- Head of Marcus Licinius Crassus, middle of 1st century BC, from Italy, Moi, Auguste, Empereur de Rome exhibition, Grand Palais, Paris - 14649017884: Following Hadrian, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:Head_of_Marcus_Licinius_Crassus,_middle_of_1st_century_BC,_from_Italy,_Moi,_Auguste,_Empereur_de_Rome_exhibition,_Grand_Palais,_Paris_-_14649017884.jpg
+- Hubert Robert - The Fire of Rome - Google Art Project: Hubert Robert, Public domain. https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Fire_of_Rome_-_Google_Art_Project.jpg
+- Spartacus, marble sculpture of Denis Foyatier (1830), Louvre Museum (8269334205): Carole Raddato from FRANKFURT, Germany, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:Spartacus,_marble_sculpture_of_Denis_Foyatier_(1830),_Louvre_Museum_(8269334205).jpg
+- Appia antica 2-7-05 048: Nicolò Musmeci, Public domain. https://commons.wikimedia.org/wiki/File:Appia_antica_2-7-05_048.jpg
+- Pompeius: Gunnar Bach Pedersen, Public domain. https://commons.wikimedia.org/wiki/File:Pompeius.JPG
+- Head of Julius Caesar from Tusculum MAntTorino 2089 n01: Marie-Lan Taÿ Pamart, Public domain. https://commons.wikimedia.org/wiki/File:Head_of_Julius_Caesar_from_Tusculum_MAntTorino_2089_n01.jpg
+- ParthianHorseman: Jean Chardin, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:ParthianHorseman.jpg
+- Roman holiday birthplace of rome roman soldiers-883133.jpg!d: Modern portrayal of Roman soldiers (legionaries), CC0. https://commons.wikimedia.org/wiki/File:Roman_holiday_birthplace_of_rome_roman_soldiers-883133.jpg!d.jpg
+- Urfa-Harran Ovası 25 09 1989 ohne GAP-Bewässerung: Volker Höhfeld, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Urfa-Harran_Ovas%C4%B1_25_09_1989_ohne_GAP-Bew%C3%A4sserung.jpg
+- Roman aquila: No machine-readable author provided. MatthiasKabel assumed (based on copyright claims)., CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:Roman_aquila.jpg
+- Epidaurus seats: Orlovic, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Epidaurus_seats.JPG
+- Mosaic depicting theatrical masks of Tragedy and Comedy (Thermae Decianae): Carole Raddato from FRANKFURT, Germany (FollowingHadrian); derivative work: Speravir, Public domain. https://commons.wikimedia.org/wiki/File:Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy_(Thermae_Decianae).jpg
+- Pankration Black Terracotta Panathenaic prize amphora Attributed to the Kleophrades Painter: metmuseum.org, CC0. https://commons.wikimedia.org/wiki/File:Pankration_Black_Terracotta_Panathenaic_prize_amphora_Attributed_to_the_Kleophrades_Painter.jpg
+- Boxer of Quirinal (Mys from Taranto) - Lateral View: Livioandronico2013, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Boxer_of_Quirinal_(Mys_from_Taranto)_-_Lateral_View.jpg
+- Kotinos light background: FocalPoint, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Kotinos_light_background.jpg
+- Old gravestone, Rochford churchyard - geograph.org.uk - 4579797: Philip Halling, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/). https://commons.wikimedia.org/wiki/File:Old_gravestone,_Rochford_churchyard_-_geograph.org.uk_-_4579797.jpg
+- Bust of Pyrrhus of Epirus from the Villa of the Papyri (Herculaneum): Yair Haklai, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Bust_of_Pyrrhus_of_Epirus_from_the_Villa_of_the_Papyri_(Herculaneum).jpg
+- CORÉE DU SUD, 100 Won à l'effigie de l'Amiral Yi Sun-Shin: cgb, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). https://commons.wikimedia.org/wiki/File:COR%C3%89E_DU_SUD,_100_Won_%C3%A0_l%27effigie_de_l%27Amiral_Yi_Sun-Shin.jpg
+- HoratioNelson1: Lemuel Francis Abbott, Public domain. https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg
+- Busanjinsunjeoldo: Byeon Bak, Public domain. https://commons.wikimedia.org/wiki/File:Busanjinsunjeoldo.jpg
+- Gwanghwamun Square, Seoul (26259210037): Richard Mortel from Riyadh, Saudi Arabia, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/). https://commons.wikimedia.org/wiki/File:Gwanghwamun_Square,_Seoul_(26259210037).jpg
+- The Wave In The Moonlight (202805865): Pavel Soro London, CC0. https://commons.wikimedia.org/wiki/File:The_Wave_In_The_Moonlight_(202805865).jpeg
+- Front view of the Imperial Throne Hall Geunjeongjeon at Gyeongbokgung Palace with blue sky in Seoul: Basile Morin, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:Front_view_of_the_Imperial_Throne_Hall_Geunjeongjeon_at_Gyeongbokgung_Palace_with_blue_sky_in_Seoul.jpg
+- Yi Sun-sin 4: Brücke-Osteuropa, CC0. https://commons.wikimedia.org/wiki/File:Yi_Sun-sin_4.jpg
+- 울돌목: Jangg8962, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). https://commons.wikimedia.org/wiki/File:%EC%9A%B8%EB%8F%8C%EB%AA%A9.jpg
+- 이순신 난중일기 및 서간첩 임진장초: Korean Cultural heritage Administration, Public domain. https://commons.wikimedia.org/wiki/File:%EC%9D%B4%EC%88%9C%EC%8B%A0_%EB%82%9C%EC%A4%91%EC%9D%BC%EA%B8%B0_%EB%B0%8F_%EC%84%9C%EA%B0%84%EC%B2%A9_%EC%9E%84%EC%A7%84%EC%9E%A5%EC%B4%88.jpg
+- Toyotomi Hideyoshi c1598 Kodai-ji Temple: Kanō Mitsunobu (狩野 光信, 1565–1608), Public domain. https://commons.wikimedia.org/wiki/File:Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png
+
+FONT: Unbounded (SIL Open Font License). MUSIC: original beds made for this video. Instrument samples: MuseScore General soundfont (MIT).

@@ -245,9 +245,11 @@ def scene(c, b, f, ctx):
         if at <= f < until:
             placed.append(O.speech(c, text, cx, bottom, f - at))
     for t in sorted(b.get('tags', []), key=lambda t: t[3]):
-        text, cx, bottom, at = t
+        text, cx, bottom, at = t[:4]
+        fixed = len(t) > 4 and t[4]
         if f >= at:
-            cx, bottom = anchor_tag(b, f, cx, bottom)
+            if not fixed:
+                cx, bottom = anchor_tag(b, f, cx, bottom)
             bottom = avoid_boxes(ctx, cx, bottom, text)
             bottom = avoid_placed(placed, cx, bottom, text)
             r = O.tag(c, text, cx, bottom, f - at)
@@ -417,7 +419,7 @@ def draw_fx(c, fx, f, b):
         op.setAlphaf(0.85 * a)
         c.drawRRect(skia.RRect.MakeRectXY(bar.makeOutset(5, 5), 8, 8), op)
         if fx.get('sub'):
-            TY.draw(c, fx['sub'], W / 2, bar.bottom() + 0.065 * H, 0.04 * H, style='red', weight=900, align='center',
+            TY.draw(c, fx['sub'], W / 2, bar.bottom() + 0.07 * H, 0.046 * H, style='red', weight=900, align='center',
                     alpha=int(255 * min(1.0, max(0.0, (df - 8) / 4))))
     elif kind == 'censor':
         from engine.premium.actors import actor_state, HEAD_TO_FEET
@@ -433,8 +435,6 @@ def draw_fx(c, fx, f, b):
             c.translate(hx, ey)
             c.rotate(-4)
             c.drawRect(skia.Rect(-w_, -0.19 * R, w_, 0.19 * R), skia.Paint(AntiAlias=True, Color=rgb('#050505')))
-            if k > 0.6:
-                TY.draw(c, 'CENSORED', 0, 0.075 * R, 0.13 * R, style='white', weight=900, align='center', shadow=0)
             c.restore()
     elif kind == 'split':
         x, y, size = fx['x'], fx['y'], fx['size']
@@ -470,11 +470,11 @@ def draw_fx(c, fx, f, b):
             c.drawPath(pth, br)
         if (df // 15) % 2 == 0:
             c.drawCircle(m + 50, m + 62, 16, skia.Paint(AntiAlias=True, Color=rgb('#FF2A2A')))
-        TY.draw(c, 'REC', m + 80, m + 80, 0.04 * H, style='white', weight=800, shadow=0.6)
+        TY.draw(c, 'REC', m + 80, m + 84, 0.046 * H, style='white', weight=800, shadow=0.6)
         sec = 7 + df // 30
-        TY.draw(c, f'SEP 25 1066  14:32:{sec:02d}', W - m - 20, H - m - 26, 0.036 * H, style='white', weight=700,
+        TY.draw(c, f'SEP 25 1066  14:32:{sec:02d}', W - m - 20, H - m - 26, 0.046 * H, style='white', weight=700,
                 align='right', shadow=0.6)
-        TY.draw(c, 'BODYCAM 01', m + 20, H - m - 26, 0.036 * H, style='white', weight=700, shadow=0.6)
+        TY.draw(c, 'BODYCAM 01', m + 20, H - m - 26, 0.046 * H, style='white', weight=700, shadow=0.6)
     elif kind == 'head':
         x, y = fx['x'], fx['y']
         for mv in fx.get('moves', []):
@@ -710,7 +710,7 @@ def band_shot(c, b, f, ctx):
                 O.draw_x(c, cx, cy, min(w, hh) * 0.7, df=f - item[5])
     for txt, cx, at in b.get('photo_labels', []):
         if f >= at:
-            O.tag(c, txt, cx, b.get('label_y', 0.955 * H), f - at, cap=44, bg='#E0262B', max_w=b.get('label_w', 0.25 * W))
+            O.tag(c, txt, cx, b.get('label_y', 0.955 * H), f - at, cap=b.get('label_cap', 50), bg='#E0262B', max_w=b.get('label_w', 0.25 * W))
     ctx['occ'].append(('frame', O.band(c, b['text'], f - b['f0'], b.get('h', 0.28))))
 
 
@@ -881,12 +881,12 @@ def trio(c, b, f, ctx):
             bp = skia.Paint(AntiAlias=True, Color=rgb('#E0393E'), Style=skia.Paint.kStroke_Style, StrokeWidth=8)
             c.drawRect(r, bp)
         for k, ln in enumerate(p['name']):
-            TY.draw(c, ln, cx, r.bottom() + 0.075 * H + k * 0.062 * H, 0.043 * H, style='white' if lit else '#8A8A8A',
+            TY.draw(c, ln, cx, r.bottom() + 0.075 * H + k * 0.064 * H, 0.046 * H, style='white' if lit else '#8A8A8A',
                     weight=800, align='center', alpha=int(255 * a))
         if p.get('sub') and f >= p.get('sub_at', 10 ** 9):
             ds = f - p['sub_at']
             s2, a2 = M.pop(ds, 0.6)
-            TY.draw(c, p['sub'], cx, r.bottom() + 0.075 * H + len(p['name']) * 0.062 * H + 0.01 * H, 0.04 * H * s2, style='red',
+            TY.draw(c, p['sub'], cx, r.bottom() + 0.075 * H + len(p['name']) * 0.064 * H + 0.012 * H, 0.046 * H * s2, style='red',
                     weight=900, align='center', alpha=int(255 * a2))
         if p.get('crown') is not None and f >= p['crown']:
             dd = f - p['crown']
@@ -1128,15 +1128,19 @@ def end_shot(c, b, f, ctx):
     c.save()
     c.translate(0, yd)
     R = 120
-    RH.draw_character(c, lx, ly - 0.03 * H, R * 0.7, 'idle', blinked('smile', f), HOST, show_rim=True)
+    pose_ = 'wave' if (d // 12) % 2 == 0 else 'idle'
+    RH.draw_character(c, lx, ly - 0.03 * H, R * 0.7, pose_, blinked('smile', f), HOST, show_rim=True)
     c.restore()
     d2 = d - 6
     if d2 >= 0:
         yd2 = M.drop(d2, 700, 14)
-        r = skia.Rect(lx - 0.13 * W, 0.70 * H + yd2, lx + 0.13 * W, 0.70 * H + 0.10 * H + yd2)
+        pul = 1 + 0.035 * math.sin(2 * math.pi * max(0, d2 - 14) / 30.0) if d2 > 14 else 1.0
+        r0 = skia.Rect(lx - 0.13 * W, 0.70 * H + yd2, lx + 0.13 * W, 0.70 * H + 0.10 * H + yd2)
+        r = skia.Rect(r0.centerX() - r0.width() / 2 * pul, r0.centerY() - r0.height() / 2 * pul,
+                      r0.centerX() + r0.width() / 2 * pul, r0.centerY() + r0.height() / 2 * pul)
         p = skia.Paint(AntiAlias=True, Color=rgb('#E0262B'))
         c.drawRRect(skia.RRect.MakeRectXY(r, r.height() / 2, r.height() / 2), p)
-        TY.draw(c, 'SUBSCRIBE', r.centerX(), r.centerY() + 0.019 * H, 0.038 * H, style='#FFFFFF', weight=900, align='center',
+        TY.draw(c, 'SUBSCRIBE', r.centerX(), r.centerY() + 0.023 * H, 0.046 * H, style='#FFFFFF', weight=900, align='center',
                 shadow=0)
 
 
@@ -1182,12 +1186,13 @@ def draw_timer(c, o, f):
     colw = TY.width(':', cap, 800) * 1.4
     wsum = sum(colw if ch in ':.' else cell for ch in s)
     x1, y1 = W - 0.05 * W, H - 0.06 * H
-    rect = skia.Rect(x1 - wsum - 60, y1 - cap - 92, x1, y1)
+    lw = TY.width(o.get('label', 'SPEEDRUN'), 0.046 * H, 800)
+    rect = skia.Rect(x1 - max(wsum, lw) - 60, y1 - cap - 118, x1, y1)
     a = min(1.0, (f - o['f0'] + 1) / 4) if f < stop - 2 else min(1.0, (f - stop + 3) / 3)
     if f < o['f0'] + 78:
         a *= min(1.0, (o['f0'] + 78 - f) / 4)
     O.pill(c, rect, '#0A0A0A', 0.88 * a)
-    TY.draw(c, o.get('label', 'SPEEDRUN'), rect.left() + 30, rect.top() + 46, 0.026 * H, style='red', weight=800, shadow=0)
+    TY.draw(c, o.get('label', 'SPEEDRUN'), rect.left() + 30, rect.top() + 66, 0.046 * H, style='red', weight=800, shadow=0)
     x = rect.left() + 30
     stopped = f >= o.get('stop', 10 ** 9)
     col = '#7CFF6B' if not stopped else ('#FFFFFF' if (f // 6) % 2 else '#7CFF6B')
@@ -1223,12 +1228,12 @@ def sub_shot(c, b, f, ctx):
     y += 0.12 * H
     TY.draw(c, b['price'], W / 2, y, 0.058 * H, style='white', weight=900, align='center')
     y += 0.075 * H
-    TY.draw(c, b.get('per', 'PER YEAR · BILLED TO ROME'), W / 2, y, 0.034 * H, style='#9A9A9A', weight=700, align='center', shadow=0)
+    TY.draw(c, b.get('per', 'PER YEAR · BILLED TO ROME'), W / 2, y + 0.01 * H, 0.046 * H, style='#A8A8A8', weight=700, align='center', shadow=0)
     btn = skia.Rect(W / 2 - 0.15 * W, r.bottom() - 0.165 * H, W / 2 + 0.15 * W, r.bottom() - 0.07 * H)
     lit = f >= b.get('btn_at', 10 ** 9)
     bpaint = skia.Paint(AntiAlias=True, Color=rgb('#E0393E' if not lit else '#3A3A3A'))
     c.drawRRect(skia.RRect.MakeRectXY(btn, btn.height() / 2, btn.height() / 2), bpaint)
-    TY.draw(c, b.get('button', 'SUBSCRIBED'), W / 2, btn.centerY() + 0.02 * H, 0.04 * H, style='white', weight=900, align='center', shadow=0)
+    TY.draw(c, b.get('button', 'SUBSCRIBED'), W / 2, btn.centerY() + 0.023 * H, 0.046 * H, style='white', weight=900, align='center', shadow=0)
     c.restore()
     ctx['occ'].append(('frame', r))
 
@@ -1253,8 +1258,8 @@ def album_shot(c, b, f, ctx):
     c.restore()
     TY.draw(c, b['band'], r.centerX(), r.top() + side * s * 0.22, side * s * 0.16, style='white', weight=900, align='center',
             tracking=0.12, glow=('#FF2A2A', 18, 0.6))
-    TY.draw(c, b['title'], r.centerX(), r.bottom() - side * s * 0.08, side * s * 0.06, style='silver', weight=800, align='center',
-            tracking=0.2)
+    TY.draw(c, b['title'], r.centerX(), r.bottom() - side * s * 0.07, side * s * 0.082, style='silver', weight=800, align='center',
+            tracking=0.14)
     if b.get('sticker'):
         O.stamp(c, b['sticker'], r.right() - 40, r.bottom() - 120, d - 12, cap=34, angle=10, color='#FFD23F')
     ctx['occ'].append(('frame', r))
@@ -1324,13 +1329,14 @@ def gallery_shot(c, b, f, ctx):
         img = L.plate(p['img'], int(pw), int(ph), tuple(p.get('focus', (0.5, 0.4))), p.get('zoom', 1.0), oversize=1.0,
                       sat=0.88 if lit else 0.0, gain=1.0 if lit else 0.35)
         c.drawImageRect(img, r, L.SAMPLING)
-        TY.draw(c, f'#{i + 1}', r.left() + 18, r.top() + 0.055 * H, 0.04 * H, style='red' if lit else '#555555', weight=900)
-        if lit:
-            lc = min([0.036 * H] + [0.036 * H * (pw * 0.94) / TY.width(ln, 0.036 * H, 800) for ln in p['label']
-                                    if TY.width(ln, 0.036 * H, 800) > pw * 0.94])
-            for k, ln in enumerate(p['label']):
-                TY.draw(c, ln, cx, r.bottom() + 0.065 * H + k * lc * 1.5, lc, style='white', weight=800, align='center',
-                        alpha=int(255 * min(1.0, (d + 1) / 4)))
+        TY.draw(c, f'#{i + 1}', r.left() + 18, r.top() + 0.062 * H, 0.046 * H, style='red' if lit else '#555555', weight=900)
+    cur = [p for p in b['people'] if f >= p['at']]
+    if cur:
+        p = cur[-1]
+        d = f - p['at']
+        s_, a_ = M.settle(d, 5)
+        TY.draw(c, ' '.join(p['label']), W / 2, cy + ph / 2 + 0.13 * H, 0.072 * H, style='red', weight=900, align='center',
+                alpha=int(255 * a_))
     ctx['occ'].append(('frame', skia.Rect(x0, cy - ph / 2, W - x0, cy + ph / 2 + 0.15 * H)))
 
 

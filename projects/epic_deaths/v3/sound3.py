@@ -111,6 +111,11 @@ def sample(name, seed=0):
             SOURCES[name] = 'procedural'
     x = x.astype(np.float32)
     x = x / (np.max(np.abs(x)) + 1e-9) * 0.9
+    fo = min(len(x) // 3, int(0.04 * SR))           # every sample ends with a 40 ms fade: no truncated tails, no clicks
+    if fo > 0:
+        x[-fo:] *= (np.linspace(1, 0, fo) ** 2)[:, None]
+    fi = min(len(x) // 3, 24)
+    x[:fi] *= np.linspace(0, 1, fi)[:, None]
     _CACHE[key] = x
     return x
 
@@ -385,7 +390,7 @@ def music_bus(tl, total_s, reveals):
     return mus, used
 
 
-def widen_stereo(x, amount=0.55):
+def widen_stereo(x, amount=0.95):
     """Mid/side widening above 300 Hz (bass stays mono): library beds are wide, ours were too narrow (corr 0.997)."""
     mid = (x[:, 0] + x[:, 1]) / 2
     side = (x[:, 0] - x[:, 1]) / 2

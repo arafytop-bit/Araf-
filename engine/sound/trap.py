@@ -20,6 +20,17 @@ MODES = {'minor': [0, 2, 3, 5, 7, 8, 10], 'phrygian': [0, 1, 3, 5, 7, 8, 10], 'd
          'harmonic': [0, 2, 3, 5, 7, 8, 11], 'major': [0, 2, 4, 5, 7, 9, 11]}
 
 
+def _tail(x, ms=12.0, fade_in_ms=0.5):
+    """Click-free one-shot: fade the last ms (decays were being truncated while still audible) and the first 0.5 ms."""
+    x = np.asarray(x, np.float32).copy()
+    n = int(SR * ms / 1000)
+    if len(x) > 2 * n:
+        x[-n:] *= np.linspace(1, 0, n) ** 2
+    m = max(1, int(SR * fade_in_ms / 1000))
+    x[:m] *= np.linspace(0, 1, m)
+    return x
+
+
 def midi(key, octave):
     return 12 * (octave + 1) + NOTE[key]
 
@@ -52,7 +63,7 @@ def kick(seed=0):
     f = 52 * (1 + 2.6 * np.exp(-t / 0.022))
     x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / 0.13)
     x += hp(white(n, seed) * np.exp(-t / 0.003), 2500) * 0.35
-    return saturate(x, 1.6)
+    return _tail(saturate(x, 1.6), 40)
 
 
 @functools.lru_cache(maxsize=8)
@@ -67,7 +78,7 @@ def clap(seed=0):
     x = bp(white(n, 11 + seed) * env, 900, 4200, order=2)
     body = np.sin(2 * np.pi * 185 * t) * np.exp(-t / 0.05) * 0.25
     x = (x + body) / max(1e-6, np.max(np.abs(x + body)))
-    return x.astype(np.float32)
+    return _tail(x, 30)
 
 
 @functools.lru_cache(maxsize=8)
@@ -77,7 +88,7 @@ def snare(seed=0):
     tone = np.sin(2 * np.pi * 200 * t) * np.exp(-t / 0.045)
     nz = hp(white(n, 21 + seed), 1400) * np.exp(-t / 0.13)
     x = 0.55 * tone + 0.75 * nz
-    return (x / np.max(np.abs(x))).astype(np.float32)
+    return _tail(x / np.max(np.abs(x)), 40)
 
 
 @functools.lru_cache(maxsize=8)
@@ -89,7 +100,7 @@ def hat(open_=False, seed=0):
     sq = sum(np.sign(np.sin(2 * np.pi * r * 6.1 * t + k)) for k, r in enumerate(ratios))
     x = bp(sq + 0.6 * white(n, 31 + seed), 7200, 15500, order=2)
     x = x * np.exp(-t / (0.11 if open_ else 0.018))
-    return (x / np.max(np.abs(x))).astype(np.float32)
+    return _tail(x / np.max(np.abs(x)), 40 if open_ else 8)
 
 
 @functools.lru_cache(maxsize=8)
@@ -99,7 +110,7 @@ def taiko(seed=0):
     f = 62 * (1 + 0.9 * np.exp(-t / 0.05))
     x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / 0.42)
     x += lp(white(n, 41 + seed) * np.exp(-t / 0.02), 1800) * 0.6
-    return saturate(x, 1.4)
+    return _tail(saturate(x, 1.4), 120)
 
 
 @functools.lru_cache(maxsize=8)
@@ -108,7 +119,7 @@ def rim(seed=0):
     t = np.arange(n) / SR
     x = (np.sin(2 * np.pi * 1700 * t) + 0.6 * np.sin(2 * np.pi * 820 * t)) * np.exp(-t / 0.012)
     x += hp(white(n, 51), 3000) * np.exp(-t / 0.004) * 0.5
-    return (x / np.max(np.abs(x))).astype(np.float32)
+    return _tail(x / np.max(np.abs(x)), 8)
 
 
 # ======================= tracks (one per entry) =======================

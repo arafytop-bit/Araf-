@@ -1,0 +1,144 @@
+{
+ "beds": [
+  [
+   "intro",
+   "trap:intro"
+  ],
+  [
+   "harald",
+   "trap:harald"
+  ],
+  [
+   "attila",
+   "trap:attila"
+  ],
+  [
+   "crassus",
+   "trap:crassus"
+  ],
+  [
+   "arrichion",
+   "trap:arrichion"
+  ],
+  [
+   "midroll",
+   "trap:midroll"
+  ],
+  [
+   "yi",
+   "trap:yi"
+  ],
+  [
+   "outro",
+   "trap:outro"
+  ]
+ ],
+ "sfx_sources": {
+  "hit_word": "designed",
+  "war_drum": "designed",
+  "whoosh_short": "designed",
+  "stamp": "designed",
+  "pop_soft": "designed",
+  "whoosh_long": "designed",
+  "hit_title": "designed",
+  "callout": "designed",
+  "thud": "designed",
+  "pop": "designed",
+  "coins": "procedural",
+  "metal_clang": "procedural",
+  "wood_crack": "procedural",
+  "splash": "procedural",
+  "ding": "designed",
+  "impact": "designed",
+  "riser": "designed",
+  "arrow": "procedural",
+  "arrow_hit": "procedural",
+  "rec_beep": "procedural",
+  "door_crash": "procedural",
+  "sizzle": "procedural",
+  "cannon": "procedural",
+  "whoosh": "designed"
+ },
+ "loudness": {
+  "input_i": -20.1,
+  "input_tp": -1.9,
+  "output_i": -14.1,
+  "output_tp": -1.7
+ },
+ "events": 448,
+ "events_per_min": 25.0,
+ "reveals": [
+  [
+   215.15,
+   216.1
+  ],
+  [
+   717.8,
+   718.68
+  ],
+  [
+   961.57,
+   965.06
+  ],
+  [
+   974.9,
+   977.38
+  ],
+  [
+   215.21,
+   215.97
+  ],
+  [
+   373.3,
+   374.19
+  ],
+  [
+   481.9,
+   482.51
+  ],
+  [
+   685.51,
+   686.65
+  ],
+  [
+   691.08,
+   692.0
+  ],
+  [
+   770.05,
+   770.83
+  ],
+  [
+   790.97,
+   791.83
+  ],
+  [
+   495.2,
+   496.51
+  ],
+  [
+   301.18,
+   301.95
+  ],
+  [
+   201.95,
+   202.84
+  ],
+  [
+   853.01,
+   853.61
+  ],
+  [
+   397.86,
+   398.35
+  ],
+  [
+   426.6,
+   427.44
+  ],
+  [
+   652.09,
+   652.62
+  ]
+ ]
+}

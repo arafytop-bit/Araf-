@@ -347,6 +347,8 @@ def find_shot(tl, f, si=[0]):
 def render(f_start, f_end, out, crf=18, preset='medium'):
     tl, calls, stamps, _ = compile_all()
     qa = []
+    from engine.premium import typo as TYQ
+    small = {}
     ff = subprocess.Popen(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'bgra',
                            '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', preset, '-crf', str(crf),
                            '-pix_fmt', 'yuv420p', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',
@@ -357,7 +359,13 @@ def render(f_start, f_end, out, crf=18, preset='medium'):
         sh = find_shot(tl, f)
         con = [cl for cl in calls if cl['f0'] <= f < cl['f1']]
         son = [st for st in stamps if st['f0'] <= f < st['f1']]
+        TYQ.TEXT_LOG = [] if f % 3 == 0 else None
         compose(surf.getCanvas(), f, sh, con, son, qa, [o for o in OVERLAYS if o['f0'] <= f < o['f1']])
+        if TYQ.TEXT_LOG:
+            for txt, capx, al in TYQ.TEXT_LOG:
+                if al >= 200 and capx < 48.5 and (txt, round(capx)) not in small:
+                    small[(txt, round(capx))] = f
+        TYQ.TEXT_LOG = None
         ff.stdin.write(surf.makeImageSnapshot().toarray().tobytes())
         if (f - f_start) % 600 == 0:
             el = time.time() - t0
@@ -365,6 +373,8 @@ def render(f_start, f_end, out, crf=18, preset='medium'):
                   flush=True)
     ff.stdin.close()
     ff.wait()
+    for (txt, capx), f in sorted(small.items(), key=lambda kv: kv[1]):
+        qa.append(dict(f=f, tc=TL.tc(f), kind='small_text', text=txt, cap_px=capx))
     json.dump(qa, open(out + '.qa.json', 'w'), indent=0)
     return out
 
@@ -403,7 +413,7 @@ def sheet(frames, out, cols=4, tile_w=480):
     return out
 
 
-def prender(n=4, crf=16, preset='slow'):
+def prender(n=4, crf=16, preset='slow', out_name='video_noaudio.mp4'):
     edges = [round(TOTAL_F * k / n) for k in range(n + 1)]
     tmp = os.path.join(HERE, 'chunks')
     os.makedirs(tmp, exist_ok=True)
@@ -417,7 +427,7 @@ def prender(n=4, crf=16, preset='slow'):
         p.wait()
     lst = os.path.join(tmp, 'list.txt')
     open(lst, 'w').write(''.join(f"file 'c{k}.mp4'\n" for k in range(n)))
-    out = os.path.join(HERE, 'video_noaudio.mp4')
+    out = os.path.join(HERE, out_name)
     subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', out],
                    check=True)
     qa = []
@@ -499,6 +509,8 @@ if __name__ == '__main__':
         print(render(int(sys.argv[2]), int(sys.argv[3]), sys.argv[4], crf=int(sys.argv[5]), preset=sys.argv[6]))
     elif cmd == 'prender':
         prender(int(sys.argv[2]) if len(sys.argv) > 2 else 4)
+    elif cmd == 'qrender':
+        prender(4, crf=20, preset='veryfast', out_name='video_qa.mp4')
 
 
 def beatsheet(t0, t1, out, per_beat=1, include_hosts=False, cols=5):
@@ -517,3 +529,63 @@ def beatsheet(t0, t1, out, per_beat=1, include_hosts=False, cols=5):
 
 if __name__ == '__main__' and sys.argv[1] == 'beatsheet':
     print(beatsheet(float(sys.argv[2]), float(sys.argv[3]), sys.argv[4], int(sys.argv[5]) if len(sys.argv) > 5 else 1))
+
+
+def describe():
+    """YouTube description: chapters from the v3 timeline + credits for every image actually used."""
+    import importlib.util
+    tl, _, _, _ = compile_all()
+
+    def ts(f):
+        t = f / FPS
+        return f'{int(t // 60)}:{int(t % 60):02d}'
+    rows = [('0:00', 'Intro')]
+    names = {1: 'Harald Hardrada', 2: 'Attila the Hun', 3: 'Marcus Licinius Crassus', 4: 'Arrichion of Phigalia', 5: 'Yi Sun-sin'}
+    for b in tl:
+        if b['kind'] == 'title':
+            rows.append((ts(b['f0']), f"#{b['num']} {names[b['num']]}"))
+    rows.insert(5, (ts(cut_frame(find('Okay, quick pause'))), 'A confession (part two)'))
+    rows.append((ts(cut_frame(find("So, that's part one"))), 'Recap'))
+    used = []
+
+    def add(k):
+        if k and k not in used and L.exists(k):
+            used.append(k)
+    for b in tl:
+        add(b.get('img'))
+        add(b.get('bg'))
+        add(b.get('over'))
+        add(b.get('pip'))
+        for p in b.get('people', []):
+            add(p.get('img'))
+        for it in b.get('photos', []):
+            add(it[0])
+        for side in ('left', 'right'):
+            if isinstance(b.get(side), dict):
+                add(b[side].get('img'))
+    spec = importlib.util.spec_from_file_location('fetch2', os.path.join(HERE, '..', 'assets', 'fetch2.py'))
+    f2 = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(f2)
+    cp = f2.write_credits(used)
+    out = ['CHAPTERS'] + [f'{a} {b}' for a, b in rows] + ['']
+    out += open(cp).read().splitlines()
+    out += ['', 'FONT: Unbounded (SIL Open Font License). MUSIC: original beds made for this video. '
+                'Instrument samples: MuseScore General soundfont (MIT).']
+    open(os.path.join(HERE, 'DESCRIPTION.md'), 'w').write('\n'.join(out) + '\n')
+    return os.path.join(HERE, 'DESCRIPTION.md'), len(used)
+
+
+if __name__ == '__main__' and sys.argv[1] == 'describe':
+    print(describe())
+
+
+def mux(video, audio, out):
+    """H.264 stream copy + AAC 320 kbps 48 kHz (native AAC at 256k overshot true peak in v2), faststart for streaming."""
+    subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', video, '-i', audio, '-map', '0:v', '-map', '1:a',
+                    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', '-shortest', out],
+                   check=True)
+    return out
+
+
+if __name__ == '__main__' and sys.argv[1] == 'mux':
+    print(mux(sys.argv[2], sys.argv[3], sys.argv[4]))
