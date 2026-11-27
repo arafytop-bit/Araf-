@@ -13,3 +13,10 @@ projects/*/stems/
 .cache/
 projects/*/sound_events.json
 projects/*/thumbnails/*_master.png
+projects/*/v3/voice.wav
+projects/*/v3/stills/
+projects/*/v3/chunks/
+projects/*/v3/video_noaudio.mp4
+projects/*/v3/*.mp4
+projects/*/v3/*.wav
+projects/*/v3/stems/

@@ -1,0 +1,59 @@
+{
+ "key": "busanjin",
+ "query": "Busanjin Sunjeoldo",
+ "cands": [
+  {
+   "title": "File:Busanjinsunjeoldo.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Busanjinsunjeoldo.jpg",
+   "w": 542,
+   "h": 800,
+   "size": 227358,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Busanjinsunjeoldo.jpg",
+   "license": "Public domain",
+   "artist": "Byeon Bak",
+   "credit": "[1]",
+   "desc": "Painting of defense of Busanjin Fortress. The Japanese invasion of Busan."
+  },
+  {
+   "title": "File:Siege-of-Busanjin-1592.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Siege-of-Busanjin-1592.jpg",
+   "w": 968,
+   "h": 1467,
+   "size": 1510413,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Siege-of-Busanjin-1592.jpg",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "http://www.cha.go.kr/unisearch/Culresult_Db_View.jsp?VdkVgwKey=12,03910000,11",
+   "desc": "Japanese Siege of Busanjin (1592)"
+  },
+  {
+   "title": "File:Осада Пусана (1592).png",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%9F%D1%83%D1%81%D0%B0%D0%BD%D0%B0_%281592%29.png",
+   "w": 963,
+   "h": 723,
+   "size": 1689341,
+   "mime": "image/png",
+   "page": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%9F%D1%83%D1%81%D0%B0%D0%BD%D0%B0_(1592).png",
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "credit": "https://uk.wikipedia.org/wiki/Файл:Pusan_battle_1592.png",
+   "desc": "Осада Пусана (1592)"
+  },
+  {
+   "title": "File:Kpusan.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Kpusan.jpg",
+   "w": 480,
+   "h": 662,
+   "size": 111592,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kpusan.jpg",
+   "license": "Public domain",
+   "artist": "",
+   "credit": "",
+   "desc": ""
+  }
+ ],
+ "tried": []
+}

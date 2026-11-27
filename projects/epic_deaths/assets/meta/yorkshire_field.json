@@ -1,0 +1,98 @@
+{
+ "key": "yorkshire_field",
+ "query": "Yorkshire countryside summer field",
+ "cands": [
+  {
+   "title": "File:Wolds countryside - geograph.org.uk - 1408852.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Wolds_countryside_-_geograph.org.uk_-_1408852.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 97867,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Wolds_countryside_-_geograph.org.uk_-_1408852.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Dr Patty McAlpin",
+   "credit": "From geograph.org.uk",
+   "desc": "Wolds countryside, near Rudston, East Riding of Yorkshire, England.A field of ripening barley shimmers like spun gold in the breeze and summer sunshine. The photo was taken from the public bridleway leaving South Side Plantation on its approach to the Roman Road, with the Woldgate radio mast clearly"
+  },
+  {
+   "title": "File:Summer Sunset Over Old Thorpe Audlin - geograph.org.uk - 56034.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Summer_Sunset_Over_Old_Thorpe_Audlin_-_geograph.org.uk_-_56034.jpg",
+   "w": 640,
+   "h": 479,
+   "size": 125867,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Summer_Sunset_Over_Old_Thorpe_Audlin_-_geograph.org.uk_-_56034.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Paul Johnston-Knight",
+   "credit": "From geograph.org.uk",
+   "desc": "Summer Sunset Over Old Thorpe Audlin."
+  },
+  {
+   "title": "File:View over fields to Whiston - geograph.org.uk - 339567.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/View_over_fields_to_Whiston_-_geograph.org.uk_-_339567.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 98565,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:View_over_fields_to_Whiston_-_geograph.org.uk_-_339567.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "John Charlton",
+   "credit": "From geograph.org.uk",
+   "desc": "View over fields to Whiston Late summer evening photograph looking over field to Whiston and Upper Whiston on horizon."
+  },
+  {
+   "title": "File:Harvested Corn Fields - Badsworth - geograph.org.uk - 56482.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Harvested_Corn_Fields_-_Badsworth_-_geograph.org.uk_-_56482.jpg",
+   "w": 640,
+   "h": 479,
+   "size": 71943,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Harvested_Corn_Fields_-_Badsworth_-_geograph.org.uk_-_56482.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Paul Johnston-Knight",
+   "credit": "From geograph.org.uk",
+   "desc": "Harvested Corn Fields - Badsworth. These fields, the Upton Beacon and the Upton Rocket on the horizon seemed to cry out to be captured on this late summer's dusk. The rolling hills, frequent small woods and hedgerows typify for me classical English countryside."
+  },
+  {
+   "title": "File:View to Hawkswick Moor - geograph.org.uk - 1295035.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_to_Hawkswick_Moor_-_geograph.org.uk_-_1295035.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 133622,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:View_to_Hawkswick_Moor_-_geograph.org.uk_-_1295035.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "John S Turner",
+   "credit": "From geograph.org.uk",
+   "desc": "View to Hawkswick Moor Looking towards Hawkswick Moor, across the valley, from the Low Ox Pasture wall corner. The River Skirfare flows in the valley below."
+  },
+  {
+   "title": "File:Kilburn white horse, the classic view - geograph.org.uk - 269113.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Kilburn_white_horse%2C_the_classic_view_-_geograph.org.uk_-_269113.jpg",
+   "w": 640,
+   "h": 480,
+   "size": 82408,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Kilburn_white_horse,_the_classic_view_-_geograph.org.uk_-_269113.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Howard Morland",
+   "credit": "geograph.org.uk",
+   "desc": "Kilburn white horse, the classic view Late summer view of the white horse on its prominent escarpment; taken from near Kilburn village. Power lines removed, as they should be in reality."
+  },
+  {
+   "title": "File:Drainage dyke, Cottingham - geograph.org.uk - 603912.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Drainage_dyke%2C_Cottingham_-_geograph.org.uk_-_603912.jpg",
+   "w": 480,
+   "h": 640,
+   "size": 168522,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Drainage_dyke,_Cottingham_-_geograph.org.uk_-_603912.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Paul Harrop",
+   "credit": "From geograph.org.uk",
+   "desc": "Drainage dyke, Cottingham, East Riding of Yorkshire, England.This dyke, running due east from Middle Dike Lane has, like many in the area, been newly cleared of many years' worth of rubbish and vegetation. This is presumably a somewhat belated response to the catastrophic floods in the area during s"
+  }
+ ],
+ "tried": []
+}

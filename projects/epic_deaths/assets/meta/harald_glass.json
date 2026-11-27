@@ -1,0 +1,20 @@
+{
+ "key": "harald_glass",
+ "query": "Harald Hardrada stained glass",
+ "cands": [
+  {
+   "title": "File:Harald Hardrada window in Kirkwall Cathedral geograph 2068881.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Harald_Hardrada_window_in_Kirkwall_Cathedral_geograph_2068881.jpg",
+   "w": 2560,
+   "h": 1920,
+   "size": 2490306,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Harald_Hardrada_window_in_Kirkwall_Cathedral_geograph_2068881.jpg",
+   "license": "CC BY-SA 2.0",
+   "artist": "Colin Smith",
+   "credit": "From geograph.org.uk",
+   "desc": "Harald Hardrada"
+  }
+ ],
+ "tried": []
+}
