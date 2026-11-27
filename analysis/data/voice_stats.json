@@ -1,0 +1,110 @@
+{
+ "n_words": 1411,
+ "n_sentences": 186,
+ "first_word_s": 0.401,
+ "last_word_end_s": 546.878,
+ "wpm_overall": 154.9,
+ "syllables_per_s_overall": 3.2,
+ "articulation_syll_per_s": 5.0,
+ "words_per_sentence": {
+  "median": 7.0,
+  "mean": 7.6,
+  "p10": 3.0,
+  "p90": 13.0,
+  "max": 20
+ },
+ "pause_within_sentence_frames": {
+  "median": 1.8,
+  "p75": 3.0,
+  "p90": 6.6,
+  "share_gt_150ms": 0.14
+ },
+ "pause_between_sentences_frames": {
+  "median": 18.0,
+  "p25": 15.6,
+  "p75": 30.1,
+  "p90": 36.8,
+  "max": 426.3
+ },
+ "questions": 7,
+ "flagged_words_gt2f": 434,
+ "words_per_minute_by_minute": [
+  {
+   "minute": 0,
+   "words": 159
+  },
+  {
+   "minute": 1,
+   "words": 154
+  },
+  {
+   "minute": 2,
+   "words": 161
+  },
+  {
+   "minute": 3,
+   "words": 164
+  },
+  {
+   "minute": 4,
+   "words": 150
+  },
+  {
+   "minute": 5,
+   "words": 157
+  },
+  {
+   "minute": 6,
+   "words": 166
+  },
+  {
+   "minute": 7,
+   "words": 160
+  },
+  {
+   "minute": 8,
+   "words": 123
+  },
+  {
+   "minute": 9,
+   "words": 17
+  },
+  {
+   "minute": 10,
+   "words": 0
+  }
+ ],
+ "pitch": {
+  "median_hz": 152.1,
+  "p5_hz": 112.6,
+  "p95_hz": 235.9,
+  "range_p5_p95_semitones": 12.8,
+  "std_semitones": 4.7,
+  "sentence_start_to_end_semitones_median": -3.4
+ },
+ "ltas_db_rel_600_1200": {
+  "80-150": 6.2,
+  "150-300": 12.3,
+  "300-600": 7.6,
+  "600-1200": 0.0,
+  "1200-2500": -8.4,
+  "2500-5000": -14.0,
+  "5000-8000": -16.0,
+  "8000-12000": -23.4,
+  "12000-16000": -36.9,
+  "16000-20000": -75.9
+ },
+ "low_cut_estimate_hz": 107.666015625,
+ "dynamics": {
+  "rms_active_dbfs_median": -16.7,
+  "rms_active_p10_p90_spread_db": 12.4,
+  "crest_factor_db": 16.4,
+  "peak_dbfs": -1.28
+ },
+ "sibilance_5_9k_minus_1_3k_db": {
+  "median": -11.8,
+  "p99": 24.5
+ },
+ "tail_decay_db_per_100ms_median": -10.3,
+ "tail_decay_n": 194
+}

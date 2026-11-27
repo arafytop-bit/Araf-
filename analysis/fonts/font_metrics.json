@@ -1,0 +1,65 @@
+{
+ "alegreya-800": {
+  "file": "alegreya-latin-800-normal",
+  "cap_height_em": 0.637,
+  "x_height_em": 0.452,
+  "ascender_em": 1.016,
+  "descender_em": -0.345
+ },
+ "alegreya-700-italic": {
+  "file": "alegreya-latin-700-italic",
+  "cap_height_em": 0.636,
+  "x_height_em": 0.452,
+  "ascender_em": 1.016,
+  "descender_em": -0.345
+ },
+ "alegreya-400-italic": {
+  "file": "alegreya-latin-400-italic",
+  "cap_height_em": 0.636,
+  "x_height_em": 0.452,
+  "ascender_em": 1.016,
+  "descender_em": -0.345
+ },
+ "alegreya-sans-800": {
+  "file": "alegreya-sans-latin-800-normal",
+  "cap_height_em": 0.645,
+  "x_height_em": 0.468,
+  "ascender_em": 0.9,
+  "descender_em": -0.3
+ },
+ "alegreya-sans-500": {
+  "file": "alegreya-sans-latin-500-normal",
+  "cap_height_em": 0.642,
+  "x_height_em": 0.461,
+  "ascender_em": 0.9,
+  "descender_em": -0.3
+ },
+ "grenze-gotisch-800": {
+  "file": "grenze-gotisch-latin-800-normal",
+  "cap_height_em": 0.603,
+  "x_height_em": 0.448,
+  "ascender_em": 1.1,
+  "descender_em": -0.38
+ },
+ "source-serif-4-900": {
+  "file": "source-serif-4-latin-900-normal",
+  "cap_height_em": 0.67,
+  "x_height_em": 0.475,
+  "ascender_em": 1.036,
+  "descender_em": -0.335
+ },
+ "patua-one-400": {
+  "file": "patua-one-latin-400-normal",
+  "cap_height_em": 0.69,
+  "x_height_em": 0.5,
+  "ascender_em": 0.972,
+  "descender_em": -0.247
+ },
+ "arvo-700-italic": {
+  "file": "arvo-latin-700-italic",
+  "cap_height_em": 0.7402,
+  "x_height_em": 0.5059,
+  "ascender_em": 0.9609,
+  "descender_em": -0.2471
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "sample_rate": 44100,
+ "hop": 1470,
+ "stems": {
+  "mix": {
+   "integrated_lufs": -14.08,
+   "sample_peak_dbfs": -1.28,
+   "crest_factor_db": 16.12,
+   "side_to_mid_rms_ratio": 0.0958,
+   "lr_correlation": 0.9818,
+   "ffmpeg_I": -14.0,
+   "LRA_LU": 4.7,
+   "true_peak_dbfs": -1.3
+  },
+  "vocals": {
+   "integrated_lufs": -13.95,
+   "sample_peak_dbfs": -1.27,
+   "crest_factor_db": 16.39,
+   "side_to_mid_rms_ratio": 0.0161,
+   "lr_correlation": 0.9995,
+   "ffmpeg_I": -13.9,
+   "LRA_LU": 4.2,
+   "true_peak_dbfs": -1.3
+  },
+  "drums": {
+   "integrated_lufs": -31.22,
+   "sample_peak_dbfs": -7.39,
+   "crest_factor_db": 29.5,
+   "side_to_mid_rms_ratio": 0.4896,
+   "lr_correlation": 0.6141,
+   "ffmpeg_I": -31.2,
+   "LRA_LU": 19.2,
+   "true_peak_dbfs": -7.4
+  },
+  "bass": {
+   "integrated_lufs": -36.31,
+   "sample_peak_dbfs": -16.58,
+   "crest_factor_db": 28.45,
+   "side_to_mid_rms_ratio": 0.023,
+   "lr_correlation": 0.9989,
+   "ffmpeg_I": -36.3,
+   "LRA_LU": 22.4,
+   "true_peak_dbfs": -16.6
+  },
+  "other": {
+   "integrated_lufs": -30.41,
+   "sample_peak_dbfs": -8.15,
+   "crest_factor_db": 25.54,
+   "side_to_mid_rms_ratio": 0.4477,
+   "lr_correlation": 0.6694,
+   "ffmpeg_I": -30.4,
+   "LRA_LU": 13.1,
+   "true_peak_dbfs": -8.2
+  },
+  "music": {
+   "integrated_lufs": -28.53,
+   "sample_peak_dbfs": -6.76,
+   "crest_factor_db": 24.68,
+   "side_to_mid_rms_ratio": 0.4574,
+   "lr_correlation": 0.6532
+  }
+ }
+}

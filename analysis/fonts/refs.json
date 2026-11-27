@@ -1,0 +1,178 @@
+{
+ "title_ARTHUR": [
+  60,
+  [
+   55,
+   318,
+   262,
+   358
+  ],
+  "light",
+  "ARTHUR"
+ ],
+ "title_MORGAN": [
+  60,
+  [
+   52,
+   372,
+   264,
+   406
+  ],
+  "light",
+  "MORGAN"
+ ],
+ "title_thats": [
+  60,
+  [
+   115,
+   430,
+   205,
+   452
+  ],
+  "light",
+  "(that's you)"
+ ],
+ "poster_name": [
+  143,
+  [
+   268,
+   83,
+   585,
+   115
+  ],
+  "dark",
+  "ARTHUR MORGAN"
+ ],
+ "poster_wantedfor": [
+  143,
+  [
+   350,
+   124,
+   500,
+   140
+  ],
+  "dark",
+  "WANTED FOR"
+ ],
+ "poster_item": [
+  143,
+  [
+   328,
+   268,
+   572,
+   304
+  ],
+  "dark",
+  "HALF THE WEST"
+ ],
+ "tag_name": [
+  1660,
+  [
+   155,
+   40,
+   362,
+   66
+  ],
+  "dark",
+  "DUTCH VAN DER LINDE"
+ ],
+ "tag_sub": [
+  1660,
+  [
+   222,
+   62,
+   292,
+   73
+  ],
+  "dark",
+  "smooth talker"
+ ],
+ "bubble": [
+  1160,
+  [
+   552,
+   212,
+   712,
+   237
+  ],
+  "dark",
+  "I watched him die."
+ ],
+ "label_gold": [
+  1160,
+  [
+   565,
+   134,
+   698,
+   158
+  ],
+  "light",
+  "YEARS LATER"
+ ],
+ "chapter_title": [
+  4465,
+  [
+   320,
+   270,
+   535,
+   312
+  ],
+  "light",
+  "Blackwater"
+ ],
+ "chapter_num": [
+  4465,
+  [
+   355,
+   224,
+   495,
+   243
+  ],
+  "light",
+  "CHAPTER I"
+ ],
+ "book_age": [
+  520,
+  [
+   460,
+   365,
+   585,
+   400
+  ],
+  "dark",
+  "you, age 0"
+ ],
+ "book_header": [
+  520,
+  [
+   400,
+   6,
+   645,
+   36
+  ],
+  "dark",
+  "The Life of Arthur Morgan"
+ ],
+ "ttr_title": [
+  2540,
+  [
+   205,
+   110,
+   508,
+   142
+  ],
+  "dark",
+  "THINGS TO REMEMBER"
+ ],
+ "ttr_line": [
+  2540,
+  [
+   232,
+   175,
+   505,
+   201
+  ],
+  "dark",
+  "DUTCH ALWAYS HAS A PLAN"
+ ]
+}

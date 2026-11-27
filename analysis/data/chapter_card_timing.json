@@ -1,0 +1,200 @@
+[
+ {
+  "card_frames": [
+   4421,
+   4498
+  ],
+  "scene_fadeout": [
+   4424,
+   4433
+  ],
+  "card_text_visible": [
+   4443,
+   4479
+  ],
+  "card_text_full": [
+   4421,
+   4498
+  ],
+  "scene_fadein": [
+   4485,
+   4496
+  ]
+ },
+ {
+  "card_frames": [
+   6045,
+   6122
+  ],
+  "scene_fadeout": [
+   6049,
+   6057
+  ],
+  "card_text_visible": [
+   6068,
+   6103
+  ],
+  "card_text_full": [
+   6045,
+   6122
+  ],
+  "scene_fadein": [
+   6109,
+   6120
+  ]
+ },
+ {
+  "card_frames": [
+   7433,
+   7510
+  ],
+  "scene_fadeout": [
+   7436,
+   7445
+  ],
+  "card_text_visible": [
+   7455,
+   7491
+  ],
+  "card_text_full": [
+   7505,
+   7510
+  ],
+  "scene_fadein": [
+   7498,
+   7508
+  ]
+ },
+ {
+  "card_frames": [
+   9003,
+   9080
+  ],
+  "scene_fadeout": [
+   9006,
+   9013
+  ],
+  "card_text_visible": [
+   9010,
+   9069
+  ],
+  "card_text_full": [
+   9076,
+   9080
+  ],
+  "scene_fadein": [
+   9070,
+   9078
+  ]
+ },
+ {
+  "card_frames": [
+   9621,
+   9698
+  ],
+  "scene_fadeout": [
+   9624,
+   9632
+  ],
+  "card_text_visible": [
+   9629,
+   9679
+  ],
+  "card_text_full": [
+   9621,
+   9625
+  ],
+  "scene_fadein": [
+   9688,
+   9696
+  ]
+ },
+ {
+  "card_frames": [
+   10297,
+   10373
+  ],
+  "scene_fadeout": [
+   10300,
+   10308
+  ],
+  "card_text_visible": [
+   10319,
+   10354
+  ],
+  "card_text_full": [
+   10297,
+   10301
+  ],
+  "scene_fadein": [
+   10361,
+   10371
+  ]
+ },
+ {
+  "card_frames": [
+   11297,
+   11374
+  ],
+  "scene_fadeout": [
+   11300,
+   11308
+  ],
+  "card_text_visible": [
+   11319,
+   11355
+  ],
+  "card_text_full": [
+   11297,
+   11300
+  ],
+  "scene_fadein": [
+   11364,
+   11371
+  ]
+ },
+ {
+  "card_frames": [
+   13062,
+   13139
+  ],
+  "scene_fadeout": [
+   13065,
+   13072
+  ],
+  "card_text_visible": [
+   13068,
+   13131
+  ],
+  "card_text_full": [
+   13062,
+   13065
+  ],
+  "scene_fadein": [
+   13132,
+   13137
+  ]
+ },
+ {
+  "card_frames": [
+   15158,
+   15235
+  ],
+  "scene_fadeout": [
+   15158,
+   15170
+  ],
+  "card_text_visible": [
+   15180,
+   15216
+  ],
+  "card_text_full": [
+   15158,
+   15235
+  ],
+  "scene_fadein": [
+   15221,
+   15232
+  ]
+ }
+]

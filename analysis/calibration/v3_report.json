@@ -1,0 +1,181 @@
+{
+ "tag": "v3",
+ "cuts": {
+  "reference": [
+   68
+  ],
+  "rebuild": [
+   68
+  ]
+ },
+ "camera_error": {
+  "max_abs_ds_pct": 0.6,
+  "median_abs_ds_pct": 0.03,
+  "max_abs_dty_px": 7.0,
+  "median_abs_dty_px": 1.6,
+  "hero_max_abs_ds_pct": 0.24
+ },
+ "list_items": {
+  "reference": {
+   "TRAINS": {
+    "text_first": 86,
+    "text_50": 87,
+    "icon_first": 87,
+    "icon_settled": 90,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     35.0,
+     55.0,
+     40.0,
+     33.5,
+     33.0,
+     33.0,
+     33.0,
+     33.0,
+     33.0
+    ]
+   },
+   "BANKS": {
+    "text_first": 116,
+    "text_50": 117,
+    "icon_first": 117,
+    "icon_settled": 120,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     30.5,
+     54.5,
+     40.5,
+     32.0,
+     32.5,
+     32.5,
+     32.5,
+     32.5
+    ]
+   },
+   "HALF THE WEST": {
+    "text_first": 132,
+    "text_50": 133,
+    "icon_first": 133,
+    "icon_settled": 135,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     57.5,
+     50.0,
+     33.5,
+     33.0,
+     33.0,
+     33.0,
+     33.0,
+     33.0
+    ]
+   }
+  },
+  "rebuild": {
+   "TRAINS": {
+    "text_first": 86,
+    "text_50": 87,
+    "icon_first": 87,
+    "icon_settled": 90,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     60.5,
+     56.5,
+     43.0,
+     35.5,
+     35.0,
+     35.0,
+     35.0,
+     35.0,
+     35.0
+    ]
+   },
+   "BANKS": {
+    "text_first": 116,
+    "text_50": 117,
+    "icon_first": 117,
+    "icon_settled": 120,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     60.0,
+     57.0,
+     43.5,
+     35.5,
+     35.0,
+     35.0,
+     35.0,
+     35.5
+    ]
+   },
+   "HALF THE WEST": {
+    "text_first": 132,
+    "text_50": 133,
+    "icon_first": 133,
+    "icon_settled": 136,
+    "icon_width_series": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     60.0,
+     56.5,
+     43.5,
+     35.0,
+     35.0,
+     35.0,
+     35.5,
+     35.0
+    ]
+   }
+  }
+ },
+ "reward_changes": {
+  "reference": [
+   92,
+   122,
+   137
+  ],
+  "rebuild": [
+   92,
+   122,
+   137
+  ]
+ },
+ "sfx": {
+  "reference_onsets": [
+   69,
+   86,
+   116,
+   123,
+   130,
+   150,
+   157
+  ],
+  "rebuild_onsets": [
+   69,
+   86,
+   116,
+   123,
+   130,
+   150,
+   156
+  ]
+ },
+ "summary": {
+  "checks": 59,
+  "mismatches_gt1f": 0,
+  "within_1f": 59
+ }
+}

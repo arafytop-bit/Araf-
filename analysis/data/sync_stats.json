@@ -1,0 +1,290 @@
+{
+ "cuts": {
+  "n": 201,
+  "per_minute": 21.62,
+  "nearest_word_onset_offset_f": {
+   "median": -3.0,
+   "within_pm1": 0.199,
+   "within_pm2": 0.458,
+   "within_pm3": 0.806
+  },
+  "share_cut_inside_a_word": 0.169,
+  "frames_until_next_word_onset": {
+   "median": 3.0,
+   "p25": 2.0,
+   "p75": 4.0,
+   "share_0_to_6": 0.95
+  },
+  "nearest_sentence_onset_offset_f": {
+   "median": -3.0,
+   "within_pm3": 0.582,
+   "within_pm6": 0.726
+  },
+  "share_sentences_with_cut_at_start": 0.774,
+  "offset_to_sentence_onset_when_aligned_f": {
+   "n": 146,
+   "median": -3.0,
+   "hist": {
+    "-6": 3,
+    "-5": 3,
+    "-4": 21,
+    "-3": 56,
+    "-2": 35,
+    "-1": 16,
+    "0": 6,
+    "1": 2,
+    "2": 2,
+    "4": 1,
+    "5": 1
+   }
+  },
+  "pause_len_containing_cut_f": {
+   "median": 17.0,
+   "p25": 14.0
+  }
+ },
+ "shots": {
+  "n": 226,
+  "median_f": 66.0,
+  "mean_f": 74.0,
+  "p10_f": 40.5,
+  "p25_f": 50.0,
+  "p75_f": 87.0,
+  "p90_f": 110.0,
+  "min_f": 12,
+  "max_f": 411,
+  "words_per_shot": {
+   "median": 6.0,
+   "p90": 10.0
+  },
+  "sentences_starting_per_shot": {
+   "median": 1.0,
+   "share_1": 0.619,
+   "share_0": 0.292,
+   "share_ge2": 0.088
+  }
+ },
+ "visual_events_per_minute": {
+  "0": 101,
+  "1": 98,
+  "2": 71,
+  "3": 88,
+  "4": 86,
+  "5": 87,
+  "6": 75,
+  "7": 51,
+  "8": 53,
+  "9": 20
+ },
+ "text_vs_word_onset": {
+  "name_tag": {
+   "n": 27,
+   "median_f": 5.0,
+   "p25": -0.5,
+   "p75": 15.0,
+   "within_pm3": 0.222,
+   "within_pm6": 0.37
+  },
+  "list_line": {
+   "n": 9,
+   "median_f": 2.0,
+   "p25": 0.0,
+   "p75": 41.0,
+   "within_pm3": 0.333,
+   "within_pm6": 0.444
+  },
+  "stamp": {
+   "n": 14,
+   "median_f": 5.0,
+   "p25": 2.0,
+   "p75": 8.5,
+   "within_pm3": 0.429,
+   "within_pm6": 0.571
+  },
+  "caption": {
+   "n": 5,
+   "median_f": 17.0,
+   "p25": 14.0,
+   "p75": 50.0,
+   "within_pm3": 0.0,
+   "within_pm6": 0.2
+  },
+  "label": {
+   "n": 42,
+   "median_f": 3.5,
+   "p25": 1.25,
+   "p75": 10.75,
+   "within_pm3": 0.429,
+   "within_pm6": 0.548
+  },
+  "bubble": {
+   "n": 19,
+   "median_f": 1.0,
+   "p25": -1.5,
+   "p75": 15.5,
+   "within_pm3": 0.526,
+   "within_pm6": 0.632
+  },
+  "handwriting": {
+   "n": 5,
+   "median_f": 1.0,
+   "p25": -2.0,
+   "p75": 1.0,
+   "within_pm3": 0.6,
+   "within_pm6": 0.8
+  },
+  "ALL": {
+   "n": 127,
+   "median_f": 4.0,
+   "p25": 0.0,
+   "p75": 12.5,
+   "within_pm3": 0.362,
+   "within_pm6": 0.488
+  }
+ },
+ "element_counts": {
+  "cut:hard_cut": 194,
+  "shot:shot": 178,
+  "graphic:icon": 67,
+  "text:label": 65,
+  "character:character": 63,
+  "camera:push_in": 56,
+  "camera:camera": 54,
+  "shot:": 46,
+  "text:name_tag": 45,
+  "text:list_line": 44,
+  "graphic:arrow": 39,
+  "fx:sparkle": 31,
+  "fx:particles": 29,
+  "character:": 29,
+  "character:gesture": 25,
+  "text:bubble": 24,
+  "shot:wide": 24,
+  "transition:fade_black": 24,
+  "camera:zoom": 22,
+  "character:idle": 20,
+  "graphic:polaroid": 20,
+  "text:stamp": 17,
+  "fx:fire": 17,
+  "shot:medium": 16,
+  "text:sign": 15,
+  "text:handwriting": 15,
+  "fx:smoke": 14,
+  "fx:fx": 14,
+  "fx:light_rays": 13,
+  "text:caption": 13,
+  "camera:pan": 13,
+  "fx:glow": 13,
+  "camera:slow_push_in": 12,
+  "text:counter": 12,
+  "graphic:circle": 12,
+  "ui:other": 12,
+  "fx:flash": 11,
+  "fx:other": 11,
+  "text:chapter_card": 10,
+  "camera:": 10,
+  "text:title": 8,
+  "graphic:sign": 8,
+  "transition:dissolve": 7,
+  "ui:meter": 7,
+  "shot:chapter_card": 6,
+  "graphic:tally": 6,
+  "camera:push-in": 6,
+  "character:horse": 5,
+  "transition:page_flip": 5,
+  "character:action": 5,
+  "fx:impact_star": 5,
+  "character:enter": 5,
+  "graphic:question_mark": 5,
+  "shot:close-up": 5,
+  "fx:dust": 4,
+  "text:poster_text": 4,
+  "graphic:silhouette": 4,
+  "transition:zoom": 4,
+  "fx:sparkles": 4,
+  "character:lyle": 4,
+  "character:talk": 4,
+  "transition:fade_white": 4,
+  "camera:zoom_out": 3,
+  "fx:bokeh": 3,
+  "character:cough": 3,
+  "fx:moon_glow": 3,
+  "cut:match": 3,
+  "camera:static": 3,
+  "fx:speed_lines": 3,
+  "character:pose_change": 3,
+  "character:reaction": 3,
+  "camera:pull_out": 3,
+  "graphic:pencil": 3,
+  "graphic:underline": 3,
+  "camera:tilt": 3,
+  "graphic:strike": 3,
+  "fx:rain": 3
+ },
+ "sfx": {
+  "n_candidates": 278,
+  "per_minute": 29.9,
+  "offset_to_nearest_visual_event_f": {
+   "median": 0.0,
+   "within_pm2": 0.223,
+   "within_pm4": 0.335
+  },
+  "offset_to_nearest_cut_f": {
+   "within_pm3": 0.122
+  },
+  "share_cuts_with_sfx_m6_p3": 0.209,
+  "cut_sfx_offset_hist": {
+   "-6": 3,
+   "-5": 5,
+   "-4": 7,
+   "-3": 5,
+   "-2": 6,
+   "-1": 4,
+   "0": 9,
+   "1": 4,
+   "2": 5,
+   "3": 1
+  },
+  "share_text_elements_with_sfx_pm3": 0.136,
+  "stamp_nearest_sfx_offset": {
+   "n": 17,
+   "median": -2.0,
+   "within_pm3": 0.353
+  },
+  "name_tag_nearest_sfx_offset": {
+   "n": 45,
+   "median": -12.0,
+   "within_pm3": 0.067
+  },
+  "label_nearest_sfx_offset": {
+   "n": 65,
+   "median": -9.0,
+   "within_pm3": 0.123
+  },
+  "bubble_nearest_sfx_offset": {
+   "n": 24,
+   "median": -16.5,
+   "within_pm3": 0.042
+  },
+  "counter_nearest_sfx_offset": {
+   "n": 12,
+   "median": 19.0,
+   "within_pm3": 0.167
+  },
+  "list_line_nearest_sfx_offset": {
+   "n": 44,
+   "median": -10.0,
+   "within_pm3": 0.205
+  },
+  "chapter_card_nearest_sfx_offset": {
+   "n": 10,
+   "median": 6.5,
+   "within_pm3": 0.2
+  }
+ },
+ "beats_vs_cuts": {
+  "n_cuts_in_confident_tempo_segments": 91,
+  "within_pm2": 0.253,
+  "null_within_pm2": 0.266
+ }
+}
