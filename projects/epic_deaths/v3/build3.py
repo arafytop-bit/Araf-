@@ -430,7 +430,38 @@ def prender(n=4, crf=16, preset='slow'):
     return out
 
 
+def glyph_qa():
+    """Every on-screen string in the board must exist in the font (no tofu boxes can reach a frame)."""
+    from engine.premium import typo as TY
+    bad = []
+
+    def walk(o):
+        if isinstance(o, str):
+            if o and not o.startswith(('img:',)) and any(ch.isalpha() for ch in o):
+                try:
+                    TY.check(o.upper() if o.isupper() is False and len(o) < 3 else o, 800)
+                except ValueError as e:
+                    bad.append(str(e))
+        elif isinstance(o, dict):
+            for k, v in o.items():
+                if k in ('trigger', 'until', 'kind', 'img', 'bg', 'name', 'pal', 'mode', 'pose', 'expr', 'region', 'icon', 'ship', 'style',
+                         'title_style', 'label_style', 'mark', 'focus', 'quote_at', 'from'):
+                    if k == 'name' and isinstance(v, list):
+                        walk(v)
+                    continue
+                walk(v)
+        elif isinstance(o, (list, tuple)):
+            for v in o:
+                walk(v)
+    for lst in (BD.BEATS, BD.CALLS, BD.STAMPS):
+        for it in lst:
+            walk(it)
+    return sorted(set(bad))
+
+
 def plan():
+    for e in glyph_qa():
+        print('  GLYPH', e)
     tl, calls, stamps, issues = compile_all()
     import numpy as np
     kinds = {}

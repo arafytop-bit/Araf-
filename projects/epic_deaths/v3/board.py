@@ -94,15 +94,16 @@ B("One of these guys wins a fight", 'scene', bg='olympia_stadium', focus=(0.5, 0
           A(OPPONENT, 1450, R=100, flip=True, expr='cry', pose='cheeks', seed=3,
             acts=[act('hop', -12, dur=10, h=0.35), act('hop', 2, dur=10, h=0.35), act('hop', 16, dur=10, h=0.35),
                   act('hop', 30, dur=10, h=0.35), act('hop', 44, dur=10, h=0.35), act('hop', 58, dur=10, h=0.35)])],
-  props=[P('wreath', 560, 760, 60, enter=dict(kind='fly', at=-10, frm=(560, 220), dur=26), z=2)],
+  props=[P('wreath', 452, 862, 58, rot=90, enter=dict(kind='fly', at=-14, until=T('already dead'), frm=(452, 240)), z=2)],
   tags=[tagp('WINNER', 600, 640, T('already dead')), tagp('LOSER', 1450, 500, T('already dead', off=6))],
   cam=[('punch', T('already dead'), 0.03)])
-B('Another wins a battle', 'scene', bg='turtle_ship', focus=(0.32, 0.55), gain=0.40, sat=0.55, until='These are the most epic',
+B('Another wins a battle', 'scene', bg='turtle_ship', focus=(0.22, 0.48), zoom=1.15, gain=0.95, sat=0.7, night=True, blur=0.8,
+  rate=0.012, until='These are the most epic',
   klines=[kline(0.205 * H, 0.083 * H, [('WON A BATTLE', T('wins a battle'), False), ('THE SAME WAY', T('the same way'), True)])],
-  props=[P('drum', 1500, 820, 125, z=2, kw=dict(hit=False))],
-  actors=[A(NEPHEW, 1190, R=104, pose='drum', expr='angry', z=3)],
-  fx_under=[dict(kind='rays', x=420, y=640, r=620)],
-  fx=[dict(kind='fire', x=300, y=930, size=70), dict(kind='fire', x=640, y=950, size=52)],
+  props=[P('drum', 1560, 820, 128, z=2, kw=dict(hit=False))],
+  actors=[A(NEPHEW, 1250, R=104, pose='drum', expr='angry', z=3)],
+  fx_under=[dict(kind='glow', x=1500, y=900, r=760, a=150), dict(kind='glow', x=250, y=980, r=520, a=110)],
+  fx=[dict(kind='fire', x=180, y=960, size=74), dict(kind='fire', x=520, y=990, size=56), dict(kind='embers', x0=0, x1=W, n=50)],
   drum=True, cam=[('punch', T('the same way'), 0.03)])
 
 # ===================================== TITLE (kinetic, as the reference opens) =====================================
@@ -140,9 +141,11 @@ B('no small talk', 'text', bg='harald_portrait', until="And if you're",
   lines=[("HARALD'S BIO:", 'silver', 0.06 * H), ('"NO SMALL TALK."', 'red', 0.11 * H, T('no small talk', off=2))])
 HO("And if you're thinking", pose='chin', expr='skeptic')
 HO("I've seen Vikings | no", framing='CU', expr='deadpan', pose='hips')
-B("You've seen TV Vikings", 'band', text='TV VIKINGS', until='Harald was real',
-  actors=[A(VIK_TEE, 960, y=0.80 * H, R=64, pose='hips', expr='grin', enter=pop(T('TV Vikings')), z=1, no_shadow=True)],
-  props=[P('tv', 960, 0.63 * H, 250, z=0, enter=pop(T('seen TV')))])
+B("You've seen TV Vikings", 'scene', bg='tv_set', focus=(0.3, 0.35), zoom=1.6, blur=0.0, gain=0.95, vignette=0.35,
+  until='Harald was real',
+  actors=[A(VIK_TEE, 845, y=760, R=96, pose='hips', expr='grin', enter=pop(T('TV Vikings')), clip=(400, 70, 1290, 742), no_shadow=True)],
+  fx=[dict(kind='crt', rect=(400, 70, 1290, 742))],
+  tags=[tagp('TV VIKINGS', 845, 1010, T('TV Vikings'))])
 B('Harald was real', 'photo', img='harald_portrait', focus=(0.6, 0.5), caption='THE REAL ONE', cap_at=T('real'),
   until='his actual life')
 HO('his actual life', pose='shrug', expr='grin')
@@ -190,15 +193,15 @@ B('he gets thrown in prison', 'scene', bg='dungeon', focus=(0.5, 0.5), until='an
 B('helps blind an emperor', 'scene', bg='hagia_sophia', focus=(0.5, 0.55), until='Then he escapes',
   actors=[A(BYZ, 960, R=140, expr='shock', pose='cheeks')],
   fx=[dict(kind='censor', actor=0, at=T('blind'))])
-B('Then he escapes by sailing', 'scene', bg='golden_horn', focus=(0.5, 0.6), until='giant iron chain',
+B('Then he escapes by sailing', 'scene', bg='golden_horn', focus=(0.5, 1.0), zoom=3.4, blur=2.5, until='giant iron chain',
   props=[P('chain', 960, 900, 240, z=1), P('longship', 420, 760, 150, z=2, acts=[act('move', T('escapes'), to=(1380, 760), dur=70), act('bob', 0)])])
 B('giant iron chain', 'photo', img='golden_horn_chain', caption='THE HARBOR CHAIN', cap_at=T('iron chain'), focus=(0.5, 0.62),
   until='One ship snaps', marks=[('ring', 0.52, 0.80, 0.42, 0.10, T('blocking'))])
-B('One ship snaps in half', 'scene', bg='golden_horn', focus=(0.5, 0.6), until='His makes it',
+B('One ship snaps in half', 'scene', bg='golden_horn', focus=(0.5, 1.0), zoom=3.4, blur=2.5, until='His makes it',
   props=[P('chain', 960, 900, 240, z=1)],
   fx=[dict(kind='split', x=960, y=760, size=150, at=T('snaps'))], cam=[('shake', T('snaps'), 14)])
 HO('His makes it', framing='CU', pose='point', expr='grin')
-B('marries a princess of Kyiv', 'scene', bg='st_sophia_kyiv', focus=(0.5, 0.6), until='goes home',
+B('marries a princess of Kyiv', 'scene', bg='st_sophia_kyiv', focus=(0.5, 0.5), blur=8.0, gain=0.55, until='goes home',
   actors=[A(HARALD, 720, R=106, expr='smile', enter=walk(T('marries'), -260, 26)),
           A(PRINCESS, 1200, R=104, flip=True, expr='smile')],
   props=[P('icon', 960, 430, 60, kw=dict(kind='heart'), enter=pop(T('princess')), acts=[act('bob', 0, amp=0.08, hz=1.2)])],
@@ -236,7 +239,7 @@ B('comes from one book', 'photo', img='heimskringla', mode='doc', caption='HEIMS
 B('written in Iceland', 'photo', img='snorri', mode='frame', focus=(0.5, 0.3), caption='SNORRI STURLUSON', cap_at=T('Snorri'),
   until='So, grain of salt')
 C('160 years after', '160 YEARS LATER', hold=1.8)
-B('So, grain of salt', 'photo', img='salt_shaker', mode='full', until='But what Snorri', caption='GRAIN OF SALT', cap_at=T('grain'))
+B('So, grain of salt', 'photo', img='salt_shaker', mode='full', focus=(0.51, 0.55), zoom=2.8, until='But what Snorri', caption='GRAIN OF SALT', cap_at=T('grain'))
 HO('But what Snorri describes', framing='CU', expr='shock', pose='cheeks')
 C('September 25th', 'SEPTEMBER 25, 1066', until='a place called')
 B('a place called Stamford Bridge', 'map', region='north_sea', focus='York', zoom=2.3, until='And the weather', highlight=('United Kingdom',),
@@ -375,7 +378,7 @@ B("So Harald's death is often used", 'text', until='and it helped set up', bg='s
 B('set up the Norman Conquest', 'photo', img='bayeux_harold', mode='full', zoom=1.4, focus=(0.4, 0.5), until='which is a big reason',
   caption='THE NORMAN CONQUEST', cap_at=T('Norman Conquest'))
 B('English is full of French', 'list', title='ENGLISH, BUT FRENCH', mark='dot', until='Not bad for a guy', items=[
-    dict(text='BEEF  ←  BOEUF', at=T('English is full')), dict(text='PORK  ←  PORC', at=T('full of French')),
+    dict(text='BEEF (BOEUF)', at=T('English is full')), dict(text='PORK (PORC)', at=T('full of French')),
     dict(text='JUSTICE, JURY, COURT', at=T('French words')), dict(text='ROYAL, CROWN, GOVERNMENT', at=T('words today'))])
 B('lost to the weather', 'scene', bg='stamford_river', until='Attila the Hun.',
   fx_under=[dict(kind='rays', x=960, y=300, r=1000)],
@@ -386,7 +389,7 @@ C('lost to the weather', 'WINNER: THE WEATHER', hold=1.8)
 # ===================================== #2 ATTILA THE HUN =====================================
 B('Attila the Hun.', 'title', num=2, name=['ATTILA', 'THE HUN'], img='leo_attila', focus=(0.53, 0.47), zoom=2.4, hold=1.7)
 HO("Here's the thing about Attila", pose='chin', expr='skeptic')
-B('written by people who hated him', 'scene', bg='roman_forum', focus=(0.5, 0.55), until='Our best source',
+B('written by people who hated him', 'scene', bg='rome_model', focus=(0.5, 0.5), blur=4.0, gain=0.6, until='Our best source',
   actors=[A(PRISCUS, 700, R=104, expr='angry', pose='hold'), A(ROMAN_EMP, 1220, R=104, flip=True, expr='angry', pose='point')],
   props=[P('book', 960, 700, 60, enter=pop(T('written by'))), P('icon', 700, 380, 50, kw=dict(kind='bang'), enter=pop(T('hated')))],
   tags=[tagp('ROMAN WRITERS', 960, 420, T('people who'))])
@@ -401,7 +404,7 @@ B('they were horse archers', 'photo', img='hun_archer', mode='full', focus=(0.4,
   caption='HORSE ARCHERS', cap_at=T('horse archers'))
 B('who rode into Europe', 'map', region='europe_huns', until='and scared the Roman', highlight=('Hungary',),
   stops=[('Steppe', 'THE STEPPE', T('who rode')), ('Pannonia', 'EUROPE', T('into Europe'))])
-B('and scared the Roman Empire', 'scene', bg='roman_forum', focus=(0.5, 0.55), until='Under Attila',
+B('and scared the Roman Empire', 'scene', bg='rome_model', focus=(0.5, 0.5), blur=4.0, gain=0.6, until='Under Attila',
   actors=[A(ROMAN_EMP, 700, R=104, expr=[(None, 'nervous'), (T('paying them'), 'grimace')], pose=[(None, 'cheeks'), (T('paying them'), 'hold')],
             acts=[act('shake', T('so badly'))]),
           A(HUN, 1240, R=104, flip=True, expr='smug', pose='hips')],
@@ -523,8 +526,10 @@ B('Which is a wild last name', 'photo', img='crassus_bust', mode='frame', focus=
   caption='RICHEST MAN IN ROME', cap_at=T('richest man'))
 HO("And that's exactly who this was", pose='hips', expr='smug')
 HO('How rich', framing='ECU', expr='skeptic', pose='chin')
-B('According to the Greek biographer Plutarch', 'photo', img='plutarch', mode='frame', focus=(0.5, 0.35), until='Crassus noticed that',
-  caption='PLUTARCH', cap_at=T('Plutarch'))
+B('According to the Greek biographer Plutarch', 'scene', bg='rome_model', blur=6.0, gain=0.5, until='Crassus noticed that',
+  actors=[A(SCRIBE, 960, R=124, pose='hold', expr='talk', enter=pop(T('biographer')))],
+  props=[P('book', 960, 760, 66, enter=pop(T('Plutarch')))],
+  tags=[tagp('PLUTARCH', 960, 330, T('Plutarch'))])
 B('Crassus noticed that Roman buildings', 'photo', img='fire_rome', mode='full', focus=(0.5, 0.5), until='So he bought more',
   marks=[('label', 'FIRE', 0.5, 0.42, T('catching fire')), ('label', 'COLLAPSE', 0.75, 0.62, T('collapsing'))])
 B('So he bought more than 500', 'count', to=500, fmt='{:,}+', label='ENSLAVED BUILDERS & ARCHITECTS', bg='rome_model',
@@ -573,7 +578,9 @@ B('In 53 BC, near a town called', 'map', region='rome_parthia', focus='Carrhae',
   highlight=('Turkey', 'Syria'), pins=[('Carrhae', 'CARRHAE', T('Carrhae'))])
 B('his army ran into Parthian', 'photo', img='parthian_archer', mode='frame', focus=(0.5, 0.45), until='Picture this',
   caption='PARTHIAN HORSE ARCHERS', cap_at=T('horse archers'))
-B("you're a Roman legionary", 'scene', bg='carrhae', focus=(0.5, 0.55), until="That's the plan",
+B('Picture this', 'photo', img='legion_reenact', mode='full', focus=(0.4, 0.45), until='in a tight formation',
+  caption='A ROMAN LEGIONARY', cap_at=T('Roman legionary'))
+B('in a tight formation behind', 'scene', bg='carrhae', focus=(0.5, 0.55), until="That's the plan",
   actors=[A(LEGIONARY, 560, R=100, expr='nervous', seed=1), A(LEGIONARY, 960, R=100, expr='nervous', seed=2),
           A(LEGIONARY, 1360, R=100, expr='nervous', seed=3)],
   props=[P('shield', 600, 760, 90, kw=dict(c='#B03A2E', c2='#E8C27A'), z=2, enter=pop(T('behind your shield'))),
@@ -607,12 +614,11 @@ B('Plutarch says about twenty thousand', 'list', until='Rome even lost', items=[
     dict(text='10,000 CAPTURED', at=T('ten thousand'), mark='x', style='white')])
 B('Rome even lost its sacred', 'photo', img='aquila', mode='frame', focus=(0.5, 0.35), until='and it took more than',
   caption='THE EAGLE STANDARDS', cap_at=T('eagle standards'))
-B('and it took more than thirty', 'photo', img='prima_porta', mode='frame', focus=(0.5, 0.4), until="And that's not even the wild",
-  caption='RETURNED AT LAST (20 BC)', cap_at=T('get them back'))
 C('thirty years of diplomacy', '30+ YEARS OF DIPLOMACY', hold=1.8)
 HO("And that's not even the wild part", framing='CU', expr='smug', pose='point')
-B('The Parthians cut off his head', 'photo', img='orodes_coin', mode='frame', focus=(0.5, 0.5), until='who was at a royal',
-  caption='THE PARTHIAN KING', cap_at=T('their king'))
+B('The Parthians cut off his head', 'scene', bg='greek_theater', blur=5.0, gain=0.5, until='who was at a royal',
+  actors=[A(PARTHIAN_KING, 960, R=124, pose='hips', expr='smug', enter=pop(T('their king')))],
+  tags=[tagp('THE PARTHIAN KING', 960, 330, T('their king'))])
 B('who was at a royal wedding feast', 'photo', img='greek_theater', mode='full', focus=(0.5, 0.5), until='The next scene',
   caption='A GREEK TRAGEDY: THE BACCHAE', cap_at=T('Greek tragedy'))
 B('The next scene features', 'photo', img='theater_masks', mode='frame', focus=(0.4, 0.5), until='So the lead actor',
@@ -666,7 +672,7 @@ B('He was an athlete', 'scene', bg='olympia_stadium', focus=(0.5, 0.6), until='A
 HO('And not in a normal sport', framing='CU', expr='smug', pose='point')
 B('He competed in pankration', 'photo', img='pankration_vase', mode='frame', focus=(0.5, 0.45), until='It had been part',
   caption='PANKRATION', cap_at=T('pankration'))
-B('It had been part of the Games', 'photo', img='palaestra', mode='full', focus=(0.5, 0.5), until='Pankration champions',
+B('It had been part of the Games', 'photo', img='olympia_stadium', mode='full', focus=(0.5, 0.55), until='Pankration champions',
   caption='OLYMPIA', cap_at=T('the Games'))
 C('since 648 BC', 'SINCE 648 BC', hold=2.0)
 B('Pankration champions were the superstars', 'photo', img='boxer_rest', mode='frame', focus=(0.5, 0.35), until='If pankration is new',
@@ -755,7 +761,7 @@ HO('So the judges did the only fair', pose='shrug', expr='talk')
 B('They crowned the corpse', 'scene', bg='olympia_stadium', focus=(0.5, 0.55), until='Pausanias says the win',
   actors=[A(ARRICHION, 860, y=GROUND - 10, R=100, lie=True, expr='ko', z=1),
           A(JUDGE, 1350, R=98, flip=True, expr='nervous', pose='point')],
-  props=[P('wreath', 560, 760, 60, enter=dict(kind='fly', at=T('They crowned', off=-6), until=T('the corpse'), frm=(560, 220)), z=2)],
+  props=[P('wreath', 452, 862, 58, rot=90, enter=dict(kind='fly', at=T('They crowned', off=-6), until=T('the corpse'), frm=(452, 220)), z=2)],
   tags=[tagp('OLYMPIC CHAMPION (x3)', 600, 620, T('third time'))], cam=[('punch', T('corpse'), 0.035)])
 C('They crowned the corpse', 'THEY CROWNED THE CORPSE', hold=2.2)
 B('Pausanias says the win came', 'list', until='About seven hundred', items=[
@@ -763,8 +769,10 @@ B('Pausanias says the win came', 'list', until='About seven hundred', items=[
 B('About seven hundred years', 'map', region='greece', focus='Phigalia', zoom=1.5, until='A statue many believe', highlight=('Greece',),
   pins=[('Phigalia', 'PHIGALIA', T("hometown"))])
 C('seven hundred years after', '~700 YEARS LATER', hold=1.8)
-B('A statue many believe', 'photo', img='olympia_museum', mode='frame', focus=(0.5, 0.4), until='As far as we know',
-  caption='MUSEUM AT OLYMPIA', cap_at=T('museum at Olympia'))
+B('A statue many believe', 'stage', until='As far as we know',
+  props=[P('pedestal', 960, 860, 230)],
+  actors=[A(ARRICHION_STATUE, 960, y=760, R=96, pose='hips', expr='neutral', no_shadow=True, enter=pop(T('A statue')))],
+  tags=[tagp('"PROBABLY" ARRICHION', 960, 300, T('many believe')), tagp('MUSEUM AT OLYMPIA', 960, 1040, T('museum at Olympia'))])
 B('As far as we know', 'text', until='Which sounds impossible', bg='olympia_stadium', lines=[
     ('THE ONLY ATHLETE TO WIN', 'white', 0.075 * H), ('AN OLYMPIC FINAL', 'white', 0.075 * H), ('AFTER DYING', 'red', 0.13 * H, T('after dying'))])
 HO('Which sounds impossible to top', pose='hips', expr='smug')
@@ -930,16 +938,19 @@ B('The battle is at its height', 'quote', text='The battle is at its height. Do 
   who='Yi Sun-sin, 1598', bg='yi_statue', until='He was fifty-three')
 STAMP('He was fifty-three', 'DEATH #5', sub='AGE 53, MID-BATTLE', y=0.52 * H, hold=2.2)
 HO('His son and his nephew carried', pose='idle', expr='sad')
-B('Then his nephew picked up the war drum', 'scene', bg='turtle_ship', focus=(0.32, 0.55), gain=0.40, sat=0.55, until='Nobody knew',
-  props=[P('drum', 1500, 820, 125, z=2, kw=dict(hit=False))],
-  actors=[A(NEPHEW, 1190, R=104, pose='drum', expr='angry', z=3)],
-  fx_under=[dict(kind='rays', x=420, y=640, r=620)],
-  fx=[dict(kind='fire', x=300, y=930, size=70), dict(kind='fire', x=640, y=950, size=52)],
-  tags=[tagp('HIS NEPHEW', 1190, 440, T('his nephew'))], drum=True)
-B('Nobody knew', 'scene', bg='turtle_ship', focus=(0.32, 0.55), gain=0.40, sat=0.55, until='The fleet fought on',
-  props=[P('drum', 1500, 820, 125, z=2, kw=dict(hit=False))],
-  actors=[A(NEPHEW, 1190, R=104, pose='drum', expr='angry', z=3)],
-  fx=[dict(kind='fire', x=300, y=930, size=70)],
+B('Then his nephew picked up the war drum', 'scene', bg='turtle_ship', focus=(0.22, 0.48), zoom=1.15, gain=0.95, sat=0.7, night=True,
+  blur=0.8, until='Nobody knew',
+  props=[P('drum', 1560, 820, 128, z=2, kw=dict(hit=False))],
+  actors=[A(NEPHEW, 1250, R=104, pose='drum', expr='angry', z=3)],
+  fx_under=[dict(kind='glow', x=1500, y=900, r=760, a=150), dict(kind='glow', x=250, y=980, r=520, a=110)],
+  fx=[dict(kind='fire', x=180, y=960, size=74), dict(kind='fire', x=520, y=990, size=56), dict(kind='embers', x0=0, x1=W, n=50)],
+  tags=[tagp('HIS NEPHEW', 1250, 440, T('his nephew'))], drum=True)
+B('Nobody knew', 'scene', bg='turtle_ship', focus=(0.22, 0.48), zoom=1.15, gain=0.95, sat=0.7, night=True, blur=0.8,
+  until='The fleet fought on',
+  props=[P('drum', 1560, 820, 128, z=2, kw=dict(hit=False))],
+  actors=[A(NEPHEW, 1250, R=104, pose='drum', expr='angry', z=3)],
+  fx_under=[dict(kind='glow', x=1500, y=900, r=760, a=150)],
+  fx=[dict(kind='fire', x=180, y=960, size=74), dict(kind='embers', x0=0, x1=W, n=50)],
   tags=[tagp('HIS SAILORS: NO IDEA', 560, 300, T('Not his sailors')), tagp('THE ENEMY: NO IDEA', 1300, 200, T('Not the enemy'))], drum=True)
 B('The fleet fought on and won', 'text', anim='slam', until='Korean records claim', lines=[('THE FLEET', 'white', 0.1 * H),
                                                                                           ('WON.', 'red', 0.16 * H, T('and won'))],

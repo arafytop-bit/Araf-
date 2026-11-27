@@ -38,8 +38,8 @@ def secs(b, f):
 
 # ======================= backgrounds =======================
 def bg_photo_full(c, key, b, f, focus=(0.5, 0.5), zoom=1.0, blur=0.0, gain=1.0, rate=0.006, direction=1, vignette=0.55,
-                  sat=0.88, contrast=1.08):
-    img = L.plate(key, W, H, tuple(focus), zoom, sat=sat, contrast=contrast, gain=gain, blur=blur)
+                  sat=0.88, contrast=1.08, night=False):
+    img = L.plate(key, W, H, tuple(focus), zoom, sat=sat, contrast=contrast, gain=gain, blur=blur, night=night)
     t = secs(b, f)
     s = M.push(t, rate, direction, start=1.0 if direction >= 0 else 1.0 + rate * (b['f1'] - b['f0']) / FPS)
     L.draw_scaled(c, img, W / 2, H / 2, s / 1.06 * 1.06, w=W, h=H)
@@ -208,8 +208,8 @@ def scene(c, b, f, ctx):
     bgk = b.get('bg')
     if bgk and L.exists(bgk):
         bg_photo_full(c, bgk, b, f, tuple(b.get('focus', (0.5, 0.5))), b.get('zoom', 1.0), blur=b.get('blur', 1.4),
-                      gain=b.get('gain', 0.86), rate=0.003, direction=b.get('push', 1), vignette=b.get('vignette', 0.5),
-                      sat=b.get('sat', 0.85))
+                      gain=b.get('gain', 0.86), rate=b.get('rate', 0.003), direction=b.get('push', 1), vignette=b.get('vignette', 0.5),
+                      sat=b.get('sat', 0.85), night=b.get('night', False))
         ctx['photo'] = True
     else:
         L.stage(c)
@@ -224,7 +224,12 @@ def scene(c, b, f, ctx):
             if r is not None and it.get('focal'):
                 ctx['occ'].append(('face', r))
         else:
+            if it.get('clip'):
+                c.save()
+                c.clipRect(skia.Rect(*it['clip']), skia.ClipOp.kIntersect, True)
             r = draw_actor(c, it, f, rim=True)
+            if it.get('clip'):
+                c.restore()
             if r is not None:
                 ctx['occ'].append(('face', r))
                 it['_rect'] = r
@@ -357,6 +362,44 @@ def draw_fx(c, fx, f, b):
             x = rng.uniform(fx['x'] - 300, fx['x'] + 300)
             y = (rng.uniform(-400, 0) + df * rng.uniform(14, 24)) % 900 - 100
             raw_prop(c, 'coin', x, y, 26, rot=df * 9 + k * 30, rim=False)
+    elif kind == 'embers':
+        rng = np.random.default_rng(fx.get('seed', 8))
+        n = fx.get('n', 46)
+        for k in range(n):
+            x0 = rng.uniform(fx.get('x0', 0), fx.get('x1', W))
+            sp = rng.uniform(60, 160)
+            ph = rng.uniform(0, 1)
+            t = ((f / FPS) * sp / 600 + ph) % 1.0
+            y = H + 30 - t * (H + 60)
+            x = x0 + math.sin(t * 9 + k) * 30
+            a = (1 - t) * 0.9
+            ep = skia.Paint(AntiAlias=True, Color=rgb('#FFB347'))
+            ep.setAlphaf(a)
+            c.drawCircle(x, y, rng.uniform(2.0, 4.5), ep)
+            gp = skia.Paint(AntiAlias=True, Color=rgb('#FF7A1A'))
+            gp.setAlphaf(a * 0.35)
+            gp.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, 8))
+            c.drawCircle(x, y, 9, gp)
+    elif kind == 'glow':
+        p = skia.Paint(AntiAlias=True)
+        fl = 0.85 + 0.15 * math.sin(f * 0.9) * math.sin(f * 0.37)
+        p.setShader(skia.GradientShader.MakeRadial((fx['x'], fx['y']), fx.get('r', 500),
+                                                   [rgb(fx.get('color', '#FF6A1A'), int(fx.get('a', 120) * fl)), rgb(fx.get('color', '#FF6A1A'), 0)]))
+        p.setBlendMode(skia.BlendMode.kScreen)
+        c.drawRect(skia.Rect(0, 0, W, H), p)
+    elif kind == 'crt':
+        x0, y0, x1, y1 = fx['rect']
+        c.save()
+        c.clipRect(skia.Rect(x0, y0, x1, y1), skia.ClipOp.kIntersect, True)
+        lp_ = skia.Paint(Color=skia.ColorBLACK)
+        lp_.setAlphaf(0.16)
+        for yy in range(int(y0), int(y1), 6):
+            c.drawRect(skia.Rect(x0, yy, x1, yy + 2), lp_)
+        g = skia.Paint(AntiAlias=True)
+        g.setShader(skia.GradientShader.MakeRadial(((x0 + x1) / 2, (y0 + y1) / 2), (x1 - x0) * 0.7,
+                                                   [rgb('#9FD8FF', 26), rgb('#000000', 120)], [0.3, 1.0]))
+        c.drawRect(skia.Rect(x0, y0, x1, y1), g)
+        c.restore()
     elif kind == 'bossbar':
         a = min(1.0, (df + 1) / 4)
         x0, x1, y = 0.14 * W, 0.86 * W, 0.17 * H
@@ -517,7 +560,7 @@ def title(c, b, f, ctx):
 
 
 # ======================= kinetic title =======================
-def draw_klines(c, lines, f, ghost=64):
+def draw_klines(c, lines, f, ghost=84):
     """Reference kinetic type: words wait as dim ghosts (~25 %) and light up white/red within 1-2 frames when spoken."""
     for line in lines:
         y, words, cap = line['y'], line['words'], line['cap']
@@ -866,7 +909,7 @@ def ships(c, b, f, ctx):
     rows = int(math.ceil(n / cols))
     area_w, area_h = 0.86 * W, 0.50 * H
     cell = min(area_w / cols, area_h / rows)
-    size = cell * 0.36
+    size = cell * 0.46
     x0 = W / 2 - cols * cell / 2 + cell / 2
     y0 = 0.60 * H - rows * cell / 2 + cell / 2
     rng = np.random.default_rng(7)

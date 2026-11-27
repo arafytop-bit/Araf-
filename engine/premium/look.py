@@ -39,9 +39,14 @@ def exists(key):
     return key and os.path.exists(os.path.join(IMG_DIR, key + '.jpg'))
 
 
-def grade_arr(im, sat=0.88, contrast=1.08, gamma=1.0, gain=1.0, warm=0.0):
-    """Cohesive photo grade: slightly desaturated, a touch more contrast, neutral blacks (keeps natural colour)."""
+def grade_arr(im, sat=0.88, contrast=1.08, gamma=1.0, gain=1.0, warm=0.0, night=False):
+    """Cohesive photo grade: slightly desaturated, a touch more contrast, neutral blacks (keeps natural colour).
+    night=True: day-for-night (blue shadows, crushed highlights) for night scenes."""
     x = im.astype(np.float32) / 255.0
+    if night:
+        lum0 = (0.114 * x[..., 0] + 0.587 * x[..., 1] + 0.299 * x[..., 2])[..., None]
+        x = lum0 * np.array([1.25, 0.95, 0.70], np.float32) * 0.55 + x * 0.25
+        x = np.clip(x, 0, 1) ** 1.25
     lum = (0.114 * x[..., 0] + 0.587 * x[..., 1] + 0.299 * x[..., 2])[..., None]
     x = lum + (x - lum) * sat
     x = (x - 0.5) * contrast + 0.5
@@ -67,7 +72,7 @@ def crop_arr(im, aspect, focus=(0.5, 0.5), zoom=1.0):
 
 
 @functools.lru_cache(maxsize=160)
-def plate(key, w, h, focus=(0.5, 0.5), zoom=1.0, sat=0.88, contrast=1.08, gain=1.0, blur=0.0, oversize=1.06):
+def plate(key, w, h, focus=(0.5, 0.5), zoom=1.0, sat=0.88, contrast=1.08, gain=1.0, blur=0.0, oversize=1.06, night=False):
     """Graded photo cropped to w x h (rendered `oversize` larger so push-ins never reveal edges)."""
     im = crop_arr(raw(key), w / h, focus, zoom)
     ow, oh = int(w * oversize), int(h * oversize)
@@ -75,7 +80,7 @@ def plate(key, w, h, focus=(0.5, 0.5), zoom=1.0, sat=0.88, contrast=1.08, gain=1
     im = cv2.resize(im, (ow, oh), interpolation=interp)
     if blur:
         im = cv2.GaussianBlur(im, (0, 0), blur)
-    return _to_skia(grade_arr(im, sat=sat, contrast=contrast, gain=gain))
+    return _to_skia(grade_arr(im, sat=sat, contrast=contrast, gain=gain, night=night))
 
 
 @functools.lru_cache(maxsize=96)

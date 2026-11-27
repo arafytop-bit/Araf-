@@ -1,0 +1,113 @@
+{
+ "key": "korean_drum",
+ "query": "Korean traditional drum buk",
+ "cands": [
+  {
+   "title": "File:Buk a Korean Traditional Drum.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Buk_a_Korean_Traditional_Drum.jpg",
+   "w": 6503,
+   "h": 4114,
+   "size": 11609268,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Buk_a_Korean_Traditional_Drum.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "IssamBarhoumi",
+   "credit": "Own work",
+   "desc": "Korean traitional drum at Gyeongbokgung Palace with man and woman wearing traditional garements called Hanbok."
+  },
+  {
+   "title": "File:Skradinski buk waterfall – NP Krka – 2016.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Skradinski_buk_waterfall_%E2%80%93_NP_Krka_%E2%80%93_2016.jpg",
+   "w": 4896,
+   "h": 3264,
+   "size": 20445378,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Skradinski_buk_waterfall_%E2%80%93_NP_Krka_%E2%80%93_2016.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Skot",
+   "credit": "Own work",
+   "desc": "Skradinski buk waterfall, Krka National Park (Croatia)"
+  },
+  {
+   "title": "File:Buk, exposat a Eolssigu! Els sons de Korea.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Buk%2C_exposat_a_Eolssigu%21_Els_sons_de_Korea.jpg",
+   "w": 3159,
+   "h": 3250,
+   "size": 6766060,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Buk,_exposat_a_Eolssigu!_Els_sons_de_Korea.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Sguastevi",
+   "credit": "Own work",
+   "desc": "Buk, exposat a Eolssigu! Els sons de Corea"
+  },
+  {
+   "title": "File:Korean Traditional Dance - Book Choom.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Korean_Traditional_Dance_-_Book_Choom.jpg",
+   "w": 720,
+   "h": 960,
+   "size": 675948,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Korean_Traditional_Dance_-_Book_Choom.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "User:Modamoda",
+   "credit": "Own work by uploader : http://blog.daum.net/modamoda/",
+   "desc": "Korean Traditional Dance : Book Choom"
+  },
+  {
+   "title": "File:Airman Buk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Airman_Buk.jpg",
+   "w": 1990,
+   "h": 2985,
+   "size": 1592025,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Airman_Buk.jpg",
+   "license": "Public domain",
+   "artist": "U.S. Army photo/Spc. Bill Addison",
+   "credit": "USAF photographic archives (image permalink)",
+   "desc": "A South Korean airman playing a traditional Buk drum."
+  },
+  {
+   "title": "File:Sori-Buk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sori-Buk.jpg",
+   "w": 2048,
+   "h": 1536,
+   "size": 2783411,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sori-Buk.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Ulrich Lange, Bochum, Germany",
+   "credit": "Own work",
+   "desc": "Sori-Buk, Korean traditional drum for Pansori performance"
+  },
+  {
+   "title": "File:Jindo-Buk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jindo-Buk.jpg",
+   "w": 2048,
+   "h": 1536,
+   "size": 2607072,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Jindo-Buk.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Ulrich Lange, Bochum, Germany",
+   "credit": "Own work",
+   "desc": "Jindo-Buk, Korean traditional drum"
+  },
+  {
+   "title": "File:Seoul-traditional.parade-01.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Seoul-traditional.parade-01.jpg",
+   "w": 600,
+   "h": 450,
+   "size": 82130,
+   "mime": "image/jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Seoul-traditional.parade-01.jpg",
+   "license": "CC BY 2.0",
+   "artist": "Neaners (a flickr user)",
+   "credit": "https://www.flickr.com/photos/neaners/8621242/",
+   "desc": "The parade is representing royal march of Joseon Dynasty and performing Piri jeongak and Daechwita (피리정악 및 대취타 大吹打) in Seoul"
+  }
+ ],
+ "tried": [
+  "File:Airman Buk.jpg"
+ ]
+}
