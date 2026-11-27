@@ -57,23 +57,24 @@ def hit_small(seed=0):
 
 @functools.lru_cache(maxsize=8)
 def whoosh(dur=0.55, seed=0, bright=1.0):
+    """Air whoosh: white noise shaped in the STFT domain by a smooth time-varying band-pass (no block seams)."""
+    import scipy.signal as ss
     t = _t(dur)
     n = len(t)
-    env = np.sin(np.pi * np.clip(t / dur, 0, 1)) ** 1.6
-    env = env * np.where(t / dur < 0.62, (t / dur / 0.62) ** 0.6, 1.0)
-    nz = white(n, seed + 7)
-    # moving band-pass: process in short blocks with a sweeping centre frequency
-    out = np.zeros(n)
-    blk = n_of(0.02)
-    for i in range(0, n, blk):
-        u = i / n
-        fc = 350 + 2600 * bright * np.sin(np.pi * u) ** 1.3
-        seg = nz[max(0, i - blk): i + blk]
-        y = bp(seg, fc * 0.55, min(fc * 1.8, 16000))
-        out[i:i + blk] = y[-min(blk, n - i):] if len(y) >= min(blk, n - i) else 0
-    x = out * env
+    nz = white(n + 2048, seed + 7)
+    f, tt, Z = ss.stft(nz, SR, nperseg=1024, noverlap=768)
+    u = np.clip(tt / dur, 0, 1)
+    fc = 350 + 2600 * bright * np.sin(np.pi * u) ** 1.3
+    bw = 0.9
+    mask = np.exp(-0.5 * (np.log2(np.maximum(f[:, None], 20) / fc[None, :]) / bw) ** 2)
+    env = np.sin(np.pi * u) ** 1.6 * np.where(u < 0.62, (u / 0.62) ** 0.6, 1.0)
+    _, y = ss.istft(Z * mask * env[None, :], SR, nperseg=1024, noverlap=768)
+    y = y[:n]
+    k = n_of(0.01)
+    y[:k] *= np.linspace(0, 1, k)
+    y[-k:] *= np.linspace(1, 0, k)
     pan = np.clip(t / dur, 0, 1)
-    st = np.stack([x * np.cos(pan * np.pi / 2), x * np.sin(pan * np.pi / 2)], 1)
+    st = np.stack([y * np.cos(pan * np.pi / 2), y * np.sin(pan * np.pi / 2)], 1)
     return _norm(st)
 
 
@@ -114,7 +115,7 @@ def impact(seed=0):
     t = _t(dur)
     sub = _sweep_sine(80, 30, dur, 9) * np.exp(-t / 0.35)
     crunch = lp(white(len(t), seed + 17) * np.exp(-t / 0.05), 3500)
-    crunch = np.round(crunch * 12) / 12                 # slight bit-crush grit
+    crunch = saturate(crunch * 3.0, 2.5) * 0.35         # grit by soft saturation (bit-crush steps clicked)
     x = saturate(sub, 2.0) + crunch * 0.6
     return _norm(reverb(_haas(x, 8, 0.3), 'hall', wet=0.22)[: len(t)])
 

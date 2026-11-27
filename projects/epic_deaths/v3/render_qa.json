@@ -1,0 +1,1416 @@
+[
+{
+"f": 54,
+"tc": "0:01.80",
+"kind": "small_text",
+"text": "WINNER",
+"cap_px": 30
+},
+{
+"f": 60,
+"tc": "0:02.00",
+"kind": "small_text",
+"text": "LOSER",
+"cap_px": 29
+},
+{
+"f": 327,
+"tc": "0:10.90",
+"kind": "small_text",
+"text": "BLADDER",
+"cap_px": 36
+},
+{
+"f": 366,
+"tc": "0:12.20",
+"kind": "small_text",
+"text": "DONKEY JOKE",
+"cap_px": 26
+},
+{
+"f": 369,
+"tc": "0:12.30",
+"kind": "small_text",
+"text": "DONKEY JOKE",
+"cap_px": 37
+},
+{
+"f": 372,
+"tc": "0:12.40",
+"kind": "small_text",
+"text": "DONKEY JOKE",
+"cap_px": 36
+},
+{
+"f": 429,
+"tc": "0:14.30",
+"kind": "small_text",
+"text": "WON'T DIE",
+"cap_px": 29
+},
+{
+"f": 438,
+"tc": "0:14.60",
+"kind": "small_text",
+"text": "WON'T DIE",
+"cap_px": 48
+},
+{
+"f": 1083,
+"tc": "0:36.10",
+"kind": "small_text",
+"text": "TV VIKINGS",
+"cap_px": 36
+},
+{
+"f": 1128,
+"tc": "0:37.60",
+"kind": "small_text",
+"text": "THE REAL ONE",
+"cap_px": 47
+},
+{
+"f": 1545,
+"tc": "0:51.50",
+"kind": "small_text",
+"text": "OLAF",
+"cap_px": 36
+},
+{
+"f": 1623,
+"tc": "0:54.10",
+"kind": "small_text",
+"text": "HARALD (15)",
+"cap_px": 36
+},
+{
+"f": 1689,
+"tc": "0:56.30",
+"kind": "small_text",
+"text": "BADLY WOUNDED",
+"cap_px": 36
+},
+{
+"f": 1758,
+"tc": "0:58.60",
+"kind": "small_text",
+"text": "NORWAY",
+"cap_px": 36
+},
+{
+"f": 1809,
+"tc": "1:00.30",
+"kind": "small_text",
+"text": "RUSSIA",
+"cap_px": 36
+},
+{
+"f": 1824,
+"tc": "1:00.80",
+"kind": "small_text",
+"text": "UKRAINE",
+"cap_px": 36
+},
+{
+"f": 1932,
+"tc": "1:04.40",
+"kind": "small_text",
+"text": "THE VARANGIAN GUARD",
+"cap_px": 38
+},
+{
+"f": 1989,
+"tc": "1:06.30",
+"kind": "small_text",
+"text": "EMPEROR",
+"cap_px": 36
+},
+{
+"f": 2451,
+"tc": "1:21.70",
+"kind": "small_text",
+"text": "THE HARBOR CHAIN",
+"cap_px": 47
+},
+{
+"f": 2577,
+"tc": "1:25.90",
+"kind": "small_text",
+"text": "PRINCESS OF KYIV",
+"cap_px": 45
+},
+{
+"f": 2634,
+"tc": "1:27.80",
+"kind": "small_text",
+"text": "KING OF NORWAY",
+"cap_px": 29
+},
+{
+"f": 2742,
+"tc": "1:31.40",
+"kind": "small_text",
+"text": "KING OF ENGLAND",
+"cap_px": 45
+},
+{
+"f": 3057,
+"tc": "1:41.90",
+"kind": "small_text",
+"text": "= THE CONQUEROR",
+"cap_px": 36
+},
+{
+"f": 3306,
+"tc": "1:50.20",
+"kind": "small_text",
+"text": "YORK: TAKEN",
+"cap_px": 47
+},
+{
+"f": 3567,
+"tc": "1:58.90",
+"kind": "small_text",
+"text": "HEIMSKRINGLA",
+"cap_px": 47
+},
+{
+"f": 3642,
+"tc": "2:01.40",
+"kind": "small_text",
+"text": "SNORRI STURLUSON",
+"cap_px": 47
+},
+{
+"f": 3750,
+"tc": "2:05.00",
+"kind": "small_text",
+"text": "GRAIN OF SALT",
+"cap_px": 47
+},
+{
+"f": 3912,
+"tc": "2:10.40",
+"kind": "small_text",
+"text": "YORK",
+"cap_px": 45
+},
+{
+"f": 4113,
+"tc": "2:17.10",
+"kind": "small_text",
+"text": "THE ARMOR: STILL ON THE SHIP",
+"cap_px": 38
+},
+{
+"f": 4362,
+"tc": "2:25.40",
+"kind": "small_text",
+"text": "LONDON",
+"cap_px": 45
+},
+{
+"f": 4584,
+"tc": "2:32.80",
+"kind": "small_text",
+"text": "T-SHIRTS",
+"cap_px": 36
+},
+{
+"f": 4905,
+"tc": "2:43.50",
+"kind": "small_text",
+"text": "ARMOR",
+"cap_px": 45
+},
+{
+"f": 5502,
+"tc": "3:03.40",
+"kind": "small_text",
+"text": "BIG MAN IN BLUE",
+"cap_px": 29
+},
+{
+"f": 5817,
+"tc": "3:13.90",
+"kind": "small_text",
+"text": "A HUGE CHUNK OF ENGLAND",
+"cap_px": 39
+},
+{
+"f": 6000,
+"tc": "3:20.00",
+"kind": "small_text",
+"text": "+ A BIT MORE",
+"cap_px": 36
+},
+{
+"f": 6228,
+"tc": "3:27.60",
+"kind": "small_text",
+"text": "THE RIDER = THE KING",
+"cap_px": 37
+},
+{
+"f": 6516,
+"tc": "3:37.20",
+"kind": "small_text",
+"text": "ARROW TO THE THROAT",
+"cap_px": 44
+},
+{
+"f": 6519,
+"tc": "3:37.30",
+"kind": "small_text",
+"text": "ARROW TO THE THROAT",
+"cap_px": 39
+},
+{
+"f": 6522,
+"tc": "3:37.40",
+"kind": "small_text",
+"text": "ARROW TO THE THROAT",
+"cap_px": 38
+},
+{
+"f": 6777,
+"tc": "3:45.90",
+"kind": "small_text",
+"text": "ANGLO-SAXON CHRONICLE",
+"cap_px": 47
+},
+{
+"f": 6894,
+"tc": "3:49.80",
+"kind": "small_text",
+"text": "1 VIKING",
+"cap_px": 36
+},
+{
+"f": 6969,
+"tc": "3:52.30",
+"kind": "small_text",
+"text": "THE ENTIRE ENGLISH ARMY",
+"cap_px": 36
+},
+{
+"f": 7290,
+"tc": "4:03.00",
+"kind": "small_text",
+"text": "BARREL GUY",
+"cap_px": 45
+},
+{
+"f": 7416,
+"tc": "4:07.20",
+"kind": "small_text",
+"text": "FULL ARMOR. IN THE HEAT.",
+"cap_px": 45
+},
+{
+"f": 7716,
+"tc": "4:17.20",
+"kind": "small_text",
+"text": "NORMANDY",
+"cap_px": 45
+},
+{
+"f": 7740,
+"tc": "4:18.00",
+"kind": "small_text",
+"text": "THE SOUTH",
+"cap_px": 36
+},
+{
+"f": 7809,
+"tc": "4:20.30",
+"kind": "small_text",
+"text": "YORK",
+"cap_px": 36
+},
+{
+"f": 7851,
+"tc": "4:21.70",
+"kind": "small_text",
+"text": "LONDON",
+"cap_px": 36
+},
+{
+"f": 7890,
+"tc": "4:23.00",
+"kind": "small_text",
+"text": "HASTINGS",
+"cap_px": 36
+},
+{
+"f": 7983,
+"tc": "4:26.10",
+"kind": "small_text",
+"text": "BATTLE OF HASTINGS",
+"cap_px": 38
+},
+{
+"f": 8124,
+"tc": "4:30.80",
+"kind": "small_text",
+"text": "THE NORMAN CONQUEST",
+"cap_px": 31
+},
+{
+"f": 8448,
+"tc": "4:41.60",
+"kind": "small_text",
+"text": "ROMAN WRITERS",
+"cap_px": 36
+},
+{
+"f": 8550,
+"tc": "4:45.00",
+"kind": "small_text",
+"text": "PRISCUS",
+"cap_px": 45
+},
+{
+"f": 8646,
+"tc": "4:48.20",
+"kind": "small_text",
+"text": "ATTILA",
+"cap_px": 36
+},
+{
+"f": 8760,
+"tc": "4:52.00",
+"kind": "small_text",
+"text": "HORSE ARCHERS",
+"cap_px": 31
+},
+{
+"f": 8802,
+"tc": "4:53.40",
+"kind": "small_text",
+"text": "THE STEPPE",
+"cap_px": 45
+},
+{
+"f": 8937,
+"tc": "4:57.90",
+"kind": "small_text",
+"text": "PLEASE GO AWAY",
+"cap_px": 45
+},
+{
+"f": 9054,
+"tc": "5:01.80",
+"kind": "small_text",
+"text": "PREMIUM \u00b7 NO HUNS AT YOUR GATES",
+"cap_px": 41
+},
+{
+"f": 9054,
+"tc": "5:01.80",
+"kind": "small_text",
+"text": "PER YEAR \u00b7 BILLED TO ROME",
+"cap_px": 42
+},
+{
+"f": 9054,
+"tc": "5:01.80",
+"kind": "small_text",
+"text": "CANCEL?",
+"cap_px": 42
+},
+{
+"f": 9057,
+"tc": "5:01.90",
+"kind": "small_text",
+"text": "PREMIUM \u00b7 NO HUNS AT YOUR GATES",
+"cap_px": 48
+},
+{
+"f": 9213,
+"tc": "5:07.10",
+"kind": "small_text",
+"text": "BLEDA",
+"cap_px": 45
+},
+{
+"f": 9387,
+"tc": "5:12.90",
+"kind": "small_text",
+"text": "HUN EMPIRE",
+"cap_px": 36
+},
+{
+"f": 9630,
+"tc": "5:21.00",
+"kind": "small_text",
+"text": "THE COW (LIMPING)",
+"cap_px": 45
+},
+{
+"f": 9801,
+"tc": "5:26.70",
+"kind": "small_text",
+"text": "THE SWORD OF THE WAR GOD",
+"cap_px": 45
+},
+{
+"f": 10449,
+"tc": "5:48.30",
+"kind": "small_text",
+"text": "ILDICO",
+"cap_px": 36
+},
+{
+"f": 10635,
+"tc": "5:54.50",
+"kind": "small_text",
+"text": "ON HIS BACK",
+"cap_px": 36
+},
+{
+"f": 10941,
+"tc": "6:04.70",
+"kind": "small_text",
+"text": "A NOSEBLEED",
+"cap_px": 38
+},
+{
+"f": 10947,
+"tc": "6:04.90",
+"kind": "small_text",
+"text": "NO WOUNDS",
+"cap_px": 30
+},
+{
+"f": 11106,
+"tc": "6:10.20",
+"kind": "small_text",
+"text": "EARLIEST ACCOUNT:",
+"cap_px": 44
+},
+{
+"f": 11334,
+"tc": "6:17.80",
+"kind": "small_text",
+"text": "JORDANES",
+"cap_px": 36
+},
+{
+"f": 11355,
+"tc": "6:18.50",
+"kind": "small_text",
+"text": "(COPYING PRISCUS)",
+"cap_px": 29
+},
+{
+"f": 11415,
+"tc": "6:20.50",
+"kind": "small_text",
+"text": "HAIR: GONE",
+"cap_px": 29
+},
+{
+"f": 11676,
+"tc": "6:29.20",
+"kind": "small_text",
+"text": "GOLD",
+"cap_px": 45
+},
+{
+"f": 11694,
+"tc": "6:29.80",
+"kind": "small_text",
+"text": "SILVER",
+"cap_px": 36
+},
+{
+"f": 11718,
+"tc": "6:30.60",
+"kind": "small_text",
+"text": "IRON",
+"cap_px": 36
+},
+{
+"f": 11769,
+"tc": "6:32.30",
+"kind": "small_text",
+"text": "THE RICHES HE TOOK",
+"cap_px": 36
+},
+{
+"f": 11808,
+"tc": "6:33.60",
+"kind": "small_text",
+"text": "THE NATIONS HE CRUSHED",
+"cap_px": 36
+},
+{
+"f": 12264,
+"tc": "6:48.80",
+"kind": "small_text",
+"text": "EMPIRE: GONE",
+"cap_px": 36
+},
+{
+"f": 12405,
+"tc": "6:53.50",
+"kind": "small_text",
+"text": "PARENTAL ADVISORY",
+"cap_px": 34
+},
+{
+"f": 12414,
+"tc": "6:53.80",
+"kind": "small_text",
+"text": "PARENTAL ADVISORY",
+"cap_px": 33
+},
+{
+"f": 12480,
+"tc": "6:56.00",
+"kind": "small_text",
+"text": "#3",
+"cap_px": 39
+},
+{
+"f": 12720,
+"tc": "7:04.00",
+"kind": "small_text",
+"text": "RICHEST MAN IN ROME",
+"cap_px": 31
+},
+{
+"f": 12861,
+"tc": "7:08.70",
+"kind": "small_text",
+"text": "PLUTARCH",
+"cap_px": 29
+},
+{
+"f": 12951,
+"tc": "7:11.70",
+"kind": "small_text",
+"text": "FIRE",
+"cap_px": 45
+},
+{
+"f": 12984,
+"tc": "7:12.80",
+"kind": "small_text",
+"text": "COLLAPSE",
+"cap_px": 45
+},
+{
+"f": 13341,
+"tc": "7:24.70",
+"kind": "small_text",
+"text": "CRASSUS'S",
+"cap_px": 36
+},
+{
+"f": 13485,
+"tc": "7:29.50",
+"kind": "small_text",
+"text": "SPARTACUS",
+"cap_px": 47
+},
+{
+"f": 13572,
+"tc": "7:32.40",
+"kind": "small_text",
+"text": "CRASSUS",
+"cap_px": 36
+},
+{
+"f": 13731,
+"tc": "7:37.70",
+"kind": "small_text",
+"text": "THE ROAD TO ROME",
+"cap_px": 47
+},
+{
+"f": 14112,
+"tc": "7:50.40",
+"kind": "small_text",
+"text": "= THE BANK ACCOUNT",
+"cap_px": 45
+},
+{
+"f": 14151,
+"tc": "7:51.70",
+"kind": "small_text",
+"text": "AGE: ~60",
+"cap_px": 45
+},
+{
+"f": 14205,
+"tc": "7:53.50",
+"kind": "small_text",
+"text": "\"SPORTS CHARIOT\"",
+"cap_px": 36
+},
+{
+"f": 14343,
+"tc": "7:58.10",
+"kind": "small_text",
+"text": "PARTHIAN EMPIRE",
+"cap_px": 36
+},
+{
+"f": 14541,
+"tc": "8:04.70",
+"kind": "small_text",
+"text": "CARRHAE",
+"cap_px": 36
+},
+{
+"f": 14598,
+"tc": "8:06.60",
+"kind": "small_text",
+"text": "PARTHIAN HORSE ARCHERS",
+"cap_px": 31
+},
+{
+"f": 14679,
+"tc": "8:09.30",
+"kind": "small_text",
+"text": "A ROMAN LEGIONARY",
+"cap_px": 47
+},
+{
+"f": 14766,
+"tc": "8:12.20",
+"kind": "small_text",
+"text": "THE PLAN: WAIT",
+"cap_px": 29
+},
+{
+"f": 14952,
+"tc": "8:18.40",
+"kind": "small_text",
+"text": "CAMELS = ARROW REFILLS",
+"cap_px": 29
+},
+{
+"f": 15216,
+"tc": "8:27.20",
+"kind": "small_text",
+"text": "FIRING BACKWARD",
+"cap_px": 30
+},
+{
+"f": 15423,
+"tc": "8:34.10",
+"kind": "small_text",
+"text": "CRASSUS'S SON",
+"cap_px": 36
+},
+{
+"f": 15609,
+"tc": "8:40.30",
+"kind": "small_text",
+"text": "PEACE TALKS",
+"cap_px": 29
+},
+{
+"f": 15666,
+"tc": "8:42.20",
+"kind": "small_text",
+"text": "AT THE 'PEACE TALKS'",
+"cap_px": 39
+},
+{
+"f": 15669,
+"tc": "8:42.30",
+"kind": "small_text",
+"text": "AT THE 'PEACE TALKS'",
+"cap_px": 38
+},
+{
+"f": 15879,
+"tc": "8:49.30",
+"kind": "small_text",
+"text": "THE EAGLE STANDARDS",
+"cap_px": 38
+},
+{
+"f": 16131,
+"tc": "8:57.70",
+"kind": "small_text",
+"text": "THE PARTHIAN KING",
+"cap_px": 29
+},
+{
+"f": 16236,
+"tc": "9:01.20",
+"kind": "small_text",
+"text": "A GREEK TRAGEDY: THE BACCHAE",
+"cap_px": 47
+},
+{
+"f": 16335,
+"tc": "9:04.50",
+"kind": "small_text",
+"text": "TRAGEDY",
+"cap_px": 31
+},
+{
+"f": 16464,
+"tc": "9:08.80",
+"kind": "small_text",
+"text": "THE \"PROP\"",
+"cap_px": 36
+},
+{
+"f": 16590,
+"tc": "9:13.00",
+"kind": "small_text",
+"text": "\"I DID IT! MY LINE!\"",
+"cap_px": 44
+},
+{
+"f": 16998,
+"tc": "9:26.60",
+"kind": "small_text",
+"text": "\"CRASSUS\"",
+"cap_px": 45
+},
+{
+"f": 17349,
+"tc": "9:38.30",
+"kind": "small_text",
+"text": "TO MOCK HIS GREED",
+"cap_px": 45
+},
+{
+"f": 17694,
+"tc": "9:49.80",
+"kind": "small_text",
+"text": "#4",
+"cap_px": 39
+},
+{
+"f": 17775,
+"tc": "9:52.50",
+"kind": "small_text",
+"text": "NO ARMOR",
+"cap_px": 29
+},
+{
+"f": 17832,
+"tc": "9:54.40",
+"kind": "small_text",
+"text": "NO CLOTHES",
+"cap_px": 29
+},
+{
+"f": 18000,
+"tc": "10:00.00",
+"kind": "small_text",
+"text": "ATHLETE",
+"cap_px": 29
+},
+{
+"f": 18072,
+"tc": "10:02.40",
+"kind": "small_text",
+"text": "PANKRATION",
+"cap_px": 31
+},
+{
+"f": 18153,
+"tc": "10:05.10",
+"kind": "small_text",
+"text": "OLYMPIA",
+"cap_px": 31
+},
+{
+"f": 18300,
+"tc": "10:10.00",
+"kind": "small_text",
+"text": "ANCIENT GREEK FIGHTING STAR",
+"cap_px": 47
+},
+{
+"f": 18909,
+"tc": "10:30.30",
+"kind": "small_text",
+"text": "SPARTA",
+"cap_px": 36
+},
+{
+"f": 18969,
+"tc": "10:32.30",
+"kind": "small_text",
+"text": "NO RULES. AT ALL.",
+"cap_px": 39
+},
+{
+"f": 19215,
+"tc": "10:40.50",
+"kind": "small_text",
+"text": "THE PRIZE",
+"cap_px": 38
+},
+{
+"f": 19446,
+"tc": "10:48.20",
+"kind": "small_text",
+"text": "THE GUY",
+"cap_px": 29
+},
+{
+"f": 19707,
+"tc": "10:56.90",
+"kind": "small_text",
+"text": "ARRICHION",
+"cap_px": 29
+},
+{
+"f": 19767,
+"tc": "10:58.90",
+"kind": "small_text",
+"text": "OPPONENT",
+"cap_px": 29
+},
+{
+"f": 19875,
+"tc": "11:02.50",
+"kind": "small_text",
+"text": "LEGS LOCKED",
+"cap_px": 45
+},
+{
+"f": 19941,
+"tc": "11:04.70",
+"kind": "small_text",
+"text": "NECK: SQUEEZED",
+"cap_px": 36
+},
+{
+"f": 20106,
+"tc": "11:10.20",
+"kind": "small_text",
+"text": "ERYXIAS (HIS COACH)",
+"cap_px": 36
+},
+{
+"f": 20376,
+"tc": "11:19.20",
+"kind": "small_text",
+"text": "EPITAPH = GRAVESTONE LINE",
+"cap_px": 29
+},
+{
+"f": 20478,
+"tc": "11:22.60",
+"kind": "small_text",
+"text": "\"YOUR TOMBSTONE",
+"cap_px": 44
+},
+{
+"f": 20478,
+"tc": "11:22.60",
+"kind": "small_text",
+"text": "WILL LOOK AMAZING!\"",
+"cap_px": 44
+},
+{
+"f": 20508,
+"tc": "11:23.60",
+"kind": "small_text",
+"text": "NEVER",
+"cap_px": 47
+},
+{
+"f": 20508,
+"tc": "11:23.60",
+"kind": "small_text",
+"text": "DEFEATED",
+"cap_px": 47
+},
+{
+"f": 20511,
+"tc": "11:23.70",
+"kind": "small_text",
+"text": "NEVER",
+"cap_px": 46
+},
+{
+"f": 20511,
+"tc": "11:23.70",
+"kind": "small_text",
+"text": "DEFEATED",
+"cap_px": 46
+},
+{
+"f": 21093,
+"tc": "11:43.10",
+"kind": "small_text",
+"text": "THE CHOKEHOLD",
+"cap_px": 44
+},
+{
+"f": 21096,
+"tc": "11:43.20",
+"kind": "small_text",
+"text": "THE CHOKEHOLD",
+"cap_px": 39
+},
+{
+"f": 21099,
+"tc": "11:43.30",
+"kind": "small_text",
+"text": "THE CHOKEHOLD",
+"cap_px": 38
+},
+{
+"f": 21159,
+"tc": "11:45.30",
+"kind": "small_text",
+"text": "THE JUDGES",
+"cap_px": 29
+},
+{
+"f": 21219,
+"tc": "11:47.30",
+"kind": "small_text",
+"text": "WINNER",
+"cap_px": 36
+},
+{
+"f": 21246,
+"tc": "11:48.20",
+"kind": "small_text",
+"text": "LOSER",
+"cap_px": 36
+},
+{
+"f": 21417,
+"tc": "11:53.90",
+"kind": "small_text",
+"text": "PAUSANIAS",
+"cap_px": 45
+},
+{
+"f": 21711,
+"tc": "12:03.70",
+"kind": "small_text",
+"text": "OLYMPIC CHAMPION (x3)",
+"cap_px": 29
+},
+{
+"f": 22134,
+"tc": "12:17.80",
+"kind": "small_text",
+"text": "\"PROBABLY\" ARRICHION",
+"cap_px": 29
+},
+{
+"f": 22200,
+"tc": "12:20.00",
+"kind": "small_text",
+"text": "MUSEUM AT OLYMPIA",
+"cap_px": 45
+},
+{
+"f": 22908,
+"tc": "12:43.60",
+"kind": "small_text",
+"text": "KILLED BY A MAN HE BEHEADED",
+"cap_px": 36
+},
+{
+"f": 22965,
+"tc": "12:45.50",
+"kind": "small_text",
+"text": "PYRRHUS",
+"cap_px": 47
+},
+{
+"f": 23640,
+"tc": "13:08.00",
+"kind": "small_text",
+"text": "HORATIO NELSON",
+"cap_px": 38
+},
+{
+"f": 23724,
+"tc": "13:10.80",
+"kind": "small_text",
+"text": "CAPTAIN HOOK",
+"cap_px": 29
+},
+{
+"f": 24063,
+"tc": "13:22.10",
+"kind": "small_text",
+"text": "JAPAN",
+"cap_px": 36
+},
+{
+"f": 24075,
+"tc": "13:22.50",
+"kind": "small_text",
+"text": "BUSAN",
+"cap_px": 45
+},
+{
+"f": 24198,
+"tc": "13:26.60",
+"kind": "small_text",
+"text": "1592: THE INVASION",
+"cap_px": 47
+},
+{
+"f": 24219,
+"tc": "13:27.30",
+"kind": "small_text",
+"text": "BUSAN",
+"cap_px": 45
+},
+{
+"f": 24240,
+"tc": "13:28.00",
+"kind": "small_text",
+"text": "SEOUL: FALLEN",
+"cap_px": 36
+},
+{
+"f": 24309,
+"tc": "13:30.30",
+"kind": "small_text",
+"text": "YI SUN-SIN",
+"cap_px": 29
+},
+{
+"f": 24462,
+"tc": "13:35.40",
+"kind": "small_text",
+"text": "TURTLE SHIPS",
+"cap_px": 47
+},
+{
+"f": 24519,
+"tc": "13:37.30",
+"kind": "small_text",
+"text": "IRON SPIKES",
+"cap_px": 36
+},
+{
+"f": 24576,
+"tc": "13:39.20",
+"kind": "small_text",
+"text": "CANNONS",
+"cap_px": 30
+},
+{
+"f": 24618,
+"tc": "13:40.60",
+"kind": "small_text",
+"text": "DRAGON HEAD",
+"cap_px": 30
+},
+{
+"f": 24669,
+"tc": "13:42.30",
+"kind": "small_text",
+"text": "HANSAN ISLAND",
+"cap_px": 36
+},
+{
+"f": 24915,
+"tc": "13:50.50",
+"kind": "small_text",
+"text": "JAPAN",
+"cap_px": 36
+},
+{
+"f": 25575,
+"tc": "14:12.50",
+"kind": "small_text",
+"text": "\"IT'S A TRAP.\"",
+"cap_px": 36
+},
+{
+"f": 25596,
+"tc": "14:13.20",
+"kind": "small_text",
+"text": "ORDER: IGNORED",
+"cap_px": 29
+},
+{
+"f": 25920,
+"tc": "14:24.00",
+"kind": "small_text",
+"text": "NO TIME TO MOURN",
+"cap_px": 36
+},
+{
+"f": 26118,
+"tc": "14:30.60",
+"kind": "small_text",
+"text": "AMBUSH",
+"cap_px": 45
+},
+{
+"f": 26286,
+"tc": "14:36.20",
+"kind": "small_text",
+"text": "THE KING",
+"cap_px": 29
+},
+{
+"f": 26433,
+"tc": "14:41.10",
+"kind": "small_text",
+"text": "\"MAYBE... NO NAVY?\"",
+"cap_px": 44
+},
+{
+"f": 27201,
+"tc": "15:06.70",
+"kind": "small_text",
+"text": "THE MYEONGNYANG STRAIT",
+"cap_px": 31
+},
+{
+"f": 27396,
+"tc": "15:13.20",
+"kind": "small_text",
+"text": "HIS CAPTAINS: NOPE",
+"cap_px": 36
+},
+{
+"f": 27525,
+"tc": "15:17.50",
+"kind": "small_text",
+"text": "ALONE",
+"cap_px": 36
+},
+{
+"f": 28077,
+"tc": "15:35.90",
+"kind": "small_text",
+"text": "YI'S WAR DIARY",
+"cap_px": 31
+},
+{
+"f": 28329,
+"tc": "15:44.30",
+"kind": "small_text",
+"text": "TOYOTOMI HIDEYOSHI (DIED 1598)",
+"cap_px": 38
+},
+{
+"f": 28635,
+"tc": "15:54.50",
+"kind": "small_text",
+"text": "NORYANG STRAIT",
+"cap_px": 45
+},
+{
+"f": 28953,
+"tc": "16:05.10",
+"kind": "small_text",
+"text": "AGE 53, MID-BATTLE",
+"cap_px": 44
+},
+{
+"f": 28956,
+"tc": "16:05.20",
+"kind": "small_text",
+"text": "AGE 53, MID-BATTLE",
+"cap_px": 39
+},
+{
+"f": 28959,
+"tc": "16:05.30",
+"kind": "small_text",
+"text": "AGE 53, MID-BATTLE",
+"cap_px": 38
+},
+{
+"f": 29079,
+"tc": "16:09.30",
+"kind": "small_text",
+"text": "HIS NEPHEW",
+"cap_px": 45
+},
+{
+"f": 29274,
+"tc": "16:15.80",
+"kind": "small_text",
+"text": "HIS SAILORS: NO IDEA",
+"cap_px": 45
+},
+{
+"f": 29301,
+"tc": "16:16.70",
+"kind": "small_text",
+"text": "THE ENEMY: NO IDEA",
+"cap_px": 45
+},
+{
+"f": 29571,
+"tc": "16:25.70",
+"kind": "small_text",
+"text": "CHEN LIN (CHINA)",
+"cap_px": 36
+},
+{
+"f": 29730,
+"tc": "16:31.00",
+"kind": "small_text",
+"text": "x3",
+"cap_px": 45
+},
+{
+"f": 30312,
+"tc": "16:50.40",
+"kind": "small_text",
+"text": "100-WON COIN",
+"cap_px": 47
+},
+{
+"f": 30378,
+"tc": "16:52.60",
+"kind": "small_text",
+"text": "CENTRAL SEOUL",
+"cap_px": 38
+},
+{
+"f": 30465,
+"tc": "16:55.50",
+"kind": "small_text",
+"text": "#1",
+"cap_px": 43
+},
+{
+"f": 30465,
+"tc": "16:55.50",
+"kind": "small_text",
+"text": "#2",
+"cap_px": 43
+},
+{
+"f": 30465,
+"tc": "16:55.50",
+"kind": "small_text",
+"text": "#3",
+"cap_px": 43
+},
+{
+"f": 30465,
+"tc": "16:55.50",
+"kind": "small_text",
+"text": "#4",
+"cap_px": 43
+},
+{
+"f": 30465,
+"tc": "16:55.50",
+"kind": "small_text",
+"text": "#5",
+"cap_px": 43
+},
+{
+"f": 30492,
+"tc": "16:56.40",
+"kind": "small_text",
+"text": "NO ARMOR",
+"cap_px": 32
+},
+{
+"f": 30492,
+"tc": "16:56.40",
+"kind": "small_text",
+"text": "DAY",
+"cap_px": 32
+},
+{
+"f": 30540,
+"tc": "16:58.00",
+"kind": "small_text",
+"text": "A",
+"cap_px": 29
+},
+{
+"f": 30540,
+"tc": "16:58.00",
+"kind": "small_text",
+"text": "NOSEBLEED",
+"cap_px": 29
+},
+{
+"f": 30585,
+"tc": "16:59.50",
+"kind": "small_text",
+"text": "THEATER",
+"cap_px": 38
+},
+{
+"f": 30585,
+"tc": "16:59.50",
+"kind": "small_text",
+"text": "PROP",
+"cap_px": 38
+},
+{
+"f": 30651,
+"tc": "17:01.70",
+"kind": "small_text",
+"text": "CROWNED",
+"cap_px": 33
+},
+{
+"f": 30651,
+"tc": "17:01.70",
+"kind": "small_text",
+"text": "CORPSE",
+"cap_px": 33
+},
+{
+"f": 30705,
+"tc": "17:03.50",
+"kind": "small_text",
+"text": "WON AFTER",
+"cap_px": 29
+},
+{
+"f": 30705,
+"tc": "17:03.50",
+"kind": "small_text",
+"text": "DEATH",
+"cap_px": 29
+},
+{
+"f": 31779,
+"tc": "17:39.30",
+"kind": "small_text",
+"text": "TRUST ME",
+"cap_px": 35
+},
+{
+"f": 31785,
+"tc": "17:39.50",
+"kind": "small_text",
+"text": "TRUST ME",
+"cap_px": 48
+},
+{
+"f": 31788,
+"tc": "17:39.60",
+"kind": "small_text",
+"text": "TRUST ME",
+"cap_px": 29
+},
+{
+"f": 31899,
+"tc": "17:43.30",
+"kind": "small_text",
+"text": "WATCH NEXT",
+"cap_px": 47
+}
+]

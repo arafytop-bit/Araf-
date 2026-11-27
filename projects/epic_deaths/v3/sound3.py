@@ -85,6 +85,40 @@ def _find(dirs, name):
     return []
 
 
+def discontinuities(m, thr=14.0):
+    """Sample indices where the waveform jumps far beyond its local roughness (clicks/splices)."""
+    import scipy.signal as ss
+    d2 = np.zeros_like(m)
+    d2[1:-1] = m[2:] - 2 * m[1:-1] + m[:-2]
+    a2 = d2 ** 2
+    k = int(0.004 * SR)
+    loc2 = np.maximum(ss.fftconvolve(a2, np.ones(2 * k + 1) / (2 * k + 1), 'same'), 0.0)
+    loc2 = np.maximum(loc2 - a2 / (2 * k + 1), 1e-14)
+    r = np.abs(d2) / np.sqrt(loc2)
+    return np.where((r > thr) & (np.abs(d2) > 0.004))[0]
+
+
+def declick(x):
+    """Smooth interior splices of procedural samples (keeps the attack): local 2 ms Hann smoothing around each jump."""
+    m = x.mean(1).astype(np.float64)
+    idx = [i for i in discontinuities(m) if i > int(0.004 * SR)]
+    if not idx:
+        return x
+    w = np.hanning(97)
+    w /= w.sum()
+    y = x.copy()
+    for i in idx:
+        a, b = max(0, i - 120), min(len(x), i + 120)
+        for ch in range(2):
+            seg = np.convolve(x[a:b, ch], w, 'same')
+            fade = np.ones(b - a)
+            r = min(24, (b - a) // 4)
+            fade[:r] = np.linspace(0, 1, r)
+            fade[-r:] = np.linspace(1, 0, r)
+            y[a:b, ch] = x[a:b, ch] * (1 - fade) + seg * fade
+    return y
+
+
 def sample(name, seed=0):
     """user upload > designed editing-kit sound > recorded CC BY foley (Commons) > procedural fallback."""
     key = (name, seed)
@@ -107,7 +141,7 @@ def sample(name, seed=0):
             x = to_stereo(trap.taiko(seed % 3))
             SOURCES[name] = 'designed'
         else:
-            x = to_stereo(X.get(name if name in X.GEN else 'pop', seed=seed))
+            x = declick(to_stereo(X.get(name if name in X.GEN else 'pop', seed=seed)).astype(np.float32))
             SOURCES[name] = 'procedural'
     x = x.astype(np.float32)
     x = x / (np.max(np.abs(x)) + 1e-9) * 0.9

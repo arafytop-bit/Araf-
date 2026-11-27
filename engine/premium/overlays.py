@@ -36,7 +36,7 @@ def callout_layout(text, cap=CALLOUT_CAP, max_w=0.91 * W, weight=800):
     return lines, cap2, box
 
 
-def callout(c, text, df, style='red', top=None, weight=800, cap=CALLOUT_CAP):
+def callout(c, text, df, style='red', top=None, weight=800, cap=CALLOUT_CAP, plate=False):
     lines, cap2, box = callout_layout(text, cap, weight=weight)
     if top is not None:
         box.offset(0, top - box.top())
@@ -49,6 +49,12 @@ def callout(c, text, df, style='red', top=None, weight=800, cap=CALLOUT_CAP):
     c.translate(W / 2, cy)
     c.scale(s, s)
     c.translate(-W / 2, -cy)
+    if plate:                                   # over photos/maps: a soft dark plate guarantees contrast for the red
+        pr = skia.Rect(box.left() - cap2 * 0.55, box.top() - cap2 * 0.42, box.right() + cap2 * 0.55, box.bottom() + cap2 * 0.42)
+        pp = skia.Paint(AntiAlias=True, Color=skia.ColorBLACK)
+        pp.setAlphaf(0.74 * a)
+        pp.setMaskFilter(skia.MaskFilter.MakeBlur(skia.kNormal_BlurStyle, cap2 * 0.12))
+        c.drawRRect(skia.RRect.MakeRectXY(pr, cap2 * 0.3, cap2 * 0.3), pp)
     for k, ln in enumerate(lines):
         TY.draw(c, ln, W / 2, box.top() + cap2 + k * lh, cap2, style=style, weight=weight, align='center',
                 alpha=int(255 * a), shadow=0.95, tracking=0.015)

@@ -873,7 +873,7 @@ B('So he was hauled to the capital', 'list', until='While he was on his way', it
 B('While he was on his way', 'scene', bg='seoul_gwanghwamun', blur=5.0, gain=0.45, until='Meanwhile, his replacement',
   actors=[A(YI_SOLDIER, 960, R=110, pose='walk', expr=[(None, 'sad'), (T('his mother died'), 'cry')], enter=walk(T('on his way'), -300, 40))],
   tags=[tagp('NO TIME TO MOURN', 960, 440, T('keep going'))])
-B('his replacement sailed almost', 'stage', until='Out of a fleet',
+B('his replacement sailed almost', 'scene', bg='night_sea', gain=0.75, sat=0.7, blur=1.0, until='Out of a fleet',
   props=[P('turtle_ship', 200 + 210 * k, 560 + 140 * (k % 2), 105, acts=[act('move', T('straight into'), to=(700 + 210 * k, 560 + 140 * (k % 2)), dur=40)])
          for k in range(3)]
   + [P('jp_ship', 1480 + 150 * (k % 2), 380 + 170 * k, 100, flip=True, enter=pop(T('Japanese ambush', off=2 * k))) for k in range(4)],
@@ -901,18 +901,18 @@ B('He picked his battlefield', 'photo', img='myeongnyang', mode='full', focus=(0
   caption='THE MYEONGNYANG STRAIT', cap_at=T('narrow strait'),
   marks=[('arrow', 0.30, 0.35, 0.70, 0.30, T('fiercest tidal')), ('arrow', 0.75, 0.55, 0.40, 0.62, T('tidal currents'))])
 HO("And here's the part that gets me", framing='CU', expr='talk', pose='point')
-B('most of his captains hung back', 'stage', until='So for a while',
+B('most of his captains hung back', 'scene', bg='night_sea', gain=0.75, sat=0.7, blur=1.0, until='So for a while',
   props=[P('turtle_ship', 1250 + 230 * k, 520 + 170 * k, 100, flip=True, acts=[act('bob', 0)]) for k in range(3)],
   actors=[A(YI_SOLDIER, 600, R=110, expr='nervous', acts=[act('shake', T('terrified'), dur=20)])],
   tags=[tagp('HIS CAPTAINS: NOPE', 1480, 360, T('hung back'))])
-B("Yi's flagship held off", 'stage', until='Then the tide turned',
+B("Yi's flagship held off", 'scene', bg='night_sea', gain=0.75, sat=0.7, blur=1.0, until='Then the tide turned',
   props=[P('turtle_ship', 520, 640, 160, acts=[act('bob', 0)])]
   + [P('jp_ship', 1160 + 150 * k, 330 + 150 * k, 105, flip=True, acts=[act('bob', 0)]) for k in range(5)]
   + [P('turtle_ship', 230, 330 + 560 * k, 95, enter=dict(kind='slide', at=T('found the nerve', off=3 * k), frm=-300, dur=14)) for k in range(2)],
   tags=[tagp('ALONE', 520, 460, T('pretty much alone'))])
 B('Then the tide turned', 'text', anim='slam', until='The Japanese ships started', lines=[('THE TIDE TURNED', 'white', 0.11 * H),
                                                                                        ('(LITERALLY)', 'red', 0.07 * H, T('turned', off=6))])
-B('The Japanese ships started drifting', 'stage', until='When it was over',
+B('The Japanese ships started drifting', 'scene', bg='night_sea', gain=0.75, sat=0.7, blur=1.0, until='When it was over',
   props=[P('jp_ship', 1000 + 200 * k, 380 + 150 * k, 110, flip=True,
            acts=[act('move', T('drifting backward'), to=(1180 + 200 * k, 420 + 130 * k), dur=40), act('shake', T('crashing'), dur=20)]) for k in range(4)]
   + [P('turtle_ship', 260 + 120 * k, 420 + 190 * k, 100, acts=[act('move', T('tore into'), to=(720 + 120 * k, 440 + 170 * k), dur=26)]) for k in range(3)],

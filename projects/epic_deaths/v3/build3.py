@@ -322,7 +322,7 @@ def compose(c, f, shot_, calls_on, stamps_on, qa=None, overlays_on=()):
         lines, cap, box = O.callout_layout(cl['text'])
         if ctx['photo']:
             c.drawImage(L.top_scrim(min(0.48, (box.bottom() + 0.1 * H) / H)), 0, 0)
-        O.callout(c, cl['text'], f - cl['f0'], style=cl.get('style', 'red'))
+        O.callout(c, cl['text'], f - cl['f0'], style=cl.get('style', 'red'), plate=ctx['photo'])
         if qa is not None and f - cl['f0'] in (5, 30):
             for kind, r in ctx['occ']:
                 if kind == 'face' and skia.Rect.Intersects(r, box):
@@ -363,8 +363,10 @@ def render(f_start, f_end, out, crf=18, preset='medium'):
         compose(surf.getCanvas(), f, sh, con, son, qa, [o for o in OVERLAYS if o['f0'] <= f < o['f1']])
         if TYQ.TEXT_LOG:
             for txt, capx, al in TYQ.TEXT_LOG:
-                if al >= 200 and capx < 48.5 and (txt, round(capx)) not in small:
-                    small[(txt, round(capx))] = f
+                if al >= 200:
+                    prev = small.get(txt)
+                    if prev is None or capx > prev[0]:
+                        small[txt] = (capx, f if prev is None else prev[1])
         TYQ.TEXT_LOG = None
         ff.stdin.write(surf.makeImageSnapshot().toarray().tobytes())
         if (f - f_start) % 600 == 0:
@@ -373,8 +375,9 @@ def render(f_start, f_end, out, crf=18, preset='medium'):
                   flush=True)
     ff.stdin.close()
     ff.wait()
-    for (txt, capx), f in sorted(small.items(), key=lambda kv: kv[1]):
-        qa.append(dict(f=f, tc=TL.tc(f), kind='small_text', text=txt, cap_px=capx))
+    for txt, (capx, f) in sorted(small.items(), key=lambda kv: kv[1][1]):
+        if capx < 48.5:                                  # never reaches 4.5 % H once settled (mid-pop frames ignored)
+            qa.append(dict(f=f, tc=TL.tc(f), kind='small_text', text=txt, cap_px=round(capx, 1)))
     json.dump(qa, open(out + '.qa.json', 'w'), indent=0)
     return out
 

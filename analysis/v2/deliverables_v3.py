@@ -25,12 +25,12 @@ def grab(path, t, h=360):
 
 
 def label(im, text, sub=None):
-    out = im.copy()
-    cv2.rectangle(out, (0, 0), (out.shape[1], 34), (0, 0, 0), -1)
-    cv2.putText(out, text, (10, 24), cv2.FONT_HERSHEY_SIMPLEX, 0.62, (255, 255, 255), 1, cv2.LINE_AA)
+    """Caption strip ABOVE the frame (never covering it)."""
+    strip = np.zeros((34, im.shape[1], 3), np.uint8)
+    cv2.putText(strip, text, (10, 24), cv2.FONT_HERSHEY_SIMPLEX, 0.62, (255, 255, 255), 1, cv2.LINE_AA)
     if sub:
-        cv2.putText(out, sub, (out.shape[1] - 150, 24), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 220, 255), 1, cv2.LINE_AA)
-    return out
+        cv2.putText(strip, sub, (strip.shape[1] - 150, 24), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 220, 255), 1, cv2.LINE_AA)
+    return np.vstack([strip, im])
 
 
 def our_moments():
