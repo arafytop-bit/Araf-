@@ -131,6 +131,10 @@ def _eye_shape(kind, cx, cy, side):
         return [Part(quad((cx - r, cy + r * 0.3), (cx, cy - r * 1.1), (cx + r, cy + r * 0.3)), ow=0.07, rim=False)]
     if kind == 'closed':
         return [Part(line((cx - r, cy), (cx + r, cy)), ow=0.065, rim=False)]
+    if kind == 'x':                        # knocked-out / dead cartoon eyes
+        rr = r * 0.95
+        return [Part(line((cx - rr, cy - rr), (cx + rr, cy + rr)), ow=0.07, rim=False),
+                Part(line((cx - rr, cy + rr), (cx + rr, cy - rr)), ow=0.07, rim=False)]
     raise ValueError(kind)
 
 
@@ -153,6 +157,9 @@ EXPR = {
     'skeptic': ('lid', 'skeptic', 'line', ()),
     'sleep': ('closed', None, None, ()),
     'dead': ('closed', None, 'wavy', ()),
+    'ko': ('x', None, 'wavy', ()),
+    'ko_grin': ('x', None, 'grin', ()),
+    'ko_o': ('x', None, 'o', ()),
 }
 
 for _k, _v in list(EXPR.items()):            # blink variants: same face, eyes closed

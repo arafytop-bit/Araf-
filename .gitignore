@@ -12,3 +12,4 @@ projects/*/assets/*.log
 projects/*/stems/
 .cache/
 projects/*/sound_events.json
+projects/*/thumbnails/*_master.png
