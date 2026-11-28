@@ -188,9 +188,9 @@ Fixes:
 - the 1080p master: Lanczos downscale, x264 CRF 16, BT.709 TV range, with the reference audio for timing (`work/hq/final/calibration_hq_1080p.mp4`, 150 frames);
 - the full-resolution side-by-side: reference 480p upscaled | rebuild, 3840×1080, with frame counters (`../calibration/calibration_hq_side_by_side.mp4`). It is reference-derived, so it is kept out of git.
 
-Encode check, PNG masters vs the same frames decoded from the MP4 (every 5th frame, 30 frames; `encode_check_final.json`):
+Encode check, PNG masters vs the same frames decoded from the MP4 (every 5th frame, 30 frames; `encode_check_final.json`, final v39 look):
 - mean pixel ΔE2000 **0.61**;
-- worst 8×8 block ΔE **3.2**, on a thin dark rule: 4:2:0 chroma bleed. 71 of 32,400 blocks exceed 2 and the mean block ΔE is 0.33;
-- mean RGB offset **+0.11 / +0.05 / +0.28**.
+- worst 8×8 block ΔE **3.2**, on thin dark line work (4:2:0 chroma bleed); the mean block ΔE is about 0.33;
+- mean RGB offset **+0.12 / +0.04 / +0.27**.
 
 Encoding doesn't shift colour.
