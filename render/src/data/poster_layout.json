@@ -4,36 +4,36 @@
  "items": {
   "WANTED": {
    "text": "WANTED",
-   "font_size_ref": 47.183,
-   "cap_ref": 33.5,
-   "tracking_em": 0.07,
+   "font_size_ref": 48.592,
+   "cap_ref": 34.5,
+   "tracking_em": 0.0972,
    "align": "centre",
    "x": 428,
-   "width_ref": 219.83,
+   "width_ref": 233.0,
    "container": [
-    304,
+    306,
     552
    ],
    "auto_shrunk": false,
-   "left": 318.09,
-   "right": 537.91,
+   "left": 311.5,
+   "right": 544.5,
    "inside": true
   },
   "NAME": {
    "text": "ARTHUR MORGAN",
    "font_size_ref": 24.648,
    "cap_ref": 17.5,
-   "tracking_em": 0.0,
+   "tracking_em": 0.0173,
    "align": "centre",
    "x": 428,
-   "width_ref": 214.88,
+   "width_ref": 220.0,
    "container": [
-    304,
+    306,
     552
    ],
    "auto_shrunk": false,
-   "left": 320.56,
-   "right": 535.44,
+   "left": 318.0,
+   "right": 538.0,
    "inside": true
   },
   "WANTED_FOR": {
@@ -57,51 +57,51 @@
    "text": "TRAINS",
    "font_size_ref": 22.535,
    "cap_ref": 16,
-   "tracking_em": 0.0,
+   "tracking_em": 0.04,
    "align": "left",
    "x": 361,
-   "width_ref": 83.88,
+   "width_ref": 88.38,
    "container": [
     361,
-    548
+    526
    ],
    "auto_shrunk": false,
    "left": 361,
-   "right": 444.88,
+   "right": 449.38,
    "inside": true
   },
   "ITEM1": {
    "text": "BANKS",
    "font_size_ref": 22.535,
    "cap_ref": 16,
-   "tracking_em": 0.0,
+   "tracking_em": 0.04,
    "align": "left",
    "x": 361,
-   "width_ref": 76.89,
+   "width_ref": 80.5,
    "container": [
     361,
-    548
+    526
    ],
    "auto_shrunk": false,
    "left": 361,
-   "right": 437.89,
+   "right": 441.5,
    "inside": true
   },
   "ITEM2": {
    "text": "HALF THE WEST",
-   "font_size_ref": 22.535,
-   "cap_ref": 16,
-   "tracking_em": 0.0,
+   "font_size_ref": 20.058,
+   "cap_ref": 14.24,
+   "tracking_em": 0.04,
    "align": "left",
    "x": 361,
-   "width_ref": 174.56,
+   "width_ref": 165.0,
    "container": [
     361,
-    548
+    526
    ],
-   "auto_shrunk": false,
+   "auto_shrunk": true,
    "left": 361,
-   "right": 535.56,
+   "right": 526.0,
    "inside": true
   },
   "REWARD": {

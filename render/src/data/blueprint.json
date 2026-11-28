@@ -18353,13 +18353,13 @@
       "f": 68,
       "s": 1.2199,
       "tx": -1.72,
-      "ty": -15.58
+      "ty": -11.58
      },
      {
       "f": 72,
       "s": 1.0005,
       "tx": -1.22,
-      "ty": -3.39,
+      "ty": 0.61,
       "ease": [
        0.726,
        -0.047,
@@ -18371,7 +18371,7 @@
       "f": 82,
       "s": 1.0,
       "tx": -1.5,
-      "ty": -2.5,
+      "ty": 1.5,
       "ease": "linear"
      },
      {
@@ -18709,7 +18709,11 @@
      1.2
     ],
     "dE2000_region_means_max": 6.0,
-    "measured_at": "reference scale (854x480) on matching regions; script analysis/scripts/b04_lookdev_metrics.py"
+    "measured_at": "reference scale (854x480) on matching regions; script analysis/scripts/b04_lookdev_metrics.py",
+    "edge_density_definition": "Canny on luma, averaged over threshold pairs 30/75, 45/110, 60/150, 80/200 (a single 60/150 pair is unstable: a ~5-level change in a wall seam flipped the ratio 1.01 -> 0.24)",
+    "fine_texture_definition": "std of luma minus Gaussian(sigma 1 ref px)",
+    "regions_note": "keep measurement boxes off thin features that sit on the box edge (a 1 px offset of a dashed rule swung one region 0.4 -> 2.3); exclude pending illustrated art and the reference character",
+    "blind_review": "fresh subagent, unlabeled A/B crop pairs at equal scale (2-3x), key stored outside its reach; iterate until only expected differences remain"
    },
    "blind_review": "fresh subagent compares unlabeled A/B crop pairs (same scale and upscale for both); iterate until only expected differences remain (different character, different words)"
   },

@@ -1,6 +1,8 @@
 """Art-director metrics: rebuild vs reference at the reference's native scale (854x480).
 
-Per region: edge density (Canny 60/150), fine texture (std of luma minus Gaussian(1.0)), RMS contrast (std luma/255),
+Per region: edge density (Canny, averaged over threshold pairs 30/75, 45/110, 60/150, 80/200 -- a single 60/150 pair flipped the
+wall from 1.01 to 0.24 when a seam's core changed by ~5 levels, so one threshold is not a stable measure; the single-pair value is kept
+in the JSON as edge_density_c60), fine texture (std of luma minus Gaussian(1.0)), RMS contrast (std luma/255),
 colourfulness (Hasler-Suesstrunk), mean CIELAB and CIEDE2000 between region means. Targets: ratios 0.8-1.2, dE00 < 6.
 usage: python b04_lookdev_metrics.py <tag>   (reads work/hq/<tag>_f<frame>.png produced by the renderer)
 """
@@ -38,11 +40,13 @@ def de2000(a, b):
 
 def metrics(rgb):
     L = 0.2126*rgb[..., 0]+0.7152*rgb[..., 1]+0.0722*rgb[..., 2]
-    e = cv2.Canny(L.astype(np.uint8), 60, 150)
+    L8 = L.astype(np.uint8)
+    e_multi = float(np.mean([(cv2.Canny(L8, lo, hi) > 0).mean() for lo, hi in ((30, 75), (45, 110), (60, 150), (80, 200))]))
+    e60 = float((cv2.Canny(L8, 60, 150) > 0).mean())
     fine = L - cv2.GaussianBlur(L, (0, 0), 1.0)
     rg = rgb[..., 0]-rgb[..., 1]; yb = 0.5*(rgb[..., 0]+rgb[..., 1])-rgb[..., 2]
     colf = np.sqrt(rg.std()**2+yb.std()**2)+0.3*np.sqrt(rg.mean()**2+yb.mean()**2)
-    return dict(edge_density=float((e > 0).mean()), fine_texture=float(fine.std()), contrast=float(L.std()/255), colorfulness=float(colf), lab=srgb_to_lab(rgb.reshape(-1, 3)).mean(0))
+    return dict(edge_density=e_multi, edge_density_c60=e60, fine_texture=float(fine.std()), contrast=float(L.std()/255), colorfulness=float(colf), lab=srgb_to_lab(rgb.reshape(-1, 3)).mean(0))
 
 def load_ours(path):
     im = cv2.imread(path)[:, :, ::-1].astype(np.float32)
@@ -51,9 +55,9 @@ def load_ref(fr):
     return cv2.imread(f'work/frames/f_{fr:05d}.png')[:, :, ::-1].astype(np.float32)
 
 SCENES = {
-  'poster_f143': dict(frame=143, regions={'list_block (text+icons+paper)': (280, 150, 560, 330), 'paper (blank)': (470, 158, 552, 200), 'wood (left wall)': (20, 60, 220, 420), 'whole_frame': (0, 0, 854, 480)}, de=['paper (blank)', 'wood (left wall)']),
+  'poster_f143': dict(frame=143, regions={'list_block (text+icons+paper)': (280, 150, 560, 330), 'paper (blank)': (470, 158, 552, 195), 'wood (left wall)': (20, 60, 220, 420), 'whole_frame': (0, 0, 854, 480)}, de=['paper (blank)', 'wood (left wall)']),
   'poster_f075': dict(frame=75, regions={'paper (list area, empty)': (330, 290, 530, 410), 'wood (left wall)': (0, 0, 250, 480), 'poster_top (WANTED)': (300, 40, 556, 100), 'whole_frame_minus_portrait': None}, de=['paper (list area, empty)', 'wood (left wall)']),
-  'portrait_f030': dict(frame=30, regions={'sky': (0, 0, 300, 200), 'mountains': (120, 228, 255, 330), 'mesa': (0, 280, 105, 340), 'ground': (0, 372, 250, 470), 'background_left_of_hero': (0, 0, 300, 480)}, de=['sky', 'mountains', 'ground']),
+  'portrait_f030': dict(frame=30, regions={'sky': (0, 0, 300, 200), 'mountains': (120, 228, 255, 330), 'mesa': (0, 280, 105, 340), 'ground': (0, 372, 250, 470), 'background_left_of_hero': (0, 0, 265, 480)}, de=['sky', 'mountains', 'ground']),
 }
 rows = []
 for name, sc in SCENES.items():
@@ -71,6 +75,7 @@ for name, sc in SCENES.items():
         row = dict(scene=name, region=rn)
         for k in ['edge_density', 'fine_texture', 'contrast', 'colorfulness']:
             row[k+'_ratio'] = round(mo[k]/max(mr[k], 1e-6), 2); row[k+'_ok'] = 0.8 <= row[k+'_ratio'] <= 1.2
+        row['edge_density_c60_ratio'] = round(mo['edge_density_c60']/max(mr['edge_density_c60'], 1e-6), 2)
         row['dE00'] = round(de2000(mr['lab'], mo['lab']), 2); row['dE_target'] = rn in sc['de']; row['dE_ok'] = (row['dE00'] < 6) if row['dE_target'] else None
         row['ref_lab'] = [round(float(v), 1) for v in mr['lab']]; row['ours_lab'] = [round(float(v), 1) for v in mo['lab']]
         rows.append(row)
