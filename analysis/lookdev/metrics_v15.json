@@ -1,0 +1,327 @@
+[
+ {
+  "scene": "poster_f143",
+  "region": "list_block (text+icons+paper)",
+  "edge_density_ratio": 1.02,
+  "edge_density_ok": true,
+  "fine_texture_ratio": 0.79,
+  "fine_texture_ok": false,
+  "contrast_ratio": 0.92,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.96,
+  "colorfulness_ok": true,
+  "dE00": 2.12,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   70.8,
+   7.3,
+   33.3
+  ],
+  "ours_lab": [
+   68.3,
+   6.7,
+   34.7
+  ]
+ },
+ {
+  "scene": "poster_f143",
+  "region": "paper (blank)",
+  "edge_density_ratio": 2.14,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 1.38,
+  "fine_texture_ok": false,
+  "contrast_ratio": 0.88,
+  "contrast_ok": true,
+  "colorfulness_ratio": 1.0,
+  "colorfulness_ok": true,
+  "dE00": 3.9,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   82.8,
+   4.3,
+   35.2
+  ],
+  "ours_lab": [
+   77.3,
+   4.7,
+   37.9
+  ]
+ },
+ {
+  "scene": "poster_f143",
+  "region": "wood (left wall)",
+  "edge_density_ratio": 0.43,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 0.67,
+  "fine_texture_ok": false,
+  "contrast_ratio": 1.09,
+  "contrast_ok": true,
+  "colorfulness_ratio": 1.11,
+  "colorfulness_ok": true,
+  "dE00": 0.74,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   26.6,
+   20.4,
+   30.6
+  ],
+  "ours_lab": [
+   26.6,
+   19.1,
+   29.6
+  ]
+ },
+ {
+  "scene": "poster_f143",
+  "region": "whole_frame",
+  "edge_density_ratio": 0.76,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 0.84,
+  "fine_texture_ok": true,
+  "contrast_ratio": 0.92,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.99,
+  "colorfulness_ok": true,
+  "dE00": 4.04,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   39.4,
+   14.2,
+   28.6
+  ],
+  "ours_lab": [
+   43.5,
+   13.8,
+   31.7
+  ]
+ },
+ {
+  "scene": "poster_f075",
+  "region": "paper (list area, empty)",
+  "edge_density_ratio": 0.98,
+  "edge_density_ok": true,
+  "fine_texture_ratio": 1.22,
+  "fine_texture_ok": false,
+  "contrast_ratio": 0.7,
+  "contrast_ok": false,
+  "colorfulness_ratio": 0.94,
+  "colorfulness_ok": true,
+  "dE00": 2.79,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   81.4,
+   4.0,
+   36.4
+  ],
+  "ours_lab": [
+   77.5,
+   3.9,
+   37.5
+  ]
+ },
+ {
+  "scene": "poster_f075",
+  "region": "wood (left wall)",
+  "edge_density_ratio": 0.77,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 0.94,
+  "fine_texture_ok": true,
+  "contrast_ratio": 1.48,
+  "contrast_ok": false,
+  "colorfulness_ratio": 1.15,
+  "colorfulness_ok": true,
+  "dE00": 0.55,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   25.6,
+   20.1,
+   29.9
+  ],
+  "ours_lab": [
+   25.5,
+   19.1,
+   29.0
+  ]
+ },
+ {
+  "scene": "poster_f075",
+  "region": "poster_top (WANTED)",
+  "edge_density_ratio": 0.74,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 0.8,
+  "fine_texture_ok": true,
+  "contrast_ratio": 0.86,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.98,
+  "colorfulness_ok": true,
+  "dE00": 2.36,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   54.2,
+   5.6,
+   24.1
+  ],
+  "ours_lab": [
+   54.7,
+   5.1,
+   28.7
+  ]
+ },
+ {
+  "scene": "poster_f075",
+  "region": "whole_frame_minus_portrait",
+  "edge_density_ratio": 1.07,
+  "edge_density_ok": true,
+  "fine_texture_ratio": 0.94,
+  "fine_texture_ok": true,
+  "contrast_ratio": 0.89,
+  "contrast_ok": true,
+  "colorfulness_ratio": 1.09,
+  "colorfulness_ok": true,
+  "dE00": 3.41,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   35.7,
+   15.5,
+   28.7
+  ],
+  "ours_lab": [
+   39.3,
+   15.6,
+   31.8
+  ]
+ },
+ {
+  "scene": "portrait_f030",
+  "region": "sky",
+  "edge_density_ratio": 0.73,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 0.7,
+  "fine_texture_ok": false,
+  "contrast_ratio": 0.89,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.86,
+  "colorfulness_ok": true,
+  "dE00": 2.16,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   41.5,
+   30.3,
+   23.0
+  ],
+  "ours_lab": [
+   40.5,
+   26.6,
+   22.8
+  ]
+ },
+ {
+  "scene": "portrait_f030",
+  "region": "mountains",
+  "edge_density_ratio": 0.76,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 1.0,
+  "fine_texture_ok": true,
+  "contrast_ratio": 0.73,
+  "contrast_ok": false,
+  "colorfulness_ratio": 0.89,
+  "colorfulness_ok": true,
+  "dE00": 2.61,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   50.9,
+   24.7,
+   28.4
+  ],
+  "ours_lab": [
+   51.7,
+   21.6,
+   23.2
+  ]
+ },
+ {
+  "scene": "portrait_f030",
+  "region": "mesa",
+  "edge_density_ratio": 0.53,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 1.27,
+  "fine_texture_ok": false,
+  "contrast_ratio": 1.8,
+  "contrast_ok": false,
+  "colorfulness_ratio": 1.09,
+  "colorfulness_ok": true,
+  "dE00": 0.92,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   21.1,
+   25.5,
+   20.9
+  ],
+  "ours_lab": [
+   21.2,
+   24.7,
+   19.2
+  ]
+ },
+ {
+  "scene": "portrait_f030",
+  "region": "ground",
+  "edge_density_ratio": 0.93,
+  "edge_density_ok": true,
+  "fine_texture_ratio": 1.43,
+  "fine_texture_ok": false,
+  "contrast_ratio": 1.1,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.96,
+  "colorfulness_ok": true,
+  "dE00": 1.95,
+  "dE_target": true,
+  "dE_ok": true,
+  "ref_lab": [
+   24.7,
+   17.7,
+   24.1
+  ],
+  "ours_lab": [
+   26.0,
+   19.8,
+   23.3
+  ]
+ },
+ {
+  "scene": "portrait_f030",
+  "region": "background_left_of_hero",
+  "edge_density_ratio": 0.78,
+  "edge_density_ok": false,
+  "fine_texture_ratio": 1.17,
+  "fine_texture_ok": true,
+  "contrast_ratio": 0.96,
+  "contrast_ok": true,
+  "colorfulness_ratio": 0.85,
+  "colorfulness_ok": true,
+  "dE00": 1.09,
+  "dE_target": false,
+  "dE_ok": null,
+  "ref_lab": [
+   40.7,
+   25.4,
+   26.9
+  ],
+  "ours_lab": [
+   40.8,
+   23.2,
+   25.3
+  ]
+ }
+]

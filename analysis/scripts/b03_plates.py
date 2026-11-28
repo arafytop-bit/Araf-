@@ -66,12 +66,12 @@ for i, (a, b) in enumerate(zip(edges[:-1], edges[1:])):
 wall *= (1 + 0.006*grainN)[..., None]
 wall += fine[..., None]*0.6
 # grain streaks: sparse thin darker wavy lines
-for _ in range(int(WW/plank_w*3)):
+for _ in range(int(WW/plank_w*6)):
     x = rng.uniform(0, WW); y = rng.uniform(0, WH); L = rng.uniform(55, 240)*S/2.25*2.25
     pts = []
     for s_ in np.linspace(0, 1, 30):
         pts.append((x + 2.5*np.sin(s_*6+rng.uniform(0, 6)), y + s_*L))
-    cv2.polylines(wall, [np.int32(pts)], False, (wall[int(min(WH-1, y)), int(min(WW-1, x))]*0.9).tolist(), thickness=2, lineType=cv2.LINE_AA)
+    cv2.polylines(wall, [np.int32(pts)], False, (wall[int(min(WH-1, y)), int(min(WW-1, x))]*0.86).tolist(), thickness=2, lineType=cv2.LINE_AA)
 # gaps (dark) with a light lip on the right side
 for e in edges:
     e = int(e)
