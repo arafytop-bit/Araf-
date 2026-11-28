@@ -40,7 +40,9 @@
    "Never build a large glow or vignette from an 8-bit SVG/CSS gradient: compute it in float and dither it into an image (b03_plates.py); a coherent 1-level ring survives a +-1.5-level dither after the 2x downscale",
    "Thin structural lines that must stay crisp under camera zoom (plank seams, rules) are vector strokes, not baked into textures",
    "Verify every reviewer claim about the reference by measurement before changing anything (three blind-review rounds contradicted each other on paper burn, pin, knots, bird weight and tear)",
-   "Screen-space vignettes go beneath foreground props that carry their own lighting (the wanted poster), above the background they darken"
+   "Screen-space vignettes go beneath foreground props that carry their own lighting (the wanted poster), above the background they darken",
+   "Measure positions only in rows/columns free of lines that cross the feature (the reference's frame line through REWARD once contaminated a baseline measurement by 3.5 px)",
+   "Light on a prop can be partly screen-space: check the same prop point at two camera framings before baking a lighting correction into its texture"
   ]
  },
  "render_settings": {

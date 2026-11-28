@@ -54,7 +54,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 ## 5. Palettes per scene (measured)
 
 - **Portrait: sky.** Vertical gradient top → horizon (every 25 px at 480p): `#412334 #522634 #6a3036 #833c38 #9c473a #b5533c #c76340 #d96f40 #e47b44 #e78844`. Near the sun: `#f0964e` → `#fbb15c`. Hue runs 322° (purple) through magenta and 0° to 24° (orange); saturation 135 → 183/255; value 54 → 220/255.
-  - Sky top `#3d1d2e` (darker than the earlier stop). Sun disc `#feecc3`, centre **(324.6, 288.9)**, radius **36** at 480p; ring `#fec26a` (re-measured in round 3, more saturated than the bloom-washed `#fedd90`), extending to r ≈ 50 with a soft outer falloff.
+  - Sky top `#3d1d2e` (darker than the earlier stop). Near the sun the sky stays **vivid orange** (`#f9a959` at (250, 230)), never beige: sun glows are saturated orange, screen-blended. Sun disc `#feecc3`, centre **(324.6, 288.9)**, radius **36** at 480p; ring `#fec26a` (re-measured in round 3, more saturated than the bloom-washed `#fedd90`), extending to r ≈ 50 with a soft outer falloff.
 - **Portrait: land.**
   - Mountains (measured at f30 on the faces, not the outline): lit face `#864038` → `#a0563d` toward the base, shade face `#7b392f` → `#9c5338`; whole-body median `#823b36` (hue 6°). Each peak ends in a narrow spike. Red-brown burgundy, **not** pink-mauve; the far range is the same family, only slightly lighter, and is **not** washed out by haze.
   - Snow: lit `#e5beb4`, shade `#bc9898`. **Large two-tone caps** covering the top quarter to third of each peak, with 2–3 deep spikes (≈ 20 px at 480p) on the bottom edge.
@@ -77,7 +77,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 | God rays | Re-measured with a polar brightness profile around the sun at f30 (row-detrended): rays at **76°** (wide, ≈ 12° FWHM), **100°** and **123°** (narrow, ≈ 5–6°), a faint one at 150°, and two more at **≈ 57° and 36°** that show above the hero's hat. Peaks +10…+12 luma. They start ≈ 60 px from the sun and stay strong to the top edge (they are not wedges glowing from the disc). Slow sway ±1.2° over 3 s |
 | Haze | Each mountain layer further back is lighter and less saturated: far range +18% value / −25% saturation vs mid range. A warm haze band `#f0964e` at 25% sits along the horizon |
 | Dust specks | **Bokeh orbs**: a bright core plus a soft, flat halo disc (r ≈ 5–7 px at 480p, visible rim). About **20 orbs** (> +12 luma) in the open sky, most of them left of the hero; fairly uniform in size. Radial profile at 480p, peak-normalised: r1 0.75, r2 0.45, r3 0.2, then a plateau ≈ 0.1 to r6 (the disc); peak +63…+78 luma over the local background, warm white `#fff0d0`. Walls: about 10 orbs per 250 × 480 px of open wall, same construction, smaller. Drift: median 0.16 px/frame, 90th percentile 2.7 px/frame, mostly sideways with slight upward bias. Gentle twinkle (opacity ±25%, 1–3 s period) |
-| Birds | 3 thin "m" silhouettes **25–35 px** wide, stroke ≈ 2 px (0.8–1.2 ref px, slightly heavier at the body), `#3a1e22`. Flap at about 2.5 Hz, drift about 0.3 px/frame |
+| Birds | 3 thin, **uneven** "m" strokes about **21 px wide at 480p** (≈ 47 px at 1080p; measured), each tilted a few degrees with unequal wings; stroke 0.8–1.2 ref px, `#3a1e22`. Flap at about 2.5 Hz, drift about 0.3 px/frame |
 | Vignette | Wall scene, fitted to the reference's 2D luma map at f075 (blocks outside the poster, RMS error 0.05): **elliptical**, centre (365, 252), radii 472 × 266 (480p), darkening factor 1 − 0.435·min(t, 1.6)^1.77. It darkens the wall and side posters but **not the main poster**, which keeps its own lit-centre/burn look. Portrait: radial, centre (427, 250), 0.08 at 0.6 r → 0.42 at r = 600. Median corner/centre over the video is 0.63 |
 | Warm light pool | Interiors and props: a centre ellipse +10–15% brighter, warm `#ffb060`, soft-light blend |
 | Grain | Not visible (< 1.5 luma std at 480p, compression-limited). Add **≤ 1.0%** monochrome grain only to stop gradient banding, and dither every gradient. **Never build a large glow or vignette from an 8-bit SVG radial gradient**: compute it in float and dither it into an image (8-bit SVG glows left 1-level contour rings) |
@@ -87,11 +87,11 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 
 - **Paper (posters, notebook, letters).**
   - Base `#e6c181`. Large soft **stains** (round blobs 90–200 px across, low contrast, low-frequency luma std ≈ 11, p5–p95 range 36) in `#deb876`/`#d0a865` with a few lighter patches `#f1d294`.
-  - **Lit centre:** even from left to right, falling off toward the bottom. Reference f075: mid-left margin `#f1ce91`, list area `#e9c586`, top strip `#dcb57f`, band above the bottom edge `#b99558`.
-  - **Burn** to ochre `#a8662c`: deep along the bottom (≈ 45 ref px), narrow along the top and sides (≈ 12 ref px), with a thin light lip at the torn edge.
+  - **Lit centre:** a broad light centred left of the poster's centre, at about world (400, 290). Measured as the 85th-percentile luma field at f075, which ignores stains and text: top-right corner −16%, bottom corners −12%, centre-left +8% relative to an evenly lit sheet. It is partly screen-space; the same paper point is ~4% darker at f143. Robust fit in `lookdev/paper_light_fit.json`.
+  - **Burn** to a yellow ochre `#a8742e`: deep along the bottom (≈ 45 ref px), narrow along the top and sides (≈ 12 ref px; the mid-height left edge measures flat in the reference), with a light lip at the torn edge.
   - **Stains:** translucent ellipses with fairly crisp edges (≈ 1.5 px soft). Stain/paper ratio per channel in the reference: 0.90 / 0.85 / 0.76 (they darken blue most, so they read warmer, not grey).
   - A **faint centre fold**: a 2 px vertical line, `#c9a56a` at 50%, plus a faint horizontal fold.
-  - **Torn edges:** smooth, gently wavy on all four sides (the bottom is not ragged; it is a wave over a compact near-black shadow band, luma ≈ 33 just below the edge). A **triangular notch** (≈ 30 ref px wide × 18 deep) near the bottom right. The bottom edge sits at y ≈ 452–456 at f075 (≈ 14 px below the outer frame line).
+  - **Torn edges:** gently wavy, with larger low-frequency waves along the top and a more torn right edge. The bottom is not ragged: it is a wave with a light lip, over a compact dark shadow band (luma ≈ 25–33 for ≈ 10 px below the edge, then the planks show). A **triangular notch** (≈ 40 ref px wide × 18 deep) near the bottom right. The bottom edge sits at y ≈ 452–456 at f075 (≈ 14 px below the outer frame line).
   - **Nail** at top centre: a dark grey-violet dome `#3e3846`, r ≈ 5 ref px, with a thick dark outline (1.4 px), a soft top-left highlight and a faint light ring on the paper around it.
   - **Drop shadow** on the wall: a tight deep one offset (+5, +8) ref px, blur 2.6, `#120400` at 90%, plus a wide ambient one (+3, +6), blur 9, 45%. The right and bottom edges show a clear dark band.
 - **Printed ink.**
@@ -99,10 +99,10 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
   - Red ink: reward value `#79220c` (measured), solid with slight edge roughness; badges `#9a2a14`, clean rings.
   - Poster portraits are **monochrome prints** of the illustrated character: sepia duotone `#2a160a` → `#d9b47a`, contrast +20%, multiplied over the paper texture.
 - **Wood wall.**
-  - Vertical planks **150 px** wide (66.7 px at 480p), plank-to-plank luma ±3, rust-brown base `#843e16`/`#7c3a14`/`#883f18`.
+  - Vertical planks **150 px** wide (66.7 px at 480p), plank-to-plank luma within ±1.5%, **amber**-brown base `#84431a`/`#804118`/`#86441a` (hue 24°; measured), with soft horizontal banding inside the planks.
   - **Seams** (cross-section at f075, 480p): a faint +4 light rim, a **≈ 2 px dark core** (min ≈ 30 on a ≈ 60 plank), then a **soft light lip ≈ 4–5 px wide peaking +12…+17**. Draw them as vector strokes so they stay crisp at every camera zoom (baked into a texture they go soft at the 1.41× push-in).
-  - **Grain:** thin **straight** darker lines, sparse (≈ 3 per plank per 960 px of height), 60–260 px long; very low mottling (≈ 1.5%).
-  - **Knots:** dark ellipses about 16×27 px `#2e1404` with only a faint rim.
+  - **Grain:** thin, nearly straight darker lines, ≈ 4 per plank per 960 px of height, 120–300 px long; very low mottling (≈ 1.5%).
+  - **Knots:** ellipses about 10×17 ref px with a **deep-maroon interior** `#4c1e12` and a **darker thin outline** `#2a0e06` (zoomed reference).
   - **Nail holes:** a row of 4 px dark dots, one per plank, at about 37% height.
   - **Even, symmetric light:** luma across the f075 wall at x = 0 / 240 / 600 / 840 is 43 / 59 / 60 / 32. A gentle radial vignette centred on the frame; a very weak warm pool (10%).
 - **Fabric and metal (character):** see the §3 table (pinstripes, stitching, brass buckle, concho).
@@ -114,7 +114,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 | Poster headline "WANTED" | **Bitter Black 900** (Bitter scored IoU 0.82, rank 1; 800 only matched with ink spread, 900 matches without; alt Roboto Slab 900) | Cap height **78 px** (34.5 ref px). Tracking **+0.097 em**, solved for the measured 233 ref px width. Solid near-black ink |
 | Poster name, list items | **Bitter Black 900** | Name cap 39 px, tracking +0.017 em (220 ref px wide); items cap **36 px** (16 ref px), tracking **+0.04 em** ("TRAINS"/"BANKS" are 5% wider than untracked Bitter). **"HALF THE WEST" is set smaller in the reference** (row height 19 vs 22 px): it auto-shrinks to the list's right limit (cap 14.2 ref px) |
 | "WANTED FOR", "REWARD" | Bitter 900 | Cap 15 px ("REWARD" 18 px), tracking +0.30 em, centred between rules. **Gap of 0.6 em on each side between text and rule**; the bottom frame lines break around the reward row |
-| Reward value "$????" | Bitter 900 | 95% of the 19.5 ref px cap, red `#7a1a0a` (glyph body measured `#882f0d`). A **narrow "$"** (80% width), then an **8 ref px gap**, then the "?"s (tracking +0.03 em); baseline y 446, ending well inside the frame break at 526. "REWARD" baseline y 438. The light halo and dark fringe seen around the reference's red glyphs are 4:2:0 chroma bleed in its 480p encode; don't copy them |
+| Reward value "$????" | Bitter 900 | 95% of the 19.5 ref px cap, red `#7a1a0a` (glyph body measured `#882f0d`). A **narrow "$"** (80% width), then an **8 ref px gap**, then the "?"s (tracking +0.03 em); baseline y 446, ending well inside the frame break at 526. "REWARD" baseline y 441: in the reference the thick outer frame line runs along its baseline and the thin one crosses its upper half. The light halo and dark fringe seen around the reference's red glyphs are 4:2:0 chroma bleed in its 480p encode; don't copy them |
 | Hero title | Alegreya ExtraBold 800 (alt Bitter 900, scored 0.82 alone) | See the report's §5 |
 | Tags, bubbles, labels | Alegreya Sans ExtraBold 800 | See the report |
 | Chapter titles | Grenze Gotisch 800 | See the report |
@@ -127,7 +127,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 
 ## 9. Icons
 
-- **Badge:** outer radius 16 ref px. Outer ring 2.4 ref px and inner ring 1 ref px at r 12.3 (a clear cream gap between them), clean (no speckle), in red `#a22e16`. Interior paper tinted `#f2c890` at 50%. The pictogram is small (about 2/3 of the inner ring's diameter).
+- **Badge:** centred 2.2 ref px above the text row's centre line (measured at f143). Outer radius 16 ref px. Outer ring 2.4 ref px and inner ring 1 ref px at r 12.3 (a clear cream gap between them), clean (no speckle), in red `#a22e16`. Interior paper tinted `#f2c890` at 50%. The pictogram is small (about 2/3 of the inner ring's diameter).
 - **Pictogram:** a **filled red silhouette** with knocked-out paper-colour details at 2–3 px.
   - Locomotive: side view with chimney, cab, boiler bands, 3 wheels and a cow-catcher.
   - Money bag: a tied sack with a knocked-out "$".

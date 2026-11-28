@@ -79,28 +79,28 @@
  },
  {
   "scene": "poster_f143",
-  "region": "whole_frame",
-  "edge_density_ratio": 0.79,
-  "edge_density_ok": false,
-  "fine_texture_ratio": 1.0,
+  "region": "whole_frame_minus_portrait",
+  "edge_density_ratio": 0.93,
+  "edge_density_ok": true,
+  "fine_texture_ratio": 1.07,
   "fine_texture_ok": true,
-  "contrast_ratio": 1.03,
+  "contrast_ratio": 0.99,
   "contrast_ok": true,
-  "colorfulness_ratio": 1.04,
+  "colorfulness_ratio": 1.06,
   "colorfulness_ok": true,
-  "edge_density_c60_ratio": 0.76,
-  "dE00": 1.65,
+  "edge_density_c60_ratio": 0.95,
+  "dE00": 0.33,
   "dE_target": false,
   "dE_ok": null,
   "ref_lab": [
-   39.4,
-   14.2,
-   28.6
+   39.8,
+   14.6,
+   29.3
   ],
   "ours_lab": [
-   41.2,
-   14.3,
-   29.5
+   39.5,
+   14.7,
+   29.1
   ]
  },
  {

@@ -50,11 +50,11 @@ def radial(cx, cy, r, st):            # st: [(offset, '#hex', opacity)] -> (rgb 
 def screen(b, c, a):                  # b, c in 0..255; a = alpha 0..1 (SVG mix-blend-mode screen with element opacity)
     sc = 255 - (255-b)*(255-c)/255; return b + (sc-b)*a[..., None]
 def over(b, c, a): return b*(1-a[..., None]) + c*a[..., None]
-c_, a_ = radial(0, 0, 330, [(0, '#14041a', 0.28), (1, '#14041a', 0)]); sky = over(sky, c_, a_)                      # tlDark
+c_, a_ = radial(0, 0, 330, [(0, '#14041a', 0.18), (1, '#14041a', 0)]); sky = over(sky, c_, a_)                      # tlDark
 inside = lambda cx, cy, r: (np.sqrt((XX-cx*k)**2 + (YY-cy*k)**2) <= r*k).astype(np.float32)
-c_, a_ = radial(360, 300, 230, [(0, '#ffb070', 0.5), (1, '#ff9a50', 0)]); sky = screen(sky, c_, a_*0.7*inside(360, 300, 230))   # hazeGlow
-disc = cv2.GaussianBlur(inside(325, 289.5, 108), (0, 0), 2.2*k); sky = screen(sky, hx('#ffd8a0')[None, None, :], disc*0.1)          # halo disc (soft2)
-c_, a_ = radial(325, 289.5, 130, [(0, '#ffd890', 0.55), (0.45, '#ffb868', 0.22), (1, '#ff9850', 0)]); sky = screen(sky, c_, a_*0.8*inside(325, 289.5, 130))  # bloomWide
+c_, a_ = radial(360, 300, 280, [(0, '#ff9c48', 0.5), (1, '#ff8a3c', 0)]); sky = screen(sky, c_, a_*0.75*inside(360, 300, 280))   # hazeGlow
+disc = cv2.GaussianBlur(inside(325, 289.5, 108), (0, 0), 3.5*k); sky = screen(sky, hx('#ffc880')[None, None, :], disc*0.1)          # halo disc (soft2)
+c_, a_ = radial(325, 289.5, 130, [(0, '#ffc870', 0.55), (0.45, '#ffa850', 0.22), (1, '#ff8c40', 0)]); sky = screen(sky, c_, a_*0.8*inside(325, 289.5, 130))  # bloomWide
 save(sky, f'{OUT}/sky_portrait.png')
 # tight sun bloom (drawn over the disc): premultiplied screen layer, black = no effect
 c_, a_ = radial(325, 289.5, 50, [(0, '#fff6d6', 0.95), (0.55, '#ffe3a0', 0.55), (1, '#ffc070', 0)])
@@ -80,7 +80,7 @@ S = 3; X0, X1, Y0, Y1 = -427, 1281, -240, 720
 WW, WH = (X1-X0)*S, (Y1-Y0)*S
 rng = np.random.default_rng(11)
 plank_w = 66.7*S
-tones = [hx('#843e16'), hx('#7c3a14'), hx('#883f18'), hx('#803c16'), hx('#7a3814'), hx('#863e18')]
+tones = [hx('#84431a'), hx('#804118'), hx('#86441a'), hx('#824218'), hx('#7e4018'), hx('#85431a')]
 wall = np.zeros((WH, WW, 3), np.float32)
 # plank boundaries aligned with the reference gap positions (x = 45,112,178,245 ref at frame 75 -> period 66.7, phase 45)
 first = (45 - X0) % 66.7
@@ -90,17 +90,17 @@ fine = fbm(WH, WW, 6, 3, seed=6)
 for i, (a, b) in enumerate(zip(edges[:-1], edges[1:])):
     a0, b0 = int(max(0, a)), int(min(WW, b))
     if b0 <= a0: continue
-    t = tones[rng.integers(len(tones))] * (1 + rng.uniform(-0.03, 0.03))
+    t = tones[rng.integers(len(tones))] * (1 + rng.uniform(-0.015, 0.015))
     wall[:, a0:b0] = t
     # subtle per-plank vertical shading (slightly darker towards both edges)
     xs = (np.arange(a0, b0) - a)/plank_w
     edge_d = np.minimum(np.arange(a0, b0) - a, b - np.arange(a0, b0))
     wall[:, a0:b0] *= ((1 - 0.03*np.abs(xs-0.5)*2) * (1 - 0.08*np.clip(1 - edge_d/14, 0, 1)))[None, :, None]
-wall *= (1 + 0.008*grainN + 0.015*fbm(WH, WW, 120, 3, seed=19))[..., None]
+wall *= (1 + 0.004*grainN + 0.015*fbm(WH, WW, 120, 3, seed=19) + 0.02*fbm(WH, WW, 90, 3, seed=23, aniso=(3.0, 0.25)))[..., None]   # + soft horizontal banding
 wall += fine[..., None]*0.2
 # grain streaks: sparse thin darker wavy lines
-for _ in range(int(WW/plank_w*3)):
-    x = rng.uniform(0, WW); y = rng.uniform(0, WH); L = rng.uniform(60, 260)*S
+for _ in range(int(WW/plank_w*4)):
+    x = rng.uniform(0, WW); y = rng.uniform(0, WH); L = rng.uniform(120, 300)*S
     ph = rng.uniform(0, 6)
     pts = [(x + 0.7*np.sin(s_*3 + ph), y + s_*L) for s_ in np.linspace(0, 1, 30)]   # straight, thin vertical grain lines (reference)
     cv2.polylines(wall, [np.int32(pts)], False, (wall[int(min(WH-1, y)), int(min(WW-1, x))]*0.83).tolist(), thickness=2, lineType=cv2.LINE_AA)
@@ -109,8 +109,8 @@ for _ in range(int(WW/plank_w*3)):
 for (kx, ky) in [(87, 28), (218, 477), (-260, 330), (640, -150), (1050, 120), (420, 610), (-120, -60), (930, 560)]:
     cx, cy = int((kx-X0)*S), int((ky-Y0)*S)
     kn = np.zeros(wall.shape[:2], np.float32); cv2.ellipse(kn, (cx, cy), (15, 26), rng.uniform(-8, 8), 0, 360, 1.0, -1, cv2.LINE_AA)
-    kn = cv2.GaussianBlur(kn, (0, 0), 2.2); wall = wall*(1-0.9*kn[..., None]) + hx('#2e1404')*0.9*kn[..., None]
-    cv2.ellipse(wall, (cx, cy), (18, 30), 0, 0, 360, (hx('#6e3412')).tolist(), 2, cv2.LINE_AA)
+    kn = cv2.GaussianBlur(kn, (0, 0), 1.2); wall = wall*(1-0.85*kn[..., None]) + hx('#4c1e12')*0.85*kn[..., None]   # deep maroon interior
+    cv2.ellipse(wall, (cx, cy), (15, 26), 0, 0, 360, (hx('#2a0e06')).tolist(), 3, cv2.LINE_AA)                  # darker thin outline (reference)
 # nail-hole row at y=272 ref, one per plank, plus a second row near the top
 for e in edges:
     for yy_ in (272, -150, 640):
@@ -124,13 +124,16 @@ wall = cv2.GaussianBlur(wall, (0, 0), 0.6)
 save(wall, f'{OUT}/wall.png')
 
 # ---------------- paper ----------------
-def paper(seed, w_ref=315.3, h_ref=453.3, notch=True, aged=1.0, avoid=None):
+def paper(seed, w_ref=315.3, h_ref=453.3, notch=True, aged=1.0, avoid=None, light=None):
     rng = np.random.default_rng(seed); w, h = int(w_ref*S), int(h_ref*S)
     gy = np.linspace(0, 1, h)[:, None, None]
     img = (hx('#ecca86')*(1-gy*0.4) + hx('#e8c27e')*gy*0.4) * np.ones((h, w, 3), np.float32)
     yy, xx = np.mgrid[0:h, 0:w]
     centre = np.exp(-(((xx-w/2)/(0.9*w))**2 + ((yy-h*0.4)/(0.42*h))**2))   # reference: even left-right, falls off toward the bottom
     img *= (0.90 + 0.15*centre)[..., None]                       # lit centre
+    if light is not None:                                        # measured correction field (reference f075 85th-pct luma / previous render)
+        u_, v_ = xx/w, yy/h; B = [np.ones_like(u_, dtype=np.float32), u_, v_, u_*u_, u_*v_, v_*v_, u_**3, u_*u_*v_, u_*v_*v_, v_**3]
+        img *= np.clip(sum(c*b for c, b in zip(light, B)), 0.7, 1.15)[..., None]
     img += fbm(h, w, 5, 3, seed=seed+2)[..., None]*0.15          # barely-there fibre
     # round, evenly translucent disc stains (reference look), kept off the portrait box
     placed = 0; tries = 0
@@ -152,12 +155,12 @@ def paper(seed, w_ref=315.3, h_ref=453.3, notch=True, aged=1.0, avoid=None):
         v += cv2.GaussianBlur(r_.normal(0, 1, n).reshape(1, -1).astype(np.float32), (0, 0), 2).ravel()*amp*hf
         return v
     pad = 20
-    top = edge(w, 4.5, seed+10, 0.04); bot = edge(w, 5, seed+11, 0.05); left = edge(h, 3.5, seed+12, 0.06); right = edge(h, 6, seed+13, 0.08)
+    top = edge(w, 6.5, seed+10, 0.04); bot = edge(w, 5, seed+11, 0.05); left = edge(h, 4, seed+12, 0.06); right = edge(h, 7.5, seed+13, 0.1)
     xs = np.arange(pad, w-pad, 3); ys = np.arange(pad, h-pad, 3)
     poly = [(x, pad + top[x]) for x in xs] + [(w - pad - right[y], y) for y in ys]
     bpts = [(x, h - pad - bot[x]) for x in xs[::-1]]
     if notch:
-        nx = int((533-278+6.7)/w_ref*w); nw = 44; nd = 56
+        nx = int((533-278+6.7)/w_ref*w); nw = 60; nd = 56
         bpts = [(x, y - nd*(1-abs(x-nx)/nw)) if abs(x-nx) < nw else (x, y) for (x, y) in bpts]
     poly += bpts + [(pad + left[y], y) for y in ys[::-1]]
     alpha = np.zeros((h, w), np.uint8); cv2.fillPoly(alpha, [np.int32(poly)], 255, cv2.LINE_AA)
@@ -166,10 +169,13 @@ def paper(seed, w_ref=315.3, h_ref=453.3, notch=True, aged=1.0, avoid=None):
     # burn: narrow along the top and sides, deep along the bottom (reference f075: mid-left margin #f1ce91, band above the bottom edge #b99558)
     Dy = 36 + 104*(yy/h)**3                                       # burn depth in plate px: 36 at the top -> 140 at the bottom
     tint = np.clip(1 - dist/Dy, 0, 1)**1.5
-    img = img*(1-0.72*tint[..., None]*aged) + hx('#a8662c')*0.72*tint[..., None]*aged
-    lip = np.clip(1 - dist/2.5, 0, 1); img = img*(1-0.45*lip[..., None]) + hx('#f3dcae')*0.45*lip[..., None]
+    img = img*(1-0.72*tint[..., None]*aged) + hx('#a8742e')*0.72*tint[..., None]*aged
+    lip = np.clip(1 - dist/4, 0, 1); img = img*(1-0.6*lip[..., None]) + hx('#f3dcae')*0.6*lip[..., None]
     return img, alpha
-img, a = paper(21, h_ref=446.8, avoid=((328-278+6.7)*S, (98-22+6.7)*S, (528-278+6.7)*S, (232-22+6.7)*S)); save(img, f'{OUT}/paper_main.png', a)
+# half-strength: the reference's poster light is partly screen-space (the same paper point is ~4% darker at f143 than at f075),
+# so a paper-bound correction fitted at f075 alone over-brightens f143; 50% splits the difference
+LIGHT = [0.5*c + (0.5 if i == 0 else 0.0) for i, c in enumerate(json.load(open('analysis/lookdev/paper_light_fit.json'))['coef'])]
+img, a = paper(21, h_ref=446.8, light=LIGHT, avoid=((328-278+6.7)*S, (98-22+6.7)*S, (528-278+6.7)*S, (232-22+6.7)*S)); save(img, f'{OUT}/paper_main.png', a)
 for kk in range(4):
     img, a = paper(100+kk, 213.3, 293.3, notch=bool(kk % 2), aged=1.3); save(img, f'{OUT}/paper_side_{kk}.png', a)
 

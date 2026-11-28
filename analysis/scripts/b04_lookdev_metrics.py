@@ -55,7 +55,7 @@ def load_ref(fr):
     return cv2.imread(f'work/frames/f_{fr:05d}.png')[:, :, ::-1].astype(np.float32)
 
 SCENES = {
-  'poster_f143': dict(frame=143, regions={'list_block (text+icons+paper)': (280, 150, 560, 330), 'paper (blank)': (470, 158, 552, 195), 'wood (left wall)': (20, 60, 220, 420), 'whole_frame': (0, 0, 854, 480)}, de=['paper (blank)', 'wood (left wall)']),
+  'poster_f143': dict(frame=143, regions={'list_block (text+icons+paper)': (280, 150, 560, 330), 'paper (blank)': (470, 158, 552, 195), 'wood (left wall)': (20, 60, 220, 420), 'whole_frame_minus_portrait': None}, de=['paper (blank)', 'wood (left wall)']),
   'poster_f075': dict(frame=75, regions={'paper (list area, empty)': (330, 290, 530, 410), 'wood (left wall)': (0, 0, 250, 480), 'poster_top (WANTED)': (300, 40, 556, 100), 'whole_frame_minus_portrait': None}, de=['paper (list area, empty)', 'wood (left wall)']),
   'portrait_f030': dict(frame=30, regions={'sky': (0, 0, 300, 200), 'mountains': (120, 228, 255, 330), 'mesa': (0, 280, 105, 340), 'ground': (0, 372, 250, 470), 'background_left_of_hero': (0, 0, 265, 480)}, de=['sky', 'mountains', 'ground']),
 }
@@ -68,7 +68,9 @@ if __name__ == '__main__':   # importable: b06 uses srgb_to_lab / de2000
         O, R = load_ours(path), load_ref(sc['frame'])
         for rn, box in sc['regions'].items():
             if box is None:
-                mask = np.ones((480, 854), bool); mask[98:232, 328:528] = False   # exclude the (pending) portrait print
+                mask = np.ones((480, 854), bool)
+                if sc['frame'] == 143: mask[0:76, 318:538] = False   # exclude the (pending) portrait print, as framed at f143
+                else: mask[98:232, 328:528] = False
                 o, r = O[mask], R[mask]
                 mo, mr = metrics(o.reshape(1, -1, 3)), metrics(r.reshape(1, -1, 3))
             else:

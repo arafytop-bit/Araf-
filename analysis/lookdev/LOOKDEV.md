@@ -1,7 +1,7 @@
 # Lookdev log: high-fidelity calibration (frames 0–149)
 
 **Status:**
-- Every **code-built** element is finished, measured and through three blind-review rounds; a fourth is checking the final state.
+- Every **code-built** element is finished, measured, and has been through four blind-review rounds.
 - The **illustrated art is pending**, because no image-generation key exists in this environment (no API key variables, no saved network secrets).
 - Following your instruction, I stopped there and sent `../assets_to_generate/ASSET_LIST.md` with its reference attachments.
 - The remaining items are A02 (hero bust for the portrait shot) and A03 (masked bust, the source for every poster print). A01 (character sheet) comes first for consistency.
@@ -25,39 +25,39 @@
 
 ## Measurements against the reference
 
-These are taken at the reference scale (854×480), as the ratio rebuild/reference. Targets are 0.8–1.2 and ΔE2000 < 6 (`metrics_v37.json`; final state after three blind-review rounds).
+These are taken at the reference scale (854×480), as the ratio rebuild/reference. Targets are 0.8–1.2 and ΔE2000 < 6 (`metrics_v39.json`; final state after four blind-review rounds).
 - **Edge density:** Canny averaged over four threshold pairs. A single 60/150 pair proved unstable: a 5-level change in a wall seam flipped it from 1.01 to 0.24. The single-pair values are still in the JSON.
 - **Measurement boxes:** keep off the pending character art and the reference character.
 
 | Scene | Region | Edge density | Fine texture | RMS contrast | Colourfulness | ΔE2000 |
 |---|---|---|---|---|---|---|
-| poster f143 | list block (text + icons + paper) | 0.99 | 1.01 | 0.96 | 1.04 | **1.84** |
-| poster f143 | paper, small blank patch (82×37 px) | 0.00 ✗ | 0.64 ✗ | 1.26 ✗ | 1.18 | **5.94** |
-| poster f143 | wood, left wall (zoomed 1.4×) | 0.95 | 0.80 | 0.94 | 1.06 | **1.64** |
-| poster f143 | whole frame | 0.79 ✗ | 1.00 | 1.03 | 1.04 | 1.65 |
-| poster f075 | paper, empty list area | 0.89 | 0.99 | 0.94 | 1.07 | **2.24** |
-| poster f075 | wood, left wall | 0.99 | 1.12 | 1.03 | 1.03 | **1.59** |
-| poster f075 | poster top ("WANTED") | 0.87 | 1.06 | 1.00 | 1.08 | 2.12 |
-| poster f075 | whole frame minus portrait box | 0.91 | 1.11 | 0.98 | 1.07 | 0.47 |
-| portrait f030 | sky | 1.23 ✗ | 0.83 | 0.86 | 0.93 | **2.28** |
-| portrait f030 | mountains | 0.86 | 1.12 | 0.88 | 0.89 | **2.43** |
-| portrait f030 | mesa (105×60 px) | 0.63 ✗ | 0.97 | 1.03 | 0.93 | 2.13 |
-| portrait f030 | ground | 1.02 | 1.17 | 0.94 | 0.92 | **1.78** |
-| portrait f030 | background left of the hero | 0.91 | 1.20 | 0.92 | 0.92 | 1.50 |
+| poster f143 | list block (text + icons + paper) | 0.98 | 1.03 | 0.98 | 1.04 | 1.43 |
+| poster f143 | paper, small blank patch (82×37 px) | 0.00 ✗ | 0.68 ✗ | 1.44 ✗ | 1.18 | **5.41** |
+| poster f143 | wood, left wall (zoomed 1.4×) | 0.93 | 0.88 | 0.97 | 1.00 | **1.73** |
+| poster f143 | whole frame minus the pending print | 0.93 | 1.08 | 0.98 | 1.03 | 1.07 |
+| poster f075 | paper, empty list area | 0.95 | 1.01 | 1.06 | 1.08 | **1.67** |
+| poster f075 | wood, left wall | 0.90 | 1.12 | 1.05 | 0.98 | **0.95** |
+| poster f075 | poster top ("WANTED") | 0.87 | 1.06 | 0.99 | 1.07 | 1.97 |
+| poster f075 | whole frame minus the pending print | 0.92 | 1.11 | 0.97 | 1.03 | 1.04 |
+| portrait f030 | sky | 0.80 | 0.73 ✗ | 0.88 | 0.96 | **0.90** |
+| portrait f030 | mountains | 0.85 | 1.13 | 0.88 | 0.91 | **2.22** |
+| portrait f030 | mesa (105×60 px) | 0.74 ✗ | 0.79 ✗ | 1.05 | 0.92 | 1.97 |
+| portrait f030 | ground | 1.07 | 1.26 ✗ | 1.02 | 0.93 | **1.59** |
+| portrait f030 | background left of the hero | 0.90 | 1.20 | 0.94 | 0.94 | 0.55 |
 
 **Reading the table:**
-- **Colour:** every targeted region is within ΔE2000 6. Across whole frames, ΔE is 0.47 (f075) and 1.65 (f143). The worst region is the 82×37 px blank-paper patch at 5.94: one of my stains now lies across it, while the reference's patch is mostly clean paper.
-- **Ratios:** 6 of 52 fall outside 0.8–1.2 (v14: 22 of 52).
-  - **Blank-paper patch:** it is 82×37 px, and its result depends on where a random stain falls. The reference has only a stain edge inside it; mine is under a stain. The larger f075 paper region carries the paper check and passes on every ratio.
-  - **Mesa:** the reference has only about 15 edge pixels in this region, so one line swings the ratio.
-  - **Sky edges (1.23):** the bokeh orbs are slightly more numerous than in the reference.
-  - **f143 whole frame (0.79):** just below the band.
-  - **f075 list-area contrast:** now fixed, 0.66 → 0.94. The stains were re-matched to the reference's stain-to-paper ratio per channel: 0.90/0.85/0.76 in the reference, now 0.93/0.86/0.78 (was 0.93/0.90/0.86).
+- **Colour:** every targeted region is within ΔE2000 6. Across whole frames, with the pending print excluded, ΔE is 1.04 (f075) and 1.07 (f143); the sky is 0.90. The worst region is the 82×37 px blank-paper patch at 5.41: one of my stains lies across it, while the reference's patch is mostly clean paper.
+- **Ratios:** 7 of 52 fall outside 0.8–1.2 (v14: 22 of 52).
+  - **Blank-paper patch (3):** its result depends on where a random stain falls. The larger f075 paper region carries the paper check and passes on every ratio.
+  - **Mesa (2):** the reference has only about 15 edge pixels in this 105×60 px region.
+  - **Sky fine texture (0.73):** fewer and more varied bokeh orbs (round 4 asked for this).
+  - **Ground fine texture (1.26):** more grass blades and striations (round 4 asked for this).
 
 Progression of the same measurements:
 - **Mountains ΔE:** 8.2 (v2) → 2.6 (v14) → 2.4.
-- **Whole poster frame ΔE:** 7.2 (v9) → 3.4 (v14) → 0.47.
-- **Ratios outside the band:** 22 (v14) → 6.
+- **Whole poster frame ΔE:** 7.2 (v9) → 3.4 (v14) → 1.0.
+- **Sky ΔE:** 2.2 (v14) → 0.90.
+- **Ratios outside the band:** 22 (v14) → 7.
 
 ## Blind review (fresh subagent, unlabeled A/B pairs, same scale and upscale for both)
 
@@ -139,7 +139,35 @@ As in round 2, I measured every claim before acting. Several descriptions were a
 - **The fix:** every static radial glow and vignette is now computed in float and dithered in `b03_plates.py`. In the portrait, the corner darkening, haze glow, halo disc and wide bloom are baked into the sky plate, and the tight sun bloom and sky vignette are separate overlay images. In the wall shot, the warm pool and vignette are overlay images.
 - **Result:** the radial profile inside the sun disc now steps by at most 0.4 levels, and the high-pass check shows no rings. The global dither layer stays in as a safety net.
 
-**Expected differences that remain** (round 3, after fixes):
+**Round 4** (8 pairs from v37). Verdicts:
+- "minor": the poster top;
+- "clear": the list, the wall, the sky, the landscape and the sun;
+- "major": the poster bottom and the reward line. In both, the item is again the intended frame break around REWARD.
+
+Measured before acting. Contradictions with round 3 were resolved by measurement; where a crop can't decide, the item is listed as remaining:
+- the pin;
+- knot rims: settled by zoom (a deep-maroon interior with a darker thin outline);
+- mesa stripes: faint;
+- grain amount: between the two rounds;
+- sun-ring edge: crisper.
+
+Fixes:
+- **Reviewer right, confirmed by measurement:**
+  - Badges sat 2.2 px low and 1.1 px right (in reference pixels).
+  - The wall was 2° too red, and one plank 18% too bright (tone spread now ±1.5%).
+  - The sky near the sun read beige: glows are now more saturated orange, with lighter corner darkening and a bigger haze glow. Sky ΔE 2.3 → 0.9.
+  - Birds were 23–28 px wide against the reference's ~21. They are now smaller, tilted and uneven.
+  - The poster shadow was too dark (13 vs 27 luma); the tight band is now at 80%.
+  - The notch is wider, the paper edge has a lighter lip, the burn is yellower, the top edge has bigger waves and the right edge is more torn.
+- **Paper lighting, measured as a field:** the 85th-percentile luma in windows, which ignores stains and text.
+  - The reference poster has a broad light centred left of centre: top-right corner −16%, bottom corners −12%, centre-left +8%. A robust 3rd-order fit is baked into the paper texture (`paper_light_fit.json`).
+  - Because the reference's light is partly screen-space (the same paper point is ~4% darker at f143 than at f075), the fit is applied at half strength.
+- **My own error, found by the reviewer:**
+  - Round 3 moved REWARD up 3.5 px based on a measurement contaminated by the reference's frame line, which runs through the letters.
+  - In the reference, the thick frame line runs along REWARD's baseline, so the baseline is back at y 441.
+- **Measurement fix:** the f143 whole-frame metric now excludes the pending portrait print, as f075's already did. The print area alone made that block +135 levels off.
+
+**Expected differences that remain** (after round 4):
 - **Missing art:** the character and the poster prints. A01–A03 are pending.
 - **Different text:** the character name and wording, once Phase 2 supplies them.
 - **The broken bottom frame line around REWARD:** in the reference the line runs through the text, which your rules forbid.
