@@ -18677,5 +18677,96 @@
   },
   "sfx_note": "plan frame = reference onset frame + 1 for transient recipes (onset detectors backtrack ~1 frame); pass 1 placed the tick at 137 and the stamp at 132 -> corrected to the measured onsets 123/130",
   "audio": "reference audio track is used for timing (analysis only)"
+ },
+ "template_settings": {
+  "quality_bar": {
+   "style_bible": "analysis/style_bible.md",
+   "rule": "Nothing may look like a placeholder. Illustrated art (characters, painterly scenes) comes from an image model or the user; code builds only what code can do at reference quality (gradients, rays, bloom, particles, paper, wood, torn edges, shadows, vignette, type, icons, motion graphics).",
+   "automatic_fails": [
+    "placeholder look (primitive shapes, faceless characters, untextured large fills)",
+    "any font fallback",
+    "text crossing a border or rule",
+    "visible gradient banding",
+    "halos/fringes around cut-outs",
+    "jagged or blurry edges at output size",
+    "image-model-drawn text"
+   ],
+   "metric_targets": {
+    "edge_density_ratio": [
+     0.8,
+     1.2
+    ],
+    "fine_texture_ratio": [
+     0.8,
+     1.2
+    ],
+    "rms_contrast_ratio": [
+     0.8,
+     1.2
+    ],
+    "colorfulness_ratio": [
+     0.8,
+     1.2
+    ],
+    "dE2000_region_means_max": 6.0,
+    "measured_at": "reference scale (854x480) on matching regions; script analysis/scripts/b04_lookdev_metrics.py"
+   },
+   "blind_review": "fresh subagent compares unlabeled A/B crop pairs (same scale and upscale for both); iterate until only expected differences remain (different character, different words)"
+  },
+  "render_settings": {
+   "composition_px": [
+    3840,
+    2160
+   ],
+   "deliver_px": [
+    1920,
+    1080
+   ],
+   "downscale": "ffmpeg scale=1920:1080:flags=lanczos+accurate_rnd+full_chroma_int:out_color_matrix=bt709:out_range=tv",
+   "codec": "libx264 -preset slow -crf 16 -profile:v high, yuv420p, BT.709 primaries/trc/matrix tags, tv range",
+   "audio": "AAC-LC 48 kHz 320 kbps (final); reference audio only for calibration timing",
+   "geometry_units": "SVG viewBox in reference pixels (854x480) so every coordinate in blueprint.json renders at any resolution",
+   "encode_check": "decode the MP4 with in_color_matrix=bt709 and compare against the PNG masters scaled with the same filter (analysis/scripts/b06_encode_compare.py); target mean pixel dE2000 < 1.0 and no systematic RGB offset > 1",
+   "dithering": "all generated gradients/plates get triangular dither before 8-bit quantisation; SVG gradients sit over dithered plates"
+  },
+  "fonts": {
+   "policy": "strict: render/src/lib/fontsStrict.ts loads every family with FontFace, checks document.fonts.check() and verifies glyph metrics differ from fallback stacks; any failure cancels the render",
+   "families": {
+    "poster_slab": "Bitter 900 (fallback alt Roboto Slab 900)",
+    "hero_title": "Alegreya 800",
+    "captions_italic": "Alegreya 700 italic",
+    "ui_sans": "Alegreya Sans 800/500",
+    "chapter_title": "Grenze Gotisch 800",
+    "chapter_number": "Patua One 400"
+   },
+   "text_fit": "layout computed offline from the font files (PIL advance widths + tracking) into render/src/data/*_layout.json; each string is auto-shrunk to its container minus a 4 % margin and the build fails if any string is outside its container"
+  },
+  "asset_pipeline": {
+   "sources": {
+    "illustrated": "image model with reference attachments (or the user's phone app when no API key exists)",
+    "code": "procedural plates (analysis/scripts/b03_plates.py) + SVG/Remotion components (render/src/CalibrationHQ.tsx)",
+    "icons": "hand-drawn SVG pictograms in the badge style (no primitive stand-ins)"
+   },
+   "generation_size": "largest the model allows; every layer at >= 2x its on-screen size at 1080p (hero bust >= 2100 px tall)",
+   "post": [
+    "key out flat green (#00FF00) or use the alpha channel",
+    "defringe: erode alpha 1 px, decontaminate edge colour from the key colour, 0.6 px feather",
+    "upscale 2-4x with Real-ESRGAN (anime model) when below the 2x rule",
+    "colour-match to the style-bible palette (per-channel curve fit on skin/fabric patches)",
+    "split into animation layers (character / far / mid / near)"
+   ],
+   "consistency": "character sheet first (A01); every later pose prompt attaches the sheet; poster prints reuse the same art through the printTone filter (monochrome sepia duotone, multiply over paper)",
+   "prompt_template": "<SUBJECT>. STYLE (match the attached references' style exactly but do not copy any character's identity): flat 2D cartoon illustration for an animated explainer; bold warm near-black outlines (#130b01) that taper at the tips, thick on silhouettes (~1% of image height) and thin inside; cel shading with exactly three tones per material; hard cast shadows; small hard-edged highlights; tapered hatching strokes in groups of 2-4 for wrinkles/texture; hair and beards as many short strokes; fabric detail (stitching, pinstripes, buckles). <LIGHTING>. <BACKGROUND: transparent, or flat pure green #00FF00>. No text, no letters, no labels, no watermark.",
+   "asset_list_when_no_api": "analysis/assets_to_generate/ASSET_LIST.md format: file name, copy-ready prompt, attachments, aspect, background"
+  }
+ },
+ "calibration_hq": {
+  "composition": "render/src/CalibrationHQ.tsx (CalibrationHQ 3840x2160)",
+  "plates": "analysis/scripts/b03_plates.py -> render/public/hq/",
+  "poster_layout": "render/src/data/poster_layout.json",
+  "pending_assets": [
+   "A02 hero bust (portrait shot)",
+   "A03 masked bust (poster prints)"
+  ]
  }
 }

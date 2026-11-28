@@ -1,0 +1,228 @@
+{
+ "font": "Bitter 900",
+ "cap_em": 0.71,
+ "items": {
+  "WANTED": {
+   "text": "WANTED",
+   "font_size_ref": 47.183,
+   "cap_ref": 33.5,
+   "tracking_em": 0.07,
+   "align": "centre",
+   "x": 428,
+   "width_ref": 219.83,
+   "container": [
+    304,
+    552
+   ],
+   "auto_shrunk": false,
+   "left": 318.09,
+   "right": 537.91,
+   "inside": true
+  },
+  "NAME": {
+   "text": "ARTHUR MORGAN",
+   "font_size_ref": 24.648,
+   "cap_ref": 17.5,
+   "tracking_em": 0.0,
+   "align": "centre",
+   "x": 428,
+   "width_ref": 214.88,
+   "container": [
+    304,
+    552
+   ],
+   "auto_shrunk": false,
+   "left": 320.56,
+   "right": 535.44,
+   "inside": true
+  },
+  "WANTED_FOR": {
+   "text": "WANTED FOR",
+   "font_size_ref": 9.577,
+   "cap_ref": 6.8,
+   "tracking_em": 0.3,
+   "align": "centre",
+   "x": 428,
+   "width_ref": 87.26,
+   "container": [
+    380,
+    476
+   ],
+   "auto_shrunk": false,
+   "left": 384.37,
+   "right": 471.63,
+   "inside": true
+  },
+  "ITEM0": {
+   "text": "TRAINS",
+   "font_size_ref": 22.535,
+   "cap_ref": 16,
+   "tracking_em": 0.0,
+   "align": "left",
+   "x": 361,
+   "width_ref": 83.88,
+   "container": [
+    361,
+    548
+   ],
+   "auto_shrunk": false,
+   "left": 361,
+   "right": 444.88,
+   "inside": true
+  },
+  "ITEM1": {
+   "text": "BANKS",
+   "font_size_ref": 22.535,
+   "cap_ref": 16,
+   "tracking_em": 0.0,
+   "align": "left",
+   "x": 361,
+   "width_ref": 76.89,
+   "container": [
+    361,
+    548
+   ],
+   "auto_shrunk": false,
+   "left": 361,
+   "right": 437.89,
+   "inside": true
+  },
+  "ITEM2": {
+   "text": "HALF THE WEST",
+   "font_size_ref": 22.535,
+   "cap_ref": 16,
+   "tracking_em": 0.0,
+   "align": "left",
+   "x": 361,
+   "width_ref": 174.56,
+   "container": [
+    361,
+    548
+   ],
+   "auto_shrunk": false,
+   "left": 361,
+   "right": 535.56,
+   "inside": true
+  },
+  "REWARD": {
+   "text": "REWARD",
+   "font_size_ref": 11.268,
+   "cap_ref": 8.0,
+   "tracking_em": 0.32,
+   "align": "left",
+   "x": 350,
+   "width_ref": 66.28,
+   "container": [
+    348,
+    432
+   ],
+   "auto_shrunk": false,
+   "left": 350,
+   "right": 416.28,
+   "inside": true
+  },
+  "VALUE": {
+   "text": "$????",
+   "font_size_ref": 27.465,
+   "cap_ref": 19.5,
+   "tracking_em": 0.06,
+   "align": "left",
+   "x": 443,
+   "width_ref": 75.42,
+   "container": [
+    443,
+    548
+   ],
+   "auto_shrunk": false,
+   "left": 443,
+   "right": 518.42,
+   "inside": true
+  },
+  "SIDE_WANTED": {
+   "text": "WANTED",
+   "font_size_ref": 30.986,
+   "cap_ref": 22,
+   "tracking_em": 0.06,
+   "align": "centre",
+   "x": 0,
+   "width_ref": 142.81,
+   "container": [
+    -95,
+    95
+   ],
+   "auto_shrunk": false,
+   "left": -71.41,
+   "right": 71.41,
+   "inside": true
+  },
+  "SIDE_DOA": {
+   "text": "DEAD OR ALIVE",
+   "font_size_ref": 7.324,
+   "cap_ref": 5.2,
+   "tracking_em": 0.25,
+   "align": "centre",
+   "x": 0,
+   "width_ref": 76.09,
+   "container": [
+    -90,
+    90
+   ],
+   "auto_shrunk": false,
+   "left": -38.04,
+   "right": 38.04,
+   "inside": true
+  },
+  "SIDE_NAME": {
+   "text": "ARTHUR MORGAN",
+   "font_size_ref": 16.197,
+   "cap_ref": 11.5,
+   "tracking_em": 0.0,
+   "align": "centre",
+   "x": 0,
+   "width_ref": 141.21,
+   "container": [
+    -95,
+    95
+   ],
+   "auto_shrunk": false,
+   "left": -70.6,
+   "right": 70.6,
+   "inside": true
+  },
+  "SIDE_REWARD": {
+   "text": "REWARD",
+   "font_size_ref": 7.324,
+   "cap_ref": 5.2,
+   "tracking_em": 0.3,
+   "align": "centre",
+   "x": 0,
+   "width_ref": 42.35,
+   "container": [
+    -60,
+    60
+   ],
+   "auto_shrunk": false,
+   "left": -21.17,
+   "right": 21.17,
+   "inside": true
+  },
+  "SIDE_VALUE": {
+   "text": "$?",
+   "font_size_ref": 16.901,
+   "cap_ref": 12,
+   "tracking_em": 0.04,
+   "align": "centre",
+   "x": 0,
+   "width_ref": 18.74,
+   "container": [
+    -60,
+    60
+   ],
+   "auto_shrunk": false,
+   "left": -9.37,
+   "right": 9.37,
+   "inside": true
+  }
+ },
+ "all_inside": true
+}

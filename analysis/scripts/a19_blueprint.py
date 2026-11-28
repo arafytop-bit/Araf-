@@ -222,5 +222,7 @@ cal = dict(fps=30, ref_px=[854, 480], frames=[0, 149],
   sfx_note='plan frame = reference onset frame + 1 for transient recipes (onset detectors backtrack ~1 frame); pass 1 placed the tick at 137 and the stamp at 132 -> corrected to the measured onsets 123/130',
   audio='reference audio track is used for timing (analysis only)')
 bp['calibration'] = cal
+bp['template_settings'] = json.load(open('analysis/template_settings.json'))
+bp['calibration_hq'] = dict(composition='render/src/CalibrationHQ.tsx (CalibrationHQ 3840x2160)', plates='analysis/scripts/b03_plates.py -> render/public/hq/', poster_layout='render/src/data/poster_layout.json', pending_assets=['A02 hero bust (portrait shot)', 'A03 masked bust (poster prints)'])
 json.dump(bp, open('analysis/blueprint.json', 'w'), indent=1)
 print('blueprint written', round(len(json.dumps(bp))/1024), 'KB;', len(bp['text_track']), 'text events;', len(bp['sfx_cues']), 'sfx cues;', len(bp['shots']), 'shots')

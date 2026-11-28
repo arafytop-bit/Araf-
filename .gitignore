@@ -18,3 +18,16 @@ analysis/data/sync_map.csv
 analysis/fonts/ref_*.png
 analysis/fonts/ref_crops_sheet.jpg
 render/out/
+# Lookdev images that contain reference pixels stay local (public repo):
+analysis/lookdev/ref_crops/
+analysis/lookdev/blind/
+analysis/lookdev/deliver/*.png
+!analysis/lookdev/deliver/*_rebuild_only.png
+analysis/lookdev/*_sbs*.jpg
+analysis/lookdev/poster_f*.jpg
+analysis/lookdev/portrait_f*.jpg
+analysis/lookdev/lookdev_wall_paper_v*.jpg
+analysis/lookdev/wall_v*_crop.png
+analysis/lookdev/paper_v*.png
+analysis/lookdev/font_poster_candidates.jpg
+analysis/assets_to_generate/attach/
