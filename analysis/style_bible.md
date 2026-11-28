@@ -54,9 +54,9 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 ## 5. Palettes per scene (measured)
 
 - **Portrait: sky.** Vertical gradient top → horizon (every 25 px at 480p): `#412334 #522634 #6a3036 #833c38 #9c473a #b5533c #c76340 #d96f40 #e47b44 #e78844`. Near the sun: `#f0964e` → `#fbb15c`. Hue runs 322° (purple) through magenta and 0° to 24° (orange); saturation 135 → 183/255; value 54 → 220/255.
-  - Sky top `#3d1d2e` (darker than the earlier stop). Sun disc `#feedc5`, ring `#ffd47c` (measured; the earlier `#fedd90` was the bloom-washed value).
+  - Sky top `#3d1d2e` (darker than the earlier stop). Sun disc `#feecc3`, centre **(324.6, 288.9)**, radius **36** at 480p; ring `#fec26a` (re-measured in round 3, more saturated than the bloom-washed `#fedd90`), extending to r ≈ 50 with a soft outer falloff.
 - **Portrait: land.**
-  - Mountains (measured at f30 on the faces, not the outline): lit face `#864038` → `#a0563d` toward the base, shade face `#7b392f` → `#9c5338`. Red-brown burgundy, **not** pink-mauve; the far range is the same family, only slightly lighter, and is **not** washed out by haze.
+  - Mountains (measured at f30 on the faces, not the outline): lit face `#864038` → `#a0563d` toward the base, shade face `#7b392f` → `#9c5338`; whole-body median `#823b36` (hue 6°). Each peak ends in a narrow spike. Red-brown burgundy, **not** pink-mauve; the far range is the same family, only slightly lighter, and is **not** washed out by haze.
   - Snow: lit `#e5beb4`, shade `#bc9898`. **Large two-tone caps** covering the top quarter to third of each peak, with 2–3 deep spikes (≈ 20 px at 480p) on the bottom edge.
   - Mesa: flat top at y 276 (480p), right face nearly vertical at x ≈ 125, then flaring to x ≈ 150 at the base. Dark bands `#4b170e`–`#551a12`, light strata `#5b2113`–`#632618` at y 294–299 and 313–326, warm glow `#6c321c` toward the base. Face right of x ≈ 78 is a uniform form-shadow `#501913` with a jagged boundary. A faint plaid of vertical lines every 9 px.
   - Hills: broad arcs ≈ 118 px wide, rising ≈ 12 px (troughs y 367, apexes ≈ 355 at 480p), pale rim `#d8a090`, over a straight dark ground line.
@@ -76,22 +76,23 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 | Bloom | Luma 240 at the centre → 204 at 0.9 r → 193 at 1.3 r → 172 at 2.8 r → sky level (≈130) at about 3.8 r. A two-layer halo: a tight one (1.4 r) and a wide one (4 r), screen-blended |
 | God rays | Re-measured with a polar brightness profile around the sun at f30 (row-detrended): rays at **76°** (wide, ≈ 12° FWHM), **100°** and **123°** (narrow, ≈ 5–6°), a faint one at 150°, and two more at **≈ 57° and 36°** that show above the hero's hat. Peaks +10…+12 luma. They start ≈ 60 px from the sun and stay strong to the top edge (they are not wedges glowing from the disc). Slow sway ±1.2° over 3 s |
 | Haze | Each mountain layer further back is lighter and less saturated: far range +18% value / −25% saturation vs mid range. A warm haze band `#f0964e` at 25% sits along the horizon |
-| Dust specks | About **20 orbs** (> +12 luma) in the open sky of the top-left quadrant; fewer, medium and **fairly uniform** (not many tiny specks). Radial profile at 480p, peak-normalised: r1 0.75, r2 0.45, r3 0.2, r4 0.1, r5 0.07; peak +63…+78 luma over the local background, warm white `#fff0d0`. Walls: about 9 smaller orbs per frame. Drift: median 0.16 px/frame, 90th percentile 2.7 px/frame, mostly sideways with slight upward bias. Gentle twinkle (opacity ±25%, 1–3 s period) |
-| Birds | 3 "m" silhouettes **25–35 px** wide, stroke ≈ 3.5 px tapering from a heavier body (≈ 1.5 ref px), `#2e161a`. Flap at about 2.5 Hz, drift about 0.3 px/frame |
-| Vignette | Strong, radial. Luma ratio to the centre at normalised radius 0.6/0.8/1.0/1.2: **0.69 / 0.55 / 0.31 / 0.23** (wall scene). Median corner/centre over the video is 0.63 |
+| Dust specks | **Bokeh orbs**: a bright core plus a soft, flat halo disc (r ≈ 5–7 px at 480p, visible rim). About **20 orbs** (> +12 luma) in the open sky, most of them left of the hero; fairly uniform in size. Radial profile at 480p, peak-normalised: r1 0.75, r2 0.45, r3 0.2, then a plateau ≈ 0.1 to r6 (the disc); peak +63…+78 luma over the local background, warm white `#fff0d0`. Walls: about 10 orbs per 250 × 480 px of open wall, same construction, smaller. Drift: median 0.16 px/frame, 90th percentile 2.7 px/frame, mostly sideways with slight upward bias. Gentle twinkle (opacity ±25%, 1–3 s period) |
+| Birds | 3 thin "m" silhouettes **25–35 px** wide, stroke ≈ 2 px (0.8–1.2 ref px, slightly heavier at the body), `#3a1e22`. Flap at about 2.5 Hz, drift about 0.3 px/frame |
+| Vignette | Wall scene, fitted to the reference's 2D luma map at f075 (blocks outside the poster, RMS error 0.05): **elliptical**, centre (365, 252), radii 472 × 266 (480p), darkening factor 1 − 0.435·min(t, 1.6)^1.77. It darkens the wall and side posters but **not the main poster**, which keeps its own lit-centre/burn look. Portrait: radial, centre (427, 250), 0.08 at 0.6 r → 0.42 at r = 600. Median corner/centre over the video is 0.63 |
 | Warm light pool | Interiors and props: a centre ellipse +10–15% brighter, warm `#ffb060`, soft-light blend |
-| Grain | Not visible (< 1.5 luma std at 480p, compression-limited). Add **≤ 1.0%** monochrome grain only to stop gradient banding, and dither every gradient |
+| Grain | Not visible (< 1.5 luma std at 480p, compression-limited). Add **≤ 1.0%** monochrome grain only to stop gradient banding, and dither every gradient. **Never build a large glow or vignette from an 8-bit SVG radial gradient**: compute it in float and dither it into an image (8-bit SVG glows left 1-level contour rings) |
 | Chromatic aberration, VHS, light leaks | None |
 
 ## 7. Materials
 
 - **Paper (posters, notebook, letters).**
   - Base `#e6c181`. Large soft **stains** (round blobs 90–200 px across, low contrast, low-frequency luma std ≈ 11, p5–p95 range 36) in `#deb876`/`#d0a865` with a few lighter patches `#f1d294`.
-  - **Lit centre:** luma p5/p50/p95 in the empty list area = 171 / 188 / 202 (480p).
-  - **Edges burn** to an ochre `#b47436` over the outer ≈ 30 ref px, with a thin light lip at the torn edge. Stains are translucent ellipses with fairly crisp edges (≈ 1.5 px soft).
+  - **Lit centre:** even from left to right, falling off toward the bottom. Reference f075: mid-left margin `#f1ce91`, list area `#e9c586`, top strip `#dcb57f`, band above the bottom edge `#b99558`.
+  - **Burn** to ochre `#a8662c`: deep along the bottom (≈ 45 ref px), narrow along the top and sides (≈ 12 ref px), with a thin light lip at the torn edge.
+  - **Stains:** translucent ellipses with fairly crisp edges (≈ 1.5 px soft). Stain/paper ratio per channel in the reference: 0.90 / 0.85 / 0.76 (they darken blue most, so they read warmer, not grey).
   - A **faint centre fold**: a 2 px vertical line, `#c9a56a` at 50%, plus a faint horizontal fold.
-  - **Torn edges:** smooth wavy top, ragged bottom and right edges (more high-frequency tearing there). A deep **triangular notch** (≈ 44 px wide × 56 px deep at 3× plate scale) near the bottom right.
-  - **Nail** at top centre: a small dull dome, r ≈ 5 ref px, grey-violet `#4a4652` with a soft top-left highlight and a dark outline; no glossy glint.
+  - **Torn edges:** smooth, gently wavy on all four sides (the bottom is not ragged; it is a wave over a compact near-black shadow band, luma ≈ 33 just below the edge). A **triangular notch** (≈ 30 ref px wide × 18 deep) near the bottom right. The bottom edge sits at y ≈ 452–456 at f075 (≈ 14 px below the outer frame line).
+  - **Nail** at top centre: a dark grey-violet dome `#3e3846`, r ≈ 5 ref px, with a thick dark outline (1.4 px), a soft top-left highlight and a faint light ring on the paper around it.
   - **Drop shadow** on the wall: a tight deep one offset (+5, +8) ref px, blur 2.6, `#120400` at 90%, plus a wide ambient one (+3, +6), blur 9, 45%. The right and bottom edges show a clear dark band.
 - **Printed ink.**
   - Text and lines are **solid near-black** (darkest pixel at 480p `#1a0100`/`#120000`), with only slight edge roughness (±0.2 px) and a few % density variation. **No speckled drop-outs** (round 2: they read as brown, speckled ink).
@@ -100,8 +101,8 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 - **Wood wall.**
   - Vertical planks **150 px** wide (66.7 px at 480p), plank-to-plank luma ±3, rust-brown base `#843e16`/`#7c3a14`/`#883f18`.
   - **Seams** (cross-section at f075, 480p): a faint +4 light rim, a **≈ 2 px dark core** (min ≈ 30 on a ≈ 60 plank), then a **soft light lip ≈ 4–5 px wide peaking +12…+17**. Draw them as vector strokes so they stay crisp at every camera zoom (baked into a texture they go soft at the 1.41× push-in).
-  - **Grain:** thin **straight** darker lines, sparse (≈ 6 per plank per 960 px of height), 60–260 px long.
-  - **Knots:** dark ellipses about 16×27 px `#2e1404` with a lighter rim `#a05a2a`.
+  - **Grain:** thin **straight** darker lines, sparse (≈ 3 per plank per 960 px of height), 60–260 px long; very low mottling (≈ 1.5%).
+  - **Knots:** dark ellipses about 16×27 px `#2e1404` with only a faint rim.
   - **Nail holes:** a row of 4 px dark dots, one per plank, at about 37% height.
   - **Even, symmetric light:** luma across the f075 wall at x = 0 / 240 / 600 / 840 is 43 / 59 / 60 / 32. A gentle radial vignette centred on the frame; a very weak warm pool (10%).
 - **Fabric and metal (character):** see the §3 table (pinstripes, stitching, brass buckle, concho).
@@ -113,7 +114,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 | Poster headline "WANTED" | **Bitter Black 900** (Bitter scored IoU 0.82, rank 1; 800 only matched with ink spread, 900 matches without; alt Roboto Slab 900) | Cap height **78 px** (34.5 ref px). Tracking **+0.097 em**, solved for the measured 233 ref px width. Solid near-black ink |
 | Poster name, list items | **Bitter Black 900** | Name cap 39 px, tracking +0.017 em (220 ref px wide); items cap **36 px** (16 ref px), tracking **+0.04 em** ("TRAINS"/"BANKS" are 5% wider than untracked Bitter). **"HALF THE WEST" is set smaller in the reference** (row height 19 vs 22 px): it auto-shrinks to the list's right limit (cap 14.2 ref px) |
 | "WANTED FOR", "REWARD" | Bitter 900 | Cap 15 px ("REWARD" 18 px), tracking +0.30 em, centred between rules. **Gap of 0.6 em on each side between text and rule**; the bottom frame lines break around the reward row |
-| Reward value "$????" | Bitter 900 | Cap 44 px, red `#7a1a0a` (measured `#79220c`). A **narrow "$"** (80% width), then an **8 ref px gap**, then the "?"s (tracking +0.025 em); ends at x 519, 7 px clear of the frame break |
+| Reward value "$????" | Bitter 900 | 95% of the 19.5 ref px cap, red `#7a1a0a` (glyph body measured `#882f0d`). A **narrow "$"** (80% width), then an **8 ref px gap**, then the "?"s (tracking +0.03 em); baseline y 446, ending well inside the frame break at 526. "REWARD" baseline y 438. The light halo and dark fringe seen around the reference's red glyphs are 4:2:0 chroma bleed in its 480p encode; don't copy them |
 | Hero title | Alegreya ExtraBold 800 (alt Bitter 900, scored 0.82 alone) | See the report's §5 |
 | Tags, bubbles, labels | Alegreya Sans ExtraBold 800 | See the report |
 | Chapter titles | Grenze Gotisch 800 | See the report |
@@ -126,7 +127,7 @@ Flat 2D cartoon illustration with **bold, warm near-black outlines**, cel shadin
 
 ## 9. Icons
 
-- **Badge:** outer diameter **80 px**. Outer ring 5 px (2.8 ref px) and inner ring 2.2 px, clean (no speckle), in red `#9a2a14`. Interior paper tinted `#f2c890` at 50%.
+- **Badge:** outer radius 16 ref px. Outer ring 2.4 ref px and inner ring 1 ref px at r 12.3 (a clear cream gap between them), clean (no speckle), in red `#a22e16`. Interior paper tinted `#f2c890` at 50%. The pictogram is small (about 2/3 of the inner ring's diameter).
 - **Pictogram:** a **filled red silhouette** with knocked-out paper-colour details at 2–3 px.
   - Locomotive: side view with chimney, cab, boiler bands, 3 wheels and a cow-catcher.
   - Money bag: a tied sack with a knocked-out "$".

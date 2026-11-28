@@ -35,7 +35,13 @@
    "regions_note": "keep measurement boxes off thin features that sit on the box edge (a 1 px offset of a dashed rule swung one region 0.4 -> 2.3); exclude pending illustrated art and the reference character",
    "blind_review": "fresh subagent, unlabeled A/B crop pairs at equal scale (2-3x), key stored outside its reach; iterate until only expected differences remain"
   },
-  "blind_review": "fresh subagent compares unlabeled A/B crop pairs (same scale and upscale for both); iterate until only expected differences remain (different character, different words)"
+  "blind_review": "fresh subagent compares unlabeled A/B crop pairs (same scale and upscale for both); iterate until only expected differences remain (different character, different words)",
+  "build_rules": [
+   "Never build a large glow or vignette from an 8-bit SVG/CSS gradient: compute it in float and dither it into an image (b03_plates.py); a coherent 1-level ring survives a +-1.5-level dither after the 2x downscale",
+   "Thin structural lines that must stay crisp under camera zoom (plank seams, rules) are vector strokes, not baked into textures",
+   "Verify every reviewer claim about the reference by measurement before changing anything (three blind-review rounds contradicted each other on paper burn, pin, knots, bird weight and tear)",
+   "Screen-space vignettes go beneath foreground props that carry their own lighting (the wanted poster), above the background they darken"
+  ]
  },
  "render_settings": {
   "composition_px": [

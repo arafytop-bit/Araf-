@@ -31,3 +31,7 @@ analysis/lookdev/wall_v*_crop.png
 analysis/lookdev/paper_v*.png
 analysis/lookdev/font_poster_candidates.jpg
 analysis/assets_to_generate/attach/
+
+# reference-derived: any side-by-side that embeds reference footage
+analysis/calibration/*side_by_side*
+analysis/calibration/*sbs*

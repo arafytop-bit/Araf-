@@ -11,10 +11,10 @@ const C = (bp as any).calibration;
 const T = (bp as any).templates;
 const LY = (layout as any).items;
 const W = 854, H = 480, CX = 427, CY = 240;
-const INK = '#120400', RED = '#7a1a0a', BADGE = '#9a2a14', OUTLINE = '#130b01';
+const INK = '#120400', RED = '#7a1a0a', BADGE = '#a22e16', OUTLINE = '#130b01';
 const camT = (s: number, tx: number, ty: number) => `translate(${CX + tx} ${CY + ty}) scale(${s}) translate(${-CX} ${-CY})`;
 const scaleAbout = (s: number, ax: number, ay: number) => `translate(${ax} ${ay}) scale(${s}) translate(${-ax} ${-ay})`;
-const SUN = {x: 325, y: 286, r: 37, ring: 47};
+const SUN = {x: 325, y: 289.5, r: 36, ring: 47};   // disc centre and radius re-measured on the reference at f030
 // poster print content sits 1.6 ref px right of the paper's measured centre line (reference f075/f143, camera inverted)
 const POSTER_DX = 1.6;
 
@@ -42,14 +42,15 @@ const Defs: React.FC = () => (
       <feOffset in="b1" dx={3} dy={6} result="o1" />
       <feFlood floodColor="#140500" floodOpacity={0.45} result="c1" />
       <feComposite in="c1" in2="o1" operator="in" result="s1" />
-      <feGaussianBlur in="SourceAlpha" stdDeviation={2.6} result="b2" />
-      <feOffset in="b2" dx={5} dy={8} result="o2" />
-      <feFlood floodColor="#120400" floodOpacity={0.9} result="c2" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation={2.2} result="b2" />
+      <feOffset in="b2" dx={5} dy={9} result="o2" />
+      <feFlood floodColor="#120400" floodOpacity={1} result="c2" />
       <feComposite in="c2" in2="o2" operator="in" result="s2" />
       <feMerge><feMergeNode in="s1" /><feMergeNode in="s2" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
-    <filter id="rayBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={3} /></filter>
+    <filter id="rayBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={5.5} /></filter>
     <filter id="soft1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={0.9} /></filter>
+    <filter id="soft06" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={0.6} /></filter>
     <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={2.2} /></filter>
     <filter id="printTone" colorInterpolationFilters="sRGB">
       {/* monochrome sepia print of a colour illustration: luminance -> duotone #2a160a..#d9b47a, +contrast */}
@@ -73,27 +74,33 @@ const Defs: React.FC = () => (
       <stop offset="0" stopColor="#000" stopOpacity="0" /><stop offset="0.6" stopColor="#1a0610" stopOpacity="0.08" /><stop offset="1" stopColor="#1a0610" stopOpacity="0.42" />
     </radialGradient>
     <radialGradient id="warmPool" gradientUnits="userSpaceOnUse" cx={427} cy={230} r={360}><stop offset="0" stopColor="#ffb060" stopOpacity="0.1" /><stop offset="1" stopColor="#ffb060" stopOpacity="0" /></radialGradient>
-    <radialGradient id="speck" cx="0.5" cy="0.5" r="0.5">{/* reference orb falloff (peak-normalised): r1 0.75, r2 0.45, r3 0.2, r4 0.1, r5 0.07 at R 6.5 */}<stop offset="0" stopColor="#fffaea" stopOpacity="1" /><stop offset="0.15" stopColor="#fff6e0" stopOpacity="0.78" /><stop offset="0.31" stopColor="#fff0d0" stopOpacity="0.46" /><stop offset="0.46" stopColor="#ffe6bc" stopOpacity="0.2" /><stop offset="0.62" stopColor="#ffe0b0" stopOpacity="0.1" /><stop offset="0.8" stopColor="#ffd8a0" stopOpacity="0.05" /><stop offset="1" stopColor="#ffd8a0" stopOpacity="0" /></radialGradient>
-    <radialGradient id="sunRing" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffd47c" /><stop offset="0.9" stopColor="#ffd47c" /><stop offset="1" stopColor="#ffd47c" stopOpacity="0" /></radialGradient>
+    <radialGradient id="speck" cx="0.5" cy="0.5" r="0.5">{/* orb core; reference profile r1 0.75, r2 0.45, r3 0.15 (peak-normalised), plateau from the halo disc */}<stop offset="0" stopColor="#fffaea" stopOpacity="1" /><stop offset="0.3" stopColor="#fff6e0" stopOpacity="0.75" /><stop offset="0.57" stopColor="#fff0d0" stopOpacity="0.45" /><stop offset="0.86" stopColor="#ffe6bc" stopOpacity="0.15" /><stop offset="1" stopColor="#ffe0b0" stopOpacity="0" /></radialGradient>
+    <radialGradient id="sunRing" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffc868" /><stop offset="0.9" stopColor="#ffc868" /><stop offset="1" stopColor="#ffc868" stopOpacity="0" /></radialGradient>
     <linearGradient id="mesaFace" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#6a2a1a" /><stop offset="1" stopColor="#4c1710" /></linearGradient>
     <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#7b4125" /><stop offset="0.5" stopColor="#5f2f18" /><stop offset="1" stopColor="#3a1a0a" /></linearGradient>
   </defs>
 );
 
 // ---------- particles ----------
-const Dust: React.FC<{f: number; n: number; seed: string; box: number[]; rMin: number; rMax: number}> = ({f, n, seed, box, rMin, rMax}) => (
+const Dust: React.FC<{f: number; n: number; seed: string; box: number[]; rMin: number; rMax: number; dense?: number[]}> = ({f, n, seed, box, rMin, rMax, dense}) => (
   <g style={{mixBlendMode: 'screen'}}>
     {Array.from({length: n}).map((_, i) => {
       const r = (k: string) => random(`${seed}-${i}-${k}`);
-      const x0 = box[0] + r('x') * (box[2] - box[0]), y0 = box[1] + r('y') * (box[3] - box[1]);
+      const bx = dense && r('d') < dense[4] ? dense : box;   // [x0, y0, x1, y1, share]: open sky left of the hero holds most orbs
+      const x0 = bx[0] + r('x') * (bx[2] - bx[0]), y0 = bx[1] + r('y') * (bx[3] - bx[1]);
       const vx = (r('vx') - 0.35) * 0.18, vy = -(r('vy')) * 0.08;
       const fast = r('fast') > 0.88 ? 6 : 1;
       const x = x0 + vx * f * fast + Math.sin(f / (25 + r('p') * 40) + r('ph') * 6) * 0.8;
       const y = y0 + vy * f * fast + Math.cos(f / (30 + r('q') * 40) + r('ph2') * 6) * 0.6;
       const size = rMin + r('s') * (rMax - rMin);   // ref px radius of the halo
       const tw = 0.75 + 0.25 * Math.sin(f / (20 + r('t') * 50) * 2 + r('tp') * 6);
-      const op = (0.55 + 0.4 * r('o')) * tw;
-      return <circle key={i} cx={x} cy={y} r={size} fill="url(#speck)" opacity={op} filter={r('b') > 0.6 ? 'url(#soft1)' : undefined} />;
+      const op = (0.6 + 0.4 * r('o')) * tw;
+      return (
+        <g key={i} opacity={op}>
+          <circle cx={x} cy={y} r={size} fill="#ffe4bc" opacity={0.13} filter="url(#soft06)" />
+          <circle cx={x} cy={y} r={size * 0.55} fill="url(#speck)" opacity={0.68} />   {/* peak +63..78 over the sky, as measured */}
+        </g>
+      );
     })}
   </g>
 );
@@ -101,7 +108,7 @@ const Dust: React.FC<{f: number; n: number; seed: string; box: number[]; rMin: n
 const Birds: React.FC<{f: number}> = ({f}) => {
   const birds = [[121, 147, 0, 1.35], [139, 139, 1.7, 1.2], [176, 143, 3.1, 1.45]];
   return (
-    <g fill="none" stroke="#2e161a" strokeLinecap="round" strokeLinejoin="round">
+    <g fill="none" stroke="#3a1e22" strokeLinecap="round" strokeLinejoin="round">
       {birds.map(([x, y, ph, k], i) => {
         const fl = Math.sin(f * 2 * Math.PI * 2.5 / 30 + ph);
         const bx = x + f * 0.13, by = y + Math.sin(f / 20 + ph) * 0.6;
@@ -109,7 +116,7 @@ const Birds: React.FC<{f: number}> = ({f}) => {
         // each wing: a bold arched stroke, heavier at the body (reference gulls read as thick 'm' shapes)
         const wing = (dir: number) => `M${bx},${by} Q${bx + dir * w * 0.4},${by - lift} ${bx + dir * w},${by - lift * 0.3 + 1.2 * k}`;
         const inner = (dir: number) => `M${bx},${by} Q${bx + dir * w * 0.25},${by - lift * 0.7} ${bx + dir * w * 0.5},${by - lift * 0.62}`;
-        return <g key={i}><path d={wing(-1)} strokeWidth={1.15 * k} /><path d={wing(1)} strokeWidth={1.15 * k} /><path d={inner(-1)} strokeWidth={1.8 * k} /><path d={inner(1)} strokeWidth={1.8 * k} /></g>;
+        return <g key={i}><path d={wing(-1)} strokeWidth={0.8 * k} /><path d={wing(1)} strokeWidth={0.8 * k} /><path d={inner(-1)} strokeWidth={1.25 * k} /><path d={inner(1)} strokeWidth={1.25 * k} /></g>;
       })}
     </g>
   );
@@ -134,7 +141,7 @@ const Tuft: React.FC<{x: number; y: number; s: number; seed: number}> = ({x, y, 
     <g>
       <defs>
         <linearGradient id={gid} gradientUnits="userSpaceOnUse" x1={0} y1={y} x2={0} y2={y - 22 * s}>
-          <stop offset="0" stopColor="#6e6226" /><stop offset="0.3" stopColor="#b8a854" /><stop offset="0.7" stopColor="#dccf80" /><stop offset="1" stopColor="#f8f0c4" />
+          <stop offset="0" stopColor="#6a6232" /><stop offset="0.3" stopColor="#aca46a" /><stop offset="0.7" stopColor="#cfc892" /><stop offset="1" stopColor="#efeac4" />
         </linearGradient>
       </defs>
       {blades.map((d, i) => <path key={i} d={d} fill={`url(#${gid})`} stroke="#3a3410" strokeOpacity={0.25} strokeWidth={0.3 * s} />)}
@@ -154,7 +161,7 @@ const MESA = MESA_EDGE + ' L-5,368 Z';
 
 const PortraitBackground: React.FC<{f: number}> = ({f}) => {
   // [angle deg, strength, half-width deg]: measured from the reference's polar brightness profile around the sun at f30
-  const rays = [[76, 1.0, 4.6], [100, 1.0, 2.6], [123, 1.0, 2.4], [150, 0.3, 2.2], [57, 0.8, 3.0], [36, 0.6, 3.0]];
+  const rays = [[76, 1.0, 4.0], [100, 1.0, 2.2], [123, 1.0, 2.1], [150, 0.12, 2.0], [57, 0.8, 2.6], [36, 0.6, 2.6]];
   const sway = (a: number, i: number) => a + 1.2 * (Math.sin((2 * Math.PI * (f - 30)) / 95 + i * 1.3) - Math.sin(i * 1.3));
   const ray = (a: number, w: number) => {
     const R = 900, r0 = SUN.ring;
@@ -171,8 +178,8 @@ const PortraitBackground: React.FC<{f: number}> = ({f}) => {
   return (
     <g>
       <defs>
-        <linearGradient id="mtnLit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#8a4240" /><stop offset="1" stopColor="#a35a42" /></linearGradient>
-        <linearGradient id="mtnShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#763630" /><stop offset="1" stopColor="#93503a" /></linearGradient>
+        <linearGradient id="mtnLit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#84393a" /><stop offset="1" stopColor="#9c503c" /></linearGradient>
+        <linearGradient id="mtnShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#70302e" /><stop offset="1" stopColor="#8c4836" /></linearGradient>
         <linearGradient id="farLit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#8e4844" /><stop offset="1" stopColor="#a8603e" /></linearGradient>
         <linearGradient id="farShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#7c3c34" /><stop offset="1" stopColor="#985440" /></linearGradient>
         <linearGradient id="mesa2" gradientUnits="userSpaceOnUse" x1={0} y1={0} x2={78} y2={0}><stop offset="0" stopColor="#4a160e" /><stop offset="1" stopColor="#561c12" /></linearGradient>
@@ -185,18 +192,14 @@ const PortraitBackground: React.FC<{f: number}> = ({f}) => {
         <filter id="softGround" x="-5%" y="-100%" width="110%" height="300%"><feGaussianBlur stdDeviation="1.6" /></filter>
         <filter id="glowBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" /></filter>
       </defs>
+      {/* sky plate already contains the corner darkening, haze glow, halo disc and wide bloom (baked in float + dithered: no 8-bit rings) */}
       <image href={staticFile('hq/sky_portrait.png')} x={0} y={0} width={W} height={H} preserveAspectRatio="none" />
-      <rect x={0} y={0} width={W} height={H} fill="url(#tlDark)" />
       <g style={{mixBlendMode: 'screen'}} filter="url(#rayBlur)">
         {rays.map(([a, op, w], i) => <path key={i} d={ray(sway(a, i), w)} fill="url(#rayFade)" opacity={op * 0.3} />)}
       </g>
-      <circle cx={360} cy={300} r={230} fill="url(#hazeGlow)" style={{mixBlendMode: 'screen'}} opacity={0.7} />
-      {/* large translucent halo disc with a visible soft edge (reference), then bloom, ring and disc */}
-      <circle cx={SUN.x} cy={SUN.y} r={108} fill="#ffd8a0" opacity={0.1} filter="url(#soft2)" style={{mixBlendMode: 'screen'}} />
-      <circle cx={SUN.x} cy={SUN.y} r={130} fill="url(#bloomWide)" style={{mixBlendMode: 'screen'}} opacity={0.8} />
-      <circle cx={SUN.x} cy={SUN.y} r={SUN.ring + 2} fill="url(#sunRing)" />
+      <circle cx={SUN.x} cy={SUN.y} r={SUN.ring + 3.5} fill="url(#sunRing)" />
       <circle cx={SUN.x} cy={SUN.y} r={SUN.r} fill="#feedc5" />
-      <circle cx={SUN.x} cy={SUN.y} r={50} fill="url(#bloomTight)" style={{mixBlendMode: 'screen'}} opacity={0.22} />
+      <image href={staticFile('hq/sun_bloom.png')} x={0} y={0} width={W} height={H} preserveAspectRatio="none" style={{mixBlendMode: 'screen'}} />
       <Birds f={f} />
       {/* far range B and C: same burgundy family as A, big two-tone spiky snowcaps, bold clean outline */}
       <g>
@@ -215,16 +218,16 @@ const PortraitBackground: React.FC<{f: number}> = ({f}) => {
       </g>
       {/* mountain A: lit left face / shade right face, large two-tone snowcap with deep spikes */}
       <g>
-        <path d="M92,372 L92,362 L104,282 L122,262 L141,238 L162,224 L178,239 L196,258 L216,268 L236,282 L243,300 L262,306 L283,326 L312,362 L312,372 Z" fill="url(#mtnShade)" />
-        <path d="M92,372 L92,362 L104,282 L122,262 L141,238 L162,224 L170,240 L168,256 L178,272 L170,290 L182,306 L175,324 L186,342 L180,362 L180,372 Z" fill="url(#mtnLit)" />
-        <path d="M125,258 L141,238 L162,224 L178,239 L187,248.5 L172,275 L153,254 L136,275 Z" fill="#e6c2b8" />
-        <path d="M162,224 L178,239 L187,248.5 L172,275 L165,250 Z" fill="#bc9898" />
+        <path d="M92,372 L92,362 L104,282 L122,262 L141,238 L158,227 L162.5,219.5 L166,227 L178,239 L196,258 L216,268 L236,282 L243,300 L262,306 L283,326 L312,362 L312,372 Z" fill="url(#mtnShade)" />
+        <path d="M92,372 L92,362 L104,282 L122,262 L141,238 L158,227 L162.5,219.5 L170,240 L168,256 L178,272 L170,290 L182,306 L175,324 L186,342 L180,362 L180,372 Z" fill="url(#mtnLit)" />
+        <path d="M125,258 L141,238 L158,227 L162.5,219.5 L166,227 L178,239 L187,248.5 L172,275 L153,254 L136,275 Z" fill="#e6c2b8" />
+        <path d="M162.5,219.5 L166,227 L178,239 L187,248.5 L172,275 L165,250 Z" fill="#bc9898" />
         <path d="M187,248.5 L172,275 L153,254 L136,275 L125,258" fill="none" stroke="#5a2a2c" strokeOpacity={0.55} strokeWidth={0.8} strokeLinejoin="round" />
         <path d="M168,256 L178,272 L170,290 L182,306 L175,324 L186,342" fill="none" stroke="#4a1c1c" strokeOpacity={0.35} strokeWidth={0.8} strokeLinejoin="round" />
-        <path d="M92,362 L104,282 L122,262 L141,238 L162,224 L178,239 L196,258 L216,268 L236,282 L243,300 L262,306 L283,326 L312,362" fill="none" stroke={OUTLINE} strokeWidth={1.8} strokeLinejoin="round" />
+        <path d="M92,362 L104,282 L122,262 L141,238 L158,227 L162.5,219.5 L166,227 L178,239 L196,258 L216,268 L236,282 L243,300 L262,306 L283,326 L312,362" fill="none" stroke={OUTLINE} strokeWidth={1.5} strokeLinejoin="round" />
       </g>
       {/* warm atmospheric haze, full width so no band ends inside the frame */}
-      <rect x={-5} y={300} width={870} height={66} fill="url(#haze)" opacity={0.55} />
+      <rect x={-5} y={300} width={870} height={66} fill="url(#haze)" opacity={0.75} />
       <rect x={-5} y={326} width={870} height={40} fill="#ff9a50" opacity={0.16} filter="url(#glowBlur)" style={{mixBlendMode: 'screen'}} />
       {/* mesa: slightly bumpy flat top, stepped right face flaring out toward the base; soft strata and a faint plaid, clipped to the shape;
           jagged vertical form shadow on the right (reference) */}
@@ -234,30 +237,38 @@ const PortraitBackground: React.FC<{f: number}> = ({f}) => {
         <g clipPath="url(#mesaClip)">
           {/* broad strata measured on the reference: light bands at y 294-299 and 313-326, dark between, warm glow toward the base */}
           <g filter="url(#softBand)">
-            <rect x={-5} y={293.5} width={180} height={6.5} fill="#6c2a1a" opacity={0.6} />
-            <rect x={-5} y={312.5} width={180} height={14} fill="#6c2a1a" opacity={0.6} />
+            <rect x={-5} y={293.5} width={180} height={6.5} fill="#6c2a1a" opacity={0.55} />
+            <rect x={-5} y={312.5} width={180} height={14} fill="#6c2a1a" opacity={0.55} />
             {[285, 304, 309].map((y, i) => <line key={i} x1={-5} x2={175} y1={y} y2={y} stroke="#3e120c" strokeOpacity={0.35} strokeWidth={1.6} />)}
           </g>
           <rect x={-5} y={324} width={180} height={46} fill="url(#mesaGlow)" />
-          {Array.from({length: 18}).map((_, i) => <line key={'p' + i} x1={4 + i * 9} x2={4 + i * 9 + 0.6} y1={270} y2={370} stroke="#2a0a06" strokeOpacity={0.12} strokeWidth={0.8} />)}
+          {Array.from({length: 18}).map((_, i) => { const x = 4 + i * 9 + (random(`mp${i}`) - 0.5) * 4; return <line key={'p' + i} x1={x} x2={x + (random(`mq${i}`) - 0.5) * 1.5} y1={270} y2={370} stroke="#2a0a06" strokeOpacity={0.14 + random(`mo${i}`) * 0.16} strokeWidth={0.8 + random(`mw${i}`) * 0.5} />; })}
           <path d="M78,268 L82,288 L76,302 L83,318 L79,334 L86,350 L84,372 L170,372 L170,268 Z" fill="#4c1812" opacity={0.78} />
           <path d="M78,276 L82,288 L76,302 L83,318 L79,334 L86,350 L84,368" fill="none" stroke="#1e0604" strokeOpacity={0.3} strokeWidth={0.8} />
         </g>
         <path d={MESA_EDGE} fill="none" stroke={OUTLINE} strokeWidth={1.3} strokeLinejoin="round" />
       </g>
       <ellipse cx={70} cy={352} rx={90} ry={18} fill="#f09048" opacity={0.25} filter="url(#glowBlur)" style={{mixBlendMode: 'screen'}} />
+      {[[58, 343, 9], [106, 351, 7.5], [236, 347, 8.5], [560, 345, 9], [790, 350, 8]].map(([x, y, rr], i) => <circle key={'ob' + i} cx={x} cy={y} r={rr} fill="#ffa058" opacity={0.2} filter="url(#soft2)" style={{mixBlendMode: 'screen'}} />)}
       {/* hills and ground */}
       <path d={arches(367) + ' L900,385 L-73,385 Z'} fill="url(#hills2)" />
-      <path d={arches(367)} fill="none" stroke="#d8a090" strokeWidth={1.1} strokeOpacity={0.7} />
+      <path d={arches(367)} fill="none" stroke="#e2aa9a" strokeWidth={1.6} strokeOpacity={0.85} />
       <rect x={-5} y={372} width={870} height={112} fill="url(#ground2)" />
       <line x1={-5} x2={860} y1={372} y2={372} stroke="#3a1408" strokeWidth={0.9} opacity={0.5} />
       <g filter="url(#softGround)">
         {bands.map(([y, h, c, o], i) => <path key={i} d={`M-5,${y} Q150,${(y as number) + 1.6} 330,${(y as number) - 0.8} T660,${(y as number) + 1.2} T880,${(y as number) - 0.6}`} stroke={c as string} strokeWidth={h as number} strokeOpacity={o as number} fill="none" />)}
       </g>
-      {TUFTS.map(([x, y, s], i) => <g key={i} opacity={Math.min(1, 0.65 + s * 0.35)}><Tuft x={x} y={y} s={s} seed={i} /></g>)}
-      <rect x={0} y={0} width={W} height={H} fill="url(#vigSky)" />
-      <Dust f={f} n={34} seed="sky" box={[0, 0, 854, 340]} rMin={5.6} rMax={7.2} />
-      <Dust f={f} n={9} seed="land" box={[0, 270, 854, 470]} rMin={4.2} rMax={5.6} />
+      {/* faint vertical striations across the ground bands (reference: smeared, brushy ground) */}
+      <g filter="url(#soft06)">
+        {Array.from({length: 90}).map((_, i) => {
+          const x = random(`gs${i}`) * 864 - 5, y0 = 373 + random(`gy${i}`) * 30, dk = random(`gd${i}`) < 0.6;
+          return <line key={'gs' + i} x1={x} x2={x + (random(`gx${i}`) - 0.5) * 2} y1={y0} y2={484} stroke={dk ? '#3a1808' : '#9a5a36'} strokeWidth={0.7 + random(`gw${i}`) * 0.8} strokeOpacity={0.05 + random(`go${i}`) * 0.1} />;
+        })}
+      </g>
+      {TUFTS.map(([x, y, s], i) => <g key={i} opacity={Math.min(1, 0.65 + s * 0.35)} filter={s < 0.6 ? 'url(#soft06)' : undefined}><Tuft x={x} y={y} s={s} seed={i} /></g>)}
+      <image href={staticFile('hq/vig_sky.png')} x={0} y={0} width={W} height={H} preserveAspectRatio="none" />
+      <Dust f={f} n={30} seed="sky" box={[0, 0, 854, 340]} rMin={5.2} rMax={6.8} dense={[0, 0, 380, 250, 0.33]} />
+      <Dust f={f} n={10} seed="land" box={[0, 270, 854, 470]} rMin={4.5} rMax={6.0} dense={[0, 272, 250, 360, 0.4]} />
     </g>
   );
 };
@@ -346,9 +357,9 @@ const Pictogram: React.FC<{kind: string}> = ({kind}) => {
 
 const Badge: React.FC<{x: number; y: number; kind: string; s: number; op: number}> = ({x, y, kind, s, op}) => (
   <g transform={scaleAbout(s, x, y)} opacity={op} filter="url(#inkRed)">
-    <circle cx={x} cy={y} r={16.4} fill="#f2c890" fillOpacity={0.5} stroke={BADGE} strokeWidth={2.8} />
-    <circle cx={x} cy={y} r={13.1} fill="none" stroke={BADGE} strokeWidth={1.2} />
-    <g transform={`translate(${x - 12.4} ${y - 12.4}) scale(0.248)`}><Pictogram kind={kind} /></g>
+    <circle cx={x} cy={y} r={16.0} fill="#f2c890" fillOpacity={0.5} stroke={BADGE} strokeWidth={2.4} />
+    <circle cx={x} cy={y} r={12.3} fill="none" stroke={BADGE} strokeWidth={1.0} />
+    <g transform={`translate(${x - 10.5} ${y - 10.5}) scale(0.21)`}><Pictogram kind={kind} /></g>
   </g>
 );
 
@@ -362,11 +373,12 @@ const MainPoster: React.FC<{f: number; shot: any; printSrc?: string | null}> = (
   const wf = LY.WANTED_FOR;
   return (
     <g>
-      <image href={staticFile('hq/paper_main.png')} x={278 - 6.67} y={22 - 6.67} width={315.3} height={453.3} preserveAspectRatio="none" filter="url(#paperShadow)" />
+      <image href={staticFile('hq/paper_main.png')} x={278 - 6.67} y={22 - 6.67} width={315.3} height={446.8} preserveAspectRatio="none" filter="url(#paperShadow)" />
       {/* nail */}
-      <circle cx={429.2} cy={31.8} r={5.4} fill="#1a0a04" opacity={0.45} filter="url(#soft1)" />
-      <circle cx={428} cy={30} r={4.9} fill="#4a4652" stroke="#1e1a22" strokeWidth={1.0} />
-      <circle cx={426.6} cy={28.6} r={1.9} fill="#9890a0" opacity={0.5} filter="url(#soft1)" />
+      <circle cx={429.4} cy={32} r={5.8} fill="#1a0a04" opacity={0.4} filter="url(#soft1)" />
+      <circle cx={428} cy={30} r={6.1} fill="none" stroke="#f6e2b0" strokeWidth={1.0} opacity={0.45} />
+      <circle cx={428} cy={30} r={5.0} fill="#3e3846" stroke="#141016" strokeWidth={1.4} />
+      <circle cx={426.5} cy={28.5} r={1.7} fill="#c0b8c8" opacity={0.65} filter="url(#soft06)" />
       <g transform={`translate(${POSTER_DX} 0)`}>
       <g filter="url(#ink)">
         {/* frame lines at world x 296.6 / 301.8 / 558.2 / 563.5 (measured), written in content-local x */}
@@ -385,7 +397,7 @@ const MainPoster: React.FC<{f: number; shot: any; printSrc?: string | null}> = (
       <PText k="WANTED" y={87.5} />
       <PText k="NAME" y={261.5} />
       <PText k="WANTED_FOR" y={280.3} />
-      <text x={LY.REWARD.left} y={441.5} fontFamily="Bitter" fontWeight={800} fontSize={LY.REWARD.font_size_ref} letterSpacing={`${LY.REWARD.tracking_em}em`} fill="#2e1004" filter="url(#ink)">{LY.REWARD.text}</text>
+      <text x={LY.REWARD.left} y={438} fontFamily="Bitter" fontWeight={800} fontSize={LY.REWARD.font_size_ref} letterSpacing={`${LY.REWARD.tracking_em}em`} fill="#2e1004" filter="url(#ink)">{LY.REWARD.text}</text>
       {items.map((e: any, i: number) => {
         const t = f - e.start;
         if (t < 0) return null;
@@ -404,8 +416,8 @@ const MainPoster: React.FC<{f: number; shot: any; printSrc?: string | null}> = (
       })}
       {/* reference: a narrow '$', an 8 px gap, then the question marks; ends at x 519, 7 px clear of the frame break at 526 */}
       <g filter="url(#inkRed)" fill={RED}>
-        <text transform={`translate(${LY.VALUE.left + 0.5} 444.5) scale(0.8 1)`} fontFamily="Bitter" fontWeight={900} fontSize={LY.VALUE.font_size_ref}>$</text>
-        <text x={464} y={444.5} fontFamily="Bitter" fontWeight={900} fontSize={LY.VALUE.font_size_ref} letterSpacing="0.025em">{rv.slice(1)}</text>
+        <text transform={`translate(${LY.VALUE.left + 0.5} 446) scale(0.8 1)`} fontFamily="Bitter" fontWeight={900} fontSize={LY.VALUE.font_size_ref * 0.95}>$</text>
+        <text x={464} y={446} fontFamily="Bitter" fontWeight={900} fontSize={LY.VALUE.font_size_ref * 0.95} letterSpacing="0.03em">{rv.slice(1)}</text>
       </g>
       </g>
     </g>
@@ -484,11 +496,15 @@ export const CalibrationHQ: React.FC<HQProps> = ({heroSrc = null, posterPrintSrc
           <SidePoster cx={154} top={252} tex={1} op={sideOp(1)} printSrc={posterPrintSrc} />
           <SidePoster cx={708} top={-48} tex={2} op={sideOp(2)} printSrc={posterPrintSrc} />
           <SidePoster cx={708} top={238} tex={3} op={sideOp(3)} faded printSrc={posterPrintSrc} />
+        </g>
+        {/* screen-space wall vignette, fitted to the reference wall (elliptical, centred left of the poster); it sits under the main
+            poster because the reference's poster keeps its own lit-centre/burn look (baked in float + dithered: no 8-bit bands) */}
+        <image href={staticFile('hq/vig_wall.png')} x={0} y={0} width={W} height={H} preserveAspectRatio="none" />
+        <g transform={`translate(${CX + tx} ${CY + ty}) scale(${s}) translate(${-CX} ${-CY})`}>
           <MainPoster f={f} shot={shot} printSrc={posterPrintSrc} />
         </g>
-        <rect x={0} y={0} width={W} height={H} fill="url(#warmPool)" style={{mixBlendMode: 'screen'}} />
-        <rect x={0} y={0} width={W} height={H} fill="url(#vigWall)" />
-        <Dust f={f} n={14} seed="wall" box={[0, 0, 854, 480]} rMin={3.4} rMax={4.8} />
+        <image href={staticFile('hq/warm_pool.png')} x={0} y={0} width={W} height={H} preserveAspectRatio="none" style={{mixBlendMode: 'screen'}} />
+        <Dust f={f} n={34} seed="wall" box={[0, 0, 854, 480]} rMin={4.0} rMax={5.8} />
       </>
     );
   }
@@ -497,6 +513,13 @@ export const CalibrationHQ: React.FC<HQProps> = ({heroSrc = null, posterPrintSrc
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="100%" preserveAspectRatio="none">
         <Defs />
         {content}
+        {/* final dither: zero-mean +-1.5-level noise under 'overlay' so no 8-bit gradient step survives as a band (style bible: grain <= 1%) */}
+        <defs>
+          <pattern id="ditherPat" patternUnits="userSpaceOnUse" width={1024 / 4.5} height={1024 / 4.5}>
+            <image href={staticFile('hq/dither_tile.png')} width={1024 / 4.5} height={1024 / 4.5} style={{imageRendering: 'pixelated'}} />
+          </pattern>
+        </defs>
+        <rect x={0} y={0} width={W} height={H} fill="url(#ditherPat)" style={{mixBlendMode: 'overlay'}} />
       </svg>
     </AbsoluteFill>
   );

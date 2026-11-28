@@ -7,7 +7,7 @@ colourfulness (Hasler-Suesstrunk), mean CIELAB and CIEDE2000 between region mean
 usage: python b04_lookdev_metrics.py <tag>   (reads work/hq/<tag>_f<frame>.png produced by the renderer)
 """
 import sys, json, numpy as np, cv2
-TAG = sys.argv[1] if len(sys.argv) > 1 else 'v1'
+TAG = sys.argv[1] if len(sys.argv) > 1 and __name__ == '__main__' else 'v1'
 
 def srgb_to_lab(rgb):
     c = rgb/255.0
@@ -59,29 +59,30 @@ SCENES = {
   'poster_f075': dict(frame=75, regions={'paper (list area, empty)': (330, 290, 530, 410), 'wood (left wall)': (0, 0, 250, 480), 'poster_top (WANTED)': (300, 40, 556, 100), 'whole_frame_minus_portrait': None}, de=['paper (list area, empty)', 'wood (left wall)']),
   'portrait_f030': dict(frame=30, regions={'sky': (0, 0, 300, 200), 'mountains': (120, 228, 255, 330), 'mesa': (0, 280, 105, 340), 'ground': (0, 372, 250, 470), 'background_left_of_hero': (0, 0, 265, 480)}, de=['sky', 'mountains', 'ground']),
 }
-rows = []
-for name, sc in SCENES.items():
-    import os
-    path = f'work/hq/{TAG}_f{sc["frame"]:03d}.png'
-    if not os.path.exists(path): continue
-    O, R = load_ours(path), load_ref(sc['frame'])
-    for rn, box in sc['regions'].items():
-        if box is None:
-            mask = np.ones((480, 854), bool); mask[98:232, 328:528] = False   # exclude the (pending) portrait print
-            o, r = O[mask], R[mask]
-            mo, mr = metrics(o.reshape(1, -1, 3)), metrics(r.reshape(1, -1, 3))
-        else:
-            x0, y0, x1, y1 = box; mo, mr = metrics(O[y0:y1, x0:x1]), metrics(R[y0:y1, x0:x1])
-        row = dict(scene=name, region=rn)
-        for k in ['edge_density', 'fine_texture', 'contrast', 'colorfulness']:
-            row[k+'_ratio'] = round(mo[k]/max(mr[k], 1e-6), 2); row[k+'_ok'] = 0.8 <= row[k+'_ratio'] <= 1.2
-        row['edge_density_c60_ratio'] = round(mo['edge_density_c60']/max(mr['edge_density_c60'], 1e-6), 2)
-        row['dE00'] = round(de2000(mr['lab'], mo['lab']), 2); row['dE_target'] = rn in sc['de']; row['dE_ok'] = (row['dE00'] < 6) if row['dE_target'] else None
-        row['ref_lab'] = [round(float(v), 1) for v in mr['lab']]; row['ours_lab'] = [round(float(v), 1) for v in mo['lab']]
-        rows.append(row)
-json.dump(rows, open(f'analysis/lookdev/metrics_{TAG}.json', 'w'), indent=1)
-hdr = f"{'scene':14s} {'region':34s} {'edge':>6s} {'fine':>6s} {'contr':>6s} {'colour':>6s} {'dE00':>6s}"
-print(hdr)
-for r in rows:
-    flag = lambda k: '' if r[k+'_ok'] else '*'
-    print(f"{r['scene']:14s} {r['region']:34s} {r['edge_density_ratio']:6.2f}{flag('edge_density')} {r['fine_texture_ratio']:6.2f}{flag('fine_texture')} {r['contrast_ratio']:6.2f}{flag('contrast')} {r['colorfulness_ratio']:6.2f}{flag('colorfulness')} {r['dE00']:6.2f}{'' if not r['dE_target'] else ('' if r['dE_ok'] else '*')}")
+if __name__ == '__main__':   # importable: b06 uses srgb_to_lab / de2000
+    rows = []
+    for name, sc in SCENES.items():
+        import os
+        path = f'work/hq/{TAG}_f{sc["frame"]:03d}.png'
+        if not os.path.exists(path): continue
+        O, R = load_ours(path), load_ref(sc['frame'])
+        for rn, box in sc['regions'].items():
+            if box is None:
+                mask = np.ones((480, 854), bool); mask[98:232, 328:528] = False   # exclude the (pending) portrait print
+                o, r = O[mask], R[mask]
+                mo, mr = metrics(o.reshape(1, -1, 3)), metrics(r.reshape(1, -1, 3))
+            else:
+                x0, y0, x1, y1 = box; mo, mr = metrics(O[y0:y1, x0:x1]), metrics(R[y0:y1, x0:x1])
+            row = dict(scene=name, region=rn)
+            for k in ['edge_density', 'fine_texture', 'contrast', 'colorfulness']:
+                row[k+'_ratio'] = round(mo[k]/max(mr[k], 1e-6), 2); row[k+'_ok'] = 0.8 <= row[k+'_ratio'] <= 1.2
+            row['edge_density_c60_ratio'] = round(mo['edge_density_c60']/max(mr['edge_density_c60'], 1e-6), 2)
+            row['dE00'] = round(de2000(mr['lab'], mo['lab']), 2); row['dE_target'] = rn in sc['de']; row['dE_ok'] = (row['dE00'] < 6) if row['dE_target'] else None
+            row['ref_lab'] = [round(float(v), 1) for v in mr['lab']]; row['ours_lab'] = [round(float(v), 1) for v in mo['lab']]
+            rows.append(row)
+    json.dump(rows, open(f'analysis/lookdev/metrics_{TAG}.json', 'w'), indent=1)
+    hdr = f"{'scene':14s} {'region':34s} {'edge':>6s} {'fine':>6s} {'contr':>6s} {'colour':>6s} {'dE00':>6s}"
+    print(hdr)
+    for r in rows:
+        flag = lambda k: '' if r[k+'_ok'] else '*'
+        print(f"{r['scene']:14s} {r['region']:34s} {r['edge_density_ratio']:6.2f}{flag('edge_density')} {r['fine_texture_ratio']:6.2f}{flag('fine_texture')} {r['contrast_ratio']:6.2f}{flag('contrast')} {r['colorfulness_ratio']:6.2f}{flag('colorfulness')} {r['dE00']:6.2f}{'' if not r['dE_target'] else ('' if r['dE_ok'] else '*')}")
